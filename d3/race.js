@@ -68,15 +68,14 @@
         .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });
+    var categories = new Set()
     let racialCategories = groupedData.map(function(d){
         (d.Data.map(function(i){
-            console.log(i.category)
-            return(i.category)
+            categories.add(i.category)
         }))
     });
-
     x0.domain(years);
-    x1.domain(racialCategories).range([0, x0.bandwidth()]);
+    x1.domain(categories).rangeRound([0, x0.bandwidth()]);
     y.domain([0, d3.max(groupedData, function(key) { 
         return d3.max(key.Data, function(d) { 
             return d.number; }); 
@@ -116,7 +115,8 @@
         })
         .enter().append("rect")
             .attr("width", 100)
-            .attr("x", function(d) { 
+            .attr("x", function(d) {
+                console.log(x1(d.category)) 
                 return x1(d.category); 
             })
             .style("fill","red") 
