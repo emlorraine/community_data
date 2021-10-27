@@ -22,129 +22,116 @@
  */
  RaceBarChart.prototype.init = function(rawData){
     var raw2010Data = rawData[0][1]; 
-    //var raw2010DataLabels = rawData[0][0]; 
-
     var raw2020Data = rawData[1][1]; 
-    //var raw2020DataLabels = rawData[1][0]; 
-
-    var processed2010Data = {
-        "White alone" : +raw2010Data.P001003,
-        "Black or African American alone" : +raw2010Data.P001004,
-        "American Indian and Alaska Native alone" : +raw2010Data.P001005, 
-        "Asian alone" : +raw2010Data.P001006, 
-        "Native Hawaiian and Other Pacific Islander" : +raw2010Data.P001007, 
-        "Two or more races" : +raw2010Data.P001009
-    }
-
-    var processed2020Data = {
-        "White alone" : +raw2020Data.P1_003N,
-        "Black or African American alone" : +raw2020Data.P1_004N,
-        "American Indian and Alaska Native alone" : +raw2020Data.P1_005N, 
-        "Asian alone" : +raw2020Data.P1_006N, 
-        "Native Hawaiian and Other Pacific Islander" : +raw2020Data.P1_007N, 
-        "Two or more races" : +raw2020Data.P1_009N
-    }
-
-    var labels = [
-        "White alone",
-        "Black or African American alone",
-        "American Indian and Alaska Native alone",
-        "Asian alone",
-        "Native Hawaiian and Other Pacific Islander",
-        "Two or more races"
+    let groupedData = [
+        {
+        "Year": "2010",
+        "Data": 
+            [
+                {category: "White alone", number: +raw2010Data.P001003},
+                {category: "Black or African American alone", number: +raw2010Data.P001004},
+                {category: "American Indian and Alaska Native alone", number: +raw2010Data.P001005},
+                {category: "Asian alone", number: +raw2010Data.P001006}, 
+                {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2010Data.P001007}, 
+                {category: "Two or more races", number: +raw2010Data.P001009},
+            ]
+        },
+        {
+            "Year": "2020",
+            "Data": 
+                [
+                    {category: "White alone", number: +raw2020Data.P1_003N},
+                    {category: "Black or African American alone", number: +raw2020Data.P1_004N},
+                    {category: "American Indian and Alaska Native alone", number: +raw2020Data.P1_005N}, 
+                    {category: "Asian alone", number: +raw2020Data.P1_006N}, 
+                    {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2020Data.P1_007N}, 
+                    {category: "Two or more races", number: +raw2020Data.P1_009N}
+                ]
+            }
     ]
-    var data2010 = [
-        {category: "White alone", number: +raw2010Data.P001003},
-        {category: "Black or African American alone", number: +raw2010Data.P001004},
-        {category: "American Indian and Alaska Native alone", number: +raw2010Data.P001005},
-        {category: "Asian alone", number: +raw2010Data.P001006}, 
-        {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2010Data.P001007}, 
-        {category: "Two or more races", number: +raw2010Data.P001009},
-    ]
-    var data2020 = [
-        {category: "White alone", number: +raw2020Data.P1_003N},
-        {category: "Black or African American alone", number: +raw2020Data.P1_004N},
-        {category: "American Indian and Alaska Native alone", number: +raw2020Data.P1_005N}, 
-        {category: "Asian alone", number: +raw2020Data.P1_006N}, 
-        {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2020Data.P1_007N}, 
-        {category: "Two or more races", number: +raw2020Data.P1_009N}
-    ]
-
-    let max2010 = Math.max(...(Object.values(processed2010Data)))
-    let max2020 = Math.max(...(Object.values(processed2010Data)))
-    let max = (Math.max(max2010, max2020))
-
     var self = this;
-    //Gets access to the div element created for this chart and legend element from HTML
     var divRaceBarChart = d3.select("#race").classed("content", true);
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
+
+    var x0  = d3.scaleBand().rangeRound([0, 1000], .5);
+    var x1  = d3.scaleBand();
+    var y   = d3.scaleLinear().rangeRound([600, 0]);
+
+    var xAxis = d3.axisBottom().scale(x0)
+                .tickValues(groupedData.map(d=>d.Year));
+
+    var yAxis = d3.axisLeft().scale(y);
 
     self.svg = divRaceBarChart.append("svg")
         .attr("width",1000)
         .attr("height",600)
         .attr("transform", "translate(" + self.margin.left + ",0)")
 
-
-    let xScale = d3.scaleBand()
-        .range([0, 500])
-        .domain(data2010.map(function(d){
-            return d.category
+    var years = groupedData.map(function(d) { return d.Year; });
+    let racialCategories = groupedData.map(function(d){
+        (d.Data.map(function(i){
+            console.log(i.category)
+            return(i.category)
         }))
-        .padding(0.1)
+    });
 
-    let yScale = d3.scaleLinear()
-        .range([600, 0])
-        .domain([0, 5000])
+    x0.domain(years);
+    x1.domain(racialCategories).range([0, x0.bandwidth()]);
+    y.domain([0, d3.max(groupedData, function(key) { 
+        return d3.max(key.Data, function(d) { 
+            return d.number; }); 
+        })
+    ]);
 
-    var xAxis = d3.scaleBand()
-        .range([ 0, 1000 ])
-        .domain(data.map(function(d) { return d.category; }))
-        .padding(0.2);
     self.svg.append("g")
-        .attr("transform", "translate(0," + 600 + ")")
-        .call(d3.axisBottom(xAxis))
-        // .selectAll("text")
-        //   .attr("transform", "translate(-10,0)rotate(-45)")
-        //   .style("text-anchor", "end");    
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + 600 + ")")
+    .call(xAxis);
 
-    var yAxis = d3.scaleLinear()
-        .domain([0, 5000])
-        .range([ 600, 0]);
+    self.svg.append("g")
+      .attr("class", "y axis")
+      .style('opacity','100')
+      .call(yAxis)
+        .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .style('font-weight','bold')
+            .text("Value"); //why are you not showing?
+        
 
+    
+    var slice = self.svg.selectAll(".slice")
+      .data(groupedData)
+      .enter().append("g")
+      .attr("class", "g")
+      .attr("transform",function(d) { 
+          return "translate(" + x0(d.Year) + ",0)"; 
+        });
 
-    self.svg.selectAll("rect")
-        .data(data2010)
-        .enter()
-        .append("rect")
-            .attr("x", function(d, i) { 
-                return xScale(d.category); 
+      slice.selectAll("rect")
+      .data(function(d) { 
+          return d.Data; 
+        })
+        .enter().append("rect")
+            .attr("width", 100)
+            .attr("x", function(d) { 
+                return x1(d.category); 
             })
+            .style("fill","red") 
             .attr("y", function(d) { 
-                return yScale(d.number); 
+                return y(d.number); 
             })
-            .attr("width", xScale.bandwidth())
-            .attr("height", function(d) { 
-                return 600 - yScale(d.number); 
-            })
-            .attr("fill", "#69b3a2")
+            .attr("height", function(d) {
+                return 600 - y(d.number); 
+            });
+           
+        
+   
 
 
-    self.svg.selectAll("rect")
-        .data(data2020)
-        .enter()
-        .append("rect")
-            .attr("x", function(d, i) { 
-                console.log(d.category)
-                return xScale(d.category); 
-            })
-            .attr("y", function(d) { 
-                return yScale(d.number); 
-            })
-            .attr("width", xScale.bandwidth())
-            .attr("height", function(d) { 
-                return 600 - yScale(d.number); 
-            })
-            .attr("fill", "red")
+    
         
 
     
