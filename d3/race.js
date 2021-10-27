@@ -54,20 +54,20 @@
         "Two or more races"
     ]
     var data2010 = [
-        +raw2010Data.P001003,
-        +raw2010Data.P001004,
-        +raw2010Data.P001005, 
-        +raw2010Data.P001006, 
-        +raw2010Data.P001007, 
-        +raw2010Data.P001009
+        {category: "White alone", number: +raw2010Data.P001003},
+        {category: "Black or African American alone", number: +raw2010Data.P001004},
+        {category: "American Indian and Alaska Native alone", number: +raw2010Data.P001005},
+        {category: "Asian alone", number: +raw2010Data.P001006}, 
+        {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2010Data.P001007}, 
+        {category: "Two or more races", number: +raw2010Data.P001009},
     ]
     var data2020 = [
-        +raw2020Data.P1_003N,
-        +raw2020Data.P1_004N,
-        +raw2020Data.P1_005N, 
-        +raw2020Data.P1_006N, 
-        +raw2020Data.P1_007N, 
-        +raw2020Data.P1_009N
+        {category: "White alone", number: +raw2020Data.P1_003N},
+        {category: "Black or African American alone", number: +raw2020Data.P1_004N},
+        {category: "American Indian and Alaska Native alone", number: +raw2020Data.P1_005N}, 
+        {category: "Asian alone", number: +raw2020Data.P1_006N}, 
+        {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2020Data.P1_007N}, 
+        {category: "Two or more races", number: +raw2020Data.P1_009N}
     ]
 
     let max2010 = Math.max(...(Object.values(processed2010Data)))
@@ -84,31 +84,68 @@
         .attr("height",600)
         .attr("transform", "translate(" + self.margin.left + ",0)")
 
-    var xScale = d3.scaleLinear()
-        .range([0, 15000])
-        .domain([0, max]);
-    var yScale = d3.scaleBand()
-        .range([ 0, 600 ])
-        .domain(data.map(function(d, i) { 
-            return labels[i]; 
-        }))
-        .padding(.1);
 
-    self.svg.selectAll("myRect")
+    let xScale = d3.scaleBand()
+        .range([0, 500])
+        .domain(data2010.map(function(d){
+            return d.category
+        }))
+        .padding(0.1)
+
+    let yScale = d3.scaleLinear()
+        .range([600, 0])
+        .domain([0, 5000])
+
+    var xAxis = d3.scaleBand()
+        .range([ 0, 1000 ])
+        .domain(data.map(function(d) { return d.category; }))
+        .padding(0.2);
+    self.svg.append("g")
+        .attr("transform", "translate(0," + 600 + ")")
+        .call(d3.axisBottom(xAxis))
+        // .selectAll("text")
+        //   .attr("transform", "translate(-10,0)rotate(-45)")
+        //   .style("text-anchor", "end");    
+
+    var yAxis = d3.scaleLinear()
+        .domain([0, 5000])
+        .range([ 600, 0]);
+
+
+    self.svg.selectAll("rect")
         .data(data2010)
         .enter()
         .append("rect")
-        .attr("x", xScale(0))
-        .attr("y", function(d, i) { 
-            console.log(labels[i])
-            return yScale(labels[i]); 
-        })
-        .attr("width", function(d, i) { 
-            console.log(labels[i], d)
-            return (xScale(d)); 
-        })
-        .attr("height", yScale.bandwidth())
-        .attr("fill", "#69b3a2")
+            .attr("x", function(d, i) { 
+                return xScale(d.category); 
+            })
+            .attr("y", function(d) { 
+                return yScale(d.number); 
+            })
+            .attr("width", xScale.bandwidth())
+            .attr("height", function(d) { 
+                return 600 - yScale(d.number); 
+            })
+            .attr("fill", "#69b3a2")
+
+
+    self.svg.selectAll("rect")
+        .data(data2020)
+        .enter()
+        .append("rect")
+            .attr("x", function(d, i) { 
+                console.log(d.category)
+                return xScale(d.category); 
+            })
+            .attr("y", function(d) { 
+                return yScale(d.number); 
+            })
+            .attr("width", xScale.bandwidth())
+            .attr("height", function(d) { 
+                return 600 - yScale(d.number); 
+            })
+            .attr("fill", "red")
+        
 
     
 }
