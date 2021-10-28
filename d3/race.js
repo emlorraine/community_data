@@ -144,8 +144,9 @@
                 .tickValues(labels)
 
     var yAxis = d3.axisLeft().scale(yScale)
-                .tickValues(values)
+                .ticks(10, ".0f"); 
 
+                
     
 
     self.svg = divRaceBarChart.append("svg")
@@ -180,24 +181,16 @@
     };
 
     self.svg.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + 600 + ")")
+    .attr("transform", "translate(100," + 600 + ")")
     .call(xAxis)
     .selectAll("text")
     .each(insertLinebreaks)	
 
 
     self.svg.append("g")
-      .attr("class", "y axis")
-      .style('opacity','100')
-      .call(yAxis)
-        .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .style('font-weight','bold')
-            .text("Value"); //why are you not showing?
+    .attr("transform", "translate(100, 0)") 
+    .call(yAxis)
+
         
   
 
@@ -229,6 +222,8 @@
             .attr("height", function(d, i) {
                 return 600 - yScale(d); 
             })
+            .attr("transform", "translate(100, 0)") 
+
       
         
         var textLabels = self.svg.selectAll("barLabels")
@@ -245,6 +240,7 @@
                     return (yScale(d)-5); 
                 }
             })
+            .attr("transform", "translate(100, 0)") 
             .text(function(d){
                 return d; 
             })
