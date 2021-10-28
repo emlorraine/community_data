@@ -49,6 +49,40 @@
                 ]
             }
     ]
+
+    let categoryData = [
+        {
+            category: "White alone", 
+            number2010W: +raw2010Data.P001003,
+            number2020W: +raw2020Data.P1_003N
+        },
+        {
+            category: "Black or African American alone", 
+            number2010BAA: +raw2010Data.P001003,
+            number2020: +raw2020Data.P1_003N
+        },
+        {
+            category: "American Indian and Alaska Native alone", 
+            number2010: +raw2010Data.P001003,
+            number2020: +raw2020Data.P1_003N
+        },
+        {
+            category: "Asian alone", 
+            number2010: +raw2010Data.P001003,
+            number2020: +raw2020Data.P1_003N
+        },
+        {
+            category: "Native Hawaiian and Other Pacific Islander alone", 
+            number2010: +raw2010Data.P001003,
+            number2020: +raw2020Data.P1_003N
+        },
+        {
+            category: "Two or more races", 
+            number2010: +raw2010Data.P001003,
+            number2020: +raw2020Data.P1_003N
+        },
+    ]
+    console.log(groupedData)
     var self = this;
     var divRaceBarChart = d3.select("#race").classed("content", true);
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
@@ -116,11 +150,11 @@
         .enter().append("rect")
             .attr("width", 100)
             .attr("x", function(d) {
-                console.log(x1(d.category)) 
                 return x1(d.category); 
             })
             .style("fill","red") 
             .attr("y", function(d) { 
+                console.log(d.number)
                 return y(d.number); 
             })
             .attr("height", function(d) {
