@@ -130,18 +130,26 @@
     var divRaceBarChart = d3.select("#race").classed("content", true);
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
 
-    var x0  = d3.scaleBand().rangeRound([0, 500], .5);
+    var x0  = d3.scaleBand().rangeRound([0, 1000], .5);
     var x1  = d3.scaleBand();
     var y   = d3.scaleLinear().rangeRound([600, 0]);
 
-    var xAxis = d3.axisBottom().scale(x0)
-                .tickValues(groupedData.map(d=>d.Year));
+    var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
+    xScale.domain(labels)
+    var yScale = d3.scaleLinear().range ([600, 0]);
+    yScale.domain([0, d3.max(values)])
 
-    var yAxis = d3.axisLeft().scale(y);
+
+    var xAxis = d3.axisBottom().scale(xScale)
+                .tickValues(labels)
+
+    var yAxis = d3.axisLeft().scale(yScale);
+
+    
 
     self.svg = divRaceBarChart.append("svg")
-        .attr("width",1000)
-        .attr("height",600)
+        .attr("width",1200)
+        .attr("height",700)
         .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });
@@ -159,15 +167,10 @@
         })
     ]);
 
-    var colors = d3.scaleQuantize()
-    .domain([0,1000])
-    .range(["#5E4FA2", "#3288BD", "#66C2A5", "#ABDDA4", "#E6F598", 
-    "#FFFFBF", "#FEE08B", "#FDAE61", "#F46D43", "#D53E4F", "#9E0142"]);
-
     self.svg.append("g")
+    .call(xAxis)
     .attr("class", "x axis")
     .attr("transform", "translate(0," + 600 + ")")
-    .call(xAxis);
 
     self.svg.append("g")
       .attr("class", "y axis")
@@ -181,11 +184,7 @@
             .style('font-weight','bold')
             .text("Value"); //why are you not showing?
         
-    var xScale = d3.scaleBand().range ([0, 1000]).padding(0.4)
-    xScale.domain(labels)
-    var yScale = d3.scaleLinear().range ([600, 0]);
-    yScale.domain([0, d3.max(values)])
-
+  
 
     var slice = self.svg.selectAll(".slice")
       .data(values)
@@ -203,11 +202,10 @@
                 return xScale(labels[i]); 
             })
             .style("fill",function(d, i){
-                console.log(i)
                 if(i % 2 == 0){
-                    return "red"
+                    return "#1F7A8C"
                 } else {
-                    return "blue"
+                    return "#B9314F"
                 }
             }) 
             .attr("y", function(d) {
@@ -216,7 +214,23 @@
             .attr("height", function(d, i) {
                 return 600 - yScale(d); 
             })
+      
         
+        var textLabels = self.svg.selectAll("barLabels")
+            .data(values)
+            .enter()
+            .append("text")
+            .attr("x", function(d, i) {
+                return (xScale(labels[i]) + 25); 
+            })  
+            .attr("y", function(d) {
+                return (yScale(d)-5); 
+            })
+            .text(function(d){
+                console.log(d)
+                return d; 
+            })
+
     
            
         
