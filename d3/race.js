@@ -52,42 +52,85 @@
 
     let categoryData = [
         {
-            category: "White alone", 
-            number2010W: +raw2010Data.P001003,
-            number2020W: +raw2020Data.P1_003N
+            "Category": "White alone",
+            "Data":[
+                {number2010: +raw2010Data.P001003},
+                {number2020: +raw2020Data.P1_003N}
+            ]
         },
         {
-            category: "Black or African American alone", 
-            number2010BAA: +raw2010Data.P001003,
-            number2020: +raw2020Data.P1_003N
+            "Category": "Black or African American alone",
+            "Data":[
+                {number2010: +raw2010Data.P001004},
+                {number2020: +raw2020Data.P1_004N}
+            ]
         },
         {
-            category: "American Indian and Alaska Native alone", 
-            number2010: +raw2010Data.P001003,
-            number2020: +raw2020Data.P1_003N
+            "Category": "American Indian and Alaska Native alone",
+            "Data":[
+                {number2010: +raw2010Data.P001005},
+                {number2020: +raw2020Data.P1_005N}
+            ]
         },
         {
-            category: "Asian alone", 
-            number2010: +raw2010Data.P001003,
-            number2020: +raw2020Data.P1_003N
+            "Category": "Asian alone",
+            "Data":[
+                {number2010: +raw2010Data.P001006},
+                {number2020: +raw2020Data.P1_006N}
+            ]
         },
         {
-            category: "Native Hawaiian and Other Pacific Islander alone", 
-            number2010: +raw2010Data.P001003,
-            number2020: +raw2020Data.P1_003N
+            "Category": "Native Hawaiian and Other Pacific Islander alone",
+            "Data":[
+                {number2010: +raw2010Data.P001007},
+                {number2020: +raw2020Data.P1_007N}
+            ]
         },
         {
-            category: "Two or more races", 
-            number2010: +raw2010Data.P001003,
-            number2020: +raw2020Data.P1_003N
-        },
+        "Category": "Two or more races",
+        "Data":[
+            {number2010: +raw2010Data.P001008},
+            {number2020: +raw2020Data.P1_008N}
+        ]
+    }
     ]
-    console.log(groupedData)
+
+    var values = [
+        +raw2010Data.P001003,
+        +raw2020Data.P1_003N,
+        +raw2010Data.P001004,
+        +raw2020Data.P1_004N,
+        +raw2010Data.P001005,
+        +raw2020Data.P1_005N,
+        +raw2010Data.P001006,
+        +raw2020Data.P1_006N,
+        +raw2010Data.P001007,
+        +raw2020Data.P1_007N,
+        +raw2010Data.P001008,
+        +raw2020Data.P1_008N
+    ]
+
+    var labels = [
+        "White alone, 2010",
+        "White alone, 2020",
+        "Black or African American alone, 2010",
+        "Black or African American alone, 2020",
+        "American Indian and Alaska Native alone, 2010",
+        "American Indian and Alaska Native alone, 2020",
+        "Asian alone, 2010",
+        "Asian alone, 2020",
+        "Native Hawaiian and Other Pacific Islander alone, 2010",
+        "Native Hawaiian and Other Pacific Islander alone, 2020",
+        "Two or more races, 2010",
+        "Two or more races, 2020"
+    ]
+
+
     var self = this;
     var divRaceBarChart = d3.select("#race").classed("content", true);
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
 
-    var x0  = d3.scaleBand().rangeRound([0, 1000], .5);
+    var x0  = d3.scaleBand().rangeRound([0, 500], .5);
     var x1  = d3.scaleBand();
     var y   = d3.scaleLinear().rangeRound([600, 0]);
 
@@ -116,6 +159,11 @@
         })
     ]);
 
+    var colors = d3.scaleQuantize()
+    .domain([0,1000])
+    .range(["#5E4FA2", "#3288BD", "#66C2A5", "#ABDDA4", "#E6F598", 
+    "#FFFFBF", "#FEE08B", "#FDAE61", "#F46D43", "#D53E4F", "#9E0142"]);
+
     self.svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + 600 + ")")
@@ -133,33 +181,43 @@
             .style('font-weight','bold')
             .text("Value"); //why are you not showing?
         
+    var xScale = d3.scaleBand().range ([0, 1000]).padding(0.4)
+    xScale.domain(labels)
+    var yScale = d3.scaleLinear().range ([600, 0]);
+    yScale.domain([0, d3.max(values)])
 
-    
+
     var slice = self.svg.selectAll(".slice")
-      .data(groupedData)
+      .data(values)
       .enter().append("g")
       .attr("class", "g")
-      .attr("transform",function(d) { 
-          return "translate(" + x0(d.Year) + ",0)"; 
+      .attr("transform",function(d, i) {
+          return "translate(" + x1(labels[i]) + ",0)"; 
         });
 
       slice.selectAll("rect")
-      .data(function(d) { 
-          return d.Data; 
-        })
+      .data(values)
         .enter().append("rect")
-            .attr("width", 100)
-            .attr("x", function(d) {
-                return x1(d.category); 
+            .attr("width", xScale.bandwidth())
+            .attr("x", function(d, i) {
+                return xScale(labels[i]); 
             })
-            .style("fill","red") 
-            .attr("y", function(d) { 
-                console.log(d.number)
-                return y(d.number); 
+            .style("fill",function(d, i){
+                console.log(i)
+                if(i % 2 == 0){
+                    return "red"
+                } else {
+                    return "blue"
+                }
+            }) 
+            .attr("y", function(d) {
+                return yScale(d); 
             })
-            .attr("height", function(d) {
-                return 600 - y(d.number); 
-            });
+            .attr("height", function(d, i) {
+                return 600 - yScale(d); 
+            })
+        
+    
            
         
    
