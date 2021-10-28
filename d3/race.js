@@ -143,7 +143,8 @@
     var xAxis = d3.axisBottom().scale(xScale)
                 .tickValues(labels)
 
-    var yAxis = d3.axisLeft().scale(yScale);
+    var yAxis = d3.axisLeft().scale(yScale)
+                .tickValues(values)
 
     
 
@@ -235,13 +236,16 @@
             .enter()
             .append("text")
             .attr("x", function(d, i) {
-                return (xScale(labels[i]) + 25); 
+                return (xScale(labels[i]) + 27); 
             })  
             .attr("y", function(d) {
-                return (yScale(d)-5); 
+                if(yScale(d)<=0){
+                    return (yScale(d)+20);
+                } else{
+                    return (yScale(d)-5); 
+                }
             })
             .text(function(d){
-                console.log(d)
                 return d; 
             })
 
