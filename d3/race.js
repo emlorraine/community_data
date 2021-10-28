@@ -111,18 +111,18 @@
     ]
 
     var labels = [
-        "White alone, 2010",
-        "White alone, 2020",
-        "Black or African American alone, 2010",
-        "Black or African American alone, 2020",
-        "American Indian and Alaska Native alone, 2010",
-        "American Indian and Alaska Native alone, 2020",
-        "Asian alone, 2010",
-        "Asian alone, 2020",
-        "Native Hawaiian and Other Pacific Islander alone, 2010",
-        "Native Hawaiian and Other Pacific Islander alone, 2020",
-        "Two or more races, 2010",
-        "Two or more races, 2020"
+        "\n White alone, 2010",
+        "\n White alone, 2020",
+        "\n Black or African American alone, 2010",
+        "\n Black or African American alone, 2020",
+        "\n American Indian and Alaska Native alone, 2010",
+        "\n American Indian and Alaska Native alone, 2020",
+        "\n Asian alone, 2010",
+        "\n Asian alone, 2020",
+        "\n Native Hawaiian and Other Pacific Islander alone, 2010",
+        "\n Native Hawaiian and Other Pacific Islander alone, 2020",
+        "\n Two or more races, 2010",
+        "\n Two or more races, 2020"
     ]
 
 
@@ -149,7 +149,7 @@
 
     self.svg = divRaceBarChart.append("svg")
         .attr("width",1200)
-        .attr("height",700)
+        .attr("height",1000)
         .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });
@@ -167,10 +167,24 @@
         })
     ]);
 
+    var insertLinebreaks = function (d) {
+        var el = d3.select(this);
+        var words = d.split(' ');
+        el.text('');
+        for (var i = 0; i < words.length; i++) {
+            var tspan = el.append('tspan').text(words[i]);
+            if (i > 0)
+                tspan.attr('x', 0).attr('dy', '15');
+        }
+    };
+
     self.svg.append("g")
-    .call(xAxis)
     .attr("class", "x axis")
     .attr("transform", "translate(0," + 600 + ")")
+    .call(xAxis)
+    .selectAll("text")
+    .each(insertLinebreaks)	
+
 
     self.svg.append("g")
       .attr("class", "y axis")
