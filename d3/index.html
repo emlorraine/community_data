@@ -23,7 +23,29 @@
         </h1>
 
         <!-- Visualization placeholders -->
+        <div class = "meta-data">
+          <h2>Race & Ethnicity Data</h2>
+          <button id='saveButton'>Export this chart to PNG</button>
+        </div>
         <div id="race"></div>
+
+        <div class = "meta-data">
+          <h2>Income Data</h2>
+          <button id='saveButton'>Export this chart to PNG</button>
+        </div>
+        <div id="income"></div>
+
+        <div class = "meta-data">
+          <h2>Educational Attainment Data</h2>
+          <button id='saveButton'>Export this chart to PNG</button>
+        </div>
+        <div id="education"></div>
+
+        <div class = "meta-data">
+          <h2>Age & Sex Data</h2>
+          <button id='saveButton'>Export this chart to PNG</button>
+        </div>
+        <div id="age"></div>
       
       </div>
     </div>
@@ -32,7 +54,12 @@
 
   <!-- Load data, create visualizations -->
   <script src="race.js"></script>
+  <script src="education.js"></script>
   <script src="main.js"></script>
+  <script src="vendor/save-svg-as-png/lib/saveSvgAsPng.js"></script>
+
 
 </body>
 </html>
+
+
