@@ -1,18 +1,7 @@
 /**
  * Constructor for the RaceBarChart
- */
- function EducationalAttainmentChart(data){
-    var self = this;
-    self.init(data);
-};
-/**
- * Initializes the svg elements required to lay the bars
- */
-
- EducationalAttainmentChart.prototype.init = function(rawData){
-    var raw2010Data = rawData[0][1]; 
-    var raw2020Data = rawData[1][1]; 
-
+ * 
+ * 
     //2010
     //Less than high school: S1501_C01_008E
     //High school or equivalent: S1501_C01_009E
@@ -26,6 +15,19 @@
     //Bachelor's degree or higher: (S1501_C01_005E + S1501_C01_012E + S1501_C01_013E) / (S1501_C01_001E + S1501_C01_006E)
 
 
+
+ */
+ function EducationalAttainmentChart(data){
+    var self = this;
+    self.init(data);
+};
+/**
+ * Initializes the svg elements required to lay the bars
+ */
+
+ EducationalAttainmentChart.prototype.init = function(rawData){
+    var raw2010Data = rawData[0][1]; 
+    var raw2020Data = rawData[1][1]; 
 
     var values2010 = [
         +raw2010Data.S1501_C01_008E,
@@ -163,40 +165,46 @@
     }
     console.log(bachelorsOrHigher2020Array)
 
-
-
-
-
     var self = this;
     var divEducationWaffleChart = d3.select("#education").classed("content", true);
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
 
     self.svg = divEducationWaffleChart.append("svg")
-        .attr("width",1200)
-        .attr("height",1000)
+        .attr("width",500)
+        .attr("height",500)
         .attr("transform", "translate(" + self.margin.left + ",0)")
 
+        //Less than high school, 2010 
         self.svg.selectAll("rect")
-        .data(lessthanHS2010Array)
+        .data(lessthanHS2010Array.reverse())
         .enter()
         .append("rect")
-        .attr("width", 25)
-        .attr("height", 25)
+        .attr("width", 30)
+        .attr("height", 30)
         .attr("x", function(d,i){
-            return Math.floor(i%10) * 100
+            return Math.floor(i%10) * 50
         })
         .attr("y", function(d,i){
-           return Math.floor(i/10)%10 * 100
+           return Math.floor(i/10)%10 * 50
         })
         .attr("fill", function(d){
             console.log(d)
             if(d=="O"){
-                return "black"; 
+                return "grey"; 
             }
             else{
-                return "red"; 
+                return "#1F7A8C"; 
             }
         })
+
+        self.svg = divEducationWaffleChart.append("svg")
+        .attr("width",500)
+        .attr("height",500)
+        .attr("transform", "translate(" + self.margin.left + ",0)")
+
+        
+
+
 
 
 
