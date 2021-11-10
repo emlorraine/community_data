@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    margin-left: 100px; 
   }
   
   h1 {
@@ -9,6 +10,7 @@ body {
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
+    text-align: center;
   }
   
   h1 .divider {
@@ -28,3 +30,10 @@ body {
     display:inline-block;
     margin-top: 100px;
   }
+
+  button{
+    margin-top:10px;
+    margin-bottom:20px;
+
+  }
+
