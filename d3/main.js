@@ -24,8 +24,13 @@
             var educationalAttainmentChart = new EducationalAttainmentChart(values);
         });
 
+        Promise.all([
+            d3.csv("./data/Baden/RawData/Age/2010.csv"),
+            d3.csv("./data/Baden/RawData/Age/2020.csv")
+            ]).then((values) => {
+            var ageChart = new AgeChart(values);
+        });
     }
-
     /**
      *
      * @constructor
