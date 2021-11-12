@@ -76,19 +76,15 @@ AgeChart.prototype.init = function(rawData){
         (+raw2020Data.S0101_C01_019E/100)*totalPopulation2020,
     ]
 
-    var xScale = d3.scaleBand().range ([0, 500]).padding(0)
+    var max2010 = Math.max(data2010)
+    var max2020 = Math.max(data2020)
+    var maxValue = Math.max(max2010, max2020)
+
+
+    var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
     xScale.domain(labels)
     var yScale = d3.scaleLinear().range ([500, 0]);
-    yScale.domain([0, d3.max(values)])
-
-    var xAxis = d3.axisBottom().scale(xScale)
-                .tickValues(labels)
-
-    var yAxis = d3.axisLeft().scale(yScale)
-                .ticks(10, ".0f"); 
-
-
-
+    yScale.domain([0, maxValue])
 
 
     var ageDiv = d3.select("#age")
@@ -96,12 +92,73 @@ AgeChart.prototype.init = function(rawData){
         self.svg = ageDiv.append("svg")
             .attr("width",1500)
             .attr("height",500)
+            .append("g")
             .attr("transform", "translate(" + self.margin.left + ",0)")
 
-        self.svg.append("g")
-            .selectAll("rect")
+        self.svg.selectAll("rect")
             .data(data2010)
-            .append("rect")
+            .enter().append("rect")
+            .attr("width", xScale.bandwidth())
+            .attr("x", function(d, i) {
+                return xScale(labels[i]); 
+            })
+            
+            .attr("y", function(d) {
+                return yScale(d); 
+            })
+            .attr("height", function(d, i) {
+                return (d); 
+            })
+            .style("fill", "#1F7A8C")
+            // .attr("transform",  "rotate(270)")
+        
+        self.svg.selectAll("rect")
+            .data(data2020)
+            .enter().append("rect")
+            .attr("width", xScale.bandwidth())
+            .attr("x", function(d, i) {
+                return xScale(labels[i]); 
+            })
+            .attr("y", function(d) {
+                return yScale(d); 
+            })
+            .attr("height", function(d, i) {
+                console.log(d)
+                return (d); 
+            })
+            .style("fill", "#B9314F")
+
+
+
+
+        // var textLabels2010 = self.svg.selectAll("barLabels")
+        //     .data(labels)
+        //     .enter()
+        //     .append("text")
+        //     .attr("x", function(d, i) {
+        //         return (xScale(labels[i]) + 27); 
+        //     })  
+        //     .attr("y", function(d) {
+        //         return d;
+                // if(yScale(d)<=0){
+                //     return (yScale(d)+20);
+                // } else{
+                //     return (yScale(d)-5); 
+                // }
+            // })
+            // .attr("transform", "translate(100, 0)") 
+            // .text(function(d){
+            //     return d; 
+            // })
+      
+      
+
+    
+
+    
+        
+        
+     
 
 
    
