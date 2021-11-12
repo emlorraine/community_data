@@ -30,6 +30,12 @@
             ]).then((values) => {
             var ageChart = new AgeChart(values);
         });
+
+        Promise.all([
+            d3.csv("./data/Testing/poverty.csv"),
+            ]).then((values) => {
+            var povertyChart = new PovertyChart(values);
+        });
     }
     /**
      *

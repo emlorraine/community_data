@@ -187,7 +187,7 @@
             })
             .attr("fill", function(d){
                 if(d=="O"){
-                    return "grey"; 
+                    return "#D3D3D3"; 
                 }
                 else{
                     return "#1F7A8C"; 
@@ -216,7 +216,7 @@
             })
             .attr("fill", function(d){
                 if(d=="O"){
-                    return "grey"; 
+                    return "#D3D3D3"; 
                 }
                 else{
                     return "#1F7A8C"; 
@@ -244,7 +244,7 @@
             })
             .attr("fill", function(d){
                 if(d=="O"){
-                    return "grey"; 
+                    return "#D3D3D3"; 
                 }
                 else{
                     return "#1F7A8C"; 
@@ -273,7 +273,7 @@
             })
             .attr("fill", function(d){
                 if(d=="O"){
-                    return "grey"; 
+                    return "#D3D3D3"; 
                 }
                 else{
                     return "#B9314F"; 
@@ -302,7 +302,7 @@
             })
             .attr("fill", function(d){
                 if(d=="O"){
-                    return "grey"; 
+                    return "#D3D3D3"; 
                 }
                 else{
                     return "#B9314F"; 
@@ -330,7 +330,7 @@
             })
             .attr("fill", function(d){
                 if(d=="O"){
-                    return "grey"; 
+                    return "#D3D3D3"; 
                 }
                 else{
                     return "#B9314F"; 
