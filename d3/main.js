@@ -19,7 +19,10 @@
 
         Promise.all([
             d3.csv("./data/Baden/RawData/Educational_Attainment/2010.csv"),
-            d3.csv("./data/Baden/RawData/Educational_Attainment/2020.csv")
+            d3.csv("./data/Baden/RawData/Educational_Attainment/2020.csv"),
+            d3.csv("./2010.csv"),
+            d3.csv("./2020.csv"),
+
             ]).then((values) => {
             var educationalAttainmentChart = new EducationalAttainmentChart(values);
         });

@@ -1,22 +1,4 @@
-/**
- * Constructor for the RaceBarChart
- * 
- * 
-    //2010
-    //Less than high school: S1501_C01_008E
-    //High school or equivalent: S1501_C01_009E
-    //Some college or associate's degree: S1501_C01_010E + S1501_C01_011E
-    //Bachelor's degree or higher: S1501_C01_012E + S1501_C01_013E
 
-    //2020
-    //Less than high school: (S1501_C01_002E + S1501_C01_008E) / (S1501_C01_001E + S1501_C01_006E) 
-    //High school or equivalent: (S1501_C01_003E + S1501_C01_009E) / (S1501_C01_001E + S1501_C01_006E)
-    //Some college or associate's degree: (S1501_C01_004E + S1501_C01_010E + S1501_C01_011E) / (S1501_C01_001E + S1501_C01_006E)
-    //Bachelor's degree or higher: (S1501_C01_005E + S1501_C01_012E + S1501_C01_013E) / (S1501_C01_001E + S1501_C01_006E)
-
-
-
- */
  function EducationalAttainmentChart(data){
     var self = this;
     self.init(data);
@@ -26,57 +8,53 @@
  */
 
  EducationalAttainmentChart.prototype.init = function(rawData){
-    var raw2010Data = rawData[0][1]; 
-    var raw2020Data = rawData[1][1]; 
 
-    var values2010 = [
-        +raw2010Data.S1501_C01_008E,
-        +raw2010Data.S1501_C01_009E,
-        (+raw2010Data.S1501_C01_010E + +raw2010Data.S1501_C01_011E),
-        (+raw2010Data.S1501_C01_012E + +raw2010Data.S1501_C01_013E),
+    //SOCIAL EXPLORER DATA: 
+    var socialExplorer2010Data = rawData[2]
+    var socialExplorer2020Data = rawData[3]
+
+
+    data2010 = [
+        socialExplorer2010Data[26],//Total population
+        socialExplorer2010Data[27],//Less than high school
+        socialExplorer2010Data[28],//High school or equivalent 
+        // socialExplorer2010Data[29],//Some college or associate's degree
+        socialExplorer2010Data[30]//Bachelor's degree or higher
     ]
-
-    var denom2020 = (+raw2020Data.S1501_C01_001E + +raw2020Data.S1501_C01_006E) 
-
-    var values2020 = [
-        (+raw2020Data.S1501_C01_002E + +raw2020Data.S1501_C01_008E)/denom2020,
-        (+raw2020Data.S1501_C01_003E + +raw2020Data.S1501_C01_009E) / denom2020,
-        (+raw2020Data.S1501_C01_004E + +raw2020Data.S1501_C01_010E + +raw2020Data.S1501_C01_011E) / denom2020,
-        (+raw2020Data.S1501_C01_005E + +raw2020Data.S1501_C01_012E + +raw2020Data.S1501_C01_013E) / denom2020
+    data2020 = [
+        socialExplorer2020Data[26],//Total population
+        socialExplorer2020Data[27],//Less than high school
+        socialExplorer2020Data[28],//High school or equivalent 
+        socialExplorer2020Data[29]//Bachelor's degree or higher
     ]
     var labels = [
         "\n Less than high school",
         "\n High school or equivalent",
-        "\n Some college or associate's degree",
+        // "\n Some college or associate's degree",
         "\n Bachelor's degree or higher",
     ]
 
-    var population2010 = +raw2010Data.S1501_C01_001E + +raw2010Data.S1501_C01_006E
-    var population2020 = +raw2020Data.S1501_C01_001E + +raw2020Data.S1501_C01_006E
+    var population2010 = +(data2010[0].Value).replace(",", "")
+    var population2020 = +(data2020[0].value).replace(",", "")
 
     var roundedPopulation2010 = Math.round(population2010/1000)*1000
     var roundedPopulation2020 = Math.round(population2020/1000)*1000
 
-    var sqValue2010 = roundedPopulation2010 / 100
-    var sqValue2020 = roundedPopulation2020 / 100
+    var lessThanHS2010 = Math.round(+(data2010[1].Value).replace(",", "")/100 * roundedPopulation2010)/ roundedPopulation2010; 
+    var lessThanHS2020 = Math.round(+(data2020[1].value).replace(",", "")/100 * roundedPopulation2020) /roundedPopulation2020; 
 
-    var lessThanHS2010 = Math.round(values2010[0]/100 * roundedPopulation2010)/ roundedPopulation2010; 
-    var lessThanHS2020 = Math.round(values2020[0] * roundedPopulation2020) /roundedPopulation2020; 
+    var hsOrEquiv2010 = Math.round(+(data2010[2].Value).replace(",", "")/100 * roundedPopulation2010) /roundedPopulation2010; 
+    var hsOrEquiv2020 = Math.round(+(data2020[2].value).replace(",", "")/100 * roundedPopulation2020)/roundedPopulation2020; 
 
-    var hsOrEquiv2010 = Math.round(values2010[1]/100 * roundedPopulation2010) /roundedPopulation2010; 
-    var hsOrEquiv2020 = Math.round(values2020[1] * roundedPopulation2020)/roundedPopulation2020; 
+    var bachelorOrHigher2010 = Math.round(+(data2010[3].Value).replace(",", "")/100 * roundedPopulation2010) / roundedPopulation2010;
+    var bachelorOrHigher2020 = Math.round(+(data2020[3].value).replace(",", "")/100 * roundedPopulation2020)/roundedPopulation2020;
 
-    var someCollegeOrAssociates2010 = Math.round(values2010[2]/100 * roundedPopulation2010) /roundedPopulation2010;
-    var someCollegeOrAssociates2020 = Math.round(values2020[2] * roundedPopulation2020)/roundedPopulation2020;
-
-    var bachelorOrHigher2010 = Math.round(values2010[3]/100 * roundedPopulation2010) / roundedPopulation2010;
-    var bachelorOrHigher2020 = Math.round(values2020[3] * roundedPopulation2020)/roundedPopulation2020;
 
     
     //2010
     //Less than high school:
     var lessthanHS2010Array = []
-    var lessthanHS2010Ratio = lessThanHS2010 * 100; 
+    var lessthanHS2010Ratio = lessThanHS2010; 
     for(var i = 0; i < 100; i++){
         if(i < lessthanHS2010Ratio){
             lessthanHS2010Array.push("X")
@@ -86,7 +64,7 @@
     }
     //High school or equivalent: 
     var hsOrEquiv2010Array = []
-    var hsOrEquiv2010Ratio = hsOrEquiv2010 * 100; 
+    var hsOrEquiv2010Ratio = hsOrEquiv2010; 
     for(var i = 0; i < 100; i++){
         if(i < hsOrEquiv2010Ratio){
             hsOrEquiv2010Array.push("X")
@@ -94,19 +72,10 @@
             hsOrEquiv2010Array.push("O")
         }
     }
-    //Some college or associate's degree:
-    var someCollegeOrAssociates2010Array = []
-    var someCollegeOrAssociates2010Ratio = someCollegeOrAssociates2010 * 100; 
-    for(var i = 0; i < 100; i++){
-        if(i < someCollegeOrAssociates2010Ratio){
-            someCollegeOrAssociates2010Array.push("X")
-        } else{
-            someCollegeOrAssociates2010Array.push("O")
-        }
-    }
+
     //Bachelor's degree or higher:
     var bachelorsOrHigher2010Array = []
-    var bachelorsOrHigher2010Ratio = bachelorOrHigher2010 * 100; 
+    var bachelorsOrHigher2010Ratio = bachelorOrHigher2010; 
     for(var i = 0; i < 100; i++){
         if(i < bachelorsOrHigher2010Ratio){
             bachelorsOrHigher2010Array.push("X")
@@ -118,7 +87,7 @@
     //2020
     //Less than high school:
     var lessthanHS2020Array = []
-    var lessthanHS2020Ratio = lessThanHS2020 * 100; 
+    var lessthanHS2020Ratio = lessThanHS2020; 
     for(var i = 0; i < 100; i++){
         if(i < lessthanHS2020Ratio){
             lessthanHS2020Array.push("X")
@@ -128,7 +97,7 @@
     }
     //High school or equivalent: 
     var hsOrEquiv2020Array = []
-    var hsOrEquiv2020Ratio = hsOrEquiv2020 * 100; 
+    var hsOrEquiv2020Ratio = hsOrEquiv2020; 
     for(var i = 0; i < 100; i++){
         if(i < hsOrEquiv2020Ratio){
             hsOrEquiv2020Array.push("X")
@@ -136,19 +105,10 @@
             hsOrEquiv2020Array.push("O")
         }
     }
-    //Some college or associate's degree:
-    var someCollegeOrAssociates2020Array = []
-    var someCollegeOrAssociates2020Ratio = someCollegeOrAssociates2020 * 100; 
-    for(var i = 0; i < 100; i++){
-        if(i < someCollegeOrAssociates2020Ratio){
-            someCollegeOrAssociates2020Array.push("X")
-        } else{
-            someCollegeOrAssociates2020Array.push("O")
-        }
-    }
+
     //Bachelor's degree or higher:
     var bachelorsOrHigher2020Array = []
-    var bachelorsOrHigher2020Ratio = bachelorOrHigher2020 * 100; 
+    var bachelorsOrHigher2020Ratio = bachelorOrHigher2020; 
     for(var i = 0; i < 100; i++){
         if(i < bachelorsOrHigher2020Ratio){
             bachelorsOrHigher2020Array.push("X")
@@ -157,13 +117,6 @@
         }
     }
     var self = this;
-    // var lessThanHighSchool2010Svg = d3.select("#lessThanHighSchool2010").classed("content", true);
-    // self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-
-    // var lessThanHighSchool2010 = lessThanHighSchool2010Svg.append("svg")
-    //     .attr("width",500)
-    //     .attr("height",500)
-    //     .attr("transform", "translate(" + self.margin.left + ",0)")
 
         //Less than high school, 2010 
         var lessThanHighSchool2010Div = d3.select("#lessThanHighSchool2010")
@@ -194,16 +147,16 @@
                 }
             })
 
-        //Some college or associate's, 2010 
-        var someCollegeOrAssociates2010Div = d3.select("#someCollegeOrAssociates2010")
+        //High school or equivalent, 2010 
+        var highSchoolOrEquivalent2010Div = d3.select("#highSchoolOrEquivalent2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = someCollegeOrAssociates2010Div.append("svg")
+        self.svg = highSchoolOrEquivalent2010Div.append("svg")
             .attr("width",500)
             .attr("height",500)
             .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
-            .data(someCollegeOrAssociates2010Array.reverse())
+            .data(hsOrEquiv2010Array.reverse())
             .enter()
             .append("rect")
             .attr("width", 30)
@@ -222,6 +175,7 @@
                     return "#1F7A8C"; 
                 }
             })
+
         //College or higher, 2010 
         var collegeOrHigher2010 = d3.select("#collegeOrHigher2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
@@ -280,16 +234,16 @@
                 }
             })
 
-        //Some college or associate's, 2019 
-        var someCollegeOrAssociates2019Div = d3.select("#someCollegeOrAssociates2019")
+        //High school or equivalent, 2019 
+        var highSchoolOrEquivalent2019Div = d3.select("#highSchoolOrEquivalent2019")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = someCollegeOrAssociates2019Div.append("svg")
+        self.svg = highSchoolOrEquivalent2019Div.append("svg")
             .attr("width",500)
             .attr("height",500)
             .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
-            .data(someCollegeOrAssociates2020Array.reverse())
+            .data(hsOrEquiv2020Array.reverse())
             .enter()
             .append("rect")
             .attr("width", 30)
@@ -308,6 +262,7 @@
                     return "#B9314F"; 
                 }
             })
+
         //College or higher, 2019 
         var collegeOrHigher2019 = d3.select("#collegeOrHigher2019")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
