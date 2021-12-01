@@ -8,17 +8,14 @@
  */
 
  EducationalAttainmentChart.prototype.init = function(rawData){
-
     //SOCIAL EXPLORER DATA: 
-    var socialExplorer2010Data = rawData[2]
-    var socialExplorer2020Data = rawData[3]
-
+    var socialExplorer2010Data = rawData[0]
+    var socialExplorer2020Data = rawData[1]
 
     data2010 = [
         socialExplorer2010Data[26],//Total population
         socialExplorer2010Data[27],//Less than high school
         socialExplorer2010Data[28],//High school or equivalent 
-        // socialExplorer2010Data[29],//Some college or associate's degree
         socialExplorer2010Data[30]//Bachelor's degree or higher
     ]
     data2020 = [
@@ -30,23 +27,22 @@
     var labels = [
         "\n Less than high school",
         "\n High school or equivalent",
-        // "\n Some college or associate's degree",
         "\n Bachelor's degree or higher",
     ]
 
-    var population2010 = +(data2010[0].Value).replace(",", "")
+    var population2010 = +(data2010[0].value).replace(",", "")
     var population2020 = +(data2020[0].value).replace(",", "")
 
     var roundedPopulation2010 = Math.round(population2010/1000)*1000
     var roundedPopulation2020 = Math.round(population2020/1000)*1000
 
-    var lessThanHS2010 = Math.round(+(data2010[1].Value).replace(",", "")/100 * roundedPopulation2010)/ roundedPopulation2010; 
+    var lessThanHS2010 = Math.round(+(data2010[1].value).replace(",", "")/100 * roundedPopulation2010)/ roundedPopulation2010; 
     var lessThanHS2020 = Math.round(+(data2020[1].value).replace(",", "")/100 * roundedPopulation2020) /roundedPopulation2020; 
 
-    var hsOrEquiv2010 = Math.round(+(data2010[2].Value).replace(",", "")/100 * roundedPopulation2010) /roundedPopulation2010; 
+    var hsOrEquiv2010 = Math.round(+(data2010[2].value).replace(",", "")/100 * roundedPopulation2010) /roundedPopulation2010; 
     var hsOrEquiv2020 = Math.round(+(data2020[2].value).replace(",", "")/100 * roundedPopulation2020)/roundedPopulation2020; 
 
-    var bachelorOrHigher2010 = Math.round(+(data2010[3].Value).replace(",", "")/100 * roundedPopulation2010) / roundedPopulation2010;
+    var bachelorOrHigher2010 = Math.round(+(data2010[3].value).replace(",", "")/100 * roundedPopulation2010) / roundedPopulation2010;
     var bachelorOrHigher2020 = Math.round(+(data2020[3].value).replace(",", "")/100 * roundedPopulation2020)/roundedPopulation2020;
 
 

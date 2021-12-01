@@ -10,35 +10,32 @@
     function init() {
         //Creating instances for each visualization
         data = [] 
-        Promise.all([
-            d3.csv("./data/Baden/RawData/Race/2010.csv"),
-            d3.csv("./data/Baden/RawData/Race/2020.csv")
-            ]).then((values) => {
-            var raceBarChart = new RaceBarChart(values);
-          });
+        // Promise.all([
+        //     d3.csv("./data/Baden/RawData/Race/2010.csv"),
+        //     d3.csv("./data/Baden/RawData/Race/2020.csv")
+        //     ]).then((values) => {
+        //     var raceBarChart = new RaceBarChart(values);
+        //   });
 
         Promise.all([
-            d3.csv("./data/Baden/RawData/Educational_Attainment/2010.csv"),
-            d3.csv("./data/Baden/RawData/Educational_Attainment/2020.csv"),
-            d3.csv("./2010.csv"),
-            d3.csv("./2020.csv"),
-
+            d3.csv("./data/baden/2010/2010/Sheet1-Table 1.csv"),
+            d3.csv("./data/baden/2019/2019/Sheet1-Table 1.csv"),
             ]).then((values) => {
             var educationalAttainmentChart = new EducationalAttainmentChart(values);
         });
 
-        Promise.all([
-            d3.csv("./data/Baden/RawData/Age/2010.csv"),
-            d3.csv("./data/Baden/RawData/Age/2020.csv")
-            ]).then((values) => {
-            var ageChart = new AgeChart(values);
-        });
+        // Promise.all([
+        //     d3.csv("./data/Baden/RawData/Age/2010.csv"),
+        //     d3.csv("./data/Baden/RawData/Age/2020.csv")
+        //     ]).then((values) => {
+        //     var ageChart = new AgeChart(values);
+        // });
 
-        Promise.all([
-            d3.csv("./data/Testing/poverty.csv"),
-            ]).then((values) => {
-            var povertyChart = new PovertyChart(values);
-        });
+        // Promise.all([
+        //     d3.csv("./data/Testing/poverty.csv"),
+        //     ]).then((values) => {
+        //     var povertyChart = new PovertyChart(values);
+        // });
     }
     /**
      *
