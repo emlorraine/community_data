@@ -1,16 +1,5 @@
 
 /**
- * DATA USED:
- * P001003: "Total!!Population of one race!!White alone"
- * P001004: "Total!!Population of one race!!Black or African American alone"
- * P001005: "Total!!Population of one race!!American Indian and Alaska Native alone"
- * P001006: "Total!!Population of one race!!Asian alone"
- * P001007: "Total!!Population of one race!!Native Hawaiian and Other Pacific Islander alone"
- * P001008: "Total!!Population of one race!!Some Other Race alone"
- * P001009: "Total!!Two or More Races"
- */
-
-/**
  * Constructor for the RaceBarChart
  */
  function RaceBarChart(data){
