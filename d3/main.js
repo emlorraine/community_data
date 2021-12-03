@@ -15,28 +15,10 @@
             d3.csv("./data/baden/2019/2019/Sheet1-Table 1.csv"),
             ]).then((values) => {
             var raceBarChart = new RaceBarChart(values);
-          });
-
-        Promise.all([
-            d3.csv("./data/baden/2010/2010/Sheet1-Table 1.csv"),
-            d3.csv("./data/baden/2019/2019/Sheet1-Table 1.csv"),
-            ]).then((values) => {
             var educationalAttainmentChart = new EducationalAttainmentChart(values);
-        });
-
-        Promise.all([
-            d3.csv("./data/baden/2010/2010/Sheet1-Table 1.csv"),
-            d3.csv("./data/baden/2019/2019/Sheet1-Table 1.csv"),
-            ]).then((values) => {
             var ageChart = new AgeChart(values);
-        });
-
-        Promise.all([
-            d3.csv("./data/baden/2010/2010/Sheet1-Table 1.csv"),
-            d3.csv("./data/baden/2019/2019/Sheet1-Table 1.csv"),
-            ]).then((values) => {
             var povertyChart = new PovertyChart(values);
-        });
+          });
     }
     /**
      *
