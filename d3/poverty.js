@@ -8,13 +8,29 @@ function PovertyChart(data){
  */
  
 PovertyChart.prototype.init = function(rawData){
-     var raw2010Data = rawData[0][1]; 
-    //  var raw2020Data = rawData[1][1];
+    console.log(rawData)
+     var raw2010Data = rawData[0]; 
+     var raw2020Data = rawData[1];
+
+    var totalUnderPovertyCount2010 = +(raw2010Data[37].value.replace(",", "")) + +(raw2010Data[42].value.replace(",", ""))
+    var totalAtOrAbovePovertyCount2010 = +(raw2010Data[38].value.replace(",", "")) + +(raw2010Data[43].value.replace(",", ""))
+
     data2010 = [
-        { label: 'Above Poverty', count: (+raw2010Data.B17003_001E - +raw2010Data.B17003_002E) }, 
-        { label: 'At or Below Poverty', count: +raw2010Data.B17003_002E }, 
+        { label: 'Above Poverty', count: totalAtOrAbovePovertyCount2010 }, 
+        { label: 'At or Below Poverty', count:  totalUnderPovertyCount2010}, 
 
     ]
+
+    var totalUnderPovertyCount2020 = +(raw2020Data[37].value.replace(",", "")) + +(raw2020Data[42].value.replace(",", ""))
+    var totalAtOrAbovePovertyCount2020 = +(raw2020Data[38].value.replace(",", "")) + +(raw2020Data[43].value.replace(",", ""))
+
+    data2020 = [
+        { label: 'Above Poverty', count: totalAtOrAbovePovertyCount2020 }, 
+        { label: 'At or Below Poverty', count: totalUnderPovertyCount2020 }, 
+
+    ]
+
+
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;
