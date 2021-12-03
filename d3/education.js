@@ -45,7 +45,6 @@
     var bachelorOrHigher2010 = Math.round(+(data2010[3].value).replace(",", "")/100 * roundedPopulation2010) / roundedPopulation2010;
     var bachelorOrHigher2020 = Math.round(+(data2020[3].value).replace(",", "")/100 * roundedPopulation2020)/roundedPopulation2020;
 
-
     
     //2010
     //Less than high school:
