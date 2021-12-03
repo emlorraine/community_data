@@ -10,95 +10,56 @@
  * Initializes the svg elements required to lay the bars
  */
  RaceBarChart.prototype.init = function(rawData){
-    var raw2010Data = rawData[0][1]; 
-    var raw2020Data = rawData[1][1]; 
+
+    var data2010 = rawData[0]
+    var data2020 = rawData[1]
+
+    var values = [
+        +(data2010[17].value.replace(",", "")),
+        +(data2020[17].value.replace(",", "")), 
+
+        +(data2010[18].value.replace(",", "")),
+        +(data2020[18].value.replace(",", "")),
+        
+        +(data2010[19].value.replace(",", "")),
+        +(data2020[19].value.replace(",", "")),
+
+        +(data2010[20].value.replace(",", "")),
+        +(data2020[20].value.replace(",", "")),
+
+        +(data2010[21].value.replace(",", "")),
+        +(data2020[21].value.replace(",", "")),
+
+        +(data2010[23].value.replace(",", "")),
+        +(data2020[23].value.replace(",", ""))
+    ]
+
     let groupedData = [
         {
         "Year": "2010",
         "Data": 
             [
-                {category: "White alone", number: +raw2010Data.P001003},
-                {category: "Black or African American alone", number: +raw2010Data.P001004},
-                {category: "American Indian and Alaska Native alone", number: +raw2010Data.P001005},
-                {category: "Asian alone", number: +raw2010Data.P001006}, 
-                {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2010Data.P001007}, 
-                {category: "Two or more races", number: +raw2010Data.P001009},
+                {category: "White alone", number: values[0]},
+                {category: "Black or African American alone", number: values[2]},
+                {category: "American Indian and Alaska Native alone", number: values[4]},
+                {category: "Asian alone", number: values[6]}, 
+                {category: "Native Hawaiian and Other Pacific Islander alone", number: values[8]}, 
+                {category: "Two or more races", number: values[10]},
             ]
         },
         {
             "Year": "2020",
             "Data": 
                 [
-                    {category: "White alone", number: +raw2020Data.P1_003N},
-                    {category: "Black or African American alone", number: +raw2020Data.P1_004N},
-                    {category: "American Indian and Alaska Native alone", number: +raw2020Data.P1_005N}, 
-                    {category: "Asian alone", number: +raw2020Data.P1_006N}, 
-                    {category: "Native Hawaiian and Other Pacific Islander alone", number: +raw2020Data.P1_007N}, 
-                    {category: "Two or more races", number: +raw2020Data.P1_009N}
+                    {category: "White alone", number: values[1]},
+                    {category: "Black or African American alone", number: values[3]},
+                    {category: "American Indian and Alaska Native alone", number: values[5]}, 
+                    {category: "Asian alone", number: values[7]}, 
+                    {category: "Native Hawaiian and Other Pacific Islander alone", number: values[9]}, 
+                    {category: "Two or more races", number: values[11]}
                 ]
             }
     ]
-
-    let categoryData = [
-        {
-            "Category": "White alone",
-            "Data":[
-                {number2010: +raw2010Data.P001003},
-                {number2020: +raw2020Data.P1_003N}
-            ]
-        },
-        {
-            "Category": "Black or African American alone",
-            "Data":[
-                {number2010: +raw2010Data.P001004},
-                {number2020: +raw2020Data.P1_004N}
-            ]
-        },
-        {
-            "Category": "American Indian and Alaska Native alone",
-            "Data":[
-                {number2010: +raw2010Data.P001005},
-                {number2020: +raw2020Data.P1_005N}
-            ]
-        },
-        {
-            "Category": "Asian alone",
-            "Data":[
-                {number2010: +raw2010Data.P001006},
-                {number2020: +raw2020Data.P1_006N}
-            ]
-        },
-        {
-            "Category": "Native Hawaiian and Other Pacific Islander alone",
-            "Data":[
-                {number2010: +raw2010Data.P001007},
-                {number2020: +raw2020Data.P1_007N}
-            ]
-        },
-        {
-        "Category": "Two or more races",
-        "Data":[
-            {number2010: +raw2010Data.P001008},
-            {number2020: +raw2020Data.P1_008N}
-        ]
-    }
-    ]
-
-    var values = [
-        +raw2010Data.P001003,
-        +raw2020Data.P1_003N,
-        +raw2010Data.P001004,
-        +raw2020Data.P1_004N,
-        +raw2010Data.P001005,
-        +raw2020Data.P1_005N,
-        +raw2010Data.P001006,
-        +raw2020Data.P1_006N,
-        +raw2010Data.P001007,
-        +raw2020Data.P1_007N,
-        +raw2010Data.P001008,
-        +raw2020Data.P1_008N
-    ]
-
     var labels = [
         "\n White alone, 2010",
         "\n White alone, 2020",
