@@ -9,7 +9,6 @@
      */
     function init() {
         //Creating instances for each visualization
-        data = [] 
         Promise.all([
             d3.csv("./data/baden/2010/2010/Sheet1-Table 1.csv"),
             d3.csv("./data/baden/2019/2019/Sheet1-Table 1.csv"),

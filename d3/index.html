@@ -20,79 +20,77 @@
       <div class="col-md-12">
         
         <!-- Headline -->
-        <h1>Community Data Sampling 
-        </h1>
+        <h1>Community Data Sampling</h1>
+
+        
 
         <!-- Visualization placeholders -->
+        <div id = "baden">
+          <h1>Baden</h1>
         <div class = "meta-data">
           <h2>Race & Ethnicity Data</h2>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='Race' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         <div id="race"></div>
-
-        <!-- <div class = "meta-data">
-          <h2>Income Data</h2>
-          <button id='saveButton'>Export this chart to PNG</button>
-        </div>
-        <div id="income"></div> -->
 
         <div class = "meta-data">
           <h2>Educational Attainment Data</h2>
           <h3>Less than high school 2010</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='LessThanHighSchool2010' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="lessThanHighSchool2010"></div>
 
           <h3>High school or equivalent 2010</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='HighSchoolOrEquivalent2010' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="highSchoolOrEquivalent2010"></div>
 
           <h3>Some college or associates 2010</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='SomeCollegeOrAssociates2010' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="someCollegeOrAssociates2010"></div>
 
           <h3>Bachelor's or higher 2010</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='CollegeOrHigher2010' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="collegeOrHigher2010"></div>
 
           <h3>Less than high school 2019</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='LessThanHighSchool2019' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="lessThanHighSchool2019"></div>
 
           <h3>High school or equivalent 2019</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='HighSchoolOrEquivalent2019' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="highSchoolOrEquivalent2019"></div>
 
 
           <h3>Some college or associates 2019</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='SomeCollegeOrAssociates2019' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="someCollegeOrAssociates2019"></div>
 
           <h3>Bachelor's or higher 2019</h3>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='CollegeOrHigher2019' onclick="save(this.id)">Export this chart to PNG</button>
           <div id="collegeOrHigher2019"></div>
         </div>
 
 
         <div class = "meta-data">
           <h2>Age & Sex Data</h2>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='Age' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         <div id="age"></div>
 
         <div class = "meta-data">
           <h2>Poverty</h2>
-          <button id='saveButton'>Export this chart to PNG</button>
+          <button id='Poverty2010' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         <h3>At or below poverty line, 2010</h3>
         <div id="poverty2010"></div>
         <h4>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</h4>
-      
-        <button id='saveButton'>Export this chart to PNG</button>
-      </div>
+        <button id='Poverty2019' onclick="save(this.id)">Export this chart to PNG</button>
       <h3>At or below poverty line, 2019</h3>
       <div id="poverty2020"></div>
       <h4>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</h4>
-    
+    </div>
+
+
+      </div>  
       </div>
     </div>
 
@@ -104,9 +102,18 @@
   <script src="race.js"></script>
   <script src="education.js"></script>
   <script src="main.js"></script>
-  <!-- <script src="vendor/save-svg-as-png/lib/saveSvgAsPng.js"></script> -->
+  <script src="saveSvgAsPng.js"></script>
+  <script type="module" src="./node_modules//save-svg-as-png/lib/saveSvgAsPng.js"></script>
 
 
+  <script>
+    function save(chartName){
+      var fileName = chartName + ".png"
+      var element = chartName.charAt(0).toLowerCase() + chartName.slice(1);
+      var chart = document.getElementById(element).getElementsByTagName('svg')[0];
+      saveSvgAsPng(chart, fileName);
+    }
+  </script>
 </body>
 </html>
 
