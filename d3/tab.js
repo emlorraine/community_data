@@ -19,7 +19,7 @@ function openBranch(evt, branchName) {
   evt.currentTarget.className += " active";
 
   //Now we need to render the d3:
-  renderD3(branchName)
+  // renderD3(branchName)
 
 }
 
@@ -32,15 +32,15 @@ function renderD3(branchName){
   data2010FileName = "./data/" + branchName +"/2010/2010/Sheet1-Table 1.csv"
   data2020FileName = "./data/" + branchName +"/2019/2019/Sheet1-Table 1.csv"
   console.log(data2010FileName, data2020FileName)
-    //Creating instances for each visualization
+    // Creating instances for each visualization
     Promise.all([
         d3.csv(data2010FileName),
         d3.csv(data2020FileName),
         ]).then((values) => {
           console.log(values)
-        // var raceBarChart = new RaceBarChart(values);
-        // var educationalAttainmentChart = new EducationalAttainmentChart(values);
-        // var ageChart = new AgeChart(values);
-        // var povertyChart = new PovertyChart(values);
+        var raceBarChart = new RaceBarChart(values);
+        var educationalAttainmentChart = new EducationalAttainmentChart(values);
+        var ageChart = new AgeChart(values);
+        var povertyChart = new PovertyChart(values);
       });
 }
