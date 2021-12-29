@@ -88,6 +88,19 @@ body {
   padding: 10px;
 }
 
+#education-block{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#age-block{
+  height:fit-content;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 #data2010{
   display: flex;
 } 
@@ -163,7 +176,6 @@ body {
   display: flex;
   padding-bottom: 150px;
 }  
-
 
 #lessThanHighSchool2019Text{
   margin-left: 175px;

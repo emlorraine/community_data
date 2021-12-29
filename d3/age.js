@@ -113,7 +113,7 @@ AgeChart.prototype.init = function(rawData){
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = ageDiv.append("svg")
             .attr("width",5000)
-            .attr("height",5000)
+            .attr("height",1500)
             .append("g")
             .attr("transform", "translate(" + self.margin.left + ",0)")
     
