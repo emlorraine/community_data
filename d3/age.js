@@ -71,7 +71,7 @@ AgeChart.prototype.init = function(rawData){
     var ageDiv = d3.select("#age2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = ageDiv.append("svg")
-            .attr("width",5000)
+            .attr("width",1750)
             .attr("height",1500)
             .append("g")
             .attr("transform", "translate(" + self.margin.left + ",0)")
@@ -112,7 +112,7 @@ AgeChart.prototype.init = function(rawData){
     var ageDiv = d3.select("#age2020")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = ageDiv.append("svg")
-            .attr("width",5000)
+            .attr("width",1600)
             .attr("height",1500)
             .append("g")
             .attr("transform", "translate(" + self.margin.left + ",0)")

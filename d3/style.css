@@ -99,6 +99,17 @@ body {
   margin: auto;
   width: 50%;
   padding: 10px;
+  display: flex;
+}
+
+#age2010{
+  flex: 1;
+} 
+
+#age2020{
+  transform: rotate(180deg);
+  flex: 1;
+  padding-top: -500px;
 }
 
 #data2010{
