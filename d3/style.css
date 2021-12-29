@@ -91,11 +91,15 @@ body {
 #data2010{
   display: flex;
 } 
+#data2019{
+  display: flex;
+} 
 
 #lessThanHighSchool2010{
   float: left;
   max-width: auto;
   padding-right: 50px;
+  padding-bottom: 150px;
   display: flex;
   
 }
@@ -104,13 +108,15 @@ body {
   float: center;
   max-width: auto;
   padding-right: 50px;
+  padding-bottom: 150px;
   display: flex;
 }
 
-#someCollegeOrAssociates2010{
+#collegeOrHigher2010{
   float:right;
   max-width: auto;
   display: flex;
+  padding-bottom: 150px;
   
 }  
 
@@ -132,6 +138,44 @@ body {
 }
 
 #collegeOrHigher2010Text{
+  margin-left: 1275px;
+  margin-top: -50px;
+}
+
+#lessThanHighSchool2019{
+  float: left;
+  max-width: auto;
+  padding-right: 50px;
+  display: flex;
+  
+}
+
+#highSchoolOrEquivalent2019{
+  float: center;
+  max-width: auto;
+  padding-right: 50px;
+  display: flex;
+}
+
+#collegeOrHigher2019{
+  float:right;
+  max-width: auto;
+  display: flex;
+  padding-bottom: 150px;
+}  
+
+
+#lessThanHighSchool2019Text{
+  margin-left: 175px;
+  margin-top: -50px;
+}
+
+#highSchoolOrEquivalent2019Text{
+  margin-left: 725px;
+  margin-top: -50px;
+} 
+
+#collegeOrHigher2019Text{
   margin-left: 1275px;
   margin-top: -50px;
 }
