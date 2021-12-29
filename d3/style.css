@@ -109,7 +109,11 @@ body {
 #age2020{
   transform: rotate(180deg);
   flex: 1;
-  padding-top: -500px;
+  padding-bottom: -500px;
+  max-height: 1120px;
+  max-width: 1500px;
+  /* position:absolute; */
+  /* top:2px */
 }
 
 #data2010{
