@@ -116,6 +116,10 @@ body {
   /* top:2px */
 }
 
+#age-header{
+  padding-bottom: 50px;
+}
+
 #data2010{
   display: flex;
 } 
@@ -206,6 +210,25 @@ body {
   margin-left: 1275px;
   margin-top: -50px;
 }
+
+#poverty-block{
+  /* height:fit-content;
+  margin: auto;
+  width: 50%;
+  padding: 10px; */
+  display: flex;
+}
+
+#poverty2010{
+  float: left;
+}
+
+#poverty2020{
+  float:right;
+
+}
+
+
 
 
 
