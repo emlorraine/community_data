@@ -55,7 +55,7 @@ AgeChart.prototype.init = function(rawData){
         "55 to 64 years",
         "65 to 74 years",
         "75 to 84 years",
-        "85 years and over"
+        "85 years & over"
     ]
     var max2010 = Math.max(populationData2010)
     var max2020 = Math.max(populationData2020)
