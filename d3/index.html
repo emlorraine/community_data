@@ -45,21 +45,21 @@
           <h3>Baden Library</h3>
 
           <div class="viz-tab">
-            <button class="viztablinks" onclick="openViz(event, 'race-block')">Race</button>
-            <button class="viztablinks" onclick="openViz(event, 'education-block')">Educational Attainment</button>
-            <button class="viztablinks" onclick="openViz(event, 'age-block')">Age</button>
-            <button class="viztablinks" onclick="openViz(event, 'poverty-block')">Poverty</button>
+            <button class="viztablinks" onclick="openRaceViz(event, 'race-block')">Race</button>
+            <button class="viztablinks" onclick="openEducationalAttainmentViz(event, 'education-block')">Educational Attainment</button>
+            <button class="viztablinks" onclick="openAgeViz(event, 'age-block')">Age</button>
+            <button class="viztablinks" onclick="openPovertyViz(event, 'poverty-block')">Poverty</button>
           </div>
   
         <div id = "viz-structure">
           <!-- Race and ethnicity -->
-        <div class = "meta-data" id="race-block">
+        <div class = "meta-data" id="race-block" class="viz_tabcontent">
           <h2>Race & Ethnicity Data</h2>
           <div id="race"></div>
           <!-- <button id='Race' onclick="save(this.id)">Export this chart to PNG</button> -->
         </div>
         <!-- Education -->
-        <div class = "meta-data" id="education-block">
+        <div class = "meta-data" id="education-block" class="viz_tabcontent">
           <h2>Educational Attainment Data</h2>
           <div id="data2010">
           <h3 class = "education-text" id = "lessThanHighSchool2010Text">Less than high school 2010</h3>
@@ -94,14 +94,14 @@
 
         </div>
         <!-- Age-->
-        <h2>Age & Sex Data</h2>
-        <div class = "meta-data" id="age-block">
+        <div class = "meta-data" id="age-block" class="viz_tabcontent">
+          <h2>Age & Sex Data</h2>
           <!-- <button id='Age' onclick="save(this.id)">Export this chart to PNG</button> -->
           <div id="age2010"></div>
           <div id="age2020"></div>
         </div>
         <!-- Poverty-->
-        <div class = "meta-data" id="poverty-block">
+        <div class = "meta-data" id="poverty-block" class="viz_tabcontent">
           <h2>Poverty</h2>
           <!-- <button id='Poverty2010' onclick="save(this.id)">Export this chart to PNG</button> -->
           <h3>At or below poverty line, 2010</h3>

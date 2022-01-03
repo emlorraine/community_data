@@ -24,19 +24,57 @@ function openBranch(evt, branchName) {
 
 }
 
-function openViz(evt, vizName) {
-  viz_ids = ['race-block', 'education-block', 'age-block', 'poverty-block']
-  // console.log("Opening:", vizName)
-  // var clicked_tab = document.getElementById('nav-ask');
+function openRaceViz(evt, vizName) {
+  var race_block = document.getElementById('race-block');
+  var education_block = document.getElementById('education-block');
+  var age_block = document.getElementById('age-block');
+  var poverty_block = document.getElementById('poverty-block');
 
-  for(var i = 0; i < viz_ids.length; i++){
-    if(viz_ids[i] != vizName){
-  //     viz_ids[i].style.visibility = 'hidden';
-      console.log("hiding", viz_ids[i])
-    }
-  }
+  race_block.style.visibility = "visible"
+  education_block.style.visibility = "hidden"
+  age_block.style.visibility = "hidden"
+  poverty_block.style.visibility = "hidden"
+
 }
 
+function openEducationalAttainmentViz(evt, vizName) {
+  var race_block = document.getElementById('race-block');
+  var education_block = document.getElementById('education-block');
+  var age_block = document.getElementById('age-block');
+  var poverty_block = document.getElementById('poverty-block');
+
+  race_block.style.visibility = "hidden"
+  education_block.style.visibility = "visible"
+  age_block.style.visibility = "hidden"
+  poverty_block.style.visibility = "hidden"
+
+}
+
+function openAgeViz(evt, vizName) {
+  var race_block = document.getElementById('race-block');
+  var education_block = document.getElementById('education-block');
+  var age_block = document.getElementById('age-block');
+  var poverty_block = document.getElementById('poverty-block');
+
+  race_block.style.visibility = "hidden"
+  education_block.style.visibility = "hidden"
+  age_block.style.visibility = "visible"
+  poverty_block.style.visibility = "hidden"
+
+}
+
+function openPovertyViz(evt, vizName) {
+  var race_block = document.getElementById('race-block');
+  var education_block = document.getElementById('education-block');
+  var age_block = document.getElementById('age-block');
+  var poverty_block = document.getElementById('poverty-block');
+
+  race_block.style.visibility = "hidden"
+  education_block.style.visibility = "hidden"
+  age_block.style.visibility = "hidden"
+  poverty_block.style.visibility = "visible"
+
+}
 function renderD3(branchName){
   var div = document.createElement('div');
   div.innerHTML = document.getElementById('viz-structure').innerHTML;
