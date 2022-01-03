@@ -25,6 +25,7 @@ function openBranch(evt, branchName) {
 }
 
 function openRaceViz(evt, vizName) {
+  console.log("hello world")
   var race_block = document.getElementById('race-block');
   var education_block = document.getElementById('education-block');
   var age_block = document.getElementById('age-block');
@@ -34,6 +35,8 @@ function openRaceViz(evt, vizName) {
   education_block.style.visibility = "hidden"
   age_block.style.visibility = "hidden"
   poverty_block.style.visibility = "hidden"
+
+  document.getElementById('viz-structure').style.height = "1000px";
 
 }
 
@@ -48,6 +51,7 @@ function openEducationalAttainmentViz(evt, vizName) {
   age_block.style.visibility = "hidden"
   poverty_block.style.visibility = "hidden"
 
+  document.getElementById('viz-structure').style.height = "1000px";
 }
 
 function openAgeViz(evt, vizName) {
@@ -61,6 +65,7 @@ function openAgeViz(evt, vizName) {
   age_block.style.visibility = "visible"
   poverty_block.style.visibility = "hidden"
 
+  document.getElementById('viz-structure').style.height = "1500px";
 }
 
 function openPovertyViz(evt, vizName) {
@@ -73,6 +78,8 @@ function openPovertyViz(evt, vizName) {
   education_block.style.visibility = "hidden"
   age_block.style.visibility = "hidden"
   poverty_block.style.visibility = "visible"
+
+  document.getElementById('viz-structure').style.height = "500px";
 
 }
 function renderD3(branchName){
@@ -96,3 +103,4 @@ function renderD3(branchName){
         var povertyChart = new PovertyChart(values);
       });
 }
+

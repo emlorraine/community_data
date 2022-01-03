@@ -97,6 +97,10 @@ body {
 .viz-tab button.active {
   background-color: #ccc;
 }
+/* 
+#viz-structure{
+  height: 1000px;
+} */
 
 
 
