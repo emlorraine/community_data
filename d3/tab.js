@@ -1,4 +1,5 @@
 function openBranch(evt, branchName) {
+  console.log("Opening:", branchName)
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -22,6 +23,19 @@ function openBranch(evt, branchName) {
   // renderD3(branchName)
 
 }
+
+// function openViz(evt, vizName) {
+//   viz_ids = ['race-block', 'education-block', 'age-block', 'poverty-block']
+//   console.log("Opening:", vizName)
+//   // var clicked_tab = document.getElementById('nav-ask');
+
+//   for(var i = 0; i < viz_ids.length; i++){
+//     console.log("Checking for", viz_ids[i])
+//     if(viz_ids[i] != vizName){
+//       viz_ids[i].style.visibility = 'hidden';
+//       console.log("hiding", viz_ids[i])
+//     }
+// }
 
 function renderD3(branchName){
   var div = document.createElement('div');
