@@ -40,10 +40,17 @@
           <button class="tablinks" onclick="openBranch(event, 'schlafly')">Schlafly Library</button>
           <button class="tablinks" onclick="openBranch(event, 'walnut-park')">Walnut Park Library</button>
         </div>
+
         <div id="baden" class="tabcontent">
           <h3>Baden Library</h3>
 
-          Visualization placeholders
+          <div class="viz-tab">
+            <button class="viztablinks" onclick="openViz(event, 'race-block')">Race</button>
+            <button class="viztablinks" onclick="openViz(event, 'education-block')">Educational Attainment</button>
+            <button class="viztablinks" onclick="openViz(event, 'age-block')">Age</button>
+            <button class="viztablinks" onclick="openViz(event, 'poverty-block')">Poverty</button>
+          </div>
+  
         <div id = "viz-structure">
           <!-- Race and ethnicity -->
         <div class = "meta-data" id="race-block">
