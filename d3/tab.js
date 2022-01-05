@@ -25,19 +25,14 @@ function openBranch(evt, branchName) {
 }
 
 function openRaceViz(evt, vizName) {
-  console.log("hello world")
   var race_block = document.getElementById('race-block');
   var education_block = document.getElementById('education-block');
   var age_block = document.getElementById('age-block');
   var poverty_block = document.getElementById('poverty-block');
 
-  race_block.style.visibility = "visible"
-  education_block.style.visibility = "hidden"
-  age_block.style.visibility = "hidden"
-  poverty_block.style.visibility = "hidden"
-
-  document.getElementById('viz-structure').style.height = "1000px";
-
+  education_block.removeAttribute
+  age_block.removeAttribute
+  poverty_block.removeAttribute
 }
 
 function openEducationalAttainmentViz(evt, vizName) {
@@ -46,12 +41,9 @@ function openEducationalAttainmentViz(evt, vizName) {
   var age_block = document.getElementById('age-block');
   var poverty_block = document.getElementById('poverty-block');
 
-  race_block.style.visibility = "hidden"
-  education_block.style.visibility = "visible"
-  age_block.style.visibility = "hidden"
-  poverty_block.style.visibility = "hidden"
-
-  document.getElementById('viz-structure').style.height = "1000px";
+  race_block.removeAttribute
+  age_block.removeAttribute
+  poverty_block.removeAttribute
 }
 
 function openAgeViz(evt, vizName) {
@@ -60,10 +52,9 @@ function openAgeViz(evt, vizName) {
   var age_block = document.getElementById('age-block');
   var poverty_block = document.getElementById('poverty-block');
 
-  race_block.style.visibility = "hidden"
-  education_block.style.visibility = "hidden"
-  age_block.style.visibility = "visible"
-  poverty_block.style.visibility = "hidden"
+  race_block.removeAttribute
+  education_block.removeAttribute
+  poverty_block.removeAttribute
 
   document.getElementById('viz-structure').style.height = "1500px";
 }
@@ -74,13 +65,11 @@ function openPovertyViz(evt, vizName) {
   var age_block = document.getElementById('age-block');
   var poverty_block = document.getElementById('poverty-block');
 
-  race_block.style.visibility = "hidden"
-  education_block.style.visibility = "hidden"
-  age_block.style.visibility = "hidden"
-  poverty_block.style.visibility = "visible"
+  race_block.removeAttribute
+  education_block.removeAttribute
+  age_block.removeAttribute
 
   document.getElementById('viz-structure').style.height = "500px";
-
 }
 function renderD3(branchName){
   var div = document.createElement('div');

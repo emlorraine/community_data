@@ -61,10 +61,6 @@ body {
   transition: 0.3s;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
 
 /* Create an active/current tablink class */
 .tab button.active {

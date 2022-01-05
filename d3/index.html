@@ -11,165 +11,25 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
   
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
 
-  <div class="container-fluid">
+  <!-- top of page title here -->
+  <h1>St. Louis City Library</h1>
+  <!-- top of page title here -->
 
-    <div class="row">
-      <div class="col-md-12">
-        
-        <!-- Headline -->
-        <h1>Community Data Sampling</h1>
-
-        <div class="tab">
-          <button class="tablinks" onclick="openBranch(event, 'baden')">Baden Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'barr')">Barr Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'buder')">Buder Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'cabanne')">Cabanne Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'carondelet')">Carondelet Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'carpenter')">Carpenter Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'central-express')">Central Express Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'central')">Central Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'charing-cross')">Charing Cross Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'divoll')">Divoll Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'julia-davis')">Julia Davis Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'kingshighway')">Kingshighway Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'machacek')">Machacek Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'marketplace')">Marketplace Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'schlafly')">Schlafly Library</button>
-          <button class="tablinks" onclick="openBranch(event, 'walnut-park')">Walnut Park Library</button>
-        </div>
-
-        <div id="baden" class="tabcontent">
-          <h3>Baden Library</h3>
-
-          <div class="viz-tab">
-            <button class="viztablinks" onclick="openRaceViz(event, 'race-block')">Race</button>
-            <button class="viztablinks" onclick="openEducationalAttainmentViz(event, 'education-block')">Educational Attainment</button>
-            <button class="viztablinks" onclick="openAgeViz(event, 'age-block')">Age</button>
-            <button class="viztablinks" onclick="openPovertyViz(event, 'poverty-block')">Poverty</button>
-          </div>
   
-        <div id = "viz-structure">
-          <!-- Race and ethnicity -->
-        <div class = "meta-data" id="race-block" class="viz_tabcontent">
-          <h2>Race & Ethnicity Data</h2>
-          <div id="race"></div>
-          <!-- <button id='Race' onclick="save(this.id)">Export this chart to PNG</button> -->
-        </div>
-        <!-- Education -->
-        <div class = "meta-data" id="education-block" class="viz_tabcontent">
-          <h2>Educational Attainment Data</h2>
-          <div id="data2010">
-          <h3 class = "education-text" id = "lessThanHighSchool2010Text">Less than high school 2010</h3>
-          <!-- <button id='LessThanHighSchool2010' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <div id="lessThanHighSchool2010"></div>
-          <h3 class = "education-text" id = "highSchoolOrEquivalent2010Text">High school or equivalent 2010</h3>
-            <!-- <button id='HighSchoolOrEquivalent2010' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <div id="highSchoolOrEquivalent2010"></div>
 
-            <!-- <h3>Some college or associates 2010</h3> -->
-            <!-- <button id='SomeCollegeOrAssociates2010' onclick="save(this.id)">Export this chart to PNG</button> -->
-            <!-- <div id="someCollegeOrAssociates2010"></div> -->
 
-          <h3 class = "education-text" id = "collegeOrHigher2010Text">Bachelor's or higher 2010</h3>
-            <!-- <button id='CollegeOrHigher2010' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <div id="collegeOrHigher2010"></div>
-        </div>
-
-        <div id="data2019">
-          <h3 id = "lessThanHighSchool2019Text" class = "education-text">Less than high school 2019</h3>
-          <!-- <button id='LessThanHighSchool2019' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <div id="lessThanHighSchool2019"></div>
-
-          <h3 id = "highSchoolOrEquivalent2019Text" class = "education-text">High school or equivalent 2019</h3>
-          <!-- <button id='HighSchoolOrEquivalent2019' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <div id="highSchoolOrEquivalent2019"></div>
-
-          <h3 id = "collegeOrHigher2019Text" class = "education-text">Bachelor's or higher 2019</h3>
-          <!-- <button id='CollegeOrHigher2019' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <div id="collegeOrHigher2019"></div>
-        </div>
-
-        </div>
-        <!-- Age-->
-        <div class = "meta-data" id="age-block" class="viz_tabcontent">
-          <h2>Age & Sex Data</h2>
-          <!-- <button id='Age' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <div id="age2010"></div>
-          <div id="age2020"></div>
-        </div>
-        <!-- Poverty-->
-        <div class = "meta-data" id="poverty-block" class="viz_tabcontent">
-          <h2>Poverty</h2>
-          <!-- <button id='Poverty2010' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <h3>At or below poverty line, 2010</h3>
-          <div id="poverty2010"></div>
-          <h4>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</h4>
-          <!-- <button id='Poverty2019' onclick="save(this.id)">Export this chart to PNG</button> -->
-          <h3>At or below poverty line, 2019</h3>
-          <div id="poverty2020"></div>
-          <h4>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</h4>
-        </div>
-      </div>
-
-         
-
-        </div>
-        <div id="barr" class="tabcontent">
-          <h3>Barr Library</h3>
-        </div>
-        <div id="buder" class="tabcontent">
-          <h3>Buder Library</h3>
-        </div>
-        <div id="cabanne" class="tabcontent">
-          <h3>Cabanne Library</h3>
-        </div>
-        <div id="carondelet" class="tabcontent">
-          <h3>Carondelet Library</h3>
-        </div>
-        <div id="carpenter" class="tabcontent">
-          <h3>Carpenter Library</h3>
-        </div>
-        <div id="central-express" class="tabcontent">
-          <h3>Central Express Library</h3>
-        </div>
-        <div id="central" class="tabcontent">
-          <h3>Central Library</h3>
-        </div>
-        <div id="charing-cross" class="tabcontent">
-          <h3>Charing Cross Library</h3>
-        </div>
-        <div id="divoll" class="tabcontent">
-          <h3>Divoll Library</h3>
-        </div>
-        <div id="julia-davis" class="tabcontent">
-          <h3>Julia Davis Library</h3>
-        </div>
-        <div id="kingshighway" class="tabcontent">
-          <h3>Kingshighway Library</h3>
-        </div>
-        <div id="machacek" class="tabcontent">
-          <h3>Machacek Library</h3>
-        </div>
-        <div id="marketplace" class="tabcontent">
-          <h3>Marketplace Library</h3>
-        </div>
-        <div id="schlafly" class="tabcontent">
-          <h3>Schlafly Library</h3>
-        </div>
-        <div id="walnut-park" class="tabcontent">
-          <h3>Walnut Park Library</h3>
-        </div>
-
-      </div>  
-      </div>
-    </div>
-
-  </div>
 
   <!-- Load data, create visualizations -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   <script src="tab.js"></script>
   <script src="poverty.js"></script>
   <script src="age.js"></script>
