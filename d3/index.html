@@ -111,10 +111,29 @@
             </ul>
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade show active" id="barr-pills-home" role="tabpanel" aria-labelledby="pills-introduction-tab">Introduction</div>
-              <div class="tab-pane fade" id="barr-pills-race" role="tabpanel" aria-labelledby="pills-race-tab">Race<div id = "#race"></div> </div>
-              <div class="tab-pane fade" id="barr-pills-education" role="tabpanel" aria-labelledby="pills-education-tab">Educational Attainment</div>
-              <div class="tab-pane fade" id="barr-pills-age" role="tabpanel" aria-labelledby="pills-age-tab">Age</div>
-              <div class="tab-pane fade" id="barr-pills-poverty" role="tabpanel" aria-labelledby="pills-poverty-tab">Poverty</div>
+              <div class="tab-pane fade" id="barr-pills-race" role="tabpanel" aria-labelledby="pills-race-tab">Race <div id="race"></div></div>
+              <div class="tab-pane fade" id="barr-pills-education" role="tabpanel" aria-labelledby="pills-education-tab">
+                Educational Attainment 
+                <div id="lessThanHighSchool2010"></div>
+                <div id="highSchoolOrEquivalent2010"></div>
+                <div id="collegeOrHigher2010"></div>
+
+                <div id="lessThanHighSchool2019"></div>
+                <div id="highSchoolOrEquivalent2019"></div>
+                <div id="collegeOrHigher2019"></div>
+              </div>
+              <div class="tab-pane fade" id="barr-pills-age" role="tabpanel" aria-labelledby="pills-age-tab">
+                Age 
+                <div id="age2010"></div>
+                <div id="age2020"></div>
+              </div>
+
+              <div class="tab-pane fade" id="barr-pills-poverty" role="tabpanel" aria-labelledby="pills-poverty-tab">
+                Poverty 
+                <div id="poverty2010"></div>
+                <div id="poverty2020"></div>
+
+              </div>
             </div>
         </div>
         <div class="tab-pane" id="buder" role="tabpanel">
@@ -514,36 +533,18 @@
 
   </div>
 
-
-
-
-
-
-
   <!-- Load data, create visualizations -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  
-  <script src="tab.js"></script>
+  <!-- <script src="tab.js"></script> -->
   <script src="poverty.js"></script>
   <script src="age.js"></script>
   <script src="race.js"></script>
   <script src="education.js"></script>
   <script src="main.js"></script>
-  <script src="saveSvgAsPng.js"></script>
-  <script type="module" src="./node_modules//save-svg-as-png/lib/saveSvgAsPng.js"></script>
 
-
-  <script>
-    function save(chartName){
-      var fileName = chartName + ".png"
-      var element = chartName.charAt(0).toLowerCase() + chartName.slice(1);
-      var chart = document.getElementById(element).getElementsByTagName('svg')[0];
-      saveSvgAsPng(chart, fileName);
-    }
-  </script>
 </body>
 </html>
