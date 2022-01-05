@@ -1,25 +1,32 @@
 /* Poverty  */
     #poverty-block{
-        /* height:fit-content;
+        height:fit-content;
         margin: auto;
-        width: 50%;
-        padding: 10px; */
         display: flex;
     }
-    #poverty2010{
+    #povertyBlock2010{
         float: left;
+        margin-right: 150px;
     }
-    #poverty2020{
+    #povertyBlock2019{
         float:right;
+        margin-left: 70px;
+
     }
 
+
 /* Education */
+    #education-block{
+        transform: scale(.75);
+        margin-left: 0%;
+    }
     #educationData2010{
         display: flex;
     } 
     #educationData2019{
         display: flex;
     } 
+      
     #lessThanHighSchool2010{
         float: left;
         max-width: auto;
@@ -62,10 +69,14 @@
   /* Age */
     #age-block{
         height:fit-content;
-        margin: auto;
+        /* margin: auto; */
         width: 75%;
         padding: 10px;
         display: flex;
+        transform: scale(.50);
+        position:absolute;
+        top:0;
+        left:0;
     }
   
     #age2010{

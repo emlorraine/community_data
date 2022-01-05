@@ -18,7 +18,7 @@
 
   
 
-  <div class="container-fluid">
+  <div class="container">
 
     <!-- top of page title here -->
     <h1>St. Louis City Library</h1>
@@ -111,24 +111,33 @@
             </ul>
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade show active" id="barr-pills-home" role="tabpanel" aria-labelledby="pills-introduction-tab">Introduction</div>
-              <div class="tab-pane fade" id="barr-pills-race" role="tabpanel" aria-labelledby="pills-race-tab">Race <div id="race"></div></div>
+              <div class="tab-pane fade" id="barr-pills-race" role="tabpanel" aria-labelledby="pills-race-tab">
+                <!-- Race  -->
+                <div id="race"></div>
+              </div>
               <div class="tab-pane fade" id="barr-pills-education" role="tabpanel" aria-labelledby="pills-education-tab">
-                Educational Attainment 
+                <!-- Educational Attainment  -->
                 <div id="education-block">
                   <div id="educationData2010">
+                    <h3 class = "education-text" id = "lessThanHighSchool2010Text">Less than high school 2010</h3><br>
                     <div id="lessThanHighSchool2010"></div>
+                    <h3 class = "education-text" id = "highSchoolOrEquivalent2010Text">High school or equivalent 2010</h3>
                     <div id="highSchoolOrEquivalent2010"></div>
+                    <h3 class = "education-text" id = "collegeOrHigher2010Text">Bachelor's or higher 2010</h3>
                     <div id="collegeOrHigher2010"></div>
                   </div>
                   <div id="educationData2019">
+                    <h3 id = "lessThanHighSchool2019Text" class = "education-text">Less than high school 2019</h3>
                     <div id="lessThanHighSchool2019"></div>
+                    <h3 id = "highSchoolOrEquivalent2019Text" class = "education-text">High school or equivalent 2019</h3>
                     <div id="highSchoolOrEquivalent2019"></div>
+                    <h3 id = "collegeOrHigher2019Text" class = "education-text">Bachelor's or higher 2019</h3>
                     <div id="collegeOrHigher2019"></div>
                   </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="barr-pills-age" role="tabpanel" aria-labelledby="pills-age-tab">
-                Age 
+                <!-- Age  -->
                 <div id="age-block">
                   <div id="age2010"></div>
                   <div id="age2020"></div>
@@ -136,10 +145,21 @@
               </div>
 
               <div class="tab-pane fade" id="barr-pills-poverty" role="tabpanel" aria-labelledby="pills-poverty-tab">
-                Poverty 
+                <!-- Poverty  -->
                 <div id="poverty-block">
-                  <div id="poverty2010"></div>
-                  <div id="poverty2020"></div>
+
+                  <div class="vstack gap-3" id="povertyBlock2010">
+                    <h3>At or below poverty line, 2010</h3>
+                    <div id="poverty2010"></div>
+                    <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
+                  </div>
+
+                  <div class="vstack gap-3" id="povertyBlock2019">
+                    <h3>At or below poverty line, 2019</h3>
+                    <div id="poverty2020"></div>
+                    <p>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
+                  </div>
+
                 </div>
 
               </div>
