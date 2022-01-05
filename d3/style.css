@@ -1,0 +1,64 @@
+/* Poverty  */
+#poverty-block{
+    /* height:fit-content;
+    margin: auto;
+    width: 50%;
+    padding: 10px; */
+    display: flex;
+  }
+  #poverty2010{
+    float: left;
+  }
+  #poverty2020{
+    float:right;
+  }
+
+
+/* Education */
+    #educationData2010{
+        display: flex;
+    } 
+    #educationData2019{
+        display: flex;
+    } 
+    #lessThanHighSchool2010{
+        float: left;
+        max-width: auto;
+        padding-right: 50px;
+        padding-bottom: 150px;
+        display: flex;
+    }
+    #highSchoolOrEquivalent2010{
+        float: center;
+        max-width: auto;
+        padding-right: 50px;
+        padding-bottom: 150px;
+        display: flex;
+    }
+    #collegeOrHigher2010{
+        float:right;
+        max-width: auto;
+        display: flex;
+        padding-bottom: 150px;
+    }  
+    #lessThanHighSchool2019{
+        float: left;
+        max-width: auto;
+        padding-right: 50px;
+        display: flex;
+    }
+    #highSchoolOrEquivalent2019{
+        float: center;
+        max-width: auto;
+        padding-right: 50px;
+        display: flex;
+    }
+    #collegeOrHigher2019{
+        float:right;
+        max-width: auto;
+        display: flex;
+        padding-bottom: 150px;
+    }  
+
+  /* Age */
+
