@@ -119,7 +119,7 @@
         self.svg = lessThanHighSchool2010Div.append("svg")
             .attr("width",500)
             .attr("height",500)
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
             .data(lessthanHS2010Array.reverse())
@@ -148,7 +148,7 @@
         self.svg = highSchoolOrEquivalent2010Div.append("svg")
             .attr("width",500)
             .attr("height",500)
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
             .data(hsOrEquiv2010Array.reverse())
@@ -177,7 +177,7 @@
         self.svg = collegeOrHigher2010.append("svg")
             .attr("width",500)
             .attr("height",500)
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
             .data(bachelorsOrHigher2020Array.reverse())
@@ -206,7 +206,7 @@
         self.svg = lessThanHighSchool2019Div.append("svg")
             .attr("width",500)
             .attr("height",500)
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
             .data(lessthanHS2020Array.reverse())
@@ -235,7 +235,7 @@
         self.svg = highSchoolOrEquivalent2019Div.append("svg")
             .attr("width",500)
             .attr("height",500)
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
             .data(hsOrEquiv2020Array.reverse())
@@ -264,7 +264,7 @@
         self.svg = collegeOrHigher2019.append("svg")
             .attr("width",500)
             .attr("height",500)
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
             .data(bachelorsOrHigher2020Array)

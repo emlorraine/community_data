@@ -74,7 +74,7 @@ AgeChart.prototype.init = function(rawData){
             .attr("width",1750)
             .attr("height",1500)
             .append("g")
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
             .data(populationData2010.reverse())
@@ -115,7 +115,7 @@ AgeChart.prototype.init = function(rawData){
             .attr("width",1600)
             .attr("height",1500)
             .append("g")
-            .attr("transform", "translate(" + self.margin.left + ",0)")
+            // .attr("transform", "translate(" + self.margin.left + ",0)")
     
         self.svg.selectAll("rect")
             .data(populationData2020.reverse())
