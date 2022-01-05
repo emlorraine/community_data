@@ -18,7 +18,7 @@
 
   
 
-  <div class="container-fluid">
+  <div class="container">
 
     <!-- top of page title here -->
     <h1>St. Louis City Library</h1>
@@ -91,44 +91,31 @@
       <div class="tab-content">
 
         <div class="tab-pane active" id="barr" role="tabpanel">
-
           <p>Barr Library</p>
-
-          <ul class="nav nav-tabs" id="barr-content" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="barr-intro-tab" data-toggle="tab" href="#introduction" role="tab">Introduction</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="barr-race-tab" data-toggle="tab" href="#race" role="tab">Race</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="barr-education-tab" data-toggle="tab" href="#education" role="tab">Educational Attainment</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="barr-age-tab" data-toggle="tab" href="#age" role="tab">Age</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="barr-poverty-tab" data-toggle="tab" href="#poverty" role="tab">Poverty</a>
-            </li>
-          </ul>
-
-          <div class="tab-content" id="barr-content">
-            <div class="tab-pane fade show active" id="barr-intro-tab" role="tabpanel">
-              Introduction
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Introduction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-race-tab" data-toggle="pill" href="#pills-race" role="tab" aria-controls="pills-profile" aria-selected="false">Race</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-education-tab" data-toggle="pill" href="#pills-education" role="tab" aria-controls="pills-contact" aria-selected="false">Educational Attainment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-age-tab" data-toggle="pill" href="#pills-age" role="tab" aria-controls="pills-profile" aria-selected="false">Age</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-poverty-tab" data-toggle="pill" href="#pills-poverty" role="tab" aria-controls="pills-contact" aria-selected="false">Poverty</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Introduction</div>
+              <div class="tab-pane fade" id="pills-race" role="tabpanel" aria-labelledby="pills-profile-tab">Race</div>
+              <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-contact-tab">Educational Attainment</div>
+              <div class="tab-pane fade" id="pills-age" role="tabpanel" aria-labelledby="pills-contact-tab">Age</div>
+              <div class="tab-pane fade" id="pills-poverty" role="tabpanel" aria-labelledby="pills-contact-tab">Poverty</div>
             </div>
-            <div class="tab-pane fade" id="barr-race-tab" role="tabpanel">
-              Race
-            </div>
-            <div class="tab-pane fade" id="barr-education-tab" role="tabpanel">
-              Educational Attainment
-            </div>
-            <div class="tab-pane fade" id="barr-age-tab" role="tabpanel">
-              Age
-            </div>
-            <div class="tab-pane fade" id="barr-poverty-tab" role="tabpanel">
-              Poverty
-            </div>
-          </div>
         </div>
 
         <div class="tab-pane" id="buder" role="tabpanel">
