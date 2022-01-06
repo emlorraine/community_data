@@ -75,21 +75,45 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
   $("#state-age").change(function(){
     if ($(this).is(':checked'))
-      //Generate d3 here 
-      console.log("Generate age d3 state")
-      //Add div to age-block
-      $('#pills-age').append($("<div id='age-missouri-2010'></div>"))
-      $('#pills-age').append($("<div id='age-missouri-2019'></div>"))
-
-
+      var html = 
+      `<div id="age-state-block">
+        <div id="age-state-2010"></div>
+        <div id="age-state-2020"></div>
+      </div>`
+      $('#pills-age').append($("<div id='age-state'></div>"))
+      $('#age-state').html(html)
+      Promise.all([
+        d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
+        d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
+      ]).then((values) => {
+        var ageStateChart = new AgeStateChart(values); 
+      })
   });
   $("#city-age").change(function(){
     if ($(this).is(':checked'))
-    console.log("Generate age d3 city")
-    //Add div to age-block
-    $('#pills-age').append($("<div id='age-city-2010'></div>"))
-    $('#pills-age').append($("<div id='age-city-2019'></div>"))
+    var html = 
+      `<div id="age-city-block">
+        <div id="age-city-2010"></div>
+        <div id="age-city-2020"></div>
+      </div>`
+      $('#pills-age').append($("<div id='age-city'></div>"))
+      $('#age-city').html(html)
+      Promise.all([
+        d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
+        d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
+      ]).then((values) => {
+        var ageCityChart = new AgeCityChart(values); 
+      })
+  });
 
+  $("#city-age").change(function(){
+    if (!$(this).is(':checked'))
+      $("#age-city").remove();
+  });
+
+  $("#state-age").change(function(){
+    if (!$(this).is(':checked'))
+      $("#age-state").remove();
   });
 
   $("#state-poverty").change(function(){
