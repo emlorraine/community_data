@@ -1,7 +1,19 @@
 /* Tabs */
 
+h1{
+    padding: 25px 25px 25px 25px;
+    text-align: center;
+    font-family: Futura;
+    color: white
+}
+
 .nav-item{
     margin-top: 20px;
+    color: #005f89;
+}
+
+.row{
+    background-color:#007bff;
 }
 
 /* Poverty  */

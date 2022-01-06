@@ -1,3 +1,5 @@
+
+
 function openBranch(evt, branchName) {
   console.log("Opening:", branchName)
   // Declare all variables

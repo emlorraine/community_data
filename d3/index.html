@@ -6,26 +6,24 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Community Data Sampling</title>
-
-  <!-- Load Google Font -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
   
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 <body>
 
   
 
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- top of page title here -->
-    <h1>St. Louis City Library</h1>
+   <div class="row"><h1>St. Louis Public Library Data Hub</h1></div>
     <!-- top of page title here -->
 
     <ul class="nav nav-tabs" role="tablist">
-
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#intro" role="tab">Introduction</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#baden" role="tab">Baden</a>
       </li>
@@ -93,15 +91,19 @@
     </ul><!-- Tab panes -->
       <div class="tab-content">
 
+        <div class="tab-pane" id="intro" role="tabpanel">
+          <p>Barr Library</p>
+        </div>
+
         <div class="tab-pane" id="baden" role="tabpanel">
           <!-- <p>Baden Library</p> -->
           <div class = "viz-structure" id="viz-wrapper">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link active" id="pills-introduction-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Introduction</a>
-              </li>
+              </li> -->
               <li class="nav-item">
-                <a class="nav-link" id="pills-race-tab" data-toggle="pill" href="#pills-race" role="tab" aria-controls="pills-profile" aria-selected="false">Race</a>
+                <a class="nav-link show active" id="pills-race-tab" data-toggle="pill" href="#pills-race" role="tab" aria-controls="pills-profile" aria-selected="false">Race</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="pills-education-tab" data-toggle="pill" href="#pills-education" role="tab" aria-controls="pills-contact" aria-selected="false">Educational Attainment</a>
@@ -114,8 +116,8 @@
               </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="barr-pills-home" role="tabpanel" aria-labelledby="pills-introduction-tab">Introduction</div>
-              <div class="tab-pane fade" id="pills-race" role="tabpanel" aria-labelledby="pills-race-tab">
+              <!-- <div class="tab-pane fade show active" id="barr-pills-home" role="tabpanel" aria-labelledby="pills-introduction-tab">Introduction</div> -->
+              <div class="tab-pane fade show active" id="pills-race" role="tabpanel" aria-labelledby="pills-race-tab">
                 <!-- Race  -->
                 <div id="race"></div>
               </div>
@@ -245,6 +247,8 @@
   </div>
 
   <!-- Load data, create visualizations -->
+
+  
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
