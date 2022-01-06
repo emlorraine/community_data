@@ -47,6 +47,17 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     })
   });
 
+  $("#state-race").change(function(){
+    if (!$(this).is(':checked'))
+      $("#race-missouri").remove();
+  });
+  $("#city-race").change(function(){
+    if (!$(this).is(':checked'))
+    $( "#race-city" ).remove();
+  });
+
+
+
   $("#state-education").change(function(){
     if ($(this).is(':checked'))
       //Generate d3 here 
@@ -110,5 +121,4 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     ]).then((values) => {
       var povertyCityChart = new PovertyCityChart(values); 
     })
-
   });
