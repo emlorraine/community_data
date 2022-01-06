@@ -220,8 +220,8 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#state-poverty").change(function(){
     if ($(this).is(':checked'))
       var html = 
-      `<div class="vstack gap-3" id="povertyBlock2010">
-      <h2> Poverty in the state of Missouri </h2>
+
+      `<div id="poverty-state-block"><div class="vstack gap-3" id="povertyBlock2010">
         <h3>At or below poverty line, 2010</h3>
         <div id="poverty-state-2010"></div>
         <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
@@ -230,7 +230,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         <h3>At or below poverty line, 2019</h3>
         <div id="poverty-state-2019"></div>
         <p>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
-      </div>`
+      </div></div>`
     //Add div to poverty-block
     $('#pills-poverty').append($("<div id='poverty-state'></div>"))
     $('#poverty-state').html(html)
@@ -246,8 +246,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#city-poverty").change(function(){
     if ($(this).is(':checked'))
       var html = 
-      `<div class="vstack gap-3" id="povertyBlock2010">
-      <h2> Poverty in St. Louis </h2>
+      `<div id="poverty-city-block"><div class="vstack gap-3" id="povertyBlock2010">
         <h3>At or below poverty line, 2010</h3>
         <div id="poverty-city-2010"></div>
         <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
@@ -256,7 +255,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         <h3>At or below poverty line, 2019</h3>
         <div id="poverty-city-2019"></div>
         <p>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
-      </div>`
+      </div></div>`
     //Add div to poverty-block
     $('#pills-poverty').append($("<div id='poverty-city'></div>"))
     $('#poverty-city').html(html)

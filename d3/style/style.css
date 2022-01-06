@@ -29,7 +29,7 @@ h2{
 
 
 /* Poverty  */
-    #poverty-block{
+    #poverty-block, #poverty-state-block, #poverty-city-block{
         height:fit-content;
         margin: auto;
         display: flex;
