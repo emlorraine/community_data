@@ -58,14 +58,18 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       //Generate d3 here 
       console.log("Generate age d3 state")
       //Add div to age-block
-      $('#pills-age').append($("<div id='age-missouri'></div>"))
+      $('#pills-age').append($("<div id='age-missouri-2010'></div>"))
+      $('#pills-age').append($("<div id='age-missouri-2019'></div>"))
+
 
   });
   $("#city-age").change(function(){
     if ($(this).is(':checked'))
     console.log("Generate age d3 city")
     //Add div to age-block
-    $('#pills-age').append($("<div id='age-city'></div>"))
+    $('#pills-age').append($("<div id='age-city-2010'></div>"))
+    $('#pills-age').append($("<div id='age-city-2019'></div>"))
+
   });
 
   $("#state-poverty").change(function(){
@@ -73,11 +77,15 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       //Generate d3 here 
       console.log("Generate poverty d3 state")
       //Add div to poverty-block
-      $('#pills-poverty').append($("<div id='poverty-missouri'></div>"))
+      $('#pills-poverty').append($("<div id='poverty-missouri-2010'></div>"))
+      $('#pills-poverty').append($("<div id='poverty-missouri-2019'></div>"))
+
   });
   $("#city-poverty").change(function(){
     if ($(this).is(':checked'))
     console.log("Generate poverty d3 city")
     //Add div to poverty-block
-    $('#pills-poverty').append($("<div id='poverty-city'></div>"))
+    $('#pills-poverty').append($("<div id='poverty-city-2010'></div>"))
+    $('#pills-poverty').append($("<div id='poverty-city-2019'></div>"))
+
   });
