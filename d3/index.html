@@ -17,9 +17,9 @@
   <div class="container-fluid">
 
     <!-- top of page title here -->
-   <div class="row"><h1>St. Louis Public Library Data Hub</h1></div>
+   <div class="row" id="header"><h1>St. Louis Public Library Data Hub</h1></div>
     <!-- top of page title here -->
-
+    
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#intro" role="tab">Introduction</a>
@@ -118,10 +118,35 @@
             <div class="tab-content" id="pills-tabContent">
               <!-- <div class="tab-pane fade show active" id="barr-pills-home" role="tabpanel" aria-labelledby="pills-introduction-tab">Introduction</div> -->
               <div class="tab-pane fade show active" id="pills-race" role="tabpanel" aria-labelledby="pills-race-tab">
+                <div id="comparison">
+                    <p>Compare this data to:</p>
+                    <div id="compare-to-MO-tick-box">
+                      <input type="checkbox" id="state">
+                      <label for="scales">The state of Missouri</label>
+                    </div>
+                    <div id="compare-to-STL-tick-box" style="margin-bottom: 30px;">
+                      <input type="checkbox" id="city">
+                      <label for="scales">St. Louis City</label>
+                    </div>
+                  </div> 
+               
                 <!-- Race  -->
                 <div id="race"></div>
+                
               </div>
               <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab">
+                <div id="comparison">
+                  <p>Compare this data to:</p>
+                  <div id="compare-to-MO-tick-box">
+                    <input type="checkbox" id="state">
+                    <label for="scales">The state of Missouri</label>
+                  </div>
+                  <div id="compare-to-STL-tick-box" style="margin-bottom: 30px;">
+                    <input type="checkbox" id="city">
+                    <label for="scales">St. Louis City</label>
+                  </div>
+                </div> 
+                
                 <!-- Educational Attainment  -->
                 <div id="education-block">
 
@@ -158,6 +183,18 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="pills-age" role="tabpanel" aria-labelledby="pills-age-tab">
+                
+                <div id="comparison">
+                  <p>Compare this data to:</p>
+                  <div id="compare-to-MO-tick-box">
+                    <input type="checkbox" id="state">
+                    <label for="scales">The state of Missouri</label>
+                  </div>
+                  <div id="compare-to-STL-tick-box" style="margin-bottom: 30px;">
+                    <input type="checkbox" id="city">
+                    <label for="scales">St. Louis City</label>
+                  </div>
+                </div> 
                 <!-- Age  -->
                 <div id="age-block">
                   <div id="age2010"></div>
@@ -166,6 +203,18 @@
               </div>
 
               <div class="tab-pane fade" id="pills-poverty" role="tabpanel" aria-labelledby="pills-poverty-tab">
+                <div id="comparison">
+                  <p>Compare this data to:</p>
+                  <div id="compare-to-MO-tick-box">
+                    <input type="checkbox" id="state">
+                    <label for="scales">The state of Missouri</label>
+                  </div>
+                  <div id="compare-to-STL-tick-box" style="margin-bottom: 30px;">
+                    <input type="checkbox" id="city">
+                    <label for="scales">St. Louis City</label>
+                  </div>
+                </div> 
+                
                 <!-- Poverty  -->
                 <div id="poverty-block">
                   <div class="vstack gap-3" id="povertyBlock2010">

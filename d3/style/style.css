@@ -12,9 +12,14 @@ h1{
     color: #005f89;
 }
 
-.row{
+.row#header{
     background-color:#007bff;
 }
+
+
+
+
+
 
 /* Poverty  */
     #poverty-block{
