@@ -57,7 +57,7 @@ h1{
         padding-bottom: 150px; 
         display: flex;
     }
-    #highSchoolOrEquivalent2010, #highSchoolOrEquivalentState2010, #highSchoolOrEquivalentState2010{
+    #highSchoolOrEquivalent2010, #highSchoolOrEquivalentState2010, #highSchoolOrEquivalentCity2010{
         float: center;
         max-width: auto;
         padding-right: 50px;
@@ -70,7 +70,7 @@ h1{
         display: flex;
         padding-bottom: 150px;
     }  
-    #lessThanHighSchool2019, #lessThanHighSchoolState2019, #lessThanHighSchoolState2019{
+    #lessThanHighSchool2019, #lessThanHighSchoolState2019, #lessThanHighSchoolCity2019{
         float: left;
         max-width: auto;
         padding-right: 50px;
@@ -100,6 +100,8 @@ h1{
         position:absolute;
         top:0;
         left:0;
+        margin-bottom: 50px;
+
     }
   
     #age2010, #age-state-2010, #age-city-2010{
@@ -114,6 +116,14 @@ h1{
         max-width: 1500px;
         /* position:absolute; */
         /* top:2px */
+    }
+
+    #age-state-block{
+        margin-bottom: 1500px
+    }
+
+    #age-city-block{
+        margin-bottom: 1500px
     }
 
     
