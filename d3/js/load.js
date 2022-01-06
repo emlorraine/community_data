@@ -24,8 +24,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
   $("#state-race").change(function(){
     if ($(this).is(':checked'))
+    var html = 
+    `<div id="education-state-block">
+    <h2> Race in Missouri </h2>
+    <div id="race-missouri"></div></div>`
       //Add div to race-block
-      $('#pills-race').append($("<h2> Race in the state of Missouri</h2><div id='race-missouri'></div>"))
+      $('#pills-race').append($("<div id='race-state'></div>"))
+      $('#race-state').html(html)
       //Generate d3:
       Promise.all([
         d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
@@ -36,8 +41,14 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   });
   $("#city-race").change(function(){
     if ($(this).is(':checked'))
+    var html = 
+    `<div id="education-state-block">
+    <h2> Race in St. Louis </h2>
+    <div id="race-city"></div></div>`
     //Add div to race-block
-    $('#pills-race').append($("<h2> Race in St. Louis</h2><div id='race-city'></div>"))
+    $('#pills-race').append($("<div id='race-stl'></div>"))
+    $('#race-stl').html(html)
+
     //Generate d3:
     Promise.all([
       d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
@@ -49,11 +60,11 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
   $("#state-race").change(function(){
     if (!$(this).is(':checked'))
-      $("#race-missouri").remove();
+      $("#race-state").remove();
   });
   $("#city-race").change(function(){
     if (!$(this).is(':checked'))
-    $( "#race-city" ).remove();
+    $( "#race-stl" ).remove();
   });
 
 
