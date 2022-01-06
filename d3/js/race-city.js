@@ -2,14 +2,14 @@
 /**
  * Constructor for the RaceBarChart
  */
- function RaceBarChart(data){
+ function RaceCityBarChart(data){
     var self = this;
     self.init(data);
 };
 /**
  * Initializes the svg elements required to lay the bars
  */
- RaceBarChart.prototype.init = function(rawData){
+ RaceCityBarChart.prototype.init = function(rawData){
 
     var data2010 = rawData[0]
     var data2020 = rawData[1]
@@ -77,8 +77,8 @@
 
 
     var self = this;
-    $('#race').empty();
-    var divRaceBarChart = d3.select("#race").classed("content", true);
+    $('#race-city').empty();
+    var divRaceBarChart = d3.select("#race-city").classed("content", true);
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
 
     var x0  = d3.scaleBand().rangeRound([0, 1000], .5);
@@ -102,7 +102,7 @@
 
     self.svg = divRaceBarChart.append("svg")
         .attr("width",1200)
-        .attr("height",750)
+        .attr("height",1000)
         // .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });

@@ -7,11 +7,9 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if(target !== "intro"){
       $('#viz-wrapper').appendTo(`#${target}`);
     }
-//     // Call datasets for branch:
+     // Call datasets for branch:
     data2010FileName = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
     data2020FileName = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
-    console.log(data2010FileName, data2010FileName)
-
     Promise.all([
         d3.csv(data2010FileName),
         d3.csv(data2020FileName),
@@ -26,16 +24,27 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
   $("#state-race").change(function(){
     if ($(this).is(':checked'))
-      //Generate d3 here 
-      console.log("Generate race d3 state")
       //Add div to race-block
       $('#pills-race').append($("<div id='race-missouri'></div>"))
+      //Generate d3:
+      Promise.all([
+        d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
+        d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
+      ]).then((values) => {
+        var raceStateBarChart = new RaceStateBarChart(values); 
+      })
   });
   $("#city-race").change(function(){
     if ($(this).is(':checked'))
-    console.log("Generate race d3 city")
     //Add div to race-block
     $('#pills-race').append($("<div id='race-city'></div>"))
+    //Generate d3:
+    Promise.all([
+      d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
+      d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+    ]).then((values) => {
+      var raceCityBarChart = new RaceCityBarChart(values); 
+    })
   });
 
   $("#state-education").change(function(){
@@ -79,6 +88,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       //Add div to poverty-block
       $('#pills-poverty').append($("<div id='poverty-missouri-2010'></div>"))
       $('#pills-poverty').append($("<div id='poverty-missouri-2019'></div>"))
+      //Generate d3:
+      Promise.all([
+        d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
+        d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+      ]).then((values) => {
+        var povertyStateChart = new PovertyStateChart(values); 
+      })
 
   });
   $("#city-poverty").change(function(){
@@ -87,5 +103,12 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     //Add div to poverty-block
     $('#pills-poverty').append($("<div id='poverty-city-2010'></div>"))
     $('#pills-poverty').append($("<div id='poverty-city-2019'></div>"))
+    //Generate d3:
+    Promise.all([
+      d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
+      d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+    ]).then((values) => {
+      var povertyCityChart = new PovertyCityChart(values); 
+    })
 
   });
