@@ -8,7 +8,7 @@ function PovertyStateChart(data){
  */
  
   PovertyStateChart.prototype.init = function(rawData){
-    console.log(rawData)
+    console.log("loading state poverty chart?")
      var raw2010Data = rawData[0]; 
      var raw2020Data = rawData[1];
 
@@ -36,11 +36,10 @@ function PovertyStateChart(data){
     var radius = Math.min(width, height) / 2;
     var donutWidth = 75;
 
-    $('#poverty-missouri-2010').empty();
-    $('#poverty-missouri-2019').empty();
+    $('#poverty-state-2010').empty();
+    $('#poverty-state-2019').empty();
 
-    
-    var svg = d3.select('#poverty-missouri-2010')
+    var svg = d3.select('#poverty-state-2010')
         .append('svg')
         .attr('width', width)
         .attr('height', height)
@@ -74,7 +73,7 @@ function PovertyStateChart(data){
 
 
 
-    var svg = d3.select('#poverty-missouri-2019')
+    var svg = d3.select('#poverty-state-2019')
         .append('svg')
         .attr('width', width)
         .attr('height', height)

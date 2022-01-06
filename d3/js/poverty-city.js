@@ -38,7 +38,6 @@ PovertyCityChart.prototype.init = function(rawData){
 
     $('#poverty-city-2010').empty();
     $('#poverty-city-2019').empty();
-
     
     var svg = d3.select('#poverty-city-2010')
         .append('svg')
