@@ -61,16 +61,102 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#state-education").change(function(){
     if ($(this).is(':checked'))
       //Generate d3 here 
-      console.log("Generate education d3 state")
+      var html = 
+      `<div id="education-state-block">
+      <div id="educationStateData2010">
+        <div class="vstack gap-2">
+          <h3 class = "education-text" id = "lessThanHighSchool2010StateText">Less than high school 2010</h3><br>
+          <div id="lessThanHighSchoolState2010"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 class = "education-text" id = "highSchoolOrEquivalent2010StateText">High school or equivalent 2010</h3><br>
+          <div id="highSchoolOrEquivalentState2010"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 class = "education-text" id = "collegeOrHigher2010StateText">Bachelor's or higher 2010</h3><br>
+          <div id="collegeOrHigherState2010"></div>
+        </div>
+      </div>
+
+      <div id="educationData2019">
+        <div class="vstack gap-2">
+          <h3 id = "lessThanHighSchool2019StateText" class = "education-text">Less than high school 2019</h3><br>
+          <div id="lessThanHighSchoolState2019"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 id = "highSchoolOrEquivalent2019StateText" class = "education-text">High school or equivalent 2019</h3><br>
+          <div id="highSchoolOrEquivalentState2019"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 id = "collegeOrHigher2019StateText" class = "education-text">Bachelor's or higher 2019</h3><br>
+          <div id="collegeOrHigherState2019"></div>
+        </div>
+      </div>
+    </div>`
       //Add div to education-block
-      $('#pills-education').append($("<div id='education-missouri'></div>"))
+      $('#pills-education').append($("<div id='education-state'></div>"))
+      $('#education-state').html(html)
+      Promise.all([
+        d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
+        d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
+      ]).then((values) => {
+        var educationalStateAttainmentChart = new EducationalStateAttainmentChart(values); 
+      })
 
   });
   $("#city-education").change(function(){
     if ($(this).is(':checked'))
-    console.log("Generate education d3 city")
+      var html = 
+      `<div id="education-city-block">
+      <div id="educationCityData2010">
+        <div class="vstack gap-2">
+          <h3 class = "education-text" id = "lessThanHighSchool2010CityText">Less than high school 2010</h3><br>
+          <div id="lessThanHighSchoolCity2010"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 class = "education-text" id = "highSchoolOrEquivalent2010CityText">High school or equivalent 2010</h3><br>
+          <div id="highSchoolOrEquivalentCity2010"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 class = "education-text" id = "collegeOrHigher2010CityText">Bachelor's or higher 2010</h3><br>
+          <div id="collegeOrHigherCity2010"></div>
+        </div>
+      </div>
+
+      <div id="educationData2019">
+        <div class="vstack gap-2">
+          <h3 id = "lessThanHighSchool2019CityText" class = "education-text">Less than high school 2019</h3><br>
+          <div id="lessThanHighSchoolCity2019"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 id = "highSchoolOrEquivalent2019CityText" class = "education-text">High school or equivalent 2019</h3><br>
+          <div id="highSchoolOrEquivalentCity2019"></div>
+        </div>
+        <div class="vstack gap-2">
+          <h3 id = "collegeOrHigher2019CityText" class = "education-text">Bachelor's or higher 2019</h3><br>
+          <div id="collegeOrHigherCity2019"></div>
+        </div>
+      </div>
+    </div>`
     //Add div to education-block
     $('#pills-education').append($("<div id='education-city'></div>"))
+    $('#education-city').html(html)
+    Promise.all([
+      d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
+      d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+    ]).then((values) => {
+      var educationalCityAttainmentChart = new EducationalCityAttainmentChart(values); 
+    })
+  });
+
+  $("#city-education").change(function(){
+    if (!$(this).is(':checked'))
+      $("#education-city").remove();
+  });
+
+  $("#state-education").change(function(){
+    if (!$(this).is(':checked'))
+      $("#education-state").remove();
   });
 
   $("#state-age").change(function(){
@@ -99,8 +185,8 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       $('#pills-age').append($("<div id='age-city'></div>"))
       $('#age-city').html(html)
       Promise.all([
-        d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
-        d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
+        d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
+        d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
       ]).then((values) => {
         var ageCityChart = new AgeCityChart(values); 
       })

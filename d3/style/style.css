@@ -90,7 +90,7 @@ h1{
     }  
 
   /* Age */
-    #age-block{
+    #age-block, #age-state, #age-city{
         height:fit-content;
         /* margin: auto; */
         width: 75%;
@@ -102,11 +102,11 @@ h1{
         left:0;
     }
   
-    #age2010{
+    #age2010, #age-state-2010, #age-city-2010{
         flex: 1;
     } 
   
-    #age2020{
+    #age2020, #age-state-2020, #age-city-2020{
         transform: rotate(180deg);
         flex: 1;
         padding-bottom: -500px;
@@ -115,3 +115,8 @@ h1{
         /* position:absolute; */
         /* top:2px */
     }
+
+    
+
+
+  
