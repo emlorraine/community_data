@@ -1,3 +1,10 @@
+$(document).ready(function(){
+  console.log("page is ready")
+  $('.nav-tabs a[href="#intro"]').tab('show') 
+  
+  });
+
+
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var target = $(e.target).attr("href").substring(1) // activated tab
 
