@@ -8,7 +8,6 @@ function PovertyCityChart(data){
  */
  
 PovertyCityChart.prototype.init = function(rawData){
-    console.log(rawData)
      var raw2010Data = rawData[0]; 
      var raw2020Data = rawData[1];
 

@@ -8,7 +8,6 @@ function PovertyStateChart(data){
  */
  
   PovertyStateChart.prototype.init = function(rawData){
-    console.log("loading state poverty chart?")
      var raw2010Data = rawData[0]; 
      var raw2020Data = rawData[1];
 
