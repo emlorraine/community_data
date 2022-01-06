@@ -35,6 +35,10 @@ PovertyChart.prototype.init = function(rawData){
     var height = 360;
     var radius = Math.min(width, height) / 2;
     var donutWidth = 75;
+
+    $('#poverty2010').empty();
+    $('#poverty2020').empty();
+
     
     var svg = d3.select('#poverty2010')
         .append('svg')

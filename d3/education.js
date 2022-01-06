@@ -113,6 +113,14 @@
     }
     var self = this;
 
+    $('#lessThanHighSchool2010').empty();
+    $('#highSchoolOrEquivalent2010').empty();
+    $('#collegeOrHigher2010').empty();
+
+    $('#lessThanHighSchool2019').empty();
+    $('#highSchoolOrEquivalent2019').empty();
+    $('#collegeOrHigher2019').empty();
+
         //Less than high school, 2010 
         var lessThanHighSchool2010Div = d3.select("#lessThanHighSchool2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};

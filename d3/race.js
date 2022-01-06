@@ -77,6 +77,7 @@
 
 
     var self = this;
+    $('#race').empty();
     var divRaceBarChart = d3.select("#race").classed("content", true);
     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
 
