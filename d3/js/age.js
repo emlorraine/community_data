@@ -131,7 +131,7 @@ AgeChart.prototype.init = function(rawData){
                 return (d); 
             })
             .style("fill", "#B9314F")
-            .attr("transform",  "translate(1500, 60) rotate(90)")
+            .attr("transform",  "translate(1600, 60) rotate(90)")
     
         
       
