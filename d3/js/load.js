@@ -25,7 +25,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#state-race").change(function(){
     if ($(this).is(':checked'))
       //Add div to race-block
-      $('#pills-race').append($("<div id='race-missouri'></div>"))
+      $('#pills-race').append($("<h2> Race in the state of Missouri</h2><div id='race-missouri'></div>"))
       //Generate d3:
       Promise.all([
         d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
@@ -37,7 +37,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#city-race").change(function(){
     if ($(this).is(':checked'))
     //Add div to race-block
-    $('#pills-race').append($("<div id='race-city'></div>"))
+    $('#pills-race').append($("<h2> Race in St. Louis</h2><div id='race-city'></div>"))
     //Generate d3:
     Promise.all([
       d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
@@ -63,6 +63,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       //Generate d3 here 
       var html = 
       `<div id="education-state-block">
+      <h2> Educational Attainment in the state of Missouri </h2>
       <div id="educationStateData2010">
         <div class="vstack gap-2">
           <h3 class = "education-text" id = "lessThanHighSchool2010StateText">Less than high school 2010</h3><br>
@@ -108,6 +109,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
       var html = 
       `<div id="education-city-block">
+      <h2> Educational Attainment in St. Louis </h2>
       <div id="educationCityData2010">
         <div class="vstack gap-2">
           <h3 class = "education-text" id = "lessThanHighSchool2010CityText">Less than high school 2010</h3><br>
@@ -163,6 +165,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
       var html = 
       `<div id="age-state-block">
+        <h2> Age Distribution in the state of Missouri </h2>
         <div id="age-state-2010"></div>
         <div id="age-state-2020"></div>
       </div>`
@@ -179,6 +182,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
     var html = 
       `<div id="age-city-block">
+      <h2> Age Distribution in St. Louis </h2>
         <div id="age-city-2010"></div>
         <div id="age-city-2020"></div>
       </div>`
@@ -206,6 +210,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
       var html = 
       `<div class="vstack gap-3" id="povertyBlock2010">
+      <h2> Poverty in the state of Missouri </h2>
         <h3>At or below poverty line, 2010</h3>
         <div id="poverty-state-2010"></div>
         <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
@@ -231,6 +236,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
       var html = 
       `<div class="vstack gap-3" id="povertyBlock2010">
+      <h2> Poverty in St. Louis </h2>
         <h3>At or below poverty line, 2010</h3>
         <div id="poverty-city-2010"></div>
         <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>

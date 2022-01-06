@@ -7,6 +7,13 @@ h1{
     color: white
 }
 
+h2{
+    text-align: center;
+    font-family: Futura;
+    margin-bottom: 10px;
+
+}
+
 .nav-item{
     margin-top: 20px;
     color: #005f89;
