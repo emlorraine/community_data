@@ -114,9 +114,13 @@ h2{
     #age2010, #age-state-2010, #age-city-2010{
         flex: 1;
     } 
+
+    
+
+
   
     #age2020, #age-state-2020, #age-city-2020{
-        transform: rotate(180deg);
+        /* transform: rotate(180deg); */
         flex: 1;
         padding-bottom: -500px;
         max-height: 1120px;
