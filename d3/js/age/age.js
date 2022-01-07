@@ -84,8 +84,8 @@ AgeChart.prototype.init = function(rawData){
     var ageDiv = d3.select("#age2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = ageDiv.append("svg")
-            .attr("width",1750)
-            .attr("height",1250)
+            .attr("width",1000)
+            .attr("height",1100)
             .append("g")
             // .attr("transform", "translate(" + self.margin.left + ",0)")
         self.svg.selectAll("rect")
@@ -102,7 +102,7 @@ AgeChart.prototype.init = function(rawData){
                 return y(d)
             })
             .style("fill", "#1F7A8C")
-            .attr("transform",  "translate(750, 1050) rotate(270)")
+            .attr("transform",  "translate(0, 1050) rotate(270)")
 
             
 
@@ -128,8 +128,7 @@ AgeChart.prototype.init = function(rawData){
             .enter()
             .append("text")
             .attr("x", function(d, i) {
-                return 1525
-
+                return 775
             })  
             .attr("y", function(d, i) {
                 yValue =  105 + i*xScale.bandwidth()
