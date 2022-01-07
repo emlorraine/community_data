@@ -87,7 +87,6 @@ AgeChart.prototype.init = function(rawData){
             .attr("width",900)
             .attr("height",1100)
             .append("g")
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
         self.svg.selectAll("rect")
             .data(populationData2010.reverse())
             .enter().append("rect")
@@ -126,7 +125,6 @@ AgeChart.prototype.init = function(rawData){
                 .attr("width",750)
                 .attr("height",1100)
                 .append("g")
-                // .attr("transform", "translate(" + self.margin.left + ",0)")
             self.svg.selectAll("rect")
                 .data(populationData2020.reverse())
                 .enter().append("rect")
@@ -144,29 +142,6 @@ AgeChart.prototype.init = function(rawData){
                 .attr("transform",  "translate(0, 1050) rotate(270)")
 
 
-    // var ageDiv = d3.select("#age2020")
-    //     self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-    //     self.svg = ageDiv.append("svg")
-    //         .attr("width",1600)
-    //         .attr("height",1500)
-    //         .append("g")
-    //         // .attr("transform", "translate(" + self.margin.left + ",0)")
-    
-    //     self.svg.selectAll("rect")
-    //         .data(populationData2020.reverse())
-    //         .enter().append("rect")
-    //         .attr("width", xScale.bandwidth())
-    //         .attr("x", function(d, i) {
-    //             return xScale(labels[i]); 
-    //         })
-    //         .attr("y", function(d) {
-    //             return yScale(d); 
-    //         })
-    //         .attr("height", function(d) {
-    //             return (d); 
-    //         })
-    //         .style("fill", "#B9314F")
-    //         .attr("transform",  "translate(1600, 60) rotate(90)")
     
         
       
