@@ -84,7 +84,7 @@ AgeChart.prototype.init = function(rawData){
     var ageDiv = d3.select("#age2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = ageDiv.append("svg")
-            .attr("width",1000)
+            .attr("width",900)
             .attr("height",1100)
             .append("g")
             // .attr("transform", "translate(" + self.margin.left + ",0)")
@@ -105,24 +105,6 @@ AgeChart.prototype.init = function(rawData){
             .attr("transform",  "translate(0, 1050) rotate(270)")
 
             
-
-        // self.svg.selectAll("rect")
-        //     .data(populationData2010.reverse())
-        //     .enter().append("rect")
-        //     .attr("width", xScale.bandwidth())
-        //     .attr("x", function(d, i) {
-        //         return x(labels[i]); 
-        //     })
-            
-        //     .attr("y", function(d) {
-        //         return y(d); 
-        //     })
-        //     .attr("height", function(d) {
-        //         return (d); 
-        //     })
-        //     .style("fill", "#1F7A8C")
-            // .attr("transform",  "translate(1500, 60) rotate(90)")
-
         var textLabels2010 = self.svg.selectAll("barLabels")
             .data(labels.reverse())
             .enter()
@@ -137,6 +119,29 @@ AgeChart.prototype.init = function(rawData){
             .text(function(d){
                 return d; 
             })
+
+    var ageDiv = d3.select("#age2020")
+            self.margin = {top: 30, right: 20, bottom: 30, left: 50};
+            self.svg = ageDiv.append("svg")
+                .attr("width",750)
+                .attr("height",1100)
+                .append("g")
+                // .attr("transform", "translate(" + self.margin.left + ",0)")
+            self.svg.selectAll("rect")
+                .data(populationData2020.reverse())
+                .enter().append("rect")
+                .attr("width", xScale.bandwidth())
+                .attr("height", function(d){
+                    return (750-y(d))
+                })
+                .attr("x", function(d,i){
+                    return (x(i))
+                })
+                .attr("y", function(d){
+                    return y(d)
+                })
+                .style("fill", "#B9314F")
+                .attr("transform",  "translate(0, 1050) rotate(270)")
 
 
     // var ageDiv = d3.select("#age2020")
