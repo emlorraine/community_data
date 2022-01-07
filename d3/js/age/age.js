@@ -122,8 +122,8 @@ AgeChart.prototype.init = function(rawData){
     var ageDiv = d3.select("#age2020")
             self.margin = {top: 30, right: 20, bottom: 30, left: 50};
             self.svg = ageDiv.append("svg")
-                .attr("width",750)
-                .attr("height",1100)
+                .attr("width",2000)
+                .attr("height",2000)
                 .append("g")
             self.svg.selectAll("rect")
                 .data(populationData2020.reverse())
@@ -139,7 +139,8 @@ AgeChart.prototype.init = function(rawData){
                     return y(d)
                 })
                 .style("fill", "#B9314F")
-                .attr("transform",  "translate(0, 1050) rotate(270)")
+                .attr("transform", "translate(750,50) rotate(90)")
+                // .attr("transform",  "translate(0, 1050) rotate(90)")
 
 
     
