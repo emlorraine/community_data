@@ -76,8 +76,6 @@ AgeChart.prototype.init = function(rawData){
 	.domain([0,maxValue])
     .range([750,0]);
 
-
-
     $('#age2010').empty();
     $('#age2020').empty();
 
@@ -140,6 +138,10 @@ AgeChart.prototype.init = function(rawData){
                 })
                 .style("fill", "#B9314F")
                 .attr("transform", "translate(750,50) rotate(90)")
+        
+       
+
+
 
 
     
