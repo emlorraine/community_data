@@ -16,121 +16,148 @@
         socialExplorer2010Data[26],//Total population
         socialExplorer2010Data[27],//Less than high school
         socialExplorer2010Data[28],//High school or equivalent 
-        socialExplorer2010Data[30]//Bachelor's degree or higher
+        socialExplorer2010Data[29],//Some college
+        socialExplorer2010Data[30],//Bachelor's degree 
+        socialExplorer2010Data[31],//Master's degree 
+        socialExplorer2010Data[32],//Professional school degree 
+        socialExplorer2010Data[33]//Doctorate degree 
     ]
+
     data2020 = [
         socialExplorer2020Data[26],//Total population
         socialExplorer2020Data[27],//Less than high school
         socialExplorer2020Data[28],//High school or equivalent 
-        socialExplorer2020Data[29]//Bachelor's degree or higher
+        socialExplorer2020Data[29],//Some college
+        socialExplorer2020Data[30],//Bachelor's degree 
+        socialExplorer2020Data[31],//Master's degree 
+        socialExplorer2020Data[32],//Professional school degree 
+        socialExplorer2020Data[33]//Doctorate degree 
     ]
     var labels = [
         "\n Less than high school",
         "\n High school or equivalent",
-        "\n Bachelor's degree or higher",
+        "\n Some college",
+        "\n Bachelor's degree",
+        "\n Master's degree",
+        "\n Professional School degree",
+        "\n Doctorate degree",
     ]
 
     var population2010 = +(data2010[0].value).replace(",", "")
     var population2020 = +(data2020[0].value).replace(",", "")
 
-    var roundedPopulation2010 = Math.round(population2010/1000)*1000
-    var roundedPopulation2020 = Math.round(population2020/1000)*1000
+    var roundedPopulation2010 = Math.round(population2010/100)*100
+    var roundedPopulation2020 = Math.round(population2020/100)*100
 
-    var lessThanHS2010 = Math.round(+(data2010[1].value).replace(",", "")/100 * roundedPopulation2010)/ roundedPopulation2010; 
-    var lessThanHS2020 = Math.round(+(data2020[1].value).replace(",", "")/100 * roundedPopulation2020) /roundedPopulation2020; 
+    var lessThanHS2010 = Math.round((+(data2010[1].value).replace(",", "")/roundedPopulation2010)*100); 
+    var lessThanHS2020 = Math.round(+(data2020[1].value).replace(",", "")/roundedPopulation2020*100); 
 
-    var hsOrEquiv2010 = Math.round(+(data2010[2].value).replace(",", "")/100 * roundedPopulation2010) /roundedPopulation2010; 
-    var hsOrEquiv2020 = Math.round(+(data2020[2].value).replace(",", "")/100 * roundedPopulation2020)/roundedPopulation2020; 
+    var hsOrEquiv2010 = Math.round(+(data2010[2].value).replace(",", "")/roundedPopulation2010*100); 
+    var hsOrEquiv2020 = Math.round(+(data2020[2].value).replace(",", "")/roundedPopulation2020*100);
 
-    var bachelorOrHigher2010 = Math.round(+(data2010[3].value).replace(",", "")/100 * roundedPopulation2010) / roundedPopulation2010;
-    var bachelorOrHigher2020 = Math.round(+(data2020[3].value).replace(",", "")/100 * roundedPopulation2020)/roundedPopulation2020;
+    var someCollege2010 = Math.round(+(data2010[3].value).replace(",", "")/roundedPopulation2010*100); 
+    var someCollege2020 = Math.round(+(data2020[3].value).replace(",", "")/roundedPopulation2020*100); 
 
-    
-    //2010
-    //Less than high school:
-    var lessthanHS2010Array = []
-    var lessthanHS2010Ratio = lessThanHS2010; 
-    for(var i = 0; i < 100; i++){
-        if(i < lessthanHS2010Ratio){
-            lessthanHS2010Array.push("X")
-        } else{
-            lessthanHS2010Array.push("O")
-        }
+    var bachelorOrHigher2010 = Math.round(+(data2010[4].value).replace(",", "")/roundedPopulation2010*100); 
+    var bachelorOrHigher2020 = Math.round(+(data2020[4].value).replace(",", "")/roundedPopulation2020*100);
+
+    var mastersDegree2010 = Math.round(+(data2010[5].value).replace(",", "")/roundedPopulation2010*100); 
+    var mastersDegree2020 = Math.round(+(data2020[5].value).replace(",", "")/roundedPopulation2020*100);
+
+    var professionalDegree2010 = Math.round(+(data2010[6].value).replace(",", "")/roundedPopulation2010*100); 
+    var professionalDegree2020 = Math.round(+(data2020[6].value).replace(",", "")/roundedPopulation2020*100);
+
+    var doctorateDegree2010 = Math.round(+(data2010[7].value).replace(",", "")/roundedPopulation2010*100); 
+    var doctorateDegree2020 = Math.round(+(data2020[7].value).replace(",", "")/roundedPopulation2020*100);
+
+    fullGrid2010 = [lessThanHS2010, hsOrEquiv2010, someCollege2010, bachelorOrHigher2010, mastersDegree2010, professionalDegree2010, doctorateDegree2010]
+    gridData2010 = []
+
+    fullGrid2020 = [lessThanHS2020, hsOrEquiv2020, someCollege2020, bachelorOrHigher2020, mastersDegree2020, professionalDegree2020, doctorateDegree2020]
+    gridData2020 = []
+
+    for(var i = 0; i < fullGrid2010[0]; i++){
+        gridData2010.push(0)
     }
-    //High school or equivalent: 
-    var hsOrEquiv2010Array = []
-    var hsOrEquiv2010Ratio = hsOrEquiv2010; 
-    for(var i = 0; i < 100; i++){
-        if(i < hsOrEquiv2010Ratio){
-            hsOrEquiv2010Array.push("X")
-        } else{
-            hsOrEquiv2010Array.push("O")
-        }
+    for(var i = 0; i < fullGrid2010[1]; i++){
+        gridData2010.push(1)
     }
+    for(var i = 0; i < fullGrid2010[2]; i++){
+        gridData2010.push(2)
+    }
+    for(var i = 0; i < fullGrid2010[3]; i++){
+        gridData2010.push(3)
+    }
+    for(var i = 0; i < fullGrid2010[4]; i++){
+        gridData2010.push(4)
+    }
+    for(var i = 0; i < fullGrid2010[5]; i++){
+        gridData2010.push(5)
+    }
+    for(var i = 0; i < fullGrid2010[6]; i++){
+        gridData2010.push(6)
+    }
+    for(var i = 0; i < fullGrid2010[7]; i++){
+        gridData2010.push(7)
+    }
+    gridData2010.length = 100;
 
-    //Bachelor's degree or higher:
-    var bachelorsOrHigher2010Array = []
-    var bachelorsOrHigher2010Ratio = bachelorOrHigher2010; 
-    for(var i = 0; i < 100; i++){
-        if(i < bachelorsOrHigher2010Ratio){
-            bachelorsOrHigher2010Array.push("X")
-        } else{
-            bachelorsOrHigher2010Array.push("O")
-        }
+    for(var i = 0; i < fullGrid2020[0]; i++){
+        gridData2020.push(0)
     }
+    for(var i = 0; i < fullGrid2020[1]; i++){
+        gridData2020.push(1)
+    }
+    for(var i = 0; i < fullGrid2020[2]; i++){
+        gridData2020.push(2)
+    }
+    for(var i = 0; i < fullGrid2020[3]; i++){
+        gridData2020.push(3)
+    }
+    for(var i = 0; i < fullGrid2020[4]; i++){
+        gridData2020.push(4)
+    }
+    for(var i = 0; i < fullGrid2020[5]; i++){
+        gridData2020.push(5)
+    }
+    for(var i = 0; i < fullGrid2020[6]; i++){
+        gridData2020.push(6)
+    }
+    for(var i = 0; i < fullGrid2020[7]; i++){
+        gridData2020.push(7)
+    }
+    gridData2020.length = 100;
 
-    //2020
-    //Less than high school:
-    var lessthanHS2020Array = []
-    var lessthanHS2020Ratio = lessThanHS2020; 
-    for(var i = 0; i < 100; i++){
-        if(i < lessthanHS2020Ratio){
-            lessthanHS2020Array.push("X")
-        } else{
-            lessthanHS2020Array.push("O")
-        }
-    }
-    //High school or equivalent: 
-    var hsOrEquiv2020Array = []
-    var hsOrEquiv2020Ratio = hsOrEquiv2020; 
-    for(var i = 0; i < 100; i++){
-        if(i < hsOrEquiv2020Ratio){
-            hsOrEquiv2020Array.push("X")
-        } else{
-            hsOrEquiv2020Array.push("O")
-        }
-    }
+    var keyLabels = [
+        "Less than High School",
+        "High School Graduate or Equivalents",
+        "Some College",
+        "Bachelor's Degree",
+        "Master's Degree",
+        "Professional School Degree",
+        "Doctorate Degree"
+    ]
 
-    //Bachelor's degree or higher:
-    var bachelorsOrHigher2020Array = []
-    var bachelorsOrHigher2020Ratio = bachelorOrHigher2020; 
-    for(var i = 0; i < 100; i++){
-        if(i < bachelorsOrHigher2020Ratio){
-            bachelorsOrHigher2020Array.push("X")
-        } else{
-            bachelorsOrHigher2020Array.push("O")
-        }
-    }
     var self = this;
 
-    $('#lessThanHighSchoolState2010').empty();
-    $('#highSchoolOrEquivalentState2010').empty();
-    $('#collegeOrHigherState2010').empty();
+    $('#educationState2010').empty();
+    $('#educationState2020').empty();
+    // $('#collegeOrHigher2010').empty();
 
-    $('#lessThanHighSchoolState2019').empty();
-    $('#highSchoolOrEquivalentState2019').empty();
-    $('#collegeOrHigherState2019').empty();
+    // $('#lessThanHighSchool2019').empty();
+    // $('#highSchoolOrEquivalent2019').empty();
+    // $('#collegeOrHigher2019').empty();
 
         //Less than high school, 2010 
-        var lessThanHighSchool2010Div = d3.select("#lessThanHighSchoolState2010")
+        var education2010Div = d3.select("#educationState2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = lessThanHighSchool2010Div.append("svg")
+        self.svg = education2010Div.append("svg")
             .attr("width",500)
-            .attr("height",500)
+            .attr("height",750)
             // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         self.svg.selectAll("rect")
-            .data(lessthanHS2010Array.reverse())
+            .data(gridData2010.reverse())
             .enter()
             .append("rect")
             .attr("width", 30)
@@ -142,24 +169,63 @@
             return Math.floor(i/10)%10 * 50
             })
             .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
+                if(d==0){
+                    return "red"; 
+                }
+                else if(d==1){
+                    return "orange"; 
+                }
+                else if(d==2){
+                    return "yellow"; 
+                }
+                else if(d==3){
+                    return "green"; 
+                }
+                else if(d==4){
+                    return "blue"; 
+                }
+                else if(d==5){
+                    return "purple"; 
+                }
+                else if(d==6){
+                    return "pink"; 
                 }
                 else{
-                    return "#1F7A8C"; 
+                    return "D3D3D3"; 
                 }
             })
+            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("fill", "black")
+            self.svg.append("text").attr("x", 350).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //High school or equivalent, 2010 
-        var highSchoolOrEquivalent2010Div = d3.select("#highSchoolOrEquivalentState2010")
+            self.svg.append("rect").attr("x",0).attr("y",500).attr("height", 20).attr("width", 20).style("fill", "pink")
+            self.svg.append("text").attr("x", 30).attr("y", 512).text(keyLabels[6]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",530).attr("height", 20).attr("width", 20).style("fill", "purple")
+            self.svg.append("text").attr("x", 30).attr("y", 542).text(keyLabels[5]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",560).attr("height", 20).attr("width", 20).style("fill", "blue")
+            self.svg.append("text").attr("x", 30).attr("y", 572).text(keyLabels[4]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",590).attr("height", 20).attr("width", 20).style("fill", "green")
+            self.svg.append("text").attr("x", 30).attr("y", 602).text(keyLabels[3]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",620).attr("height", 20).attr("width", 20).style("fill", "yellow")
+            self.svg.append("text").attr("x", 30).attr("y", 632).text(keyLabels[2]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",650).attr("height", 20).attr("width", 20).style("fill", "orange")
+            self.svg.append("text").attr("x", 30).attr("y", 662).text(keyLabels[1]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",680).attr("height", 20).attr("width", 20).style("fill", "red")
+            self.svg.append("text").attr("x", 30).attr("y", 692).text(keyLabels[0]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+        var lessThanHighSchool2020Div = d3.select("#educationState2020")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = highSchoolOrEquivalent2010Div.append("svg")
+        self.svg = lessThanHighSchool2020Div.append("svg")
             .attr("width",500)
-            .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+            .attr("height",750)
 
         self.svg.selectAll("rect")
-            .data(hsOrEquiv2010Array.reverse())
+            .data(gridData2020.reverse())
             .enter()
             .append("rect")
             .attr("width", 30)
@@ -171,130 +237,55 @@
             return Math.floor(i/10)%10 * 50
             })
             .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
+                if(d==0){
+                    return "red"; 
+                }
+                else if(d==1){
+                    return "orange"; 
+                }
+                else if(d==2){
+                    return "yellow"; 
+                }
+                else if(d==3){
+                    return "green"; 
+                }
+                else if(d==4){
+                    return "blue"; 
+                }
+                else if(d==5){
+                    return "purple"; 
+                }
+                else if(d==6){
+                    return "pink"; 
                 }
                 else{
-                    return "#1F7A8C"; 
+                    return "D3D3D3"; 
                 }
             })
+            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("fill", "black")
+            self.svg.append("text").attr("x", 350).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //College or higher, 2010 
-        var collegeOrHigher2010 = d3.select("#collegeOrHigherState2010")
-        self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = collegeOrHigher2010.append("svg")
-            .attr("width",500)
-            .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+            self.svg.append("rect").attr("x",0).attr("y",500).attr("height", 20).attr("width", 20).style("fill", "pink")
+            self.svg.append("text").attr("x", 30).attr("y", 512).text(keyLabels[6]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        self.svg.selectAll("rect")
-            .data(bachelorsOrHigher2020Array.reverse())
-            .enter()
-            .append("rect")
-            .attr("width", 30)
-            .attr("height", 30)
-            .attr("x", function(d,i){
-                return Math.floor(i%10) * 50
-            })
-            .attr("y", function(d,i){
-            return Math.floor(i/10)%10 * 50
-            })
-            .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
-                }
-                else{
-                    return "#1F7A8C"; 
-                }
-            })
+            self.svg.append("rect").attr("x",0).attr("y",530).attr("height", 20).attr("width", 20).style("fill", "purple")
+            self.svg.append("text").attr("x", 30).attr("y", 542).text(keyLabels[5]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //Less than high school, 2019
-        var lessThanHighSchool2019Div = d3.select("#lessThanHighSchoolState2019")
-        self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = lessThanHighSchool2019Div.append("svg")
-            .attr("width",500)
-            .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+            self.svg.append("rect").attr("x",0).attr("y",560).attr("height", 20).attr("width", 20).style("fill", "blue")
+            self.svg.append("text").attr("x", 30).attr("y", 572).text(keyLabels[4]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        self.svg.selectAll("rect")
-            .data(lessthanHS2020Array.reverse())
-            .enter()
-            .append("rect")
-            .attr("width", 30)
-            .attr("height", 30)
-            .attr("x", function(d,i){
-                return Math.floor(i%10) * 50
-            })
-            .attr("y", function(d,i){
-            return Math.floor(i/10)%10 * 50
-            })
-            .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
-                }
-                else{
-                    return "#B9314F"; 
-                }
-            })
+            self.svg.append("rect").attr("x",0).attr("y",590).attr("height", 20).attr("width", 20).style("fill", "green")
+            self.svg.append("text").attr("x", 30).attr("y", 602).text(keyLabels[3]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //High school or equivalent, 2019 
-        var highSchoolOrEquivalent2019Div = d3.select("#highSchoolOrEquivalentState2019")
-        self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = highSchoolOrEquivalent2019Div.append("svg")
-            .attr("width",500)
-            .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+            self.svg.append("rect").attr("x",0).attr("y",620).attr("height", 20).attr("width", 20).style("fill", "yellow")
+            self.svg.append("text").attr("x", 30).attr("y", 632).text(keyLabels[2]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        self.svg.selectAll("rect")
-            .data(hsOrEquiv2020Array.reverse())
-            .enter()
-            .append("rect")
-            .attr("width", 30)
-            .attr("height", 30)
-            .attr("x", function(d,i){
-                return Math.floor(i%10) * 50
-            })
-            .attr("y", function(d,i){
-            return Math.floor(i/10)%10 * 50
-            })
-            .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
-                }
-                else{
-                    return "#B9314F"; 
-                }
-            })
+            self.svg.append("rect").attr("x",0).attr("y",650).attr("height", 20).attr("width", 20).style("fill", "orange")
+            self.svg.append("text").attr("x", 30).attr("y", 662).text(keyLabels[1]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //College or higher, 2019 
-        var collegeOrHigher2019 = d3.select("#collegeOrHigherState2019")
-        self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = collegeOrHigher2019.append("svg")
-            .attr("width",500)
-            .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+            self.svg.append("rect").attr("x",0).attr("y",680).attr("height", 20).attr("width", 20).style("fill", "red")
+            self.svg.append("text").attr("x", 30).attr("y", 692).text(keyLabels[0]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        self.svg.selectAll("rect")
-            .data(bachelorsOrHigher2020Array)
-            .enter()
-            .append("rect")
-            .attr("width", 30)
-            .attr("height", 30)
-            .attr("x", function(d,i){
-                return Math.floor(i%10) * 50
-            })
-            .attr("y", function(d,i){
-            return Math.floor(i/10)%10 * 50
-            })
-            .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
-                }
-                else{
-                    return "#B9314F"; 
-                }
-            })
-
-
-
-    }
+ }
+    
+        

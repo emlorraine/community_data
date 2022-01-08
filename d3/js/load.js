@@ -79,43 +79,23 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       //Generate d3 here 
       var html = 
       `<div id="education-state-block">
-      <h2> Educational Attainment in the state of Missouri </h2>
-      <div id="educationStateData2010">
-        <div class="vstack gap-2">
-          <h3 class = "education-text" id = "lessThanHighSchool2010StateText">Less than high school 2010</h3><br>
-          <div id="lessThanHighSchoolState2010"></div>
+        <div id="educationData2010" style="transform: scale(1.25)">
+        <div class="vstack gap-2" style="margin-right: 150px;">
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in Missouri, 2010</h3><br>
+          <div id="educationState2010"></div>
         </div>
         <div class="vstack gap-2">
-          <h3 class = "education-text" id = "highSchoolOrEquivalent2010StateText">High school or equivalent 2010</h3><br>
-          <div id="highSchoolOrEquivalentState2010"></div>
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in Missouri, 2019</h3><br>
+          <div id="educationState2020"></div>
         </div>
-        <div class="vstack gap-2">
-          <h3 class = "education-text" id = "collegeOrHigher2010StateText">Bachelor's or higher 2010</h3><br>
-          <div id="collegeOrHigherState2010"></div>
         </div>
-      </div>
-
-      <div id="educationData2019">
-        <div class="vstack gap-2">
-          <h3 id = "lessThanHighSchool2019StateText" class = "education-text">Less than high school 2019</h3><br>
-          <div id="lessThanHighSchoolState2019"></div>
-        </div>
-        <div class="vstack gap-2">
-          <h3 id = "highSchoolOrEquivalent2019StateText" class = "education-text">High school or equivalent 2019</h3><br>
-          <div id="highSchoolOrEquivalentState2019"></div>
-        </div>
-        <div class="vstack gap-2">
-          <h3 id = "collegeOrHigher2019StateText" class = "education-text">Bachelor's or higher 2019</h3><br>
-          <div id="collegeOrHigherState2019"></div>
-        </div>
-      </div>
-    </div>`
+      </div>`
       //Add div to education-block
       $('#pills-education').append($("<div id='education-state'></div>"))
       $('#education-state').html(html)
       Promise.all([
-        d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
-        d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
+        d3.csv("../data/missouri/2010/2010/Sheet1-Table 1.csv"),
+        d3.csv("../data/missouri/2019/2019/Sheet1-Table 1.csv"),
       ]).then((values) => {
         var educationalStateAttainmentChart = new EducationalStateAttainmentChart(values); 
       })
