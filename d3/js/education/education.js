@@ -155,7 +155,7 @@
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = lessThanHighSchool2010Div.append("svg")
             .attr("width",500)
-            .attr("height",500)
+            .attr("height",560)
             // .attr("transform", "translate(" + self.margin.left + ",0)")
 
         console.log(gridData2010)
@@ -198,15 +198,14 @@
                     return "D3D3D3"; 
                 }
             })
+            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("fill", "black")
+            self.svg.append("text").attr("x", 340).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
 
         var lessThanHighSchool2020Div = d3.select("#lessThanHighSchool2020")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = lessThanHighSchool2020Div.append("svg")
             .attr("width",500)
             .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
-
-        console.log(gridData2010)
 
         self.svg.selectAll("rect")
             .data(gridData2020.reverse())
@@ -247,151 +246,56 @@
                 }
             })
 
+            var key = [
+                {value:"Less than High School", color:"red"},
+                {value:"High School Graduate or Equivalents", color:"orange"},
+                {value:"Some College", color:"yellow"},
+                {value:"Bachelor's Degree", color:"green"},
+                {value:"Master's Degree", color:"blue"},
+                {value:"Professional School Degree", color:"purple"},
+                {value:"Doctorate Degree", color:"pink"}
+            ]
+
+            var keyLabels = [
+                "Less than High School",
+                "High School Graduate or Equivalents",
+                "Some College",
+                "Bachelor's Degree",
+                "Master's Degree",
+                "Professional School Degree",
+                "Doctorate Degree"
+            ]
+
+
+
         //High school or equivalent, 2010 
-        // var highSchoolOrEquivalent2010Div = d3.select("#highSchoolOrEquivalent2010")
-        // self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        // self.svg = highSchoolOrEquivalent2010Div.append("svg")
-        //     .attr("width",500)
-        //     .attr("height",500)
-        //     // .attr("transform", "translate(" + self.margin.left + ",0)")
-
-        // self.svg.selectAll("rect")
-        //     .data(hsOrEquiv2010Array.reverse())
-        //     .enter()
-        //     .append("rect")
-        //     .attr("width", 30)
-        //     .attr("height", 30)
-        //     .attr("x", function(d,i){
-        //         return Math.floor(i%10) * 50
-        //     })
-        //     .attr("y", function(d,i){
-        //     return Math.floor(i/10)%10 * 50
-        //     })
-        //     .attr("fill", function(d){
-        //         if(d=="O"){
-        //             return "#D3D3D3"; 
-        //         }
-        //         else{
-        //             return "#1F7A8C"; 
-        //         }
-        //     })
-
-        //College or higher, 2010 
-        // var collegeOrHigher2010 = d3.select("#collegeOrHigher2010")
-        // self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        // self.svg = collegeOrHigher2010.append("svg")
-        //     .attr("width",500)
-        //     .attr("height",500)
-        //     // .attr("transform", "translate(" + self.margin.left + ",0)")
-
-        // self.svg.selectAll("rect")
-        //     .data(bachelorsOrHigher2020Array.reverse())
-        //     .enter()
-        //     .append("rect")
-        //     .attr("width", 30)
-        //     .attr("height", 30)
-        //     .attr("x", function(d,i){
-        //         return Math.floor(i%10) * 50
-        //     })
-        //     .attr("y", function(d,i){
-        //     return Math.floor(i/10)%10 * 50
-        //     })
-        //     .attr("fill", function(d){
-        //         if(d=="O"){
-        //             return "#D3D3D3"; 
-        //         }
-        //         else{
-        //             return "#1F7A8C"; 
-        //         }
-        //     })
-
-        //Less than high school, 2019
-        var lessThanHighSchool2019Div = d3.select("#lessThanHighSchool2019")
+        var highSchoolOrEquivalent2010Div = d3.select("#highSchoolOrEquivalent2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = lessThanHighSchool2019Div.append("svg")
+        self.svg = highSchoolOrEquivalent2010Div.append("svg")
             .attr("width",500)
             .attr("height",500)
             // .attr("transform", "translate(" + self.margin.left + ",0)")
 
-        self.svg.selectAll("rect")
-            .data(lessthanHS2020Array.reverse())
-            .enter()
-            .append("rect")
-            .attr("width", 30)
-            .attr("height", 30)
-            .attr("x", function(d,i){
-                return Math.floor(i%10) * 50
-            })
-            .attr("y", function(d,i){
-            return Math.floor(i/10)%10 * 50
-            })
-            .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
-                }
-                else{
-                    return "#B9314F"; 
-                }
-            })
+        self.svg.append("rect").attr("x",195).attr("y",125).attr("height", 12).attr("width", 12).style("fill", "pink")
+        self.svg.append("text").attr("x", 220).attr("y", 130).text(keyLabels[6]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //High school or equivalent, 2019 
-        var highSchoolOrEquivalent2019Div = d3.select("#highSchoolOrEquivalent2019")
-        self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = highSchoolOrEquivalent2019Div.append("svg")
-            .attr("width",500)
-            .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+        self.svg.append("rect").attr("x",195).attr("y",155).attr("height", 12).attr("width", 12).style("fill", "purple")
+        self.svg.append("text").attr("x", 220).attr("y", 160).text(keyLabels[5]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        self.svg.selectAll("rect")
-            .data(hsOrEquiv2020Array.reverse())
-            .enter()
-            .append("rect")
-            .attr("width", 30)
-            .attr("height", 30)
-            .attr("x", function(d,i){
-                return Math.floor(i%10) * 50
-            })
-            .attr("y", function(d,i){
-            return Math.floor(i/10)%10 * 50
-            })
-            .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
-                }
-                else{
-                    return "#B9314F"; 
-                }
-            })
+        self.svg.append("rect").attr("x",195).attr("y",185).attr("height", 12).attr("width", 12).style("fill", "blue")
+        self.svg.append("text").attr("x", 220).attr("y", 190).text(keyLabels[4]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //College or higher, 2019 
-        var collegeOrHigher2019 = d3.select("#collegeOrHigher2019")
-        self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = collegeOrHigher2019.append("svg")
-            .attr("width",500)
-            .attr("height",500)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+        self.svg.append("rect").attr("x",195).attr("y",215).attr("height", 12).attr("width", 12).style("fill", "green")
+        self.svg.append("text").attr("x", 220).attr("y", 220).text(keyLabels[3]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        self.svg.selectAll("rect")
-            .data(bachelorsOrHigher2020Array)
-            .enter()
-            .append("rect")
-            .attr("width", 30)
-            .attr("height", 30)
-            .attr("x", function(d,i){
-                return Math.floor(i%10) * 50
-            })
-            .attr("y", function(d,i){
-            return Math.floor(i/10)%10 * 50
-            })
-            .attr("fill", function(d){
-                if(d=="O"){
-                    return "#D3D3D3"; 
-                }
-                else{
-                    return "#B9314F"; 
-                }
-            })
+        self.svg.append("rect").attr("x",195).attr("y",245).attr("height", 12).attr("width", 12).style("fill", "yellow")
+        self.svg.append("text").attr("x", 220).attr("y", 250).text(keyLabels[2]).style("font-size", "15px").attr("alignment-baseline","middle")
 
+        self.svg.append("rect").attr("x",195).attr("y",275).attr("height", 12).attr("width", 12).style("fill", "orange")
+        self.svg.append("text").attr("x", 220).attr("y", 280).text(keyLabels[1]).style("font-size", "15px").attr("alignment-baseline","middle")
 
+        self.svg.append("rect").attr("x",195).attr("y",305).attr("height", 12).attr("width", 12).style("fill", "red")
+        self.svg.append("text").attr("x", 220).attr("y", 310).text(keyLabels[0]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-    }
+      
+        }
