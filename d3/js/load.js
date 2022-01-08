@@ -105,37 +105,17 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
       var html = 
       `<div id="education-city-block">
-      <h2> Educational Attainment in St. Louis </h2>
-      <div id="educationCityData2010">
-        <div class="vstack gap-2">
-          <h3 class = "education-text" id = "lessThanHighSchool2010CityText">Less than high school 2010</h3><br>
-          <div id="lessThanHighSchoolCity2010"></div>
+        <div id="educationData2010" style="transform: scale(1.25)">
+        <div class="vstack gap-2" style="margin-right: 150px;">
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in St. Louis, 2010</h3><br>
+          <div id="educationCity2010"></div>
         </div>
         <div class="vstack gap-2">
-          <h3 class = "education-text" id = "highSchoolOrEquivalent2010CityText">High school or equivalent 2010</h3><br>
-          <div id="highSchoolOrEquivalentCity2010"></div>
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in St. Louis, 2019</h3><br>
+          <div id="educationCity2020"></div>
         </div>
-        <div class="vstack gap-2">
-          <h3 class = "education-text" id = "collegeOrHigher2010CityText">Bachelor's or higher 2010</h3><br>
-          <div id="collegeOrHigherCity2010"></div>
         </div>
-      </div>
-
-      <div id="educationData2019">
-        <div class="vstack gap-2">
-          <h3 id = "lessThanHighSchool2019CityText" class = "education-text">Less than high school 2019</h3><br>
-          <div id="lessThanHighSchoolCity2019"></div>
-        </div>
-        <div class="vstack gap-2">
-          <h3 id = "highSchoolOrEquivalent2019CityText" class = "education-text">High school or equivalent 2019</h3><br>
-          <div id="highSchoolOrEquivalentCity2019"></div>
-        </div>
-        <div class="vstack gap-2">
-          <h3 id = "collegeOrHigher2019CityText" class = "education-text">Bachelor's or higher 2019</h3><br>
-          <div id="collegeOrHigherCity2019"></div>
-        </div>
-      </div>
-    </div>`
+      </div>`
     //Add div to education-block
     $('#pills-education').append($("<div id='education-city'></div>"))
     $('#education-city').html(html)

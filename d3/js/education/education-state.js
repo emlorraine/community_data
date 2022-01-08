@@ -43,38 +43,40 @@
         "\n Doctorate degree",
     ]
 
-    var population2010 = +(data2010[0].value).replace(",", "")
-    var population2020 = +(data2020[0].value).replace(",", "")
+    var population2010 = +(data2010[0].value).replaceAll(",", "")
+    var population2020 = +(data2020[0].value).replaceAll(",", "")
 
     var roundedPopulation2010 = Math.round(population2010/100)*100
     var roundedPopulation2020 = Math.round(population2020/100)*100
 
-    var lessThanHS2010 = Math.round((+(data2010[1].value).replace(",", "")/roundedPopulation2010)*100); 
-    var lessThanHS2020 = Math.round(+(data2020[1].value).replace(",", "")/roundedPopulation2020*100); 
+    var lessThanHS2010 = Math.round((+(data2010[1].value).replaceAll(",", "")/roundedPopulation2010)*100); 
+    var lessThanHS2020 = Math.round(+(data2020[1].value).replaceAll(",", "")/roundedPopulation2020*100); 
 
-    var hsOrEquiv2010 = Math.round(+(data2010[2].value).replace(",", "")/roundedPopulation2010*100); 
-    var hsOrEquiv2020 = Math.round(+(data2020[2].value).replace(",", "")/roundedPopulation2020*100);
+    var hsOrEquiv2010 = Math.round(+(data2010[2].value).replaceAll(",", "")/roundedPopulation2010*100); 
+    var hsOrEquiv2020 = Math.round(+(data2020[2].value).replaceAll(",", "")/roundedPopulation2020*100);
 
-    var someCollege2010 = Math.round(+(data2010[3].value).replace(",", "")/roundedPopulation2010*100); 
-    var someCollege2020 = Math.round(+(data2020[3].value).replace(",", "")/roundedPopulation2020*100); 
+    var someCollege2010 = Math.round(+(data2010[3].value).replaceAll(",", "")/roundedPopulation2010*100); 
+    var someCollege2020 = Math.round(+(data2020[3].value).replaceAll(",", "")/roundedPopulation2020*100); 
 
-    var bachelorOrHigher2010 = Math.round(+(data2010[4].value).replace(",", "")/roundedPopulation2010*100); 
-    var bachelorOrHigher2020 = Math.round(+(data2020[4].value).replace(",", "")/roundedPopulation2020*100);
+    var bachelorOrHigher2010 = Math.round(+(data2010[4].value).replaceAll(",", "")/roundedPopulation2010*100); 
+    var bachelorOrHigher2020 = Math.round(+(data2020[4].value).replaceAll(",", "")/roundedPopulation2020*100);
 
-    var mastersDegree2010 = Math.round(+(data2010[5].value).replace(",", "")/roundedPopulation2010*100); 
-    var mastersDegree2020 = Math.round(+(data2020[5].value).replace(",", "")/roundedPopulation2020*100);
+    var mastersDegree2010 = Math.round(+(data2010[5].value).replaceAll(",", "")/roundedPopulation2010*100); 
+    var mastersDegree2020 = Math.round(+(data2020[5].value).replaceAll(",", "")/roundedPopulation2020*100);
 
-    var professionalDegree2010 = Math.round(+(data2010[6].value).replace(",", "")/roundedPopulation2010*100); 
-    var professionalDegree2020 = Math.round(+(data2020[6].value).replace(",", "")/roundedPopulation2020*100);
+    var professionalDegree2010 = Math.round(+(data2010[6].value).replaceAll(",", "")/roundedPopulation2010*100); 
+    var professionalDegree2020 = Math.round(+(data2020[6].value).replaceAll(",", "")/roundedPopulation2020*100);
 
-    var doctorateDegree2010 = Math.round(+(data2010[7].value).replace(",", "")/roundedPopulation2010*100); 
-    var doctorateDegree2020 = Math.round(+(data2020[7].value).replace(",", "")/roundedPopulation2020*100);
+    var doctorateDegree2010 = Math.round(+(data2010[7].value).replaceAll(",", "")/roundedPopulation2010*100); 
+    var doctorateDegree2020 = Math.round(+(data2020[7].value).replaceAll(",", "")/roundedPopulation2020*100);
 
     fullGrid2010 = [lessThanHS2010, hsOrEquiv2010, someCollege2010, bachelorOrHigher2010, mastersDegree2010, professionalDegree2010, doctorateDegree2010]
     gridData2010 = []
 
     fullGrid2020 = [lessThanHS2020, hsOrEquiv2020, someCollege2020, bachelorOrHigher2020, mastersDegree2020, professionalDegree2020, doctorateDegree2020]
     gridData2020 = []
+
+    console.log(fullGrid2010)
 
     for(var i = 0; i < fullGrid2010[0]; i++){
         gridData2010.push(0)
