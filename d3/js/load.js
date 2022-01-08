@@ -10,7 +10,8 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
      // Call datasets for branch:
     data2010FileName = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
     data2020FileName = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
-    if(d3.csv(data2010FileName) & d3.csv(data2020FileName)){
+    console.log(d3.csv(data2010FileName))
+    if(d3.csv(data2010FileName) && d3.csv(data2020FileName)){
       Promise.all([
           d3.csv(data2010FileName),
           d3.csv(data2020FileName),
