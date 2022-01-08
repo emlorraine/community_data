@@ -266,8 +266,8 @@
                     return "D3D3D3"; 
                 }
             })
-            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("stroke", "black").style("fill", "white")
-            self.svg.append("text").attr("x", 350).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
+            // self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("stroke", "black").style("fill", "white")
+            // self.svg.append("text").attr("x", 350).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
 
             self.svg.append("rect").attr("x",0).attr("y",500).attr("height", 20).attr("width", 20).style("fill", "pink")
             self.svg.append("text").attr("x", 30).attr("y", 512).text(keyLabels[6]).style("font-size", "15px").attr("alignment-baseline","middle")
