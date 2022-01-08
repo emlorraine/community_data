@@ -195,7 +195,7 @@
                     return "D3D3D3"; 
                 }
             })
-            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("fill", "black")
+            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("stroke", "black").style("fill", "white")
             self.svg.append("text").attr("x", 350).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
 
             self.svg.append("rect").attr("x",0).attr("y",500).attr("height", 20).attr("width", 20).style("fill", "pink")
@@ -218,6 +218,9 @@
 
             self.svg.append("rect").attr("x",0).attr("y",680).attr("height", 20).attr("width", 20).style("fill", "red")
             self.svg.append("text").attr("x", 30).attr("y", 692).text(keyLabels[0]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",710).attr("height", 20).attr("width", 20).style("fill", "black")
+            self.svg.append("text").attr("x", 30).attr("y", 722).text("Unclassified").style("font-size", "15px").attr("alignment-baseline","middle")
 
         var lessThanHighSchool2020Div = d3.select("#education2020")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
@@ -263,7 +266,7 @@
                     return "D3D3D3"; 
                 }
             })
-            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("fill", "black")
+            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("stroke", "black").style("fill", "white")
             self.svg.append("text").attr("x", 350).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
 
             self.svg.append("rect").attr("x",0).attr("y",500).attr("height", 20).attr("width", 20).style("fill", "pink")
@@ -286,6 +289,9 @@
 
             self.svg.append("rect").attr("x",0).attr("y",680).attr("height", 20).attr("width", 20).style("fill", "red")
             self.svg.append("text").attr("x", 30).attr("y", 692).text(keyLabels[0]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",710).attr("height", 20).attr("width", 20).style("fill", "black")
+            self.svg.append("text").attr("x", 30).attr("y", 722).text("Unclassified").style("font-size", "15px").attr("alignment-baseline","middle")
 
  }
     
