@@ -63,6 +63,7 @@ h2{
         padding-right: 50px;
         padding-bottom: 150px; 
         display: flex;
+        transform: scale(1.5)
     }
     #highSchoolOrEquivalent2010, #highSchoolOrEquivalentState2010, #highSchoolOrEquivalentCity2010{
         float: center;
