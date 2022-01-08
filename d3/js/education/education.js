@@ -12,10 +12,6 @@
     var socialExplorer2010Data = rawData[0]
     var socialExplorer2020Data = rawData[1]
 
-    console.log(socialExplorer2020Data)
-
-
-
     data2010 = [
         socialExplorer2010Data[26],//Total population
         socialExplorer2010Data[27],//Less than high school
@@ -37,8 +33,6 @@
         socialExplorer2020Data[32],//Professional school degree 
         socialExplorer2020Data[33]//Doctorate degree 
     ]
-
-    console.log(data2010, data2020)
     var labels = [
         "\n Less than high school",
         "\n High school or equivalent",
@@ -82,10 +76,6 @@
 
     fullGrid2020 = [lessThanHS2020, hsOrEquiv2020, someCollege2020, bachelorOrHigher2020, mastersDegree2020, professionalDegree2020, doctorateDegree2020]
     gridData2020 = []
-
-    console.log(fullGrid2020)
-
-
 
     for(var i = 0; i < fullGrid2010[0]; i++){
         gridData2010.push(0)
