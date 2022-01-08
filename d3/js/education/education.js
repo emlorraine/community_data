@@ -237,10 +237,10 @@
                     return "blue"; 
                 }
                 else if(d==5){
-                    return "#purple"; 
+                    return "purple"; 
                 }
                 else if(d==6){
-                    return "#pink"; 
+                    return "pink"; 
                 }
                 else{
                     return "D3D3D3"; 
