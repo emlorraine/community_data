@@ -33,6 +33,7 @@ h2{
         height:fit-content;
         margin: auto;
         display: flex;
+        margin-left: 20px;
     }
     #povertyBlock2010{
         float: left;
@@ -43,6 +44,13 @@ h2{
         margin-left: 70px;
 
     }
+    #poverty-state, #poverty-city{
+        margin-top: 100px;
+        max-width: fit-content;
+        margin-left: 20px;
+    }
+
+
 
 
 /* Education */

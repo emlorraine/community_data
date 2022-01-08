@@ -10,7 +10,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
      // Call datasets for branch:
     data2010FileName = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
     data2020FileName = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
-    console.log(d3.csv(data2010FileName))
     if(d3.csv(data2010FileName) && d3.csv(data2020FileName)){
       Promise.all([
           d3.csv(data2010FileName),
@@ -186,7 +185,8 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
       var html = 
 
-      `<div id="poverty-state-block"><div class="vstack gap-3" id="povertyBlock2010">
+      `<h2>Poverty in the state of Missouri</h2>
+      <div id="poverty-state-block"><div class="vstack gap-3" id="povertyBlock2010">
         <h3>At or below poverty line, 2010</h3>
         <div id="poverty-state-2010"></div>
         <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>
@@ -211,7 +211,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#city-poverty").change(function(){
     if ($(this).is(':checked'))
       var html = 
-      `<div id="poverty-city-block"><div class="vstack gap-3" id="povertyBlock2010">
+      `<h2>Poverty in St. Louis</h2><div id="poverty-city-block"><div class="vstack gap-3" id="povertyBlock2010">
         <h3>At or below poverty line, 2010</h3>
         <div id="poverty-city-2010"></div>
         <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p>

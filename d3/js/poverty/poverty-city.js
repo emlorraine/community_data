@@ -7,29 +7,31 @@ function PovertyCityChart(data){
  * Initializes the svg elements required to lay the bars
  */
  
-PovertyCityChart.prototype.init = function(rawData){
+  PovertyCityChart.prototype.init = function(rawData){
      var raw2010Data = rawData[0]; 
      var raw2020Data = rawData[1];
+     
+    var totalUnderPovertyCount2010 = +(raw2010Data[37].value.replaceAll(",", "")) + +(raw2010Data[42].value.replace(",", "")) + +(raw2010Data[47].value.replace(",", ""))
+    var totalAtOrAbovePovertyCount2010 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replace(",", ""))+ +(raw2010Data[48].value.replace(",", ""))
 
-    var totalUnderPovertyCount2010 = +(raw2010Data[37].value.replace(",", "")) + +(raw2010Data[42].value.replace(",", ""))
-    var totalAtOrAbovePovertyCount2010 = +(raw2010Data[38].value.replace(",", "")) + +(raw2010Data[43].value.replace(",", ""))
+    var totalUnderPovertyCount2020 = +(raw2020Data[33].value.replaceAll(",", "")) + +(raw2020Data[38].value.replaceAll(",", ""))+ +(raw2020Data[43].value.replaceAll(",", ""))
+    var totalAtOrAbovePovertyCount2020 = +(raw2020Data[34].value.replaceAll(",", "")) + +(raw2020Data[39].value.replaceAll(",", ""))+ +(raw2020Data[44].value.replaceAll(",", ""))
+
+    dataArray2010 = [totalUnderPovertyCount2010, totalAtOrAbovePovertyCount2010]
+    dataArray2020 = [totalUnderPovertyCount2020, totalAtOrAbovePovertyCount2020]
 
     data2010 = [
-        { label: 'Above Poverty', count: totalAtOrAbovePovertyCount2010 }, 
-        { label: 'At or Below Poverty', count:  totalUnderPovertyCount2010}, 
-
+        { label: 'Above Poverty', value: totalAtOrAbovePovertyCount2010 }, 
+        { label: 'At or Below Poverty', value:  totalUnderPovertyCount2010}, 
+        // { label: 'Total Population', count: totalPopultion2010 }, 
     ]
-
-    var totalUnderPovertyCount2020 = +(raw2020Data[37].value.replace(",", "")) + +(raw2020Data[42].value.replace(",", ""))
-    var totalAtOrAbovePovertyCount2020 = +(raw2020Data[38].value.replace(",", "")) + +(raw2020Data[43].value.replace(",", ""))
 
     data2020 = [
-        { label: 'Above Poverty', count: totalAtOrAbovePovertyCount2020 }, 
-        { label: 'At or Below Poverty', count: totalUnderPovertyCount2020 }, 
+        { label: 'Above Poverty', value: totalAtOrAbovePovertyCount2020 }, 
+        { label: 'At or Below Poverty', value: totalUnderPovertyCount2020 }, 
+        // { label: 'Total Population', count: totalPopultion2020 }, 
 
     ]
-
-
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;
@@ -37,6 +39,7 @@ PovertyCityChart.prototype.init = function(rawData){
 
     $('#poverty-city-2010').empty();
     $('#poverty-city-2019').empty();
+
     
     var svg = d3.select('#poverty-city-2010')
         .append('svg')
@@ -50,19 +53,15 @@ PovertyCityChart.prototype.init = function(rawData){
         .innerRadius(radius - donutWidth)             
         .outerRadius(radius);
         
-      var pie = d3.pie()
-        .value(function(d) { 
-            return d.count; 
-        })
-        .sort(null);
+    var pie = d3.pie();
 
       var path = svg.selectAll('path')
-        .data(pie(data2010))
+        .data(pie(dataArray2010))
         .enter()
         .append('path')
         .attr('d', arc)
         .attr('fill', function(d, i) { 
-            if(d.data.label == "At or Below Poverty"){
+            if(i==0){
                 return "#1F7A8C"
             } else {
                 return "#D3D3D3"
@@ -83,20 +82,16 @@ PovertyCityChart.prototype.init = function(rawData){
     var arc = d3.arc()
         .innerRadius(radius - donutWidth)             
         .outerRadius(radius);
-        
-      var pie = d3.pie()
-        .value(function(d) { 
-            return d.count; 
-        })
-        .sort(null);
+    var pie = d3.pie();
+
 
       var path = svg.selectAll('path')
-        .data(pie(data2010))
+        .data(pie(dataArray2020))
         .enter()
         .append('path')
         .attr('d', arc)
         .attr('fill', function(d, i) { 
-            if(d.data.label == "At or Below Poverty"){
+            if(i==0){
                 return "#B9314F"
             } else {
                 return "#D3D3D3"
