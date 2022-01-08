@@ -46,12 +46,14 @@ h2{
 
 
 /* Education */
+
     #education-block, #education-state-block, #education-city-block{
         transform: scale(.75);
         margin-left: 0%;
     }
     #educationData2010, #educationStateData2010, #educationCityData2010{
         display: flex;
+
     } 
     #educationData2019, #educationStateData2019, #educationCityData2019{
         display: flex;

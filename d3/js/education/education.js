@@ -151,23 +151,21 @@
 
     var self = this;
 
-    $('#lessThanHighSchool2010').empty();
-    $('#highSchoolOrEquivalent2010').empty();
-    $('#collegeOrHigher2010').empty();
+    $('#education2010').empty();
+    $('#education2020').empty();
+    // $('#collegeOrHigher2010').empty();
 
-    $('#lessThanHighSchool2019').empty();
-    $('#highSchoolOrEquivalent2019').empty();
-    $('#collegeOrHigher2019').empty();
+    // $('#lessThanHighSchool2019').empty();
+    // $('#highSchoolOrEquivalent2019').empty();
+    // $('#collegeOrHigher2019').empty();
 
         //Less than high school, 2010 
-        var lessThanHighSchool2010Div = d3.select("#lessThanHighSchool2010")
+        var education2010Div = d3.select("#education2010")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = lessThanHighSchool2010Div.append("svg")
-            .attr("width",1000)
+        self.svg = education2010Div.append("svg")
+            .attr("width",500)
             .attr("height",750)
             // .attr("transform", "translate(" + self.margin.left + ",0)")
-
-        console.log(gridData2010)
 
         self.svg.selectAll("rect")
             .data(gridData2010.reverse())
@@ -231,11 +229,11 @@
             self.svg.append("rect").attr("x",0).attr("y",680).attr("height", 20).attr("width", 20).style("fill", "red")
             self.svg.append("text").attr("x", 30).attr("y", 692).text(keyLabels[0]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        var lessThanHighSchool2020Div = d3.select("#lessThanHighSchool2020")
+        var lessThanHighSchool2020Div = d3.select("#education2020")
         self.margin = {top: 30, right: 20, bottom: 30, left: 50};
         self.svg = lessThanHighSchool2020Div.append("svg")
             .attr("width",500)
-            .attr("height",500)
+            .attr("height",750)
 
         self.svg.selectAll("rect")
             .data(gridData2020.reverse())
@@ -275,30 +273,30 @@
                     return "D3D3D3"; 
                 }
             })
+            self.svg.append("rect").attr("x",305).attr("y",500).attr("height", 30).attr("width", 30).style("fill", "black")
+            self.svg.append("text").attr("x", 350).attr("y", 515).text("= approx. 100 people").style("font-size", "15px").attr("alignment-baseline","middle")
 
-            var key = [
-                {value:"Less than High School", color:"red"},
-                {value:"High School Graduate or Equivalents", color:"orange"},
-                {value:"Some College", color:"yellow"},
-                {value:"Bachelor's Degree", color:"green"},
-                {value:"Master's Degree", color:"blue"},
-                {value:"Professional School Degree", color:"purple"},
-                {value:"Doctorate Degree", color:"pink"}
-            ]
+            self.svg.append("rect").attr("x",0).attr("y",500).attr("height", 20).attr("width", 20).style("fill", "pink")
+            self.svg.append("text").attr("x", 30).attr("y", 512).text(keyLabels[6]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-            
+            self.svg.append("rect").attr("x",0).attr("y",530).attr("height", 20).attr("width", 20).style("fill", "purple")
+            self.svg.append("text").attr("x", 30).attr("y", 542).text(keyLabels[5]).style("font-size", "15px").attr("alignment-baseline","middle")
 
+            self.svg.append("rect").attr("x",0).attr("y",560).attr("height", 20).attr("width", 20).style("fill", "blue")
+            self.svg.append("text").attr("x", 30).attr("y", 572).text(keyLabels[4]).style("font-size", "15px").attr("alignment-baseline","middle")
 
+            self.svg.append("rect").attr("x",0).attr("y",590).attr("height", 20).attr("width", 20).style("fill", "green")
+            self.svg.append("text").attr("x", 30).attr("y", 602).text(keyLabels[3]).style("font-size", "15px").attr("alignment-baseline","middle")
 
-        //High school or equivalent, 2010 
-        var highSchoolOrEquivalent2010Div = d3.select("#highSchoolOrEquivalent2010")
-        self.margin = {top: 30, right: 20, bottom: 30, left: 50};
-        self.svg = highSchoolOrEquivalent2010Div.append("svg")
-            .attr("width",500)
-            .attr("height",350)
-            // .attr("transform", "translate(" + self.margin.left + ",0)")
+            self.svg.append("rect").attr("x",0).attr("y",620).attr("height", 20).attr("width", 20).style("fill", "yellow")
+            self.svg.append("text").attr("x", 30).attr("y", 632).text(keyLabels[2]).style("font-size", "15px").attr("alignment-baseline","middle")
 
+            self.svg.append("rect").attr("x",0).attr("y",650).attr("height", 20).attr("width", 20).style("fill", "orange")
+            self.svg.append("text").attr("x", 30).attr("y", 662).text(keyLabels[1]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+            self.svg.append("rect").attr("x",0).attr("y",680).attr("height", 20).attr("width", 20).style("fill", "red")
+            self.svg.append("text").attr("x", 30).attr("y", 692).text(keyLabels[0]).style("font-size", "15px").attr("alignment-baseline","middle")
+
+ }
+    
         
-
-      
-        }
