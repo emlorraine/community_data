@@ -140,6 +140,12 @@ h2{
         margin-bottom: 1500px
     }
 
+
+/* Race */
+#race, #race-state, #race-stl{
+    max-width: fit-content;
+}
+
     
 
 

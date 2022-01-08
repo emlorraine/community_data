@@ -30,7 +30,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#state-race").change(function(){
     if ($(this).is(':checked'))
     var html = 
-    `<div id="education-state-block">
+    `<div class="vstack gap-2">
     <h2> Race in Missouri </h2>
     <div id="race-missouri"></div></div>`
       //Add div to race-block
@@ -47,7 +47,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#city-race").change(function(){
     if ($(this).is(':checked'))
     var html = 
-    `<div id="education-state-block">
+    `<div class="vstack gap-2">
     <h2> Race in St. Louis </h2>
     <div id="race-city"></div></div>`
     //Add div to race-block

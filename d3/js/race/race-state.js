@@ -15,25 +15,24 @@
     var data2020 = rawData[1]
 
     var values = [
-        +(data2010[17].value.replace(",", "")),
-        +(data2020[17].value.replace(",", "")), 
+        +(data2010[17].value.replaceAll(",", "")),
+        +(data2020[17].value.replaceAll(",", "")), 
 
-        +(data2010[18].value.replace(",", "")),
-        +(data2020[18].value.replace(",", "")),
+        +(data2010[18].value.replaceAll(",", "")),
+        +(data2020[18].value.replaceAll(",", "")),
         
-        +(data2010[19].value.replace(",", "")),
-        +(data2020[19].value.replace(",", "")),
+        +(data2010[19].value.replaceAll(",", "")),
+        +(data2020[19].value.replaceAll(",", "")),
 
-        +(data2010[20].value.replace(",", "")),
-        +(data2020[20].value.replace(",", "")),
+        +(data2010[20].value.replaceAll(",", "")),
+        +(data2020[20].value.replaceAll(",", "")),
 
-        +(data2010[21].value.replace(",", "")),
-        +(data2020[21].value.replace(",", "")),
+        +(data2010[21].value.replaceAll(",", "")),
+        +(data2020[21].value.replaceAll(",", "")),
 
-        +(data2010[23].value.replace(",", "")),
-        +(data2020[23].value.replace(",", ""))
+        +(data2010[23].value.replaceAll(",", "")),
+        +(data2020[23].value.replaceAll(",", ""))
     ]
-
     let groupedData = [
         {
         "Year": "2010",
@@ -74,6 +73,8 @@
         "\n Two or more races, 2010",
         "\n Two or more races, 2020"
     ]
+
+    console.log()
 
 
     var self = this;
