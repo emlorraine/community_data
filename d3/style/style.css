@@ -190,6 +190,7 @@ h2{
 /* Race */
 #race{
     max-width: fit-content;
+    transform: scale(0.8);
 }
 #race-state, #race-stl{
     max-width: fit-content;
