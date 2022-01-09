@@ -3,7 +3,7 @@ function onEachFeature(feature, layer) {
 }
 
     var map = L.map("map",{
-        center: [38.636975, -90.239971],
+        center: [38.769164, -90.698974],
         zoom: 11.5
     });
 

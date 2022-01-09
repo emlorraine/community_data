@@ -8,8 +8,11 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
     if(target !== "intro"){
       $('#viz-wrapper').appendTo(`#${target}`);
-      $('#map').attr("id",mapTag)
+    }
 
+    if(target !=="intro"){
+      console.log("Are we evening attempting to change the div id?")
+      // $('#map').attr("id","newMapTag")
     }
 
     
