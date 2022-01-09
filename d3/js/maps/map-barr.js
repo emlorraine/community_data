@@ -1,17 +1,11 @@
-function testMap(){
-    console.log("hmmmm")
-}
 function onEachFeature(feature, layer) {
     layer.bindPopup("Library: " +feature.properties['Branch Name']);
 }
 
-    // $('#map').empty();
-
-    console.log("Calling function")
-    var map = L.map("map",{
+var map = L.map("map-barr",{
         center: [38.636975, -90.239971],
         zoom: 13
-    });
+});
 
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -29,8 +23,6 @@ function onEachFeature(feature, layer) {
         return response.json();
     })
     .then(function (data) {
-        console.log(data)
-        // use geoJSON
         L.geoJSON(data, {
             onEachFeature: onEachFeature,
         }).addTo(map);
@@ -51,8 +43,6 @@ function onEachFeature(feature, layer) {
         return response.json();
     })
     .then(function (data) {
-        console.log(data)
-        // use geoJSON
         L.geoJSON(data, {
             onEachFeature: 
                 function (feature, layer) {
@@ -105,8 +95,6 @@ function onEachFeature(feature, layer) {
         return response.json();
     })
     .then(function (data) {
-        console.log(data)
-        // use geoJSON
         L.geoJSON(data, {
             onEachFeature: 
                 function (feature, layer) {
