@@ -15,7 +15,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
           d3.csv(data2010FileName),
           d3.csv(data2020FileName),
           ]).then((values) => {
-              testMap()
+              console.log(testMap())
               var raceBarChart = new RaceBarChart(values);
               var educationalAttainmentChart = new EducationalAttainmentChart(values);
               var ageChart = new AgeChart(values);
