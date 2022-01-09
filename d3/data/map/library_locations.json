@@ -5,7 +5,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2327487,38.7149707 ]
+      "coordinates":[-90.2327487,38.7149707]
    },
    "properties": {
    "Branch Name":"Baden Library",
@@ -16,7 +16,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2213976,38.6145509 ]
+      "coordinates":[-90.2213976,38.6145509]
    },
    "properties": {
    "Branch Name":"Barr Library",
@@ -27,7 +27,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2948063,38.5904057 ]
+      "coordinates":[-90.2948063,38.5904057]
    },
    "properties": {
    "Branch Name":"Buder Library",
@@ -38,7 +38,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2721648,38.6573791 ]
+      "coordinates":[-90.2721648,38.6573791]
    },
    "properties": {
    "Branch Name":"Cabanne Library",
@@ -49,7 +49,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2542077,38.5546939 ]
+      "coordinates":[-90.2542077,38.5546939]
    },
    "properties": {
    "Branch Name":"Carondelet Library",
@@ -60,7 +60,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2434506,38.5967553 ]
+      "coordinates":[-90.2434506,38.5967553]
    },
    "properties": {
    "Branch Name":"Carpenter Library",
@@ -71,7 +71,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.1927682,38.6290975 ]
+      "coordinates":[-90.1927682,38.6290975]
    },
    "properties": {
    "Branch Name":"Central Express Library",
@@ -82,7 +82,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.1994854,38.63061 ]
+      "coordinates":[-90.1994854,38.63061]
    },
    "properties": {
    "Branch Name":"Central Library",
@@ -93,7 +93,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.3000167,38.6515428 ]
+      "coordinates":[-90.3000167,38.6515428]
    },
    "properties": {
    "Branch Name":"Charing Cross Library\n",
@@ -104,7 +104,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2117906,38.6674556 ]
+      "coordinates":[-90.2117906,38.6674556]
    },
    "properties": {
    "Branch Name":"Divoll Library",
@@ -115,7 +115,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2368834,38.6703954 ]
+      "coordinates":[-90.2368834,38.6703954]
    },
    "properties": {
    "Branch Name":"Julia Davis Library\n",
@@ -126,7 +126,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2668824,38.6128136 ]
+      "coordinates":[-90.2668824,38.6128136]
    },
    "properties": {
    "Branch Name":"Kingshighway Library\n",
@@ -137,7 +137,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2978531,38.6047874 ]
+      "coordinates":[-90.2978531,38.6047874]
    },
    "properties": {
    "Branch Name":"Machacek Library\n",
@@ -148,7 +148,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2981101,38.6189758 ]
+      "coordinates":[-90.2981101,38.6189758]
    },
    "properties": {
    "Branch Name":"Marketplace Library\n",
@@ -159,7 +159,7 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2621509,38.6440072 ]
+      "coordinates":[-90.2621509,38.6440072]
    },
    "properties": {
    "Branch Name":"Schlafly Library\n",
@@ -170,22 +170,11 @@
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.2472266,38.7037006 ]
+      "coordinates":[-90.2472266,38.7037006]
    },
    "properties": {
    "Branch Name":"Walnut Park Library\n",
    "Address":"5760 West Florissant Avenue\nSt. Louis MO 63120"
-   }
- },
- {
-   "type": "Feature",
-   "geometry": {
-      "type": "Point",
-      "coordinates":  { }
-   },
-   "properties": {
-   "Branch Name":"Data source: https://slpl.bibliocommons.com/locations/list",
-   "Address":""
    }
  }
 ]

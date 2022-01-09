@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "csvtojson": "^2.0.10",
+    "leaflet-ajax": "^2.1.0",
     "papaparse": "^5.3.1",
     "save-svg-as-png": "^1.4.17"
   }
