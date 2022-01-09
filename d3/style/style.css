@@ -45,9 +45,9 @@ h2{
 
     }
     #poverty-state, #poverty-city{
-        margin-top: 100px;
         max-width: fit-content;
-        margin-left: 20px;
+        transform: scale(.5); 
+
     }
 
 
@@ -55,8 +55,12 @@ h2{
 
 /* Education */
 
-    #education-block, #education-state-block, #education-city-block{
+    #education-block{
         transform: scale(.75);
+        margin-left: 0%;
+    }
+    #education-state, #education-city{
+        transform: scale(.45);
         margin-left: 0%;
     }
     #educationData2010, #educationStateData2010, #educationCityData2010{
@@ -108,7 +112,22 @@ h2{
     }  
 
   /* Age */
-    #age-block, #age-state, #age-city{
+    #age-block{
+        height:fit-content;
+        /* margin: auto; */
+        width: 75%;
+        padding: 10px;
+        display: flex;
+        transform: scale(.50);
+        position:absolute;
+        top:0;
+        left:0;
+        margin-bottom: 50px;
+
+    }
+
+    #age-state, #age-city{
+        transform: scale(.5); 
         height:fit-content;
         /* margin: auto; */
         width: 75%;
@@ -150,9 +169,16 @@ h2{
 
 
 /* Race */
-#race, #race-state, #race-stl{
+#race{
     max-width: fit-content;
 }
+#race-state, #race-stl{
+    max-width: fit-content;
+    transform: scale(.5);
+}
+
+
+
 
     
 

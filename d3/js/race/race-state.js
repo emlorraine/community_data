@@ -103,7 +103,7 @@
 
     self.svg = divRaceBarChart.append("svg")
         .attr("width",1200)
-        .attr("height",1200)
+        .attr("height",850)
         // .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });
