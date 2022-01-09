@@ -1,6 +1,6 @@
 /* Tabs */
 
-h1{
+#header{
     padding: 25px 25px 25px 25px;
     text-align: center;
     font-family: Futura;
@@ -23,6 +23,12 @@ h2{
     background-color:#007bff;
 }
 
+#intro{
+    margin-left: 50px;
+    margin-right: 50px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 
