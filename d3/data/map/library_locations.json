@@ -1,0 +1,192 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2327487,38.7149707 ]
+   },
+   "properties": {
+   "Branch Name":"Baden Library",
+   "Address":"8448 Church Road\nSt. Louis MO 63147"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2213976,38.6145509 ]
+   },
+   "properties": {
+   "Branch Name":"Barr Library",
+   "Address":"1701 South Jefferson Ave\nSt. Louis MO 63104"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2948063,38.5904057 ]
+   },
+   "properties": {
+   "Branch Name":"Buder Library",
+   "Address":"4401 Hampton Ave\nSt. Louis MO 63109"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2721648,38.6573791 ]
+   },
+   "properties": {
+   "Branch Name":"Cabanne Library",
+   "Address":"1106 Union Boulevard\nSt. Louis MO 63113"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2542077,38.5546939 ]
+   },
+   "properties": {
+   "Branch Name":"Carondelet Library",
+   "Address":"6800 Michigan Avenue\nSt. Louis MO 63111"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2434506,38.5967553 ]
+   },
+   "properties": {
+   "Branch Name":"Carpenter Library",
+   "Address":"3309 South Grand Boulevard\nSt. Louis MO 63118"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.1927682,38.6290975 ]
+   },
+   "properties": {
+   "Branch Name":"Central Express Library",
+   "Address":"815 Olive Street, Suite 160\nSt. Louis MO 63101"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.1994854,38.63061 ]
+   },
+   "properties": {
+   "Branch Name":"Central Library",
+   "Address":"1301 Olive Street\nSt. Louis MO 63103"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.3000167,38.6515428 ]
+   },
+   "properties": {
+   "Branch Name":"Charing Cross Library\n",
+   "Address":"356 N. Skinker Blvd\nSt. Louis MO 63130"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2117906,38.6674556 ]
+   },
+   "properties": {
+   "Branch Name":"Divoll Library",
+   "Address":"4234 North Grand Blvd.\nSt. Louis MO 63107"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2368834,38.6703954 ]
+   },
+   "properties": {
+   "Branch Name":"Julia Davis Library\n",
+   "Address":"4415 Natural Bridge Avenue\nSt. Louis MO 63115"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2668824,38.6128136 ]
+   },
+   "properties": {
+   "Branch Name":"Kingshighway Library\n",
+   "Address":"2260 South Vandeventer Avenue\nSt. Louis MO 63110"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2978531,38.6047874 ]
+   },
+   "properties": {
+   "Branch Name":"Machacek Library\n",
+   "Address":"6424 Scanlan Avenue\nSt. Louis MO 63139"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2981101,38.6189758 ]
+   },
+   "properties": {
+   "Branch Name":"Marketplace Library\n",
+   "Address":"6548 Manchester Avenue\nSt. Louis MO 63139"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2621509,38.6440072 ]
+   },
+   "properties": {
+   "Branch Name":"Schlafly Library\n",
+   "Address":"225 North Euclid Avenue\nSt. Louis MO 63108"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [ -90.2472266,38.7037006 ]
+   },
+   "properties": {
+   "Branch Name":"Walnut Park Library\n",
+   "Address":"5760 West Florissant Avenue\nSt. Louis MO 63120"
+   }
+ },
+ {
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  { }
+   },
+   "properties": {
+   "Branch Name":"Data source: https://slpl.bibliocommons.com/locations/list",
+   "Address":""
+   }
+ }
+]
+}

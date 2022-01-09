@@ -30,6 +30,14 @@ h2{
     margin-bottom: 20px;
 }
 
+/* Leaflet */
+
+#map { 
+    width: 960px;
+    height: 500px;
+}
+
+
 
 
 

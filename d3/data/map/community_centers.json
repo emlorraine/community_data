@@ -1,0 +1,82 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2043191,38.6140457 ]
+     },
+     "properties": {
+     "Center":"12th & Park Recreation Center",
+     "Address":"1410 S. Tucker Blvd\nSt Louis, MO 63104"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2258656,38.6217534 ]
+     },
+     "properties": {
+     "Center":"Buder Recreational Center",
+     "Address":"2900 Hickory Street\nSt Louis, MO 63104"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.224326,38.5966189 ]
+     },
+     "properties": {
+     "Center":"Cherokee Recreation Center",
+     "Address":"3200 S Jefferson Ave.\nSt. Louis, MO 63118"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2179081,38.6415167 ]
+     },
+     "properties": {
+     "Center":"Gamble Recreation Center",
+     "Address":"2907 Gamble St\nSt Louis, MO 63106"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2372925,38.5828275 ]
+     },
+     "properties": {
+     "Center":"Marquette Recreation Center",
+     "Address":"4025 Minnesota Ave\nSt Louis, MO 63118"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2371825,38.6598305 ]
+     },
+     "properties": {
+     "Center":"Tandy Recreation Center",
+     "Address":"4206 Kennerly Ave\nSt Louis, MO 63113"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2617789,38.6640783 ]
+     },
+     "properties": {
+     "Center":"Wohl Recreation Center",
+     "Address":"1515 N Kingshighway Blvd\nSt Louis, MO 63113"
+     }
+   }
+ ]
+ }

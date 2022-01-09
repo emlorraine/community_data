@@ -1,0 +1,115 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.3151104,38.6422794 ]
+     },
+     "properties": {
+     "Institution":"Fontbonne University",
+     "Address":"6800 Wydown Blvd, St. Louis, MO 63105"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2240265,38.6319589 ]
+     },
+     "properties": {
+     "Institution":"Harris-Stowe State University",
+     "Address":"​3026 Laclede Ave, St. Louis, MO 63103"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2484309,38.6529729 ]
+     },
+     "properties": {
+     "Institution":"Ranken Technical College  ",
+     "Address":"4431 Finney Ave, St. Louis, MO 63113"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2343699,38.634991 ]
+     },
+     "properties": {
+     "Institution":"Saint Louis University",
+     "Address":"1 N Grand Blvd, St. Louis, MO 63103"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.2611776,38.6365934 ]
+     },
+     "properties": {
+     "Institution":"St. Louis College of Pharmacy  ",
+     "Address":"1 Pharmacy Place, St. Louis, MO 63110"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.4371196,38.7456585 ]
+     },
+     "properties": {
+     "Institution":"St. Louis Community College",
+     "Address":"3221 McKelvey Rd, Bridgeton, MO 63044"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.3076167,38.7038456 ]
+     },
+     "properties": {
+     "Institution":"UMSL Neighborhood Leadership Academy",
+     "Address":"469 Marillac Hall, University of Missouri - St. Louis, One University Boulevard, St. Louis, MO 63121-4400 "
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.3080331,38.7096165 ]
+     },
+     "properties": {
+     "Institution":"University of Missouri-St. Louis",
+     "Address":"1 University Blvd, St. Louis, MO 63121"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.3049314,38.6482436 ]
+     },
+     "properties": {
+     "Institution":"Washington University in St. Louis ",
+     "Address":"1 Brookings Dr, St. Louis, MO 63130"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.3460372,38.5905133 ]
+     },
+     "properties": {
+     "Institution":"Webster University",
+     "Address":"470 E Lockwood Ave, Webster Groves, MO 63119"
+     }
+   }
+ ]
+ }

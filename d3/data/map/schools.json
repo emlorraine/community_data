@@ -1,0 +1,3515 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2957607,38.5808086 ]
+    },
+    "properties": {
+    "School":"Bishop Dubourg High School",
+    "Phone #":"832-3030",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":500,
+    "Principal Name":"Monica Freese",
+    "Principal Email":"mfreese@bishopdubourg.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"7:45-2:30",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2830252,38.5889997 ]
+    },
+    "properties": {
+    "School":"Buder Elementary School",
+    "Phone #":"352-4343",
+    "Grade Levels":"Pre-K-5",
+    "Level":"P",
+    "Number of Students":390,
+    "Principal Name":" Anna Russell",
+    "Principal Email":"",
+    "Other Contact - Name":"Jennifer Cole",
+    "Contact Title":"Kindergarten Teacher",
+    "Contact Email":"Jennifer.Cole@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":" 8:05am - 3:02pm",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.297107,38.5780968 ]
+    },
+    "properties": {
+    "School":"Busch Middle School of Character",
+    "Phone #":"352-1043",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":400,
+    "Principal Name":"Robert Lescher",
+    "Principal Email":"robert.lescher@slps.org",
+    "Other Contact - Name":"Tracy Jane Weidel",
+    "Contact Title":"6th grade English teacher",
+    "Contact Email":"tracyjane.weidel@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2287167,38.5817783 ]
+    },
+    "properties": {
+    "School":"Carnahan Middle School",
+    "Phone #":"457-0582",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":380,
+    "Principal Name":"Jonathan Griffin",
+    "Principal Email":"Jonathan.Griffin@slps.org",
+    "Other Contact - Name":"Anna Mennerick",
+    "Contact Title":"Librarian",
+    "Contact Email":"anna.mennerick@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2381722,38.5797092 ]
+    },
+    "properties": {
+    "School":"Confluence Academy South City",
+    "Phone #":"481-4700",
+    "Grade Levels":"PK - 8",
+    "Level":"P",
+    "Number of Students":850,
+    "Principal Name":"Pamela Davenport",
+    "Principal Email":"Pamela.Davenport@confluenceacademy.org",
+    "Other Contact - Name":"Kristin Huntley",
+    "Contact Title":"Librarian ",
+    "Contact Email":"Kristin.Huntley@confluenceacademy.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:00 - 3:45 ",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.280963,38.570268 ]
+    },
+    "properties": {
+    "School":"Gateway Science Academy South",
+    "Phone #":"669-9000",
+    "Grade Levels":"K-5",
+    "Level":"P",
+    "Number of Students":450,
+    "Principal Name":"Wendy Gilliam",
+    "Principal Email":"wendy@gsasouth.org",
+    "Other Contact - Name":"Belinda Vose",
+    "Contact Title":"Librarian",
+    "Contact Email":"bvose@gsasouth.org",
+    "Notes":"Charter",
+    "Hours of Operation":"7:45-3:15",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2764042,38.5979823 ]
+    },
+    "properties": {
+    "School":"Kennard Classical Junior Academy",
+    "Phone #":"353-8875",
+    "Grade Levels":"PreK-5",
+    "Level":"P",
+    "Number of Students":346,
+    "Principal Name":"Dr. Steven-Kyle Jefferson",
+    "Principal Email":"",
+    "Other Contact - Name":"Brenda Kukay",
+    "Contact Title":"Librarian",
+    "Contact Email":"Brenda.Kukay@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":" 9:10am - 4:07pm",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2672216,38.5801378 ]
+    },
+    "properties": {
+    "School":"Long Middle School",
+    "Phone #":"481-3440",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":325,
+    "Principal Name":"Benicia Nanez-Hunt",
+    "Principal Email":"benicia.nanez-hunt@slps.org",
+    "Other Contact - Name":"Erin O'Donnell",
+    "Contact Title":"Teacher",
+    "Contact Email":"erin.odonnell@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2938152,38.5963529 ]
+    },
+    "properties": {
+    "School":"Mallinckrodt Academy of Gifted Instruction",
+    "Phone #":"352-9212",
+    "Grade Levels":"PK-5",
+    "Level":"P",
+    "Number of Students":300,
+    "Principal Name":"Ciciley Johnson",
+    "Principal Email":"ciciley.johnson@slps.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"9:10-4:07",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2323447,38.5798439 ]
+    },
+    "properties": {
+    "School":"Meramec Elementary School",
+    "Phone #":"353-7145",
+    "Grade Levels":"PK-5",
+    "Level":"P",
+    "Number of Students":219,
+    "Principal Name":"Jonathan Strong",
+    "Principal Email":"jonathan.strong@slps.org",
+    "Other Contact - Name":"Cheryl Henderson",
+    "Contact Title":"Library Aide",
+    "Contact Email":"cheryl.henderson@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:10 AM - 4:07 PM",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.3043512,38.5875933 ]
+    },
+    "properties": {
+    "School":"Nottingham Community Access & Job Training",
+    "Phone #":"481-4095",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":150,
+    "Principal Name":"Kimberly Long",
+    "Principal Email":"kimberly.long@slps.org",
+    "Other Contact - Name":"Mary Luley",
+    "Contact Title":"Reading teacher",
+    "Contact Email":"mary.luley@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.291907,38.5968059 ]
+    },
+    "properties": {
+    "School":"South City Catholic Academy",
+    "Phone #":"752-4171",
+    "Grade Levels":"PK-8",
+    "Level":"P",
+    "Number of Students":230,
+    "Principal Name":"Laura Hirschman",
+    "Principal Email":"lhirschman@sccastl.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"7:50-3:15",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2992848,38.5880163 ]
+    },
+    "properties": {
+    "School":"St. Gabriel the Archangel Catholic School",
+    "Phone #":"353-1229",
+    "Grade Levels":"K-8",
+    "Level":"P",
+    "Number of Students":500,
+    "Principal Name":"Tonya McEnery",
+    "Principal Email":"tmcenery@stgabschool.org",
+    "Other Contact - Name":"Deborah DaLay",
+    "Contact Title":"Assistant Principal",
+    "Contact Email":"ddalay@stgabschool.org",
+    "Notes":"Private",
+    "Hours of Operation":"7:50-3:00",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2504861,38.5750856 ]
+    },
+    "properties": {
+    "School":"St. Mary's High School",
+    "Phone #":"481-8400",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":320,
+    "Principal Name":"Valerie Todd",
+    "Principal Email":"toddv@stmaryshs.com",
+    "Other Contact - Name":"Michelle Klimpel",
+    "Contact Title":"Dean of English Department",
+    "Contact Email":"klimpelm@stmaryshs.com",
+    "Notes":"Private",
+    "Hours of Operation":"8:00-2:45",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.3028826,38.5769358 ]
+    },
+    "properties": {
+    "School":"St. Raphael the Archangel",
+    "Phone #":"352-9474",
+    "Grade Levels":"K-9",
+    "Level":"P",
+    "Number of Students":200,
+    "Principal Name":"Mrs. Julie Hayes",
+    "Principal Email":"hayes@straphaelarchangel.org",
+    "Other Contact - Name":"Susan Polson",
+    "Contact Title":"3rd Grade Teacher",
+    "Contact Email":"polson@straphaelarchangel.org",
+    "Notes":"Private",
+    "Hours of Operation":"8-3pm",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.3058199,38.5829972 ]
+    },
+    "properties": {
+    "School":"Word of Life Lutheran School",
+    "Phone #":"832-1244",
+    "Grade Levels":"K-8",
+    "Level":"P",
+    "Number of Students":150,
+    "Principal Name":"Melissa Bergholt",
+    "Principal Email":"mbergholt@wordoflifeschool.net",
+    "Other Contact - Name":"Jill Moorman",
+    "Contact Title":"Kindergarten teacher",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"8:00-3:00",
+    "Region":"Buder",
+    "Library":"Buder",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2569066,38.5549381 ]
+    },
+    "properties": {
+    "School":"Lyon at Blow Academy",
+    "Phone #":"353-1349",
+    "Grade Levels":"PreK-8",
+    "Level":"P",
+    "Number of Students":400,
+    "Principal Name":"Ingrid Iskali",
+    "Principal Email":"ingrid.iskali@slps.org",
+    "Other Contact - Name":"Anne Markle",
+    "Contact Title":"Academic Instructional Coach",
+    "Contact Email":"anne.markle@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8 a.m.-3 p.m.",
+    "Region":"Buder",
+    "Library":"Carondelet",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2501597,38.5687346 ]
+    },
+    "properties": {
+    "School":"St. Cecilia ",
+    "Phone #":"353-2455",
+    "Grade Levels":"PreK-8",
+    "Level":"P",
+    "Number of Students":300,
+    "Principal Name":"Mary Loux",
+    "Principal Email":"mloux@stc-stl.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"7:30 a.m.-3:30 p.m.",
+    "Region":"Buder",
+    "Library":"Carondelet",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.262261,38.5694465 ]
+    },
+    "properties": {
+    "School":"St. Stephen Protomartyr",
+    "Phone #":"752-4700",
+    "Grade Levels":"PreK-8",
+    "Level":"P",
+    "Number of Students":300,
+    "Principal Name":"Michel Wendell",
+    "Principal Email":"michelwendelssp@gmail.com",
+    "Other Contact - Name":"Amanda Quinn",
+    "Contact Title":"Administrative Assistant",
+    "Contact Email":"amandaquinnssp@gmail.com",
+    "Notes":"Private",
+    "Hours of Operation":"8 a.m.-3 p.m.",
+    "Region":"Buder",
+    "Library":"Carondelet",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2693034,38.5691025 ]
+    },
+    "properties": {
+    "School":"Woerner Elementary",
+    "Phone #":"481-8585",
+    "Grade Levels":"PreK-5",
+    "Level":"P",
+    "Number of Students":400,
+    "Principal Name":"Margaret (Peggy) Meyer",
+    "Principal Email":"margaret.meyer@slps.org",
+    "Other Contact - Name":"Nedra Davis",
+    "Contact Title":"Librarian",
+    "Contact Email":"nedra.davis@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:30 a.m.-4:30 p.m.",
+    "Region":"Buder",
+    "Library":"Carondelet",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2500407,38.5657365 ]
+    },
+    "properties": {
+    "School":"Woodward Elementary",
+    "Phone #":"353-1346",
+    "Grade Levels":"PreK-5",
+    "Level":"P",
+    "Number of Students":325,
+    "Principal Name":"Carla Cunigan",
+    "Principal Email":"carla.cunigan@slps.org",
+    "Other Contact - Name":"Nedra Davis",
+    "Contact Title":"Librarian",
+    "Contact Email":"nedra.davis@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:30 a.m.-4:30 p.m.",
+    "Region":"Buder",
+    "Library":"Carondelet",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.3025489,38.6310478 ]
+    },
+    "properties": {
+    "School":"Dewey International Studies",
+    "Phone #":"645-4845",
+    "Grade Levels":"0-5",
+    "Level":"P",
+    "Number of Students":423,
+    "Principal Name":"Andrew Donovan",
+    "Principal Email":"adonovan@slps.org",
+    "Other Contact - Name":"DeAdrenne Torrey",
+    "Contact Title":"Assistant Principal",
+    "Contact Email":"dtorrey@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:20 a.m.-4:17 a.m.",
+    "Region":"Buder",
+    "Library":"Machacek",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2764998,38.6006927 ]
+    },
+    "properties": {
+    "School":"Gateway Science Academy (Middle and High School)",
+    "Phone #":"261-4361",
+    "Grade Levels":"6-12",
+    "Level":"H",
+    "Number of Students":512,
+    "Principal Name":"Mr. Murat Sagnak",
+    "Principal Email":"infomiddle-high@gsastl.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Charter",
+    "Hours of Operation":"7:30-3:30",
+    "Region":"Buder",
+    "Library":"Machacek",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2752632,38.6006935 ]
+    },
+    "properties": {
+    "School":"Gateway Science Academy Middle School",
+    "Phone #":"261-4361",
+    "Grade Levels":"6-12",
+    "Level":"H",
+    "Number of Students":512,
+    "Principal Name":"Murat Sagnak",
+    "Principal Email":"infomiddle-high@gsastl.org",
+    "Other Contact - Name":"Ms Weaver",
+    "Contact Title":"Librarian",
+    "Contact Email":"",
+    "Notes":"Charter",
+    "Hours of Operation":"7:30 a.m.-3:30 p.m.",
+    "Region":"Buder",
+    "Library":"Machacek",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.3022585,38.6064978 ]
+    },
+    "properties": {
+    "School":"Gateway Science Adademy",
+    "Phone #":"932-7513",
+    "Grade Levels":"K-5",
+    "Level":"P",
+    "Number of Students":437,
+    "Principal Name":"Nuh Celik",
+    "Principal Email":"info@gsastl.org",
+    "Other Contact - Name":"Traci Behrens",
+    "Contact Title":"Librarian",
+    "Contact Email":"tbehrens@gsastl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"7:30 a.m.- 3:30 p.m.",
+    "Region":"Buder",
+    "Library":"Machacek",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2902434,38.6108605 ]
+    },
+    "properties": {
+    "School":"Mason School",
+    "Phone #":"645-1201",
+    "Grade Levels":"PK-6",
+    "Level":"P",
+    "Number of Students":361,
+    "Principal Name":"Debra Leto",
+    "Principal Email":"dleto@slps.org",
+    "Other Contact - Name":"Tina Matthews",
+    "Contact Title":"Librarian",
+    "Contact Email":"tmatthews@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05 a.m.-3:02 p.m.",
+    "Region":"Buder",
+    "Library":"Machacek",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2791017,38.6017181 ]
+    },
+    "properties": {
+    "School":"Premier Charter School",
+    "Phone #":"645-9600",
+    "Grade Levels":"K-8",
+    "Level":"P",
+    "Number of Students":950,
+    "Principal Name":"Dana Leesman(Elementary) Kim Wright (Middle School) ",
+    "Principal Email":"",
+    "Other Contact - Name":"Vera Ramsey",
+    "Contact Title":"Librarian",
+    "Contact Email":"vramsey@premierecharterschool.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8 a.m. - 4 p.m.",
+    "Region":"Buder",
+    "Library":"Machacek",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.3044981,38.6220253 ]
+    },
+    "properties": {
+    "School":"Wilkinson Early Childhood Center",
+    "Phone #":"645-1202",
+    "Grade Levels":"K-2nd",
+    "Level":"P",
+    "Number of Students":284,
+    "Principal Name":"Yvette Levy",
+    "Principal Email":"ylevy@slps.org",
+    "Other Contact - Name":"Shannon Riley",
+    "Contact Title":"Teacher",
+    "Contact Email":"sriley@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:10 a.m.- 4:07 p.m.",
+    "Region":"Buder",
+    "Library":"Machacek",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2233357,38.6078194 ]
+    },
+    "properties": {
+    "School":"EAGLE: Fox Park ",
+    "Phone #":"450-7651",
+    "Grade Levels":"K-5",
+    "Level":"P",
+    "Number of Students":100,
+    "Principal Name":"Emily Dittmer ",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"Taylor Jenkinson ",
+    "Contact Email":"taylor.jenkinson@eagleprepstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8-4 pm ",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2245395,38.6166318 ]
+    },
+    "properties": {
+    "School":"Hodgen Tech ",
+    "Phone #":"771-2539",
+    "Grade Levels":"Pk-6th ",
+    "Level":"P",
+    "Number of Students":250,
+    "Principal Name":"Julia Kaiser ",
+    "Principal Email":"",
+    "Other Contact - Name":"Cynthia Knighten ",
+    "Contact Title":"Librarian ",
+    "Contact Email":"cynthia.knighten@slps.org ",
+    "Notes":"Public",
+    "Hours of Operation":"9:20 am -4:17 pm ",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2076095,38.6013935 ]
+    },
+    "properties": {
+    "School":"Humboldt Academy of Higher Learning",
+    "Phone #":"932-5720",
+    "Grade Levels":"3-5th ",
+    "Level":"P",
+    "Number of Students":180,
+    "Principal Name":"Jacqueline Russel ",
+    "Principal Email":"",
+    "Other Contact - Name":"Dana Carothers ",
+    "Contact Title":"Librarian ",
+    "Contact Email":"dana.carothers@slps.org ",
+    "Notes":"Public",
+    "Hours of Operation":"8:30am-5:30pm ",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2135505,38.6135508 ]
+    },
+    "properties": {
+    "School":"Lafayette Preparatory Academy",
+    "Phone #":"880-4458",
+    "Grade Levels":"K-8th ",
+    "Level":"P",
+    "Number of Students":150,
+    "Principal Name":"Sarah Ranney",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Charter",
+    "Hours of Operation":"7-6pm",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2193809,38.6101246 ]
+    },
+    "properties": {
+    "School":"McKinley ",
+    "Phone #":"773-0027",
+    "Grade Levels":"6-12",
+    "Level":"H",
+    "Number of Students":530,
+    "Principal Name":"Nakia King",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"7:10am -2:07pm",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2371563,38.608791 ]
+    },
+    "properties": {
+    "School":"Shenandoah Elementary",
+    "Phone #":"",
+    "Grade Levels":"",
+    "Level":"P",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.216661,38.6103907 ]
+    },
+    "properties": {
+    "School":"Sigel",
+    "Phone #":"771-0010",
+    "Grade Levels":"PK-6th ",
+    "Level":"P",
+    "Number of Students":300,
+    "Principal Name":"Hollie Russell-West ",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"9-4 pm",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2112192,38.6026108 ]
+    },
+    "properties": {
+    "School":"Soulard School ",
+    "Phone #":"865-2799",
+    "Grade Levels":"preK-6th ",
+    "Level":"P",
+    "Number of Students":150,
+    "Principal Name":"Kerri Fair ",
+    "Principal Email":"",
+    "Other Contact - Name":"Eleanor White ",
+    "Contact Title":"Assistant Executive Director",
+    "Contact Email":"eleanor.white@soulardschool.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8-4pm",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2319416,38.6165354 ]
+    },
+    "properties": {
+    "School":"St. Louis Christian Academy ",
+    "Phone #":" 664-3299",
+    "Grade Levels":"preK-12th ",
+    "Level":"A",
+    "Number of Students":120,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"7-6pm",
+    "Region":"Carpenter",
+    "Library":"Barr",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.227764,38.6226909 ]
+    },
+    "properties": {
+    "School":"Academy of Entrepreneurship Studies Middle @ L'Ouverture",
+    "Phone #":"932-1464",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":351,
+    "Principal Name":"Dr. Ce Andre Perry",
+    "Principal Email":"CeAndre.Perry@slps.org",
+    "Other Contact - Name":"Mekessa Moreland",
+    "Contact Title":"ELA Teacher",
+    "Contact Email":"Mekessa.Moreland@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10 AM - 2:07 PM",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2709163,38.6046435 ]
+    },
+    "properties": {
+    "School":"Central Visual and Performing Arts",
+    "Phone #":"771-7227",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":400,
+    "Principal Name":"Kacy Seals",
+    "Principal Email":"Kacy.Seals@slps.org",
+    "Other Contact - Name":"Margaret Schuh",
+    "Contact Title":"English teacher",
+    "Contact Email":"Margaret.Schuh@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2371092,38.6191071 ]
+    },
+    "properties": {
+    "School":"Collegiate School of Medicine and Bioscience",
+    "Phone #":"696-2290",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":300,
+    "Principal Name":"Frederick Steele",
+    "Principal Email":"frederick.steele@slps.org",
+    "Other Contact - Name":"Kennedy Hulittle",
+    "Contact Title":"Librarian ",
+    "Contact Email":"kennedy.hulittle@slps.org ",
+    "Notes":"Public",
+    "Hours of Operation":"8:05 - 3:02",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2281483,38.5888823 ]
+    },
+    "properties": {
+    "School":"EAGLE Gravois Park",
+    "Phone #":"664-7627",
+    "Grade Levels":"K-6",
+    "Level":"P",
+    "Number of Students":147,
+    "Principal Name":"Kayla Case",
+    "Principal Email":"kayla.case@eagleprepstl.org",
+    "Other Contact - Name":"Tesha Weathersby",
+    "Contact Title":"Dean of Scholars, Assistant Principal",
+    "Contact Email":"tesha.weathersby@eagleprepstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:00 AM - 3:15 PM",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.241682,38.6041304 ]
+    },
+    "properties": {
+    "School":"EAGLE Tower Grove East",
+    "Phone #":"664-7627",
+    "Grade Levels":"K-6",
+    "Level":"P",
+    "Number of Students":175,
+    "Principal Name":"Emily Dittmer",
+    "Principal Email":"emily.dittmer@eagleprepstl.org",
+    "Other Contact - Name":"Chelsea Conwell",
+    "Contact Title":"Fourth Grade Lead Teacher",
+    "Contact Email":"chelsea.conwell@eagleprepstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:00 AM - 3:15 PM",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2632457,38.5910037 ]
+    },
+    "properties": {
+    "School":"EAGLE Tower Grove South",
+    "Phone #":"664-7627",
+    "Grade Levels":"K-8",
+    "Level":"P",
+    "Number of Students":260,
+    "Principal Name":"Dr. Laura Brock",
+    "Principal Email":"laura.brock@eagleprepstl.org",
+    "Other Contact - Name":"Nellie Mitchell",
+    "Contact Title":"Dean of Students",
+    "Contact Email":"nellie.mitchell@eagleprepstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:00 AM - 3:15 PM",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2339206,38.5884106 ]
+    },
+    "properties": {
+    "School":"FROEBEL LITERACY ACADEMY",
+    "Phone #":"314.771.3533",
+    "Grade Levels":"PK - 5",
+    "Level":"P",
+    "Number of Students":250,
+    "Principal Name":"Jim Triplett",
+    "Principal Email":"jim.triplett@slps.org",
+    "Other Contact - Name":"Valerie Dampier",
+    "Contact Title":"Librarian ",
+    "Contact Email":"Valerie.Dampier@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:20am - 4:17pm",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2696336,38.6218646 ]
+    },
+    "properties": {
+    "School":"Gateway STEM High School",
+    "Phone #":"314.776.3300",
+    "Grade Levels":"9 - 12",
+    "Level":"H",
+    "Number of Students":1100,
+    "Principal Name":"Dr. Amy Phillips",
+    "Principal Email":"amy.phillips@slps.org",
+    "Other Contact - Name":"Jason McCoy",
+    "Contact Title":"Communication Arts Teacher",
+    "Contact Email":"Jason.McCoy@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10 - 2:07",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 90.13303,38.35224 ]
+    },
+    "properties": {
+    "School":"Kairos Academy",
+    "Phone #":"",
+    "Grade Levels":"",
+    "Level":"M",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2203882,38.5855953 ]
+    },
+    "properties": {
+    "School":"KIPP Wonder Academy",
+    "Phone #":"",
+    "Grade Levels":"Pk - 3",
+    "Level":"P",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2544168,38.6022105 ]
+    },
+    "properties": {
+    "School":"Mann Elementary",
+    "Phone #":"772-4545",
+    "Grade Levels":"PK - 5",
+    "Level":"P",
+    "Number of Students":300,
+    "Principal Name":"Angela Glass",
+    "Principal Email":"Angela.Glass@slps.org",
+    "Other Contact - Name":"Amaris Triplett",
+    "Contact Title":"Counselor ",
+    "Contact Email":"amaris.triplett@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05 - 3:02",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2568327,38.600053 ]
+    },
+    "properties": {
+    "School":"Marian Middle School",
+    "Phone #":"771-7674",
+    "Grade Levels":"5-8",
+    "Level":"M",
+    "Number of Students":70,
+    "Principal Name":"Sarah Heger",
+    "Principal Email":"sheger@mms-stl.org",
+    "Other Contact - Name":"Erin Lynch",
+    "Contact Title":"Enrichment Director",
+    "Contact Email":"elynch@mms-stl.org",
+    "Notes":"Private",
+    "Hours of Operation":"7:30 AM - 5:30 PM",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2249792,38.5881001 ]
+    },
+    "properties": {
+    "School":"Monroe Elementary School",
+    "Phone #":"776-7315",
+    "Grade Levels":"PK-6",
+    "Level":"P",
+    "Number of Students":240,
+    "Principal Name":"Sonya Wayne",
+    "Principal Email":"Sonya.Wayne@slps.org",
+    "Other Contact - Name":"Renita Cockrell",
+    "Contact Title":"Library Aide",
+    "Contact Email":"Renita.Cockrell@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05 AM - 3:02 PM",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.5683421,41.8345324 ]
+    },
+    "properties": {
+    "School":"Nahed Chapman New American Academy @ Roosevelt",
+    "Phone #":"",
+    "Grade Levels":"",
+    "Level":"H",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2385754,38.6185303 ]
+    },
+    "properties": {
+    "School":"Nahed Chapman New American Academy",
+    "Phone #":"776-3285  ",
+    "Grade Levels":"8:05- 3:02",
+    "Level":"A",
+    "Number of Students":308,
+    "Principal Name":"Nicole Conaway",
+    "Principal Email":"Nicole.Conaway@slps.org",
+    "Other Contact - Name":"James Davis",
+    "Contact Title":"library aide",
+    "Contact Email":"james.davis@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05- 3:02",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2639083,38.5884806 ]
+    },
+    "properties": {
+    "School":"Oak Hill Elementary",
+    "Phone #":"481-0420",
+    "Grade Levels":"K-5",
+    "Level":"P",
+    "Number of Students":226,
+    "Principal Name":"Dr. Tina Hamilton",
+    "Principal Email":"tina.hamilton@slps.org",
+    "Other Contact - Name":"Shanise Lewis",
+    "Contact Title":"Unleashing Potential After School Program",
+    "Contact Email":"slewis@upstl.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:10 AM - 4:07 PM",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2368527,38.6002121 ]
+    },
+    "properties": {
+    "School":"Roosevelt High School",
+    "Phone #":"776-6040",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":500,
+    "Principal Name":"Enna Dancy",
+    "Principal Email":"enna.dancy@slps.org",
+    "Other Contact - Name":"Anna Mennerick",
+    "Contact Title":"Librarian",
+    "Contact Email":"anna.mennerick@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05- 3:02",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2294863,38.6006776 ]
+    },
+    "properties": {
+    "School":"St. Frances Cabrini Academy",
+    "Phone #":"776-0883",
+    "Grade Levels":"K-8",
+    "Level":"P",
+    "Number of Students":186,
+    "Principal Name":"Caroline Koetting",
+    "Principal Email":"caroline.koetting@cabriniacademy.org",
+    "Other Contact - Name":"Beth Deboo",
+    "Contact Title":"8th Grade Homeroom/Science",
+    "Contact Email":"deboo@cabriniacademy.org",
+    "Notes":"Private",
+    "Hours of Operation":"7:30-3:30",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2668458,38.6282636 ]
+    },
+    "properties": {
+    "School":"St. Louis University High School",
+    "Phone #":"531-0330",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":960,
+    "Principal Name":"FR. IAN GIBBONS, S.J.",
+    "Principal Email":"igibbons@sluh.org",
+    "Other Contact - Name":"Lynne Casey",
+    "Contact Title":"Librarian ",
+    "Contact Email":"lcasey@sluh.org",
+    "Notes":"Private",
+    "Hours of Operation":"8:00 - 5:00 ",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2567864,38.6091759 ]
+    },
+    "properties": {
+    "School":"Tower Grove Christian Academy",
+    "Phone #":"776-6473",
+    "Grade Levels":"PK-8",
+    "Level":"P",
+    "Number of Students":45,
+    "Principal Name":"Michael Gregory (Head of School)",
+    "Principal Email":"mgregory@towergrovechristian.org",
+    "Other Contact - Name":"Abby Heeb ",
+    "Contact Title":"Math Teacher, High School Lead",
+    "Contact Email":" aheeb@towergrovechristian.org ",
+    "Notes":"Private",
+    "Hours of Operation":"7:45 - 2:35",
+    "Region":"Carpenter",
+    "Library":"Carpenter",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2553481,38.6201549 ]
+    },
+    "properties": {
+    "School":"City Garden Montessori",
+    "Phone #":"664-7646",
+    "Grade Levels":"prek-8",
+    "Level":"P",
+    "Number of Students":268,
+    "Principal Name":"Cyrstal Isom",
+    "Principal Email":"crystal.isom@citygardenschool.org",
+    "Other Contact - Name":"Anne Beney / Liz Harris",
+    "Contact Title":"Reading Specialist / Secretary",
+    "Contact Email":"anne@citygardenschool.org / liz@citygardenschool.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:30-3:30",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2720784,38.6293192 ]
+    },
+    "properties": {
+    "School":"Compton Drew ILC",
+    "Phone #":"652-9282",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":528,
+    "Principal Name":"Susan Reid",
+    "Principal Email":"Susan.Reid@slps.org",
+    "Other Contact - Name":"Shaire Duncan",
+    "Contact Title":"Assistant Principal",
+    "Contact Email":"shaire.duncan@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2445504,38.6083126 ]
+    },
+    "properties": {
+    "School":"Missouri School for the Blind",
+    "Phone #":"776-4320",
+    "Grade Levels":"k-12",
+    "Level":"A",
+    "Number of Students":0,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"Mike McQueen",
+    "Contact Title":"Librarian",
+    "Contact Email":"Mike.McQueen@msb.dese.mo.gov",
+    "Notes":"Public",
+    "Hours of Operation":"8:30-3:30",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2545231,38.6171444 ]
+    },
+    "properties": {
+    "School":"Mullanphy ILC",
+    "Phone #":"772-0994",
+    "Grade Levels":"pre-k-5",
+    "Level":"P",
+    "Number of Students":468,
+    "Principal Name":"Dr. Kelli Casper",
+    "Principal Email":"kelli.casper@slps.org",
+    "Other Contact - Name":"Dr. Victoria Jones",
+    "Contact Title":"Librarian",
+    "Contact Email":"victoria.jones@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:10-4:07",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.277007,38.611798 ]
+    },
+    "properties": {
+    "School":"Shaw VPA",
+    "Phone #":"776-5091",
+    "Grade Levels":"pre-k-5",
+    "Level":"P",
+    "Number of Students":389,
+    "Principal Name":"Dr. Lori Craig",
+    "Principal Email":"lori.craig@slps.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"9:20-4:17",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2697804,38.6071283 ]
+    },
+    "properties": {
+    "School":"South City Community School",
+    "Phone #":"667-4311",
+    "Grade Levels":"prek-8",
+    "Level":"P",
+    "Number of Students":200,
+    "Principal Name":"Michael Treadwell",
+    "Principal Email":"mtreadwell@sccommunityschool.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"office@sccommunityschool.org",
+    "Notes":"Private",
+    "Hours of Operation":"8:30-3:15",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2718405,38.61538 ]
+    },
+    "properties": {
+    "School":"St. Ambrose",
+    "Phone #":"772-1437",
+    "Grade Levels":"pre-k-8",
+    "Level":"P",
+    "Number of Students":274,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"Linda Gambaro",
+    "Contact Title":"Secretary",
+    "Contact Email":"lgambaro@stambroseonthehill.com",
+    "Notes":"Private",
+    "Hours of Operation":"7:30-3:00",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2473,38.6147418 ]
+    },
+    "properties": {
+    "School":"St. Margaret of Scotland School",
+    "Phone #":"776-7837",
+    "Grade Levels":"prek-8",
+    "Level":"P",
+    "Number of Students":480,
+    "Principal Name":"Clare Young",
+    "Principal Email":"",
+    "Other Contact - Name":"Angela Faul",
+    "Contact Title":"Library Volunteer",
+    "Contact Email":"ange.faul@gmail.com",
+    "Notes":"Private",
+    "Hours of Operation":"7:50-3:00",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2567864,38.6091759 ]
+    },
+    "properties": {
+    "School":"Tower Grove Christian Academy",
+    "Phone #":"776-6473",
+    "Grade Levels":"k-8",
+    "Level":"P",
+    "Number of Students":300,
+    "Principal Name":"Mrs. Hoelker",
+    "Principal Email":"ehoelker@towergrovechristian.org",
+    "Other Contact - Name":"Mrs. Heeb",
+    "Contact Title":"Middle School Coordinator",
+    "Contact Email":"aheeb@towergrovechristian.org",
+    "Notes":"Private",
+    "Hours of Operation":"7:45-3:00",
+    "Region":"Carpenter",
+    "Library":"Kingshighway",
+    "Did outreach in 2019-2020 school year? (Y/N)":"",
+    "Did outreach in 2020-2021 school year? (Y/N)":"",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2111511,38.6416511 ]
+    },
+    "properties": {
+    "School":"Gateway MST Elementary",
+    "Phone #":"",
+    "Grade Levels":"",
+    "Level":"P",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"",
+    "Region":"Central",
+    "Library":"Central",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2082012,38.6169078 ]
+    },
+    "properties": {
+    "School":"KIPP: Wisdom",
+    "Phone #":"358-9561",
+    "Grade Levels":"k-4th ",
+    "Level":"P",
+    "Number of Students":600,
+    "Principal Name":"Jacob Shiffrin",
+    "Principal Email":"jshiffrin@kippstl.org",
+    "Other Contact - Name":"Briana Greer",
+    "Contact Title":"Assistant School Leader of Culture",
+    "Contact Email":"bgreer@kippstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8-5pm",
+    "Region":"Central",
+    "Library":"Central",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.3948906,39.4540337 ]
+    },
+    "properties": {
+    "School":"Peabody Elementary School",
+    "Phone #":"",
+    "Grade Levels":"",
+    "Level":"P",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"",
+    "Region":"Central",
+    "Library":"Central",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2008685,38.6309481 ]
+    },
+    "properties": {
+    "School":"Confluence Prep Academy ",
+    "Phone #":"588-1088",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":200,
+    "Principal Name":"Dayle Burgdorf",
+    "Principal Email":"dayle.burgdorf@confluenceacademy.org",
+    "Other Contact - Name":"Haley Brueck",
+    "Contact Title":"12th Grade Teacher",
+    "Contact Email":"haley.brueck@confluenceacademy.org",
+    "Notes":"Public",
+    "Hours of Operation":"8-2:58",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2117865,38.6408766 ]
+    },
+    "properties": {
+    "School":"Gateway Middle School",
+    "Phone #":"241-2295",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":513,
+    "Principal Name":"Dr. A. Michael Shaw",
+    "Principal Email":"Arthur.Shaw@slps.org",
+    "Other Contact - Name":"Phyllis Craig",
+    "Contact Title":"Librarian",
+    "Contact Email":"phyllis.craig@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05 a.m. - 3:02 p.m.",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2354599,38.6443915 ]
+    },
+    "properties": {
+    "School":"Griscom Juvenile Detention Center",
+    "Phone #":"552-2194",
+    "Grade Levels":"5 - 12",
+    "Level":"H",
+    "Number of Students":70,
+    "Principal Name":"Carey Cunningham",
+    "Principal Email":"carey.cunningham@courts.mo.gov",
+    "Other Contact - Name":"NiKeisha Fortenberry",
+    "Contact Title":"Detention Program Coordinator",
+    "Contact Email":"nikeisha.fortenberry@courts.mo.gov",
+    "Notes":"Public",
+    "Hours of Operation":"Non-Traditional",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2005107,38.6466685 ]
+    },
+    "properties": {
+    "School":"Hogan Street Regional Youth Center",
+    "Phone #":"340-7434",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":36,
+    "Principal Name":"Michael Hume",
+    "Principal Email":"michael.hume@dss.mo.gov",
+    "Other Contact - Name":"Elizabeth Cassmeyer",
+    "Contact Title":"Teacher",
+    "Contact Email":"elizabeth.f.cassmeyere@dss.mo.gov",
+    "Notes":"Public",
+    "Hours of Operation":"Residental",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2035867,38.6437136 ]
+    },
+    "properties": {
+    "School":"Innovative Concept Academy @Blewett",
+    "Phone #":"231-7738",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":250,
+    "Principal Name":"Derrick Mitchell",
+    "Principal Email":"derrick.mitchell@slps.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"9:10-4:07",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2125486,38.6359378 ]
+    },
+    "properties": {
+    "School":"Kipp High School",
+    "Phone #":"241-1030",
+    "Grade Levels":"9-10",
+    "Level":"H",
+    "Number of Students":250,
+    "Principal Name":"Mrs. Simmons ",
+    "Principal Email":"tsimmons@kippstl.org",
+    "Other Contact - Name":"Mrs. Nicole Niewald",
+    "Contact Title":"Co School Leader",
+    "Contact Email":"nniewald@kippstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"7:15-3:16",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2082012,38.6405101 ]
+    },
+    "properties": {
+    "School":"Kipp Inspire Middle School",
+    "Phone #":"296-3502",
+    "Grade Levels":"5-8",
+    "Level":"M",
+    "Number of Students":400,
+    "Principal Name":"Jessica Pachak",
+    "Principal Email":"jpachak@kippstl.org",
+    "Other Contact - Name":"Aleisha Archie-McMillan",
+    "Contact Title":"Teacher",
+    "Contact Email":"amcmillan@kippstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"7:15-3:30",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2122613,38.6401421 ]
+    },
+    "properties": {
+    "School":"La Salle Middle School",
+    "Phone #":"531-9820",
+    "Grade Levels":"5-8",
+    "Level":"M",
+    "Number of Students":127,
+    "Principal Name":"LaShanda Boone",
+    "Principal Email":"lboone@lasallemiddleschool.org",
+    "Other Contact - Name":"Azalia Carter",
+    "Contact Title":"Director of Student & Family Engagement",
+    "Contact Email":"acarter@lasallemiddleschool.org\n",
+    "Notes":"Charter",
+    "Hours of Operation":"8:00-4:20",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2004801,38.6085012 ]
+    },
+    "properties": {
+    "School":"Lift for Life Academy: Middle",
+    "Phone #":"231-2337",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":300,
+    "Principal Name":"Jeff Edwards",
+    "Principal Email":"jedwards@liftforlifeacademy.org",
+    "Other Contact - Name":"Orianna Creel",
+    "Contact Title":"Instructional Coach/ELA Instructor",
+    "Contact Email":"ocreel@liftforlifeacademy.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8-3:40",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.221242,38.6478602 ]
+    },
+    "properties": {
+    "School":"Vashon High School",
+    "Phone #":"539-9487",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":425,
+    "Principal Name":"Brenda Smith",
+    "Principal Email":"brenda.smith5@slps.org",
+    "Other Contact - Name":"Rachel Fenner",
+    "Contact Title":"Reading Specialist",
+    "Contact Email":"rachel.fenner@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-3:02",
+    "Region":"Central",
+    "Library":"Central Teen Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2123767,38.6394374 ]
+    },
+    "properties": {
+    "School":"Carr Lane VPA Middle School",
+    "Phone #":"231-0413",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":0,
+    "Principal Name":"Darwin Young",
+    "Principal Email":"darwin.young@slps.org",
+    "Other Contact - Name":"Amy Grove",
+    "Contact Title":"English Language Arts Teacher & Reading Coach",
+    "Contact Email":"amy.grove@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7-2",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2282397,38.6427058 ]
+    },
+    "properties": {
+    "School":"Clyde C. Miller Career Academy",
+    "Phone #":"371-0394",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":750,
+    "Principal Name":"Jana Haywood",
+    "Principal Email":"jana.haywood@slps.org",
+    "Other Contact - Name":"Michelle Arett",
+    "Contact Title":"English Teacher",
+    "Contact Email":"michelle.arett@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"7-2",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -112.0652144,33.4372553 ]
+    },
+    "properties": {
+    "School":"ETS @ Madison",
+    "Phone #":"345-5651",
+    "Grade Levels":"5-8",
+    "Level":"M",
+    "Number of Students":40,
+    "Principal Name":"Marvin Echols",
+    "Principal Email":"marvinechols@slpl.org",
+    "Other Contact - Name":"Alvin Morris",
+    "Contact Title":"5th/6th grade teacher",
+    "Contact Email":"alvinmorris@slpl.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:15 a.m.-3:12 p.m.",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.1958238,38.6163553 ]
+    },
+    "properties": {
+    "School":"ETS @ Madison",
+    "Phone #":"314.345.5651",
+    "Grade Levels":"Pre-K-8",
+    "Level":"P",
+    "Number of Students":0,
+    "Principal Name":"Marvin Echols",
+    "Principal Email":"marvin.echols@slps.org",
+    "Other Contact - Name":"James Harris",
+    "Contact Title":"5th/6th grade teacher",
+    "Contact Email":"james.harris@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:15 a.m. to 3:12 p.m. ",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2111016,38.6420564 ]
+    },
+    "properties": {
+    "School":"Gateway Michael",
+    "Phone #":"314 241-0993",
+    "Grade Levels":"K-8th",
+    "Level":"P",
+    "Number of Students":67,
+    "Principal Name":"Petra Baker",
+    "Principal Email":"petra.baker@slps.org",
+    "Other Contact - Name":"Tisha Tooksa",
+    "Contact Title":"Secretary",
+    "Contact Email":"tisha.tooksa@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-3:02",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2034402,38.6407642 ]
+    },
+    "properties": {
+    "School":"Jefferson Elementary",
+    "Phone #":"3142312459",
+    "Grade Levels":"Pre-K-5",
+    "Level":"P",
+    "Number of Students":183,
+    "Principal Name":"Leslie Bonner",
+    "Principal Email":"leslie.bonner@slpl.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-3:02",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.191284,38.6371793 ]
+    },
+    "properties": {
+    "School":"Patrick Henry Downtown Academy",
+    "Phone #":" 231-7284",
+    "Grade Levels":"Pre-K-5",
+    "Level":"P",
+    "Number of Students":267,
+    "Principal Name":"Deborah Rogers",
+    "Principal Email":"deborah.rogers@slps.org",
+    "Other Contact - Name":"Morgan Hill",
+    "Contact Title":"Dean of Culture",
+    "Contact Email":"morgan.hill@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:10-3:12",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.206869,38.630963 ]
+    },
+    "properties": {
+    "School":"SLLIS - St Louis Language Immersion School",
+    "Phone #":"314-399-4835  ",
+    "Grade Levels":"K-8th",
+    "Level":"P",
+    "Number of Students":475,
+    "Principal Name":"Dr. Phillip Kennedy",
+    "Principal Email":"phillip.kennedy@sllis.org",
+    "Other Contact - Name":"Naxin Fan ",
+    "Contact Title":"Librarian",
+    "Contact Email":"naxin.fan@sllis.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:30-3:30",
+    "Region":"Central",
+    "Library":"Central Youth Services",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2411046,38.7214332 ]
+    },
+    "properties": {
+    "School":"Earl Nance Sr Elementary School",
+    "Phone #":"867-0634",
+    "Grade Levels":"Pre-K - 6th",
+    "Level":"P",
+    "Number of Students":600,
+    "Principal Name":"Dr. Tyler Archer",
+    "Principal Email":"Tyler.Archer@slps.org",
+    "Other Contact - Name":"Joyce Wicks ",
+    "Contact Title":"Library Aide",
+    "Contact Email":"Joyce.Lloyd@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05am - 3:02pm",
+    "Region":"Julia Davis",
+    "Library":"Baden",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2229656,38.7184851 ]
+    },
+    "properties": {
+    "School":"River Roads Lutheran School",
+    "Phone #":"388-0300",
+    "Grade Levels":"Pre-k - 8th",
+    "Level":"P",
+    "Number of Students":200,
+    "Principal Name":"Yvonne Boyd",
+    "Principal Email":"Ymboyd26@gmail.com",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"7:45 AM - 4:30 PM",
+    "Region":"Julia Davis",
+    "Library":"Baden",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.235986,38.6715099 ]
+    },
+    "properties": {
+    "School":"Ashland Elementary",
+    "Phone #":"385-4767",
+    "Grade Levels":"Pre K- 6th",
+    "Level":"P",
+    "Number of Students":201,
+    "Principal Name":"Dr. Paula Boddie",
+    "Principal Email":"Paula.Boddie@slps.org",
+    "Other Contact - Name":"Christopher Wells",
+    "Contact Title":"Library Aide",
+    "Contact Email":"christopher.wells@slps.org ",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-3:02",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2218896,38.6625664 ]
+    },
+    "properties": {
+    "School":"Beaumont Technical Center",
+    "Phone #":"533-2410",
+    "Grade Levels":"11th-12th",
+    "Level":"H",
+    "Number of Students":160,
+    "Principal Name":"Dr. Felita Williams",
+    "Principal Email":"felita.williams@slps.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"8:00-2:30",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2488765,38.6814688 ]
+    },
+    "properties": {
+    "School":"City Academy",
+    "Phone #":"382-0085",
+    "Grade Levels":"Pre K- 6th",
+    "Level":"P",
+    "Number of Students":210,
+    "Principal Name":"Jeff Horwitz",
+    "Principal Email":"jhorwitz@cityacademyschool.org",
+    "Other Contact - Name":"Marybeth Huff",
+    "Contact Title":"Librarian and Technology Integration Coordinator",
+    "Contact Email":"mhuff@cityacademyschool.org",
+    "Notes":"Private",
+    "Hours of Operation":"8:05- 3:30",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2339507,38.6594015 ]
+    },
+    "properties": {
+    "School":"Emerson Academy Therapeutic School",
+    "Phone #":" 531-1907`",
+    "Grade Levels":"K-12",
+    "Level":"A",
+    "Number of Students":0,
+    "Principal Name":"Verneice Wise",
+    "Principal Email":"vwise@anniemalone.com",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2452103,38.6691924 ]
+    },
+    "properties": {
+    "School":"Hickey Elementary School",
+    "Phone #":"383-2550",
+    "Grade Levels":"PK-5",
+    "Level":"P",
+    "Number of Students":200,
+    "Principal Name":"DeAndria Wallace",
+    "Principal Email":"DeAndria.Wallace@slps.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"8:05am - 3:02pm",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2548898,38.6744133 ]
+    },
+    "properties": {
+    "School":"Lexington Elementary School",
+    "Phone #":"385-2522",
+    "Grade Levels":"PK, K-5 ",
+    "Level":"P",
+    "Number of Students":400,
+    "Principal Name":"Angelique Brown",
+    "Principal Email":"Angelique.Brown@slps.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"8:05am - 3:02pm",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2153623,38.6595709 ]
+    },
+    "properties": {
+    "School":"Janan Academy- Muhammed Islamic Academy",
+    "Phone #":"652-8419",
+    "Grade Levels":"Pre- K- 6th",
+    "Level":"P",
+    "Number of Students":37,
+    "Principal Name":"Ibrahim A. Muhammad",
+    "Principal Email":"",
+    "Other Contact - Name":"Janiece Muhammad",
+    "Contact Title":"",
+    "Contact Email":"muiaffiliate4@gmail.com",
+    "Notes":"Private",
+    "Hours of Operation":"8:00- 3:00",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.252323,38.6720438 ]
+    },
+    "properties": {
+    "School":"North Side Community School",
+    "Phone #":"385-9502",
+    "Grade Levels":"Pre-K- 4th ",
+    "Level":"P",
+    "Number of Students":411,
+    "Principal Name":"Stella Erondu",
+    "Principal Email":"stella.erondu@northsidecommunityschool.org",
+    "Other Contact - Name":"Leah Harris",
+    "Contact Title":"leah.harris@northsidecommunityschool.org",
+    "Contact Email":"",
+    "Notes":"Charter",
+    "Hours of Operation":"7:55-3:30",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.252323,38.6720438 ]
+    },
+    "properties": {
+    "School":"North Side Community School",
+    "Phone #":"385-9502",
+    "Grade Levels":"5th-8th",
+    "Level":"M",
+    "Number of Students":411,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"Leah Harris",
+    "Contact Title":"leah.harris@northsidecommunityschool.org",
+    "Contact Email":"",
+    "Notes":"Charter",
+    "Hours of Operation":"7:55-3:30",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2389814,38.6807969 ]
+    },
+    "properties": {
+    "School":"St. Louis Catholic Academy",
+    "Phone #":"389-0401",
+    "Grade Levels":"K- 8th",
+    "Level":"P",
+    "Number of Students":133,
+    "Principal Name":"Sandra Morton",
+    "Principal Email":"morton@slca-stl.org",
+    "Other Contact - Name":"Minette Blair",
+    "Contact Title":"Administrative Assistant",
+    "Contact Email":"blair@slca-stl.org",
+    "Notes":"Private",
+    "Hours of Operation":"8:00- 3:00",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2396508,38.6596117 ]
+    },
+    "properties": {
+    "School":"Sumner High School",
+    "Phone #":"371-1048",
+    "Grade Levels":"9th-12th",
+    "Level":"H",
+    "Number of Students":200,
+    "Principal Name":"Dr. Sean Nichols",
+    "Principal Email":"Sean.Nichols@slps.org",
+    "Other Contact - Name":"Ora Cole",
+    "Contact Title":"Library Aide",
+    "Contact Email":"Ora.Cole@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05am - 3:02pm",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2509297,38.6935824 ]
+    },
+    "properties": {
+    "School":"Walbridge STEAM Academy",
+    "Phone #":"383-1829",
+    "Grade Levels":"PK-5",
+    "Level":"P",
+    "Number of Students":189,
+    "Principal Name":"Mildred Moore",
+    "Principal Email":"Mildred.Moore@slpl.org",
+    "Other Contact - Name":"Joyce Wicks",
+    "Contact Title":"School Librarian",
+    "Contact Email":"Joyce.Lloyd@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05 a.m.-3:02 p.m.",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2283503,38.6754506 ]
+    },
+    "properties": {
+    "School":"Yeatman-Liddell Prep",
+    "Phone #":"261-8132",
+    "Grade Levels":"6-8th",
+    "Level":"M",
+    "Number of Students":397,
+    "Principal Name":"Kenneth Griffin",
+    "Principal Email":"Kenneth.Griffin@slps.org",
+    "Other Contact - Name":"Dr. Melissa Nash ",
+    "Contact Title":"Full Service School Coordinator",
+    "Contact Email":"Melissa.Nash@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:00- 3:15",
+    "Region":"Julia Davis",
+    "Library":"Julia Davis",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2457968,38.6957219 ]
+    },
+    "properties": {
+    "School":"Aspire Academy",
+    "Phone #":"383-8900",
+    "Grade Levels":"PK-8",
+    "Level":"P",
+    "Number of Students":453,
+    "Principal Name":"Lacqweda Taylor",
+    "Principal Email":"Lacqweda.Taylor@confluenceacademy.org",
+    "Other Contact - Name":"Katrina Harmon",
+    "Contact Title":"Assistant Principal",
+    "Contact Email":"Katrina.Harmon@confluenceacademies.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:00 a.m. - 3:45 p.m.",
+    "Region":"Julia Davis",
+    "Library":"Walnut Park",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.252213,38.7111386 ]
+    },
+    "properties": {
+    "School":"Herzog Elementary",
+    "Phone #":"385-2212",
+    "Grade Levels":"PK-5",
+    "Level":"P",
+    "Number of Students":226,
+    "Principal Name":"Ms. Oluyemisi Folarin",
+    "Principal Email":"Oluyemisi.Folarin@slps.org",
+    "Other Contact - Name":"Eileen Stiles-Henderson",
+    "Contact Title":"Library Aid",
+    "Contact Email":"Eileen.Stiles@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:15 a.m. - 3:12 p.m.",
+    "Region":"Julia Davis",
+    "Library":"Walnut Park",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2837958,38.6517401 ]
+    },
+    "properties": {
+    "School":"Crossroads College Preparatory School",
+    "Phone #":"367-8085",
+    "Grade Levels":"Grades 7-11",
+    "Level":"H",
+    "Number of Students":175,
+    "Principal Name":"Jason Heissener",
+    "Principal Email":"",
+    "Other Contact - Name":"Susan Kane",
+    "Contact Title":"Librarian",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"8:30 -3:30 p.m.",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2339507,38.6594015 ]
+    },
+    "properties": {
+    "School":"Emerson Academy Therapeutic School",
+    "Phone #":"531-1907",
+    "Grade Levels":"K-12",
+    "Level":"A",
+    "Number of Students":63,
+    "Principal Name":"Verniece Wise",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"9.22",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2899993,38.6530358 ]
+    },
+    "properties": {
+    "School":"Hamilton Elementary",
+    "Phone #":"367-0552",
+    "Grade Levels":"PK-5",
+    "Level":"P",
+    "Number of Students":307,
+    "Principal Name":"Starlett Frenchie",
+    "Principal Email":"starlett.frenchie@slps.org",
+    "Other Contact - Name":"Keisha Murphy-Petis",
+    "Contact Title":"Library Aide",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-3:02 p.m.",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2599426,38.6660161 ]
+    },
+    "properties": {
+    "School":"Hawthorn Leadership School For Girls",
+    "Phone #":"361-5323",
+    "Grade Levels":"grades 6-11",
+    "Level":"H",
+    "Number of Students":109,
+    "Principal Name":"Mary Stillman",
+    "Principal Email":"",
+    "Other Contact - Name":"Shonda Gray",
+    "Contact Title":"Associate Head of School",
+    "Contact Email":"sgray@hawthornschool.org",
+    "Notes":"Public",
+    "Hours of Operation":"8-4 p.m.",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2799734,38.6599518 ]
+    },
+    "properties": {
+    "School":"KIPP Victory Academy",
+    "Phone #":"314454-9255",
+    "Grade Levels":"K-4",
+    "Level":"P",
+    "Number of Students":550,
+    "Principal Name":"Cetera Altepeter (co School Leader)",
+    "Principal Email":"caltepeter@kippstl.org",
+    "Other Contact - Name":"Ashley Anderson",
+    "Contact Title":"Dean of Operations",
+    "Contact Email":"acanderson@kippstl.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8 - 4:15 p.m.",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2765413,38.6773089 ]
+    },
+    "properties": {
+    "School":"Pierre Laclede Junior Career Academy",
+    "Phone #":"385-0546",
+    "Grade Levels":"PK-8",
+    "Level":"P",
+    "Number of Students":197,
+    "Principal Name":"Dr. Damaris White",
+    "Principal Email":"Damaris.white@slps.org",
+    "Other Contact - Name":"Marie Gorman-Wilkes",
+    "Contact Title":"Library Aide",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"Pk-8",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2726489,38.6554601 ]
+    },
+    "properties": {
+    "School":"Soldan High School",
+    "Phone #":"367-9222",
+    "Grade Levels":"Grades 9-12",
+    "Level":"H",
+    "Number of Students":515,
+    "Principal Name":"Mr. Haymore",
+    "Principal Email":"LaRon.Haymore@slps.org",
+    "Other Contact - Name":"Lefonia Alexander",
+    "Contact Title":"Library Aide",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07 p.m.",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2956943,38.6500723 ]
+    },
+    "properties": {
+    "School":"St Roch Elementary",
+    "Phone #":"721-2595",
+    "Grade Levels":"PK-8",
+    "Level":"P",
+    "Number of Students":195,
+    "Principal Name":"Karin Hiatt",
+    "Principal Email":"karinh@strochschool.org",
+    "Other Contact - Name":"Jo Josh",
+    "Contact Title":"Secretary",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"8-3:15 p.m.",
+    "Region":"Schlafly",
+    "Library":"Cabanne",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.1953845,38.6529035 ]
+    },
+    "properties": {
+    "School":"Ames VPA Elementary School",
+    "Phone #":"241-7165",
+    "Grade Levels":"Pre-k to 5th",
+    "Level":"P",
+    "Number of Students":230,
+    "Principal Name":"JaVeeta Parks-Prince",
+    "Principal Email":"javetta.parks@slps.org",
+    "Other Contact - Name":"Jean Washington",
+    "Contact Title":"Academic Instructional Coach",
+    "Contact Email":"jean.washington@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:10-4:07",
+    "Region":"Schlafly",
+    "Library":"Divoll",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2059758,38.6594823 ]
+    },
+    "properties": {
+    "School":"Arch Community School",
+    "Phone #":"314-267-8191",
+    "Grade Levels":"K-5",
+    "Level":"P",
+    "Number of Students":88,
+    "Principal Name":"Tanisha Stanciel",
+    "Principal Email":"stanciel.t@stlacs.org",
+    "Other Contact - Name":"Gary Mitchell",
+    "Contact Title":"Reading Specialist",
+    "Contact Email":"mitchell.g@stlacs.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:00-3:30PM",
+    "Region":"Schlafly",
+    "Library":"Divoll",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2125598,38.6711807 ]
+    },
+    "properties": {
+    "School":"Bryan Hill",
+    "Phone #":"314-534-0370",
+    "Grade Levels":"Prek - 5th",
+    "Level":"P",
+    "Number of Students":173,
+    "Principal Name":"Sarah Briscoe",
+    "Principal Email":"Sarah.Briscoe@slps.org",
+    "Other Contact - Name":"Shinetha Williams",
+    "Contact Title":"Librarian",
+    "Contact Email":"shinetha.williams@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:15- 3:12",
+    "Region":"Schlafly",
+    "Library":"Divoll",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2190318,38.65354 ]
+    },
+    "properties": {
+    "School":"Columbia Elementary",
+    "Phone #":"314-533-2750",
+    "Grade Levels":"PreK-5",
+    "Level":"P",
+    "Number of Students":209,
+    "Principal Name":"Tiffany Houston",
+    "Principal Email":"tiffany.houston@slps.org",
+    "Other Contact - Name":"Eileen Stiles",
+    "Contact Title":"Librarian",
+    "Contact Email":"eileen.stiles@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-2:02",
+    "Region":"Schlafly",
+    "Library":"Divoll",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.1967012,38.6545761 ]
+    },
+    "properties": {
+    "School":"Confluence Academy Old North",
+    "Phone #":"314-241-1110",
+    "Grade Levels":"Pre-k - 8th",
+    "Level":"P",
+    "Number of Students":513,
+    "Principal Name":"Dr. Lesile Muhammad ",
+    "Principal Email":"LMuhammad@confluenceacademy.org",
+    "Other Contact - Name":"Janice Smith",
+    "Contact Title":"Librarian",
+    "Contact Email":"Janice.Smith@confluenceacademy.org",
+    "Notes":"Charter",
+    "Hours of Operation":"7:30 am -4 pm",
+    "Region":"Schlafly",
+    "Library":"Divoll",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.1468448,44.0693609 ]
+    },
+    "properties": {
+    "School":"George Washington Carver Elementary ",
+    "Phone #":"314-420-2468",
+    "Grade Levels":"PreK-5",
+    "Level":"P",
+    "Number of Students":175,
+    "Principal Name":"Brandon Clay",
+    "Principal Email":"brandon.clay@slps.org",
+    "Other Contact - Name":"Cynthia A. Knighten",
+    "Contact Title":"Library Aide",
+    "Contact Email":"cynthia.knighten@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:10-4:07",
+    "Region":"Schlafly",
+    "Library":"Divoll",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2098505,38.6771159 ]
+    },
+    "properties": {
+    "School":"KIPP Triumph",
+    "Phone #":"314-454-9167",
+    "Grade Levels":"5-8",
+    "Level":"M",
+    "Number of Students":440,
+    "Principal Name":"Elizabeth Valerio",
+    "Principal Email":"evalerio@kippstl.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Charter",
+    "Hours of Operation":"7:15-3:30 M-Th and 7:15-1:30 F",
+    "Region":"Schlafly",
+    "Library":"Divoll",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2570965,38.6249242 ]
+    },
+    "properties": {
+    "School":"Adams Elementary School ",
+    "Phone #":"535-3910 ",
+    "Grade Levels":"Pre K-6",
+    "Level":"P",
+    "Number of Students":300,
+    "Principal Name":"Felicia Miller",
+    "Principal Email":" Felicia.Miller@slps.org",
+    "Other Contact - Name":"Dione Lampros",
+    "Contact Title":"Literacy Intervention Specialist",
+    "Contact Email":"dione.lampros@slps.org ",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-3:02",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2350934,38.6420161 ]
+    },
+    "properties": {
+    "School":"Cardinal Ritter College Prepartory High School  ",
+    "Phone #":"446-5500",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":262,
+    "Principal Name":"Dr. Shante Lyons",
+    "Principal Email":"slyons@cardinalritterprep.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Private",
+    "Hours of Operation":"7:00 am - 3:00 pm",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2618341,38.6327679 ]
+    },
+    "properties": {
+    "School":"Central Institute for the Deaf",
+    "Phone #":"977-0132",
+    "Grade Levels":"Pre K-6",
+    "Level":"P",
+    "Number of Students":70,
+    "Principal Name":"Lynda Berkowitz",
+    "Principal Email":"lberkowitz@cid.edu",
+    "Other Contact - Name":"Abby Zoia",
+    "Contact Title":"Coordinator",
+    "Contact Email":"azoia@cid.edu",
+    "Notes":"Private",
+    "Hours of Operation":"8:30-3:00",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.3027866,38.6449757 ]
+    },
+    "properties": {
+    "School":"Forsyth School",
+    "Phone #":"726-4542",
+    "Grade Levels":"pre K-6",
+    "Level":"P",
+    "Number of Students":375,
+    "Principal Name":"Dan Hildebrand",
+    "Principal Email":"dhildebrand@forsythonline.com",
+    "Other Contact - Name":"Melissa Pilot",
+    "Contact Title":"Librarian ",
+    "Contact Email":"mpilot@forsythonline.com",
+    "Notes":"Private",
+    "Hours of Operation":"9-3",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2307254,38.6406106 ]
+    },
+    "properties": {
+    "School":"Grand Center Arts Academy",
+    "Phone #":"533-1791",
+    "Grade Levels":"6-12",
+    "Level":"H",
+    "Number of Students":740,
+    "Principal Name":"Ashley Olson & Tennille Peeler",
+    "Principal Email":"ashley.olson@grandcenterartsacademy.org & tennille.peeler@grandcenterartsacademy.org",
+    "Other Contact - Name":"Kimberly Volkmann",
+    "Contact Title":"Instructional Coach",
+    "Contact Email":"Kimberly.volkmann@grandcenterartsacademy.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8:00-3:15",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2488765,38.6372353 ]
+    },
+    "properties": {
+    "School":"Guidepost Montessori",
+    "Phone #":"314-328-4972",
+    "Grade Levels":"10 weeks - 12 yrs.",
+    "Level":"A",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"centralwestend@guidepostmontessori.com",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2365523,38.6417928 ]
+    },
+    "properties": {
+    "School":"Loyola Academy ",
+    "Phone #":"5319091",
+    "Grade Levels":"6-8",
+    "Level":"M",
+    "Number of Students":58,
+    "Principal Name":"Ashley Chapman",
+    "Principal Email":"achapman@loyolaacademy.org",
+    "Other Contact - Name":"Colleen Clark ",
+    "Contact Title":"Director of Academic Support",
+    "Contact Email":"cclark@loyolaacademy.org",
+    "Notes":"Private",
+    "Hours of Operation":"7:30-5:40",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2367187,38.6413013 ]
+    },
+    "properties": {
+    "School":"MAP St. Louis",
+    "Phone #":"",
+    "Grade Levels":"",
+    "Level":"H",
+    "Number of Students":null,
+    "Principal Name":"",
+    "Principal Email":"",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"",
+    "Hours of Operation":"7:00 am - 6:00 pm",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2430107,38.6408529 ]
+    },
+    "properties": {
+    "School":"Metro Academic and Classical High School ",
+    "Phone #":"244-1838",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":330,
+    "Principal Name":"Steven Lawler ",
+    "Principal Email":"steven.lawler@slps.org",
+    "Other Contact - Name":"Brenda Kukay",
+    "Contact Title":"Library Media Specialist",
+    "Contact Email":"brenda.kukay@slps.org ",
+    "Notes":"Public",
+    "Hours of Operation":"7:10-2:07",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2705082,38.649175 ]
+    },
+    "properties": {
+    "School":"New City ",
+    "Phone #":"361-6411",
+    "Grade Levels":"PK-6",
+    "Level":"P",
+    "Number of Students":318,
+    "Principal Name":"Alexis Wright ",
+    "Principal Email":"awright@newcityschool.org",
+    "Other Contact - Name":"Joe Corbett",
+    "Contact Title":"Librarian ",
+    "Contact Email":"jcorbett@newcityschool.org",
+    "Notes":"Private",
+    "Hours of Operation":"8:30-3:30",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"N",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2382088,38.6451643 ]
+    },
+    "properties": {
+    "School":"Pamoja @ Cole Preparatory Academy ",
+    "Phone #":"244-1753",
+    "Grade Levels":"PK-7",
+    "Level":"P",
+    "Number of Students":400,
+    "Principal Name":"Angel Nave",
+    "Principal Email":"angel.nave@slps.org",
+    "Other Contact - Name":"Maria Medina ",
+    "Contact Title":"Academic Instructional Coach",
+    "Contact Email":"maria.medina@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"8:05-3:02",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2536629,38.6419581 ]
+    },
+    "properties": {
+    "School":"Rosati-Kain High School ",
+    "Phone #":"544-8513",
+    "Grade Levels":"9-12",
+    "Level":"H",
+    "Number of Students":300,
+    "Principal Name":"Terrance McNamee",
+    "Principal Email":"tmcnamee@rosati-kain.org",
+    "Other Contact - Name":"Susan Faron",
+    "Contact Title":"Librarian ",
+    "Contact Email":"sfaron@rosati-kain.org",
+    "Notes":"Private",
+    "Hours of Operation":"7:00-2:45",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y ",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2556231,38.6321402 ]
+    },
+    "properties": {
+    "School":"Stix Early Childhood Center ",
+    "Phone #":"533-0874",
+    "Grade Levels":"PK-2",
+    "Level":"P",
+    "Number of Students":520,
+    "Principal Name":"Diane Dymond",
+    "Principal Email":"Diane.Dymond@slps.org",
+    "Other Contact - Name":"Ilena Albarron",
+    "Contact Title":"Library Media Specialist ",
+    "Contact Email":"Ilena.Albarron@slps.org",
+    "Notes":"Public",
+    "Hours of Operation":"9:10-4:07",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"Y",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.253863,38.64804 ]
+    },
+    "properties": {
+    "School":"The Biome School",
+    "Phone #":"531-0982",
+    "Grade Levels":"K-5yh",
+    "Level":"P",
+    "Number of Students":205,
+    "Principal Name":"Julie Harris",
+    "Principal Email":"jharris@thebiomeschool.org",
+    "Other Contact - Name":"Carolyn Jordan ",
+    "Contact Title":"Reading Specialist ",
+    "Contact Email":"cjordan@thebiomeschool.org",
+    "Notes":"Charter",
+    "Hours of Operation":"8-3",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2585356,38.6569262 ]
+    },
+    "properties": {
+    "School":"Washington Montessori",
+    "Phone #":"361-0432",
+    "Grade Levels":"Pk-5",
+    "Level":"P",
+    "Number of Students":400,
+    "Principal Name":"Dr. Lisa Small",
+    "Principal Email":"lisa.small@slps.org",
+    "Other Contact - Name":"",
+    "Contact Title":"",
+    "Contact Email":"",
+    "Notes":"Public",
+    "Hours of Operation":"9:10-4:07",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"Y",
+    "Did outreach in 2020-2021 school year? (Y/N)":"N",
+    "Notes":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.2192429,38.6364511 ]
+    },
+    "properties": {
+    "School":"Atlas Public Schools",
+    "Phone #":"",
+    "Grade Levels":"K-5th",
+    "Level":"P",
+    "Number of Students":null,
+    "Principal Name":"Tierrus Nance ",
+    "Principal Email":"nance@atlaspublic.org",
+    "Other Contact - Name":"Erin Jackson",
+    "Contact Title":"Teacher",
+    "Contact Email":"314.313.0234",
+    "Notes":"Charter",
+    "Hours of Operation":"",
+    "Region":"Schlafly",
+    "Library":"Schlafly",
+    "Did outreach in 2019-2020 school year? (Y/N)":"",
+    "Did outreach in 2020-2021 school year? (Y/N)":"",
+    "Notes":""
+    }
+  }
+]
+}
