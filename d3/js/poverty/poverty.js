@@ -18,7 +18,6 @@ PovertyChart.prototype.init = function(rawData){
     var totalUnderPovertyCount2020 = +(raw2010Data[37].value.replaceAll(",", "")) + +(raw2010Data[42].value.replace(",", "")) + +(raw2010Data[47].value.replace(",", ""))
     var totalAtOrAbovePovertyCount2020 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replace(",", ""))+ +(raw2010Data[48].value.replace(",", ""))
 
-    console.log(raw2020Data)
     dataArray2010 = [totalUnderPovertyCount2010, totalAtOrAbovePovertyCount2010]
     dataArray2020 = [totalUnderPovertyCount2020, totalAtOrAbovePovertyCount2020]
 

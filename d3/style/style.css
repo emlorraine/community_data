@@ -35,9 +35,13 @@ h2{
 #map { 
     width: 900px;
     height: 960px;
-    display:flex;
+    /* display:flex; */
+    float:left;
 }
 
+#intro-text{
+    float:right
+}
 
 
 
