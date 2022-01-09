@@ -177,24 +177,24 @@
 
       
         
-        var textLabels = self.svg.selectAll("barLabels")
-            .data(values)
-            .enter()
-            .append("text")
-            .attr("x", function(d, i) {
-                return (xScale(labels[i]) + 27); 
-            })  
-            .attr("y", function(d) {
-                if(yScale(d)<=0){
-                    return (yScale(d)+20);
-                } else{
-                    return (yScale(d)-5); 
-                }
-            })
-            .attr("transform", "translate(100, 0)") 
-            .text(function(d){
-                return d; 
-            })
+        // var textLabels = self.svg.selectAll("barLabels")
+        //     .data(values)
+        //     .enter()
+        //     .append("text")
+        //     .attr("x", function(d, i) {
+        //         return (xScale(labels[i]) + 27); 
+        //     })  
+        //     .attr("y", function(d) {
+        //         if(yScale(d)<=0){
+        //             return (yScale(d)+20);
+        //         } else{
+        //             return (yScale(d)-5); 
+        //         }
+        //     })
+        //     .attr("transform", "translate(100, 0)") 
+        //     .text(function(d){
+        //         return d; 
+        //     })
 
 }
 
