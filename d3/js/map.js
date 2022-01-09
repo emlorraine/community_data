@@ -1,13 +1,18 @@
 function testMap(){
     console.log("hmmmm")
 }
+function onEachFeature(feature, layer) {
+    layer.bindPopup("Library: " +feature.properties['Branch Name']);
+}
 
+    // $('#map').empty();
 
-function createVis() {
-    var map = L.map('map',{
+    console.log("Calling function")
+    var map = L.map("map",{
         center: [38.636975, -90.239971],
         zoom: 13
     });
+
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -18,9 +23,7 @@ function createVis() {
     accessToken: 'pk.eyJ1IjoiZW1sb3JyYWluZSIsImEiOiJja25xcjFsanYwY3hjMm9uMHRkMmt1bzk3In0.AK4bzeFyxjafUrisldluWQ'
     }).addTo(map);
 
-    function onEachFeature(feature, layer) {
-        layer.bindPopup("Library: " +feature.properties['Branch Name']);
-    }
+    
     fetch("../data/map/library_locations.json")
     .then(function (response) {
         return response.json();
@@ -80,8 +83,8 @@ function createVis() {
 
     var highSchoolMarker = {
         radius: 6,
-        fillColor: "teal",
-        color: "teal",
+        fillColor: "red",
+        color: "red",
         weight: 1,
         opacity: 1,
         fillOpacity: 0.8
@@ -114,11 +117,10 @@ function createVis() {
                 } else if(feature.properties.Level == "M"){
                     return L.circleMarker(latlng, middleSchoolMarker);
                 } else if(feature.properties.Level == "H"){
-                    return L.circleMarker(latlng, elementarySchoolMarker);
+                    return L.circleMarker(latlng, highSchoolMarker);
                 } else{
                     return L.circleMarker(latlng, otherSchoolMarker);
                 }
             }
         }).addTo(map);
     })
-}
