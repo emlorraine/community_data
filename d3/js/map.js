@@ -102,7 +102,6 @@
         L.geoJSON(data, {
             onEachFeature: 
                 function (feature, layer) {
-                    
                     layer.bindPopup("School: " + feature.properties.School)},
             pointToLayer: function (feature, latlng) {
                 if(feature.properties.Level == "P"){
