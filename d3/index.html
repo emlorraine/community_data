@@ -193,11 +193,11 @@
           <!-- <p>Baden Library</p> -->
           <div class = "viz-structure" id="viz-wrapper">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link show active" id="pills-introduction-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Introduction</a>
-              </li>
+              </li> -->
               <li class="nav-item">
-                <a class="nav-link" id="pills-race-tab" data-toggle="pill" href="#pills-race" role="tab" aria-controls="pills-profile" aria-selected="false">Race</a>
+                <a class="nav-link show active" id="pills-race-tab" data-toggle="pill" href="#pills-race" role="tab" aria-controls="pills-profile" aria-selected="false">Race</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="pills-education-tab" data-toggle="pill" href="#pills-education" role="tab" aria-controls="pills-contact" aria-selected="false">Educational Attainment</a>
@@ -210,11 +210,10 @@
               </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-introduction-tab">
-                <div id="map"></div>
-              </div>
+              <!-- <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-introduction-tab">
+              </div> -->
 
-              <div class="tab-pane fade" id="pills-race" role="tabpanel" aria-labelledby="pills-race-tab">
+              <div class="tab-pane fade show active" id="pills-race" role="tabpanel" aria-labelledby="pills-race-tab">
                 <div id="comparison">
                     <p>Compare this data to:</p>
                     <div id="compare-to-MO-tick-box">
@@ -229,6 +228,7 @@
                
                 <!-- Race  -->
                 <div id="race"></div>
+                <button id='race' onclick="save(this.id)">Export this chart to PNG</button>
                 
               </div>
               <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab">
@@ -250,10 +250,12 @@
                     <div class="vstack gap-2" style="margin-right: 150px;">
                       <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment, 2010</h3><br>
                       <div id="education2010"></div>
+                      <button id='education2010' onclick="save(this.id)">Export this chart to PNG</button>
                     </div>
                     <div class="vstack gap-2">
                       <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment, 2019</h3><br>
                       <div id="education2020"></div>
+                      <button id='education2020' onclick="save(this.id)">Export this chart to PNG</button>
                     </div>
                   </div>
                 </div>
@@ -275,6 +277,7 @@
                 <div id="age-block">
                   <div id="age2010"></div>
                   <div id="age2020"></div>
+                  <!-- <button id='age2020' onclick="save(this.id)">Export this chart to PNG</button> -->
                 </div>
               </div>
 
@@ -296,11 +299,13 @@
                   <div class="vstack gap-3" id="povertyBlock2010">
                     <h3>At or below poverty line, 2010</h3>
                     <div id="poverty2010"></div>
+                    <button id='poverty2010' onclick="save(this.id)">Export this chart to PNG</button>
                     <!-- <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p> -->
                   </div>
                   <div class="vstack gap-3" id="povertyBlock2019">
                     <h3>At or below poverty line, 2019</h3>
                     <div id="poverty2020"></div>
+                    <button id='poverty2020' onclick="save(this.id)">Export this chart to PNG</button>
                     <!-- <p>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p> -->
                   </div>
                 </div>
@@ -398,6 +403,20 @@
   <script src="js/maps/map-marketplace.js"></script>
   <script src="js/maps/map-schlafley.js"></script>
   <script src="js/maps/map-walnut-park.js"></script> -->
+
+
+  <script src="saveSvgAsPng.js"></script>
+  <script type="module" src="./node_modules/save-svg-as-png/lib/saveSvgAsPng.js"></script>
+
+  <script>
+    function save(chartName){
+      console.log("Saving", chartName)
+      var fileName = chartName + ".png"
+      var element = chartName.charAt(0).toLowerCase() + chartName.slice(1);
+      var chart = document.getElementById(element).getElementsByTagName('svg')[0];
+      saveSvgAsPng(chart, fileName);
+    }
+  </script>
   
 
 

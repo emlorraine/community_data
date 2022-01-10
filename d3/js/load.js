@@ -154,6 +154,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         <h2> Age Distribution in the state of Missouri </h2>
         <div id="age-state-2010"></div>
         <div id="age-state-2020"></div>
+
       </div>`
       $('#pills-age').append($("<div id='age-state'></div>"))
       $('#age-state').html(html)
