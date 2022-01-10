@@ -32,6 +32,9 @@ function PovertyCityChart(data){
         // { label: 'Total Population', count: totalPopultion2020 }, 
 
     ]
+
+    console.log("Poverty city 2010", data2010)
+    console.log("Poverty city 2019", data2020)
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;

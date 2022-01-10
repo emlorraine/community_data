@@ -31,7 +31,8 @@ function PovertyStateChart(data){
 
     ]
 
-    console.log(raw2010Data)
+    console.log("Poverty state 2010", data2010)
+    console.log("Poverty state 2019", data2020)
 
     var width = 360;
     var height = 360;

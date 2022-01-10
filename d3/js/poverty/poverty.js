@@ -15,8 +15,8 @@ PovertyChart.prototype.init = function(rawData){
     var totalAtOrAbovePovertyCount2010 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replace(",", ""))+ +(raw2010Data[48].value.replace(",", ""))
 
     
-    var totalUnderPovertyCount2020 = +(raw2010Data[37].value.replaceAll(",", "")) + +(raw2010Data[42].value.replace(",", "")) + +(raw2010Data[47].value.replace(",", ""))
-    var totalAtOrAbovePovertyCount2020 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replace(",", ""))+ +(raw2010Data[48].value.replace(",", ""))
+    var totalUnderPovertyCount2020 = +(raw2020Data[37].value.replaceAll(",", "")) + +(raw2020Data[42].value.replace(",", "")) + +(raw2020Data[47].value.replace(",", ""))
+    var totalAtOrAbovePovertyCount2020 = +(raw2020Data[38].value.replaceAll(",", "")) + +(raw2020Data[43].value.replace(",", ""))+ +(raw2020Data[48].value.replace(",", ""))
 
     dataArray2010 = [totalUnderPovertyCount2010, totalAtOrAbovePovertyCount2010]
     dataArray2020 = [totalUnderPovertyCount2020, totalAtOrAbovePovertyCount2020]
@@ -33,6 +33,10 @@ PovertyChart.prototype.init = function(rawData){
         // { label: 'Total Population', count: totalPopultion2020 }, 
 
     ]
+
+    console.log("Poverty regional 2010", data2010)
+    console.log("Poverty regional 2019", data2020)
+
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;
