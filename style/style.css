@@ -142,11 +142,10 @@ h2{
         top:0;
         left:0;
         margin-bottom: 50px;
-
     }
 
+
     #age-state, #age-city{
-        transform: scale(.5); 
         height:fit-content;
         /* margin: auto; */
         width: 75%;
@@ -157,12 +156,13 @@ h2{
         top:0;
         left:0;
         margin-bottom: 50px;
+        margin-top: 450px;
 
-    }
-  
-    #age2010, #age-state-2010, #age-city-2010{
-        flex: 1;
     } 
+  
+    /* #age2010, #age-state-2010, #age-city-2010{
+        flex: 1;
+    }  */
 
     
 

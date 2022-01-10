@@ -11,13 +11,8 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     }
 
     if(target !=="intro"){
-      console.log("Are we evening attempting to change the div id?")
-      // $('#map').attr("id","newMapTag")
+      // $('#map').attr("id",mapTag)
     }
-
-    
-
-    console.log(target)
      // Call datasets for branch:
     data2010FileName = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
     data2020FileName = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
@@ -152,9 +147,10 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       var html = 
       `<div id="age-state-block">
         <h2> Age Distribution in the state of Missouri </h2>
-        <div id="age-state-2010"></div>
-        <div id="age-state-2020"></div>
-
+            <div id="age-state">
+              <div id="age-state-2010"></div>
+              <div id="age-state-2020"></div>
+            </div>
       </div>`
       $('#pills-age').append($("<div id='age-state'></div>"))
       $('#age-state').html(html)
@@ -170,8 +166,8 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var html = 
       `<div id="age-city-block">
       <h2> Age Distribution in St. Louis </h2>
-        <div id="age-city-2010"></div>
-        <div id="age-city-2020"></div>
+          <div id="age-city-2010"></div>
+          <div id="age-city-2020"></div>
       </div>`
       $('#pills-age').append($("<div id='age-city'></div>"))
       $('#age-city').html(html)
