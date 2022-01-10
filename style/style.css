@@ -145,20 +145,23 @@ h2{
     }
 
 
-    #age-state, #age-city{
+    #age-state-container, #age-city{
         height:fit-content;
         /* margin: auto; */
         width: 75%;
         padding: 10px;
         display: flex;
-        transform: scale(.50);
+        transform: scale(.5);
         position:absolute;
         top:0;
         left:0;
         margin-bottom: 50px;
-        margin-top: 450px;
+        margin-top: 50px;
 
     } 
+    /* #age-state{
+        margin-top: 450px;
+    } */
   
     /* #age2010, #age-state-2010, #age-city-2010{
         flex: 1;
