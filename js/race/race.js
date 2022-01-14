@@ -90,11 +90,6 @@
                 ]
             }
     ]
-    console.log(data2010)
-    console.log(data2020)
-    console.log(groupedData)
-
-
 
     var self = this;
     $('#race').empty();
