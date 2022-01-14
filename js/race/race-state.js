@@ -113,7 +113,9 @@
                 .tickValues(labels)
 
     var yAxis = d3.axisLeft().scale(yScale)
-                .ticks(10, ".0f"); 
+                .ticks(10) 
+                .tickFormat(d3.format(",")); 
+
 
                 
     
