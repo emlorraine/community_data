@@ -66,7 +66,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     //Generate d3:
     Promise.all([
       d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
-      d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+      d3.csv("../data/st-louis/2019/2019/Sheet1-Table 1.csv"),
     ]).then((values) => {
       var raceCityBarChart = new RaceCityBarChart(values); 
     })
@@ -106,6 +106,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         d3.csv("../data/missouri/2010/2010/Sheet1-Table 1.csv"),
         d3.csv("../data/missouri/2019/2019/Sheet1-Table 1.csv"),
       ]).then((values) => {
+        console.log(values)
         var educationalStateAttainmentChart = new EducationalStateAttainmentChart(values); 
       })
 

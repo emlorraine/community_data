@@ -33,6 +33,8 @@
         socialExplorer2020Data[32],//Professional school degree 
         socialExplorer2020Data[33]//Doctorate degree 
     ]
+
+    console.log("Local data",socialExplorer2020Data[31])
     var labels = [
         "\n Less than high school",
         "\n High school or equivalent",
