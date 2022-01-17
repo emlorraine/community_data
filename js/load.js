@@ -90,12 +90,14 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       `<div id="education-state-block">
         <div id="educationData2010" style="transform: scale(1.25)">
         <div class="vstack gap-2" style="margin-right: 150px;">
-          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in Missouri, 2010</h3><br>
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">2010</h3><br>
           <div id="educationState2010"></div>
+          <button id='educationState2010' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         <div class="vstack gap-2">
-          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in Missouri, 2019</h3><br>
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">2019</h3><br>
           <div id="educationState2020"></div>
+          <button id='educationState2020' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         </div>
       </div>`
@@ -117,12 +119,14 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       `<div id="education-city-block">
         <div id="educationData2010" style="transform: scale(1.25)">
         <div class="vstack gap-2" style="margin-right: 150px;">
-          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in St. Louis, 2010</h3><br>
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">2010</h3><br>
           <div id="educationCity2010"></div>
+          <button id='educationCity2010' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         <div class="vstack gap-2">
-          <h3 class = "education-text" id = "collegeOrHigher2010Text">Educational Attainment in St. Louis, 2019</h3><br>
+          <h3 class = "education-text" id = "collegeOrHigher2010Text">2019</h3><br>
           <div id="educationCity2020"></div>
+          <button id='educationCity2020' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         </div>
       </div>`
@@ -131,7 +135,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $('#education-city').html(html)
     Promise.all([
       d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
-      d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+      d3.csv("../data/st-louis/2019/2019/Sheet1-Table 1.csv"),
     ]).then((values) => {
       var educationalCityAttainmentChart = new EducationalCityAttainmentChart(values); 
     })
