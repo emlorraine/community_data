@@ -37,7 +37,9 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var html = 
     `<div class="vstack gap-2">
     <h2> Race in Missouri </h2>
-    <div id="race-missouri"></div></div>`
+    <div id="race-missouri"></div>
+    <button id='race-state' onclick="save(this.id)">Export this chart to PNG</button>
+    </div>`
       //Add div to race-block
       $('#pills-race').append($("<div id='race-state'></div>"))
       $('#race-state').html(html)
@@ -54,7 +56,9 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var html = 
     `<div class="vstack gap-2">
     <h2> Race in St. Louis </h2>
-    <div id="race-city"></div></div>`
+    <div id="race-city"></div>
+    <button id='race-city' onclick="save(this.id)">Export this chart to PNG</button>
+    </div>`
     //Add div to race-block
     $('#pills-race').append($("<div id='race-stl'></div>"))
     $('#race-stl').html(html)

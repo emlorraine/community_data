@@ -14,52 +14,24 @@
     var data2010 = rawData[0]
     var data2020 = rawData[1]
 
-    var allOtherRacialGroups2010 = +(data2010[19].value.replace(",", "")) + +(data2010[21].value.replace(",", "")) + +(data2010[22].value.replace(",", "")); 
-    var allOtherRacialGroups2020 = +(data2020[19].value.replace(",", "")) + +(data2020[21].value.replace(",", "")) + +(data2020[22].value.replace(",", "")); 
-   
-    var labels = [
-        "\n White alone, 2010",
-        "\n White alone, 2020",
-        "\n Black or African American alone, 2010",
-        "\n Black or African American alone, 2020",
-        // "\n American Indian and Alaska Native alone, 2010",
-        // "\n American Indian and Alaska Native alone, 2020",
-        "\n Asian alone, 2010",
-        "\n Asian alone, 2020",
-        // "\n Native Hawaiian and Other Pacific Islander alone, 2010",
-        // "\n Native Hawaiian and Other Pacific Islander alone, 2020",
-        "\n Two or more races, 2010",
-        "\n Two or more races, 2020",
-        "\n All other racial groups, 2010",
-        "\n All other racial groups, 2020",
-    ]
-
     var values = [
-        //White alone:
-        +(data2010[17].value.replaceAll(",", "")),
-        +(data2020[17].value.replaceAll(",", "")), 
+        +(data2010[17].value.replace(",", "")),
+        +(data2020[17].value.replace(",", "")), 
 
-        //Black or African American alone
-        +(data2010[18].value.replaceAll(",", "")),
-        +(data2020[18].value.replaceAll(",", "")),
+        +(data2010[18].value.replace(",", "")),
+        +(data2020[18].value.replace(",", "")),
         
-        // +(data2010[19].value.replace(",", "")),
-        // +(data2020[19].value.replace(",", "")), 
+        +(data2010[19].value.replace(",", "")),
+        +(data2020[19].value.replace(",", "")),
 
-        //Asian alone
-        +(data2010[20].value.replaceAll(",", "")),
-        +(data2020[20].value.replaceAll(",", "")),
+        +(data2010[20].value.replace(",", "")),
+        +(data2020[20].value.replace(",", "")),
 
-        // +(data2010[21].value.replace(",", "")),
-        // +(data2020[21].value.replace(",", "")), 
+        +(data2010[21].value.replace(",", "")),
+        +(data2020[21].value.replace(",", "")),
 
-        //Two or more races
-        +(data2010[23].value.replaceAll(",", "")),
-        +(data2020[23].value.replaceAll(",", "")),
-
-        //All other racial groups
-        allOtherRacialGroups2010,
-        allOtherRacialGroups2020,
+        +(data2010[23].value.replace(",", "")),
+        +(data2020[23].value.replace(",", ""))
     ]
 
     let groupedData = [
@@ -69,11 +41,10 @@
             [
                 {category: "White alone", number: values[0]},
                 {category: "Black or African American alone", number: values[2]},
-                // {category: "American Indian and Alaska Native alone", number: values[4]},
-                {category: "Asian alone", number: values[4]}, 
-                // {category: "Native Hawaiian and Other Pacific Islander alone", number: values[8]}, 
-                {category: "Two or more races", number: values[8]},
-                {category: "All other racial groups", number: values[6]},
+                {category: "American Indian and Alaska Native alone", number: values[4]},
+                {category: "Asian alone", number: values[6]}, 
+                {category: "Native Hawaiian and Other Pacific Islander alone", number: values[8]}, 
+                {category: "Two or more races", number: values[10]},
             ]
         },
         {
@@ -82,14 +53,28 @@
                 [
                     {category: "White alone", number: values[1]},
                     {category: "Black or African American alone", number: values[3]},
-                    // {category: "American Indian and Alaska Native alone", number: values[5]}, 
-                    {category: "Asian alone", number: values[5]}, 
-                    // {category: "Native Hawaiian and Other Pacific Islander alone", number: values[9]}, 
-                    {category: "Two or more races", number: values[9]},
-                    {category: "All other racial groups", number: values[7]},
+                    {category: "American Indian and Alaska Native alone", number: values[5]}, 
+                    {category: "Asian alone", number: values[7]}, 
+                    {category: "Native Hawaiian and Other Pacific Islander alone", number: values[9]}, 
+                    {category: "Two or more races", number: values[11]}
                 ]
             }
     ]
+    var labels = [
+        "\n White alone, 2010",
+        "\n White alone, 2020",
+        "\n Black or African American alone, 2010",
+        "\n Black or African American alone, 2020",
+        "\n American Indian and Alaska Native alone, 2010",
+        "\n American Indian and Alaska Native alone, 2020",
+        "\n Asian alone, 2010",
+        "\n Asian alone, 2020",
+        "\n Native Hawaiian and Other Pacific Islander alone, 2010",
+        "\n Native Hawaiian and Other Pacific Islander alone, 2020",
+        "\n Two or more races, 2010",
+        "\n Two or more races, 2020"
+    ]
+
 
     var self = this;
     $('#race-city').empty();
@@ -110,7 +95,7 @@
                 .tickValues(labels)
 
     var yAxis = d3.axisLeft().scale(yScale)
-                .ticks(10)
+                .ticks(10, ".0f")
                 .tickFormat(d3.format(",")); 
 
                 
@@ -118,7 +103,7 @@
 
     self.svg = divRaceBarChart.append("svg")
         .attr("width",1200)
-        .attr("height",750)
+        .attr("height",850)
         // .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });
@@ -149,7 +134,7 @@
 
     self.svg.append("g")
     .attr("transform", "translate(100," + 600 + ")")
-    .call(xAxis)
+    // .call(xAxis)
     .selectAll("text")
     .each(insertLinebreaks)	
 
@@ -172,7 +157,7 @@
       slice.selectAll("rect")
       .data(values)
         .enter().append("rect")
-            .attr("width", xScale.bandwidth())
+            .attr("width", 50)
             .attr("x", function(d, i) {
                 return xScale(labels[i]); 
             })

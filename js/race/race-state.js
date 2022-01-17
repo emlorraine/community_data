@@ -140,22 +140,22 @@
         })
     ]);
 
-    var insertLinebreaks = function (d) {
-        var el = d3.select(this);
-        var words = d.split(' ');
-        el.text('');
-        for (var i = 0; i < words.length; i++) {
-            var tspan = el.append('tspan').text(words[i]);
-            if (i > 0)
-                tspan.attr('x', 0).attr('dy', '15');
-        }
-    };
+    // var insertLinebreaks = function (d) {
+    //     var el = d3.select(this);
+    //     var words = d.split(' ');
+    //     el.text('');
+    //     for (var i = 0; i < words.length; i++) {
+    //         var tspan = el.append('tspan').text(words[i]);
+    //         if (i > 0)
+    //             tspan.attr('x', 0).attr('dy', '15');
+    //     }
+    // };
 
     self.svg.append("g")
     .attr("transform", "translate(100," + 600 + ")")
-    .call(xAxis)
-    .selectAll("text")
-    .each(insertLinebreaks)	
+    // .call(xAxis)
+    // .selectAll("text")
+    // .each(insertLinebreaks)	
 
 
     self.svg.append("g")
@@ -176,7 +176,7 @@
       slice.selectAll("rect")
       .data(values)
         .enter().append("rect")
-            .attr("width", xScale.bandwidth())
+            .attr("width", 50)
             .attr("x", function(d, i) {
                 return xScale(labels[i]); 
             })
