@@ -16,51 +16,6 @@
 
     var allOtherRacialGroups2010 = +(data2010[19].value.replace(",", "")) + +(data2010[21].value.replace(",", "")) + +(data2010[22].value.replace(",", "")); 
     var allOtherRacialGroups2020 = +(data2020[19].value.replace(",", "")) + +(data2020[21].value.replace(",", "")) + +(data2020[22].value.replace(",", "")); 
-   
-    var labels = [
-        "\n White alone, 2010",
-        "\n White alone, 2020",
-
-        // "\n",
-        // "\n",
-
-        "\n Black or African American alone, 2010",
-        "\n Black or African American alone, 2020",
-
-        // "\n",
-        // "\n",
-
-        // "\n American Indian and Alaska Native alone, 2010",
-        // "\n American Indian and Alaska Native alone, 2020",
-        "\n Asian alone, 2010",
-        "\n Asian alone, 2020",
-
-        // "\n",
-        // "\n",
-
-        // "\n Native Hawaiian and Other Pacific Islander alone, 2010",
-        // "\n Native Hawaiian and Other Pacific Islander alone, 2020",
-        "\n Two or more races, 2010",
-        "\n Two or more races, 2020",
-
-        // "\n",
-        // "\n",
-        "\n All other racial groups, 2010",
-        "\n All other racial groups, 2020",
-    ]
-
-    var yearLabels = [
-        "\n 2010",
-        "\n 2020",
-        "\n 2010",
-        "\n 2020",
-        "\n 2010",
-        "\n 2020",
-        "\n 2010",
-        "\n 2020",
-        "\n 2010",
-        "\n 2020",
-    ]
 
     var values = [
         //White alone:
@@ -196,6 +151,44 @@
     .attr('class', 'grouped-bar-chart axis y-axis')
     .attr('transform', `translate(0, 0)`)
     .call(yAxis);
+
+    const labelsArr = [
+        { key: '2010', name: '2010' },
+        { key: '2019', name: '2019' },
+      ];
+      // 2. Create the container of the labels
+      const labels = main.append('g')
+        .attr('class', 'grouped-bar-chart labels-container')
+        .attr('transform', `translate(${width - margin.left - margin.right}, 0)`)
+        .selectAll('.label-container') // Start data binding
+        .data(labelsArr) // bind with our labels array
+        .enter() // "for each entry"
+        .append('g') // append a g element
+        .attr('class', label => { // transform our node as we desire
+          return `label-container label-container--${dasherize(label.key)}`
+        });
+    //   // 3. For each .label-container append a rect
+      labels.append('rect')
+        .attr('fill', label => { return colors[label.key]; }) // use our color mappings
+        .attr('width', 10)
+        .attr('height', 10)
+        .attr('transform', (label, index) => {
+          return `translate(5, ${index * 20})` // translate each rect by index
+        });
+    //   // 3. For each .label-container append a text
+      labels.append('text')
+        .attr('transform', (label, index) => {
+          return `translate(18, ${index * 20})` // translate each rect by index
+        })
+        .attr('dy', '.75em')
+        .attr('font-size', '12px')
+        .text(label => { return label.name });  
+    //   // Create a helper function to normalize our keys
+      function dasherize(str) {
+        return str.trim().replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
+      };
+}
+
 
     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -364,7 +357,7 @@
         //         return d; 
         //     })
 
-}
+
 
 
 
