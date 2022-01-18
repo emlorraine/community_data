@@ -187,7 +187,93 @@
       function dasherize(str) {
         return str.trim().replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
       };
-}
+      const dataContainer = main.append('g')
+      .attr('class', 'grouped-bar-chart data-container');
+    // 2. Create g elements with data binding to contain our rating's elements
+    const movies = dataContainer.selectAll('.movie-container')
+      .data(data)
+      .enter()
+      .append('g')
+      .attr('class', movie => {
+        return `movie-container movie-container--${dasherize(movie.key)}`
+      })
+      .attr('transform', movie => {
+        // Position the element with our xScale
+        const offset = xScale(movie.key);
+        return `translate(${offset}, 0)`;
+      });
+    // 3. Append reference rects
+    movies.append('rect')
+      .attr('width', xScale.bandwidth())
+      .attr('height', height - margin.top - margin.bottom)
+      .attr('fill', 'none')
+      .attr('stroke', '#000')
+      .attr('stroke-dasharray', '2,2');
+
+      const ratings = movies.selectAll('.rating-container')
+      .data(movie => { return movie.values; })
+      .enter()
+      .append('g')
+      .attr('class', movie => {
+        return `rating-container rating-container--${dasherize(movie.key)}`
+      })
+      .append('rect')
+      .attr('height', rating => {
+        const h = height - margin.top - margin.bottom;
+        return h - yScale(rating.value);
+      })
+      .attr('width', subCategories.bandwidth())
+      .attr('transform', rating => {
+        const offset = subCategories(rating.key);
+        return `translate(${offset}, ${yScale(rating.value)})`;
+      })
+      .attr('fill', rating => { return colors[rating.key] });
+    }
+
+
+    //   // 1. Create a g element to contain our bars
+    // const dataContainer = main.append('g')
+    //     .attr('class', 'grouped-bar-chart data-container');
+    // // 2. Create g elements with data binding to contain our rating's elements
+    // const d3Groups = dataContainer.selectAll('.group-container')
+    //     .data(data)
+    //     .enter()
+    //     .append('g')
+    //     .attr('class', point => {
+    //         return `group-container group-container--${dasherize(point.key)}`
+    //     })
+    //     .attr('transform', name => {
+    //     // Position the element with our xScale
+    //     const offset = xScale(name.key);
+    //     return `translate(${offset}, 0)`;
+    // });
+    // // 3. Append reference rects
+    // d3Groups.append('rect')
+    //     .attr('width', xScale.bandwidth())
+    //     .attr('height', height - margin.top - margin.bottom)
+    //     .attr('fill', 'none')
+    //     .attr('stroke', '#000')
+    //     .attr('stroke-dasharray', '2,2');
+    // }
+
+    // const population = d3Groups.selectAll('.population-container')
+    //     .data(group => { return group.values; })
+    //     .enter()
+    //     .append('g')
+    //     .attr('class', populationValue => {
+    //     return `population-container population-container--${dasherize(populationValue.key)}`
+    //     })
+    //     .append('rect')
+    //     .attr('height', number => {
+    //         const h = height - margin.top - margin.bottom;
+    //         return h - yScale(number.value);
+    //     })
+    //     .attr('width', ratingsScale.bandwidth())
+    //     .attr('transform', number => {
+    //         const offset = ratingsScale(number.key);
+    //         return `translate(${offset}, ${yScale(number.value)})`;
+    //     })
+    //     .attr('fill', number => { return colors[number.key] });
 
 
     
