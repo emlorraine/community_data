@@ -92,8 +92,8 @@
     var height = 750;
 
     var maxValue = Math.max(...values)
-
-    var margin = {top: 30, right: 20, bottom: 30, left: 50};
+70
+    var margin = {top: 30, right: 20, bottom: 30, left: 70};
 
     const svg = d3.select("#race-missouri")
         .append("svg")

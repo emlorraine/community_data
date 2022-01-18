@@ -93,7 +93,7 @@
 
     var maxValue = Math.max(...values)
 
-    var margin = {top: 30, right: 20, bottom: 30, left: 50};
+    var margin = {top: 30, right: 20, bottom: 30, left: 70};
 
     const svg = d3.select("#race-city")
         .append("svg")
