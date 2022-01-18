@@ -14,24 +14,80 @@
     var data2010 = rawData[0]
     var data2020 = rawData[1]
 
+    var allOtherRacialGroups2010 = +(data2010[19].value.replace(",", "")) + +(data2010[21].value.replace(",", "")) + +(data2010[22].value.replace(",", "")); 
+    var allOtherRacialGroups2020 = +(data2020[19].value.replace(",", "")) + +(data2020[21].value.replace(",", "")) + +(data2020[22].value.replace(",", "")); 
+   
+    var labels = [
+        "\n White alone, 2010",
+        "\n White alone, 2020",
+
+        // "\n",
+        // "\n",
+
+        "\n Black or African American alone, 2010",
+        "\n Black or African American alone, 2020",
+
+        // "\n",
+        // "\n",
+
+        // "\n American Indian and Alaska Native alone, 2010",
+        // "\n American Indian and Alaska Native alone, 2020",
+        "\n Asian alone, 2010",
+        "\n Asian alone, 2020",
+
+        // "\n",
+        // "\n",
+
+        // "\n Native Hawaiian and Other Pacific Islander alone, 2010",
+        // "\n Native Hawaiian and Other Pacific Islander alone, 2020",
+        "\n Two or more races, 2010",
+        "\n Two or more races, 2020",
+
+        // "\n",
+        // "\n",
+        "\n All other racial groups, 2010",
+        "\n All other racial groups, 2020",
+    ]
+
+    var yearLabels = [
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
+    ]
+
     var values = [
+        //White alone:
         +(data2010[17].value.replace(",", "")),
         +(data2020[17].value.replace(",", "")), 
 
+        //Black or African American alone
         +(data2010[18].value.replace(",", "")),
         +(data2020[18].value.replace(",", "")),
         
-        +(data2010[19].value.replace(",", "")),
-        +(data2020[19].value.replace(",", "")),
+        // +(data2010[19].value.replace(",", "")),
+        // +(data2020[19].value.replace(",", "")), 
 
+        //Asian alone
         +(data2010[20].value.replace(",", "")),
         +(data2020[20].value.replace(",", "")),
 
-        +(data2010[21].value.replace(",", "")),
-        +(data2020[21].value.replace(",", "")),
+        // +(data2010[21].value.replace(",", "")),
+        // +(data2020[21].value.replace(",", "")), 
 
+        //Two or more races
         +(data2010[23].value.replace(",", "")),
-        +(data2020[23].value.replace(",", ""))
+        +(data2020[23].value.replace(",", "")),
+
+        //All other racial groups
+        allOtherRacialGroups2010,
+        allOtherRacialGroups2020,
     ]
 
     let groupedData = [
@@ -41,10 +97,11 @@
             [
                 {category: "White alone", number: values[0]},
                 {category: "Black or African American alone", number: values[2]},
-                {category: "American Indian and Alaska Native alone", number: values[4]},
-                {category: "Asian alone", number: values[6]}, 
-                {category: "Native Hawaiian and Other Pacific Islander alone", number: values[8]}, 
-                {category: "Two or more races", number: values[10]},
+                // {category: "American Indian and Alaska Native alone", number: values[4]},
+                {category: "Asian alone", number: values[4]}, 
+                // {category: "Native Hawaiian and Other Pacific Islander alone", number: values[8]}, 
+                {category: "Two or more races", number: values[8]},
+                {category: "All other racial groups", number: values[6]},
             ]
         },
         {
@@ -53,28 +110,14 @@
                 [
                     {category: "White alone", number: values[1]},
                     {category: "Black or African American alone", number: values[3]},
-                    {category: "American Indian and Alaska Native alone", number: values[5]}, 
-                    {category: "Asian alone", number: values[7]}, 
-                    {category: "Native Hawaiian and Other Pacific Islander alone", number: values[9]}, 
-                    {category: "Two or more races", number: values[11]}
+                    // {category: "American Indian and Alaska Native alone", number: values[5]}, 
+                    {category: "Asian alone", number: values[5]}, 
+                    // {category: "Native Hawaiian and Other Pacific Islander alone", number: values[9]}, 
+                    {category: "Two or more races", number: values[9]},
+                    {category: "All other racial groups", number: values[7]},
                 ]
             }
     ]
-    var labels = [
-        "\n White alone, 2010",
-        "\n White alone, 2020",
-        "\n Black or African American alone, 2010",
-        "\n Black or African American alone, 2020",
-        "\n American Indian and Alaska Native alone, 2010",
-        "\n American Indian and Alaska Native alone, 2020",
-        "\n Asian alone, 2010",
-        "\n Asian alone, 2020",
-        "\n Native Hawaiian and Other Pacific Islander alone, 2010",
-        "\n Native Hawaiian and Other Pacific Islander alone, 2020",
-        "\n Two or more races, 2010",
-        "\n Two or more races, 2020"
-    ]
-
 
     var self = this;
     $('#race-city').empty();
@@ -87,15 +130,17 @@
 
     var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
     xScale.domain(labels)
+    
     var yScale = d3.scaleLinear().range ([600, 0]);
     yScale.domain([0, d3.max(values)])
 
 
     var xAxis = d3.axisBottom().scale(xScale)
-                .tickValues(labels)
+                .ticks(10)
+                .tickValues(yearLabels)
 
     var yAxis = d3.axisLeft().scale(yScale)
-                .ticks(10, ".0f")
+                .ticks(10)
                 .tickFormat(d3.format(",")); 
 
                 
@@ -103,14 +148,14 @@
 
     self.svg = divRaceBarChart.append("svg")
         .attr("width",1200)
-        .attr("height",850)
+        .attr("height",750)
         // .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });
-    var categories = new Set()
+    var categories = []
     let racialCategories = groupedData.map(function(d){
         (d.Data.map(function(i){
-            categories.add(i.category)
+            categories.push(i.category)
         }))
     });
     x0.domain(years);
@@ -121,43 +166,46 @@
         })
     ]);
 
-    var insertLinebreaks = function (d) {
-        var el = d3.select(this);
-        var words = d.split(' ');
-        el.text('');
-        for (var i = 0; i < words.length; i++) {
-            var tspan = el.append('tspan').text(words[i]);
-            if (i > 0)
-                tspan.attr('x', 0).attr('dy', '15');
-        }
-    };
+    // var insertLinebreaks = function (d) {
+    //     var el = d3.select(this);
+    //     var words = d.split(' ');
+    //     el.text('');
+    //     for (var i = 0; i < words.length; i++) {
+    //         var tspan = el.append('tspan').text(words[i]);
+    //         if (i > 0)
+    //             tspan.attr('x', 0).attr('dy', '15');
+    //     }
+    // };
 
     self.svg.append("g")
     .attr("transform", "translate(100," + 600 + ")")
     // .call(xAxis)
-    .selectAll("text")
-    .each(insertLinebreaks)	
-
+    // .selectAll("text")
+    // .each(function(d,i){
+    //     // .attr("transform", "translate(0," + 50 + ")")
+    // })	
 
     self.svg.append("g")
     .attr("transform", "translate(100, 0)") 
     .call(yAxis)
 
+
         
-  
+    // var groupSpacing = 6;
 
     var slice = self.svg.selectAll(".slice")
       .data(values)
       .enter().append("g")
       .attr("class", "g")
-      .attr("transform",function(d, i) {
-          return "translate(" + x1(labels[i]) + ",0)"; 
-        });
+    //   .attr("transform",function(d, i) {
+    //       console.log(x1(labels[i]))
+    //       return "translate(" + x1(labels[i]) + ",0)"; 
+    //     });
 
       slice.selectAll("rect")
       .data(values)
         .enter().append("rect")
-            .attr("width", 50)
+            .attr("width", xScale.bandwidth())
             .attr("x", function(d, i) {
                 return xScale(labels[i]); 
             })
@@ -175,6 +223,7 @@
                 return 600 - yScale(d); 
             })
             .attr("transform", "translate(100, 0)") 
+            // .style("margin-top", "10px")
 
       
         

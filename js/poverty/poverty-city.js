@@ -11,11 +11,14 @@ function PovertyCityChart(data){
      var raw2010Data = rawData[0]; 
      var raw2020Data = rawData[1];
      
-    var totalUnderPovertyCount2010 = +(raw2010Data[37].value.replaceAll(",", "")) + +(raw2010Data[42].value.replace(",", "")) + +(raw2010Data[47].value.replace(",", ""))
-    var totalAtOrAbovePovertyCount2010 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replace(",", ""))+ +(raw2010Data[48].value.replace(",", ""))
+    var totalUnderPovertyCount2010 = +(raw2010Data[37].value.replaceAll(",", "")) + +(raw2010Data[42].value.replaceAll(",", "")) + +(raw2010Data[47].value.replaceAll(",", ""))
+    var totalAtOrAbovePovertyCount2010 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replaceAll(",", ""))+ +(raw2010Data[48].value.replaceAll(",", ""))
 
-    var totalUnderPovertyCount2020 = +(raw2020Data[33].value.replaceAll(",", "")) + +(raw2020Data[38].value.replaceAll(",", ""))+ +(raw2020Data[43].value.replaceAll(",", ""))
-    var totalAtOrAbovePovertyCount2020 = +(raw2020Data[34].value.replaceAll(",", "")) + +(raw2020Data[39].value.replaceAll(",", ""))+ +(raw2020Data[44].value.replaceAll(",", ""))
+    // var totalUnderPovertyCount2020 = +(raw2020Data[33].value.replaceAll(",", "")) + +(raw2020Data[38].value.replaceAll(",", ""))+ +(raw2020Data[43].value.replaceAll(",", ""))
+    // var totalAtOrAbovePovertyCount2020 = +(raw2020Data[34].value.replaceAll(",", "")) + +(raw2020Data[39].value.replaceAll(",", ""))+ +(raw2020Data[44].value.replaceAll(",", ""))
+    
+    var totalUnderPovertyCount2020 = +(raw2010Data[37].value.replaceAll(",", "")) + +(raw2010Data[42].value.replaceAll(",", "")) + +(raw2010Data[47].value.replaceAll(",", ""))
+    var totalAtOrAbovePovertyCount2020 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replaceAll(",", ""))+ +(raw2010Data[48].value.replaceAll(",", ""))
 
     dataArray2010 = [totalUnderPovertyCount2010, totalAtOrAbovePovertyCount2010]
     dataArray2020 = [totalUnderPovertyCount2020, totalAtOrAbovePovertyCount2020]
@@ -33,8 +36,9 @@ function PovertyCityChart(data){
 
     ]
 
-    console.log("Poverty city 2010", data2010)
-    console.log("Poverty city 2019", data2020)
+    console.log(raw2020Data)
+
+
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;

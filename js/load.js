@@ -160,7 +160,9 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
               <div id="age-state-2010"></div>
               <div id="age-state-2020"></div>
             </div>
-      </div>`
+            <button id='age-state-2020' onclick="save(this.id)">Export this chart to PNG</button>
+      </div>
+      `
       $('#pills-age').append($("<div id='age-state'></div>"))
       $('#age-state').html(html)
       Promise.all([
@@ -177,12 +179,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       <h2> Age Distribution in St. Louis </h2>
           <div id="age-city-2010"></div>
           <div id="age-city-2020"></div>
+      <button id='age-city-2020' onclick="save(this.id)">Export this chart to PNG</button>
       </div>`
       $('#pills-age').append($("<div id='age-city'></div>"))
       $('#age-city').html(html)
       Promise.all([
         d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
-        d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+        d3.csv("../data/st-louis/2019/2019/Sheet1-Table 1.csv"),
       ]).then((values) => {
         var ageCityChart = new AgeCityChart(values); 
       })
@@ -204,13 +207,14 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
       `<h2>Poverty in the state of Missouri</h2>
       <div id="poverty-state-block"><div class="vstack gap-3" id="povertyBlock2010">
-        <h3>At or below poverty line, 2010</h3>
+        <h3>2010</h3>
         <div id="poverty-state-2010"></div>
       </div>
       <div class="vstack gap-3" id="povertyBlock2019">
-        <h3>At or below poverty line, 2019</h3>
+        <h3>2019</h3>
         <div id="poverty-state-2019"></div>
-      </div></div>`
+      </div>
+      </div>`
     //Add div to poverty-block
     $('#pills-poverty').append($("<div id='poverty-state'></div>"))
     $('#poverty-state').html(html)
@@ -227,13 +231,15 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if ($(this).is(':checked'))
       var html = 
       `<h2>Poverty in St. Louis</h2><div id="poverty-city-block"><div class="vstack gap-3" id="povertyBlock2010">
-        <h3>At or below poverty line, 2010</h3>
+        <h3>2010</h3>
         <div id="poverty-city-2010"></div>
       </div>
       <div class="vstack gap-3" id="povertyBlock2019">
-        <h3>At or below poverty line, 2019</h3>
+        <h3>2019</h3>
         <div id="poverty-city-2019"></div>
-      </div></div>`
+      </div>
+
+      </div>`
     //Add div to poverty-block
     $('#pills-poverty').append($("<div id='poverty-city'></div>"))
     $('#poverty-city').html(html)
@@ -241,7 +247,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     //Generate d3:
     Promise.all([
       d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
-      d3.csv("../data/st-louis/2019/R13001297/Sheet1-Table 1.csv"),
+      d3.csv("../data/st-louis/2019/2019/Sheet1-Table 1.csv"),
     ]).then((values) => {
       var povertyCityChart = new PovertyCityChart(values); 
     })

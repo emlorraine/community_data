@@ -262,7 +262,7 @@
               </div>
               <div class="tab-pane fade" id="pills-age" role="tabpanel" aria-labelledby="pills-age-tab">
                 
-                <!-- <div id="comparison">
+                <div id="comparison">
                   <p>Compare this data to:</p>
                   <div id="compare-to-MO-tick-box">
                     <input type="checkbox" id="state-age">
@@ -272,12 +272,14 @@
                     <input type="checkbox" id="city-age">
                     <label for="scales">St. Louis City</label>
                   </div>
-                </div>  -->
+                </div> 
                 <!-- Age  -->
                 <div id="age-block">
                   <div id="age2010"></div>
                   <div id="age2020"></div>
-                  <button id='age2020' onclick="save(this.id)">Export this chart to PNG</button>
+                  <!-- <button id='age2020' onclick="save(this.id)">Export this chart to PNG</button> -->
+                  <!-- <button id='age2010' onclick="save(this.id)">Export this chart to PNG</button> -->
+
                 </div>
               </div>
 
@@ -297,13 +299,13 @@
                 <!-- Poverty  -->
                 <div id="poverty-block">
                   <div class="vstack gap-3" id="povertyBlock2010">
-                    <h3>At or below poverty line, 2010</h3>
+                    <h3>2010</h3>
                     <div id="poverty2010"></div>
                     <button id='poverty2010' onclick="save(this.id)">Export this chart to PNG</button>
                     <!-- <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p> -->
                   </div>
                   <div class="vstack gap-3" id="povertyBlock2019">
-                    <h3>At or below poverty line, 2019</h3>
+                    <h3>2019</h3>
                     <div id="poverty2020"></div>
                     <button id='poverty2020' onclick="save(this.id)">Export this chart to PNG</button>
                     <!-- <p>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p> -->

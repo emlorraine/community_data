@@ -14,25 +14,52 @@
     var data2010 = rawData[0]
     var data2020 = rawData[1]
 
-    var allOtherRacialGroups2010 = +(data2010[19].value.replace(",", "")) + +(data2010[21].value.replace(",", "")) + +(data2010[22].value.replace(",", "")); 
-    var allOtherRacialGroups2020 = +(data2020[19].value.replace(",", "")) + +(data2020[21].value.replace(",", "")) + +(data2020[22].value.replace(",", "")); 
-    
-    
+    var allOtherRacialGroups2010 = +(data2010[19].value.replaceAll(",", "")) + +(data2010[21].value.replaceAll(",", "")) + +(data2010[22].value.replaceAll(",", "")); 
+    var allOtherRacialGroups2020 = +(data2020[19].value.replaceAll(",", "")) + +(data2020[21].value.replaceAll(",", "")) + +(data2020[22].value.replaceAll(",", "")); 
+   
     var labels = [
         "\n White alone, 2010",
         "\n White alone, 2020",
+
+        // "\n",
+        // "\n",
+
         "\n Black or African American alone, 2010",
         "\n Black or African American alone, 2020",
+
+        // "\n",
+        // "\n",
+
         // "\n American Indian and Alaska Native alone, 2010",
         // "\n American Indian and Alaska Native alone, 2020",
         "\n Asian alone, 2010",
         "\n Asian alone, 2020",
+
+        // "\n",
+        // "\n",
+
         // "\n Native Hawaiian and Other Pacific Islander alone, 2010",
         // "\n Native Hawaiian and Other Pacific Islander alone, 2020",
         "\n Two or more races, 2010",
         "\n Two or more races, 2020",
+
+        // "\n",
+        // "\n",
         "\n All other racial groups, 2010",
         "\n All other racial groups, 2020",
+    ]
+
+    var yearLabels = [
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
+        "\n 2010",
+        "\n 2020",
     ]
 
     var values = [
@@ -44,15 +71,15 @@
         +(data2010[18].value.replaceAll(",", "")),
         +(data2020[18].value.replaceAll(",", "")),
         
-        // +(data2010[19].value.replace(",", "")),
-        // +(data2020[19].value.replace(",", "")), 
+        // +(data2010[19].value.replaceAll(",", "")),
+        // +(data2020[19].value.replaceAll(",", "")), 
 
         //Asian alone
         +(data2010[20].value.replaceAll(",", "")),
         +(data2020[20].value.replaceAll(",", "")),
 
-        // +(data2010[21].value.replace(",", "")),
-        // +(data2020[21].value.replace(",", "")), 
+        // +(data2010[21].value.replaceAll(",", "")),
+        // +(data2020[21].value.replaceAll(",", "")), 
 
         //Two or more races
         +(data2010[23].value.replaceAll(",", "")),
@@ -92,8 +119,6 @@
             }
     ]
 
-    console.log(values)
-
     var self = this;
     $('#race-missouri').empty();
     var divRaceBarChart = d3.select("#race-missouri").classed("content", true);
@@ -105,17 +130,18 @@
 
     var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
     xScale.domain(labels)
+    
     var yScale = d3.scaleLinear().range ([600, 0]);
     yScale.domain([0, d3.max(values)])
 
 
     var xAxis = d3.axisBottom().scale(xScale)
-                .tickValues(labels)
+                .ticks(10)
+                .tickValues(yearLabels)
 
     var yAxis = d3.axisLeft().scale(yScale)
-                .ticks(10) 
+                .ticks(10)
                 .tickFormat(d3.format(",")); 
-
 
                 
     
@@ -126,10 +152,10 @@
         // .attr("transform", "translate(" + self.margin.left + ",0)")
 
     var years = groupedData.map(function(d) { return d.Year; });
-    var categories = new Set()
+    var categories = []
     let racialCategories = groupedData.map(function(d){
         (d.Data.map(function(i){
-            categories.add(i.category)
+            categories.push(i.category)
         }))
     });
     x0.domain(years);
@@ -155,28 +181,31 @@
     .attr("transform", "translate(100," + 600 + ")")
     // .call(xAxis)
     // .selectAll("text")
-    // .each(insertLinebreaks)	
-
+    // .each(function(d,i){
+    //     // .attr("transform", "translate(0," + 50 + ")")
+    // })	
 
     self.svg.append("g")
     .attr("transform", "translate(100, 0)") 
     .call(yAxis)
 
+
         
-  
+    // var groupSpacing = 6;
 
     var slice = self.svg.selectAll(".slice")
       .data(values)
       .enter().append("g")
       .attr("class", "g")
-      .attr("transform",function(d, i) {
-          return "translate(" + x1(labels[i]) + ",0)"; 
-        });
+    //   .attr("transform",function(d, i) {
+    //       console.log(x1(labels[i]))
+    //       return "translate(" + x1(labels[i]) + ",0)"; 
+    //     });
 
       slice.selectAll("rect")
       .data(values)
         .enter().append("rect")
-            .attr("width", 50)
+            .attr("width", xScale.bandwidth())
             .attr("x", function(d, i) {
                 return xScale(labels[i]); 
             })
@@ -194,6 +223,7 @@
                 return 600 - yScale(d); 
             })
             .attr("transform", "translate(100, 0)") 
+            // .style("margin-top", "10px")
 
       
         
