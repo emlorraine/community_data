@@ -34,7 +34,8 @@
         socialExplorer2020Data[33]//Doctorate degree 
     ]
 
-    console.log("Local data",socialExplorer2020Data[31])
+
+
     var labels = [
         "\n Less than high school",
         "\n High school or equivalent",
@@ -47,6 +48,9 @@
 
     var population2010 = +(data2010[0].value).replace(",", "")
     var population2020 = +(data2020[0].value).replace(",", "")
+
+    console.log("Local 2010 data", data2010)
+    console.log("Local 2020 data", data2020)
 
     var roundedPopulation2010 = Math.round(population2010/100)*100
     var roundedPopulation2020 = Math.round(population2020/100)*100

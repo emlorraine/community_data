@@ -61,8 +61,17 @@ AgeChart.prototype.init = function(rawData){
     var max2020 = Math.max(...populationData2020)
     var maxValue = Math.max(max2010, max2020)
 
+
+    var population2010 = populationData2010.reduce((a, b) => a + b, 0)
+    var population2020 = populationData2020.reduce((a, b) => a + b, 0)
+
+
+    console.log("2010 age data:", population2010, populationData2010)
+    console.log("2020 age data:", population2020, populationData2020)
+
     var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
     xScale.domain(labels)
+    xScale.paddingInner(0.05)
     var yScale = d3.scaleLinear().range ([500, 0]);
     yScale.domain([0, maxValue])
 

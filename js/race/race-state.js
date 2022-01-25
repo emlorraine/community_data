@@ -88,7 +88,7 @@
     var self = this;
     $('#race-missouri').empty();
 
-    var width = 1200;
+    var width = 1500;
     var height = 750;
 
     var maxValue = Math.max(...values)
@@ -109,7 +109,7 @@
           // 2. Append a g element into our SVG
           const main = svg.append('g')
             .attr('class', 'grouped-bars-main-group')
-            .attr('transform', `translate(${margin.left},${margin.top})`);
+            .attr('transform', `translate(170,${margin.top})`);
 
             const xDomain = data.map(category => { return category.key });
             // xScale's domain will be our previously configured xDomain
@@ -130,16 +130,16 @@
     // Ugly way to create gridlines
     const yGrid = d3.axisLeft(yScale).tickSize(-width + margin.left + margin.right);
     // Render gridlines
-    main.append('g')
-    .attr('class', 'grouped-bar-chart grid y-grid')
-    .attr('transform', `translate(0, 0)`)
-    .call(yGrid)
-    .selectAll('text') // Remove all the text elements from this g
-    .remove();
+    // main.append('g')
+    // .attr('class', 'grouped-bar-chart grid y-grid')
+    // .attr('transform', `translate(0, 0)`)
+    // .call(yGrid)
+    // .selectAll('text') // Remove all the text elements from this g
+    // .remove();
     main.append('g')
     .attr('class', 'grouped-bar-chart axis x-axis')
     // Translate our x-axis to the bottom of our chart
-    .attr('transform', `translate(0, ${height - margin.top - margin.bottom})`)
+    .attr('transform', `translate(100, ${height - margin.top - margin.bottom})`)
     .call(xAxis);
     main.append('g')
     .attr('class', 'grouped-bar-chart axis y-axis')

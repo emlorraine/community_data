@@ -130,12 +130,12 @@
     // Ugly way to create gridlines
     const yGrid = d3.axisLeft(yScale).tickSize(-width + margin.left + margin.right);
     // Render gridlines
-    main.append('g')
-    .attr('class', 'grouped-bar-chart grid y-grid')
-    .attr('transform', `translate(0, 0)`)
-    .call(yGrid)
-    .selectAll('text') // Remove all the text elements from this g
-    .remove();
+    // main.append('g')
+    // .attr('class', 'grouped-bar-chart grid y-grid')
+    // .attr('transform', `translate(0, 0)`)
+    // .call(yGrid)
+    // .selectAll('text') // Remove all the text elements from this g
+    // .remove();
     main.append('g')
     .attr('class', 'grouped-bar-chart axis x-axis')
     // Translate our x-axis to the bottom of our chart

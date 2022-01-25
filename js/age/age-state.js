@@ -65,6 +65,7 @@ function AgeStateChart(data){
  
      var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
      xScale.domain(labels)
+     xScale.paddingInner(0.05)
      var yScale = d3.scaleLinear().range ([500, 0]);
      yScale.domain([0, maxValue])
  

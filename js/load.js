@@ -92,12 +92,10 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         <div class="vstack gap-2" style="margin-right: 150px;">
           <h3 class = "education-text" id = "collegeOrHigher2010Text">2010</h3><br>
           <div id="educationState2010"></div>
-          <button id='educationState2010' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         <div class="vstack gap-2">
           <h3 class = "education-text" id = "collegeOrHigher2010Text">2019</h3><br>
           <div id="educationState2020"></div>
-          <button id='educationState2020' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         </div>
       </div>`
@@ -121,12 +119,11 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         <div class="vstack gap-2" style="margin-right: 150px;">
           <h3 class = "education-text" id = "collegeOrHigher2010Text">2010</h3><br>
           <div id="educationCity2010"></div>
-          <button id='educationCity2010' onclick="save(this.id)">Export this chart to PNG</button>
+          <button id='educationCity2010' onclick="save(this.id)">Export this 2010 CITY chart to PNG</button>
         </div>
         <div class="vstack gap-2">
           <h3 class = "education-text" id = "collegeOrHigher2010Text">2019</h3><br>
           <div id="educationCity2020"></div>
-          <button id='educationCity2020' onclick="save(this.id)">Export this chart to PNG</button>
         </div>
         </div>
       </div>`

@@ -17,8 +17,11 @@ function PovertyCityChart(data){
     // var totalUnderPovertyCount2020 = +(raw2020Data[33].value.replaceAll(",", "")) + +(raw2020Data[38].value.replaceAll(",", ""))+ +(raw2020Data[43].value.replaceAll(",", ""))
     // var totalAtOrAbovePovertyCount2020 = +(raw2020Data[34].value.replaceAll(",", "")) + +(raw2020Data[39].value.replaceAll(",", ""))+ +(raw2020Data[44].value.replaceAll(",", ""))
     
-    var totalUnderPovertyCount2020 = +(raw2010Data[37].value.replaceAll(",", "")) + +(raw2010Data[42].value.replaceAll(",", "")) + +(raw2010Data[47].value.replaceAll(",", ""))
-    var totalAtOrAbovePovertyCount2020 = +(raw2010Data[38].value.replaceAll(",", "")) + +(raw2010Data[43].value.replaceAll(",", ""))+ +(raw2010Data[48].value.replaceAll(",", ""))
+    var totalUnderPovertyCount2020 = +(raw2020Data[37].value.replaceAll(",", "")) + +(raw2020Data[42].value.replaceAll(",", "")) + +(raw2020Data[47].value.replaceAll(",", ""))
+    var totalAtOrAbovePovertyCount2020 = +(raw2020Data[38].value.replaceAll(",", "")) + +(raw2020Data[43].value.replaceAll(",", ""))+ +(raw2020Data[48].value.replaceAll(",", ""))
+
+    console.log("2010 poverty data", totalUnderPovertyCount2010, "/", totalAtOrAbovePovertyCount2010)
+    console.log("2020 poverty data", totalUnderPovertyCount2020, "/", totalAtOrAbovePovertyCount2020)
 
     dataArray2010 = [totalUnderPovertyCount2010, totalAtOrAbovePovertyCount2010]
     dataArray2020 = [totalUnderPovertyCount2020, totalAtOrAbovePovertyCount2020]
@@ -35,9 +38,6 @@ function PovertyCityChart(data){
         // { label: 'Total Population', count: totalPopultion2020 }, 
 
     ]
-
-    console.log(raw2020Data)
-
 
     var width = 360;
     var height = 360;
@@ -61,6 +61,7 @@ function PovertyCityChart(data){
         .outerRadius(radius);
         
     var pie = d3.pie();
+
 
       var path = svg.selectAll('path')
         .data(pie(dataArray2010))
