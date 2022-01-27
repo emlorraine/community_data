@@ -11,6 +11,8 @@ AgeChart.prototype.init = function(rawData){
     var data2010 = rawData[0]
     var data2020 = rawData[1]
 
+    console.log(data2010, data2020)
+
     var totalPopulation2010 = +(data2010[1].value.replace(",", ""))
     var populationData2010 = [
         +(data2010[2].value.replace(",", "")),
@@ -97,12 +99,15 @@ AgeChart.prototype.init = function(rawData){
             .enter().append("rect")
             .attr("width", xScale.bandwidth())
             .attr("height", function(d){
+                console.log(d)
                 return (750-y(d))
             })
             .attr("x", function(d,i){
+                console.log(d)
                 return (x(i))
             })
             .attr("y", function(d){
+                console.log(d)
                 return y(d)
             })
             .style("fill", "#1F7A8C")
