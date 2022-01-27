@@ -3,11 +3,14 @@ $(document).ready(function(){
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var target = $(e.target).attr("href").substring(1) // activated tab
-    
     var mapTag = "map-"+target
 
     if(target !== "intro"){
       $('#viz-wrapper').appendTo(`#${target}`);
+    }
+
+    if(target == "transportation"){
+      $("#viz-wrapper").remove();
     }
 
     if(target !=="intro"){
