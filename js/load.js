@@ -11,12 +11,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
     if(target == "transportation"){
       $("#viz-wrapper").remove();
-      Promise.all([
-        d3.csv("../data/transportation-reduced/"),
-        d3.csv(data2020FileName),
-        ]).then((values) => {
-            var transportationChart = new TransportationChart(values);      
-      });
+      var transportationChart = new TransportationChart();      
     }
 
     if(target !=="intro"){
