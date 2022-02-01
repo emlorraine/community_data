@@ -75,6 +75,9 @@ function TransportationChart(){
         }]
       }
 
+      $('#transportation-2010').empty();
+      $('#transportation-2019').empty();
+
       //2010
     var root2010 = d3.hierarchy(data2010Hierarchy).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
     
@@ -118,18 +121,18 @@ function TransportationChart(){
         //   .style("opacity", function(d){ return opacity(d.data.value)})
     
       // and to add the text labels
-      svg
-        .selectAll("text")
-        .data(root2010.leaves())
-        .enter()
-        .append("text")
-          .attr("x", function(d){ return d.x0+5})    
-          .attr("y", function(d){ return d.y0+20})    
-          .text(function(d){ 
-                return d.data.name 
-            })
-          .attr("font-size", "13px")
-          .attr("fill", "white")
+      // svg
+      //   .selectAll("text")
+      //   .data(root2010.leaves())
+      //   .enter()
+      //   .append("text")
+      //     .attr("x", function(d){ return d.x0+5})    
+      //     .attr("y", function(d){ return d.y0+20})    
+      //     .text(function(d){ 
+      //           return d.data.name 
+      //       })
+      //     .attr("font-size", "13px")
+      //     .attr("fill", "white")
 
       //2019
       var root2019 = d3.hierarchy(data2019Hierarchy).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
@@ -174,16 +177,16 @@ function TransportationChart(){
           //   .style("opacity", function(d){ return opacity(d.data.value)})
       
         // and to add the text labels
-        svg2019
-          .selectAll("text")
-          .data(root2019.leaves())
-          .enter()
-          .append("text")
-            .attr("x", function(d){ return d.x0+5})    
-            .attr("y", function(d){ return d.y0+20})    
-            .text(function(d){ 
-                  return d.data.name 
-              })
-            .attr("font-size", "13px")
-            .attr("fill", "white")
+        // svg2019
+        //   .selectAll("text")
+        //   .data(root2019.leaves())
+        //   .enter()
+        //   .append("text")
+        //     .attr("x", function(d){ return d.x0+5})    
+        //     .attr("y", function(d){ return d.y0+20})    
+        //     .text(function(d){ 
+        //           return d.data.name 
+        //       })
+        //     .attr("font-size", "13px")
+        //     .attr("fill", "white")
  } 
