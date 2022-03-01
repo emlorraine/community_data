@@ -131,7 +131,7 @@ function RaceTreeChart(data){
           .attr('height', function (d) { return d.y1 - d.y0; })
           .style("stroke", "black")
           .style("fill", function(d, i){ 
-              console.log(d.parent.data.children[i].name, color(d.parent.data.children[i].name))
+              // console.log(d.parent.data.children[i].name, color(d.parent.data.children[i].name))
               return color(d.parent.data.children[i].name)
             } )
         //   .style("opacity", function(d){ return opacity(d.data.value)})

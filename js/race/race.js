@@ -83,8 +83,6 @@
         }
       ];
 
-      console.log(data)
-
     var self = this;
     $('#race').empty();
 

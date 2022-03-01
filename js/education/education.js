@@ -49,9 +49,10 @@
     var population2010 = +(data2010[0].value).replace(",", "")
     var population2020 = +(data2020[0].value).replace(",", "")
 
-    console.log("Local 2010 data", data2010)
-    console.log("Local 2020 data", data2020)
+    // console.log("Local 2010 data", data2010)
+    // console.log("Local 2020 data", data2020)
 
+    // https://en.wikipedia.org/wiki/Largest_remainder_method
     var roundedPopulation2010 = Math.round(population2010/100)*100
     var roundedPopulation2020 = Math.round(population2020/100)*100
 
@@ -82,6 +83,30 @@
 
     fullGrid2020 = [lessThanHS2020, hsOrEquiv2020, someCollege2020, bachelorOrHigher2020, mastersDegree2020, professionalDegree2020, doctorateDegree2020]
     gridData2020 = []
+
+    sum2010 = fullGrid2010.reduce((a, b) => a + b, 0)
+    sum2020 = fullGrid2020.reduce((a, b) => a + b, 0)
+
+    console.log("sums 2010", sum2010)
+    console.log("sums 2020", sum2020)
+
+    if(sum2010 == 99){
+        max =Math.max(...fullGrid2010)
+        largestRemainderMethodIndex = fullGrid2010.indexOf(max)
+        fullGrid2010[largestRemainderMethodIndex] = max+1
+    }
+    if(sum2020 == 99){
+        max=Math.max(...fullGrid2020)
+        largestRemainderMethodIndex = fullGrid2020.indexOf(max)
+        fullGrid2020[largestRemainderMethodIndex] = max+1
+    }
+
+    sum2010 = fullGrid2010.reduce((a, b) => a + b, 0)
+    sum2020 = fullGrid2020.reduce((a, b) => a + b, 0)
+
+    console.log("new sums 2010", sum2010)
+    console.log("new sums 2020", sum2020)
+
 
     for(var i = 0; i < fullGrid2010[0]; i++){
         gridData2010.push(0)

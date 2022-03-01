@@ -11,7 +11,7 @@ AgeChart.prototype.init = function(rawData){
     var data2010 = rawData[0]
     var data2020 = rawData[1]
 
-    console.log(data2010, data2020)
+    // console.log(data2010, data2020)
 
     var totalPopulation2010 = +(data2010[1].value.replace(",", ""))
     var populationData2010 = [
@@ -45,6 +45,18 @@ AgeChart.prototype.init = function(rawData){
         +(data2020[13].value.replace(",", "")),
     ]
 
+    var populationPercentagesData2010 = []
+    for(var i = 0; i < populationData2010.length; i++){
+        proportion = (populationData2010[i]/totalPopulation2010)*100;
+        populationPercentagesData2010.push(proportion)
+    }
+
+    var populationPercentagesData2020 = []
+    for(var i = 0; i < populationData2020.length; i++){
+        proportion = (populationData2020[i]/totalPopulation2020)* 100;
+        populationPercentagesData2020.push(proportion)
+    }
+
     var labels = [
         "Under 5 years",
         "5 to 9 years",
@@ -63,26 +75,24 @@ AgeChart.prototype.init = function(rawData){
     var max2020 = Math.max(...populationData2020)
     var maxValue = Math.max(max2010, max2020)
 
-
     var population2010 = populationData2010.reduce((a, b) => a + b, 0)
     var population2020 = populationData2020.reduce((a, b) => a + b, 0)
-
-
-    console.log("2010 age data:", population2010, populationData2010)
-    console.log("2020 age data:", population2020, populationData2020)
 
     var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
     xScale.domain(labels)
     xScale.paddingInner(0.05)
     var yScale = d3.scaleLinear().range ([500, 0]);
-    yScale.domain([0, maxValue])
+    // yScale.domain([0, maxValue])
+    yScale.domain([0, 100])
+
 
     var x = d3.scaleLinear()
 	.domain([0,12])
     .range([0,1000]);
     
     var y = d3.scaleLinear()
-	.domain([0,maxValue])
+	// .domain([0,maxValue])
+    .domain([0,100])
     .range([750,0]);
 
     $('#age2010').empty();
@@ -95,19 +105,16 @@ AgeChart.prototype.init = function(rawData){
             .attr("height",1100)
             .append("g")
         self.svg.selectAll("rect")
-            .data(populationData2010.reverse())
+            .data(populationPercentagesData2010.reverse())
             .enter().append("rect")
             .attr("width", xScale.bandwidth())
             .attr("height", function(d){
-                console.log(d)
                 return (750-y(d))
             })
             .attr("x", function(d,i){
-                console.log(d)
                 return (x(i))
             })
             .attr("y", function(d){
-                console.log(d)
                 return y(d)
             })
             .style("fill", "#1F7A8C")
@@ -136,7 +143,7 @@ AgeChart.prototype.init = function(rawData){
                 .attr("height",1100)
                 .append("g")
             self.svg.selectAll("rect")
-                .data(populationData2020.reverse())
+                .data(populationPercentagesData2020.reverse())
                 .enter().append("rect")
                 .attr("width", xScale.bandwidth())
                 .attr("height", function(d){

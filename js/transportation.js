@@ -158,7 +158,7 @@ function TransportationChart(){
   
           var color = d3.scaleOrdinal()
           .domain(["Drove alone", "Carpooled", "Public transport", "Walked", "Taxicab, motorcycle, bicycle, or other means", "Worked from home",])
-          .range([ "#590d22", "#a4133c", "#c9184a", "#ff4d6d", "#ff758f", "#ffb3c1"])
+          .range([ "#8f2d56", "#a4133c", "#c9184a", "#ff4d6d", "#ff758f", "#ffb3c1"])
       
           svg2019
           .selectAll("rect")
