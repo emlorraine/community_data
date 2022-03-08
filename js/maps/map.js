@@ -1,17 +1,8 @@
-    var race = {
-        'White':143401,
-        'Black_or_African_American':143018,
-        'American_Indian_or_Alaskan_Native':787,
-        'Asian':10365,
-        'Native_Hawaiian_and_Other_Pacific_Islander':10365,
-        'Other':2979,
-        'Two_Or_More_Races':7412,
-    }
-    
     var map = L.map("race-map",{
         center: [38.769164, -90.698974],
         zoom: 11.5
     });
+
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -147,6 +138,98 @@
   
     var poly = L.geoJson(boundary);
     map.addLayer(poly);
+
+    coordinateArray = (boundary[0].geometry.coordinates)
+
+    var coordinanteBounds = poly.getBounds();
+    console.log(coordinateArray,coordinanteBounds ) 
+
+    var x_max = coordinanteBounds.getEast();
+    var x_min = coordinanteBounds.getWest();
+    var y_max = coordinanteBounds.getSouth();
+    var y_min = coordinanteBounds.getNorth();
+
+
+    //Event listeners for checkboxes:
+    var checkboxRace = document.querySelector("input[name=race]");
+    checkboxRace.addEventListener('change', function() {
+    if (this.checked) {
+        //Load race data points here:
+        var race = {
+            'White':143401,
+            'Black_or_African_American':143018,
+            'American_Indian_or_Alaskan_Native':787,
+            'Asian':10365,
+            'Native_Hawaiian_and_Other_Pacific_Islander':10365,
+            'Other':2979,
+            'Two_Or_More_Races':7412,
+        }
+        var race_round = {
+            'White':Math.round(143401/1000),
+            'Black_or_African_American':Math.round(143018/1000),
+            'American_Indian_or_Alaskan_Native':Math.round(787/1000),
+            'Asian':Math.round(10365/1000),
+            'Native_Hawaiian_and_Other_Pacific_Islander':Math.round(10365/1000),
+            'Other':Math.round(2979/1000),
+            'Two_Or_More_Races':Math.round(7412/1000),
+        }
+        var polyGeoJson = poly.toGeoJSON();
+
+        randomPointInPoly = function(polygon) {
+            var bounds = poly.getBounds(); 
+            var x_min  = bounds.getEast();
+            var x_max  = bounds.getWest();
+            var y_min  = bounds.getSouth();
+            var y_max  = bounds.getNorth();
+        
+            var lat = y_min + (Math.random() * (y_max - y_min));
+            var lng = x_min + (Math.random() * (x_max - x_min));
+        
+            var point  = turf.point([lng, lat]);
+            var turfPolygon = turf.polygon(coordinateArray)
+            var inside = turf.booleanPointInPolygon(point, turfPolygon);
+
+        
+            if (inside) {
+                return point
+            } else {
+                return randomPointInPoly(polygon)
+            }
+        } 
+        for (var key of Object.keys(race_round)) {
+            console.log(key + " -> " + race_round[key])
+            L.geoJson(randomPointInPoly(poly)).addTo(map);
+
+
+
+        }
+
+    }
+    });
+
+    var checkboxEducation = document.querySelector("input[name=education]");
+    checkboxEducation.addEventListener('change', function() {
+    if (this.checked) {
+        //Load education data points here:
+        console.log("education Checkbox is checked..");
+    }
+    });
+
+    var checkboxAge = document.querySelector("input[name=age]");
+    checkboxAge.addEventListener('change', function() {
+    if (this.checked) {
+        //Load age data points here:
+        console.log("age Checkbox is checked..");
+    }
+    });
+
+    var checkboxIncome = document.querySelector("input[name=income]");
+    checkboxIncome.addEventListener('change', function() {
+    if (this.checked) {
+        //Load income data points here:
+        console.log("income Checkbox is checked..");
+    }
+    });
 
 
 
