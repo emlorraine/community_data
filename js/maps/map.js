@@ -1,3 +1,13 @@
+    var race = {
+        'White':143401,
+        'Black_or_African_American':143018,
+        'American_Indian_or_Alaskan_Native':787,
+        'Asian':10365,
+        'Native_Hawaiian_and_Other_Pacific_Islander':10365,
+        'Other':2979,
+        'Two_Or_More_Races':7412,
+    }
+    
     var map = L.map("race-map",{
         center: [38.769164, -90.698974],
         zoom: 11.5
@@ -17,7 +27,7 @@
         "geometry": {
             "type": "Polygon",
             "coordinates": [[
-                [-90.2504061672504, 38.542620160444], 
+              [-90.2504061672504, 38.542620160444], 
               [-90.2577840472612, 38.5320072933694], 
               [-90.2577916876478, 38.5319963033383], 
               [-90.2606347577976, 38.53315274012], 
@@ -137,6 +147,9 @@
   
     var poly = L.geoJson(boundary);
     map.addLayer(poly);
+
+
+
 
     
     
