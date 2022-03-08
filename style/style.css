@@ -36,7 +36,7 @@ h3{
 
 /* Leaflet */
 
-#map { 
+#race-map { 
     width: 900px;
     height: 960px;
     /* display:flex; */

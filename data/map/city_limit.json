@@ -1,23 +1,24 @@
-    var map = L.map("race-map",{
-        center: [38.769164, -90.698974],
-        zoom: 11.5
-    });
-
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 16,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoiZW1sb3JyYWluZSIsImEiOiJja25xcjFsanYwY3hjMm9uMHRkMmt1bzk3In0.AK4bzeFyxjafUrisldluWQ'
-    }).addTo(map);
-
-    var boundary = [{
-        "type": "Feature",
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [[
-                [-90.2504061672504, 38.542620160444], 
+{
+    "type" : "FeatureCollection", 
+    "crs" : 
+    {
+      "type" : "name", 
+      "properties" : 
+      {
+        "name" : "EPSG:4326"
+      }
+    }, 
+    "features" : [
+      {
+        "type" : "Feature", 
+        "id" : 1, 
+        "geometry" : 
+        {
+          "type" : "Polygon", 
+          "coordinates" : 
+          [
+            [
+              [-90.2504061672504, 38.542620160444], 
               [-90.2577840472612, 38.5320072933694], 
               [-90.2577916876478, 38.5319963033383], 
               [-90.2606347577976, 38.53315274012], 
@@ -130,13 +131,18 @@
               [-90.2489191997166, 38.5447591273224], 
               [-90.249996580869, 38.543209344278], 
               [-90.2504061672504, 38.542620160444]
-            ]]
+            ]
+          ]
+        }, 
+        "properties" : {
+          "FID" : 1, 
+          "LAYER" : "--CITY_LIMIT_BOUND_2002--", 
+          "AREA_SQMI" : 62.11, 
+          "SHAPE_area" : 1845207807.69, 
+          "SHAPE_len" : 218275.771282, 
+          "Shape__Area" : 281399126.484375, 
+          "Shape__Length" : 85331.8789195921
         }
-    }]
-
-  
-    var poly = L.geoJson(boundary);
-    map.addLayer(poly);
-
-    
-    
+      }
+    ]
+  }
