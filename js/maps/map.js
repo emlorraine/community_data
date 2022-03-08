@@ -154,6 +154,7 @@
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
     if (this.checked) {
+
         //Load race data points here:
         var race = {
             'White':143401,
@@ -173,8 +174,8 @@
             'Other':Math.round(2979/1000),
             'Two_Or_More_Races':Math.round(7412/1000),
         }
-        var polyGeoJson = poly.toGeoJSON();
 
+        var polyGeoJson = poly.toGeoJSON();
         randomPointInPoly = function(polygon) {
             var bounds = poly.getBounds(); 
             var x_min  = bounds.getEast();
@@ -198,7 +199,10 @@
         } 
         for (var key of Object.keys(race_round)) {
             console.log(key + " -> " + race_round[key])
-            L.geoJson(randomPointInPoly(poly)).addTo(map);
+
+            for(var i = 0; i <race_round[key]; i++){
+                L.geoJson(randomPointInPoly(poly)).addTo(map);
+            }
 
 
 
