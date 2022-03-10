@@ -253,8 +253,6 @@
     coordinateArray = (boundary[0].geometry.coordinates)
 
     var coordinanteBounds = poly.getBounds();
-    console.log(coordinateArray,coordinanteBounds ) 
-
     var x_max = coordinanteBounds.getEast();
     var x_min = coordinanteBounds.getWest();
     var y_max = coordinanteBounds.getSouth();
@@ -265,59 +263,62 @@
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
     if (this.checked) {
+        for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = stlCensusTracts.geometries[i].coordinates
+            var censusTractPoly = L.geoJson(censusTract)
+            
+
+        }
 
         //Load race data points here:
-        var race = {
-            'White':143401,
-            'Black_or_African_American':143018,
-            'American_Indian_or_Alaskan_Native':787,
-            'Asian':10365,
-            'Native_Hawaiian_and_Other_Pacific_Islander':10365,
-            'Other':2979,
-            'Two_Or_More_Races':7412,
-        }
-        var race_round = {
-            'White':Math.round(143401/1000),
-            'Black_or_African_American':Math.round(143018/1000),
-            'American_Indian_or_Alaskan_Native':Math.round(787/1000),
-            'Asian':Math.round(10365/1000),
-            'Native_Hawaiian_and_Other_Pacific_Islander':Math.round(10365/1000),
-            'Other':Math.round(2979/1000),
-            'Two_Or_More_Races':Math.round(7412/1000),
-        }
+        // var race = {
+        //     'White':143401,
+        //     'Black_or_African_American':143018,
+        //     'American_Indian_or_Alaskan_Native':787,
+        //     'Asian':10365,
+        //     'Native_Hawaiian_and_Other_Pacific_Islander':10365,
+        //     'Other':2979,
+        //     'Two_Or_More_Races':7412,
+        // }
+        // var race_round = {
+        //     'White':Math.round(143401/1000),
+        //     'Black_or_African_American':Math.round(143018/1000),
+        //     'American_Indian_or_Alaskan_Native':Math.round(787/1000),
+        //     'Asian':Math.round(10365/1000),
+        //     'Native_Hawaiian_and_Other_Pacific_Islander':Math.round(10365/1000),
+        //     'Other':Math.round(2979/1000),
+        //     'Two_Or_More_Races':Math.round(7412/1000),
+        // }
 
-        var polyGeoJson = poly.toGeoJSON();
-        randomPointInPoly = function(polygon) {
-            var bounds = poly.getBounds(); 
-            var x_min  = bounds.getEast();
-            var x_max  = bounds.getWest();
-            var y_min  = bounds.getSouth();
-            var y_max  = bounds.getNorth();
+        // var polyGeoJson = poly.toGeoJSON();
+        // randomPointInPoly = function(polygon) {
+        //     var bounds = poly.getBounds(); 
+        //     var x_min  = bounds.getEast();
+        //     var x_max  = bounds.getWest();
+        //     var y_min  = bounds.getSouth();
+        //     var y_max  = bounds.getNorth();
         
-            var lat = y_min + (Math.random() * (y_max - y_min));
-            var lng = x_min + (Math.random() * (x_max - x_min));
+        //     var lat = y_min + (Math.random() * (y_max - y_min));
+        //     var lng = x_min + (Math.random() * (x_max - x_min));
         
-            var point  = turf.point([lng, lat]);
-            var turfPolygon = turf.polygon(coordinateArray)
-            var inside = turf.booleanPointInPolygon(point, turfPolygon);
+        //     var point  = turf.point([lng, lat]);
+        //     var turfPolygon = turf.polygon(coordinateArray)
+        //     var inside = turf.booleanPointInPolygon(point, turfPolygon);
 
         
-            if (inside) {
-                return point
-            } else {
-                return randomPointInPoly(polygon)
-            }
-        } 
-        for (var key of Object.keys(race_round)) {
-            console.log(key + " -> " + race_round[key])
+        //     if (inside) {
+        //         return point
+        //     } else {
+        //         return randomPointInPoly(polygon)
+        //     }
+        // } 
+        // for (var key of Object.keys(race_round)) {
+        //     console.log(key + " -> " + race_round[key])
 
-            for(var i = 0; i <race_round[key]; i++){
-                L.geoJson(randomPointInPoly(poly)).addTo(map);
-            }
-
-
-
-        }
+        //     for(var i = 0; i <race_round[key]; i++){
+        //         L.geoJson(randomPointInPoly(poly)).addTo(map);
+        //     }
+        // }
 
     }
     });
