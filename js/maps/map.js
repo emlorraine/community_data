@@ -614,7 +614,7 @@
           "1152": 184,
           "1153": 459,
           "1154": 161,
-          "1155": "1,021",
+          "1155": "1021",
           "1156": 585,
           "1157": 266,
           "1161": 89,
@@ -847,12 +847,12 @@
           "1172": 115,
           "1174": 344,
           "1181": 106,
-          "1184": "1,173",
-          "1186": "1,240",
+          "1184": "1173",
+          "1186": "1240",
           "1191.01": 153,
           "1191.02": 469,
           "1192": 191,
-          "1193": "1,898",
+          "1193": "1898",
           "1202": 101,
           "1211": 399,
           "1212": 199,
@@ -888,7 +888,7 @@
           "1015": 676,
           "1018": 584,
           "1021": 502,
-          "1022": "1,057",
+          "1022": "1057",
           "1023": 487,
           "1024": 425,
           "1025": 447,
@@ -897,7 +897,7 @@
           "1036": 316,
           "1037": 490,
           "1038": 655,
-          "1042": "1,129",
+          "1042": "1129",
           "1045": 802,
           "1051.98": 558,
           "1052": 671,
@@ -931,36 +931,36 @@
           "1113": 184,
           "1114": 171,
           "1115": 19,
-          "1121": "1,469",
+          "1121": "1469",
           "1122": 147,
           "1123": 250,
-          "1124": "1,161",
+          "1124": "1161",
           "1135": 580,
           "1141.01": 896,
           "1141.02": 670,
-          "1142": "1,225",
+          "1142": "1225",
           "1143": 928,
           "1151": 830,
           "1152": 586,
           "1153": 797,
           "1154": 618,
-          "1155": "1,153",
+          "1155": "1153",
           "1156": 460,
           "1157": 417,
           "1161": 519,
-          "1162": "1,455",
+          "1162": "1455",
           "1163.01": 851,
           "1163.02": 660,
           "1164": 902,
-          "1165": "1,202",
+          "1165": "1202",
           "1171": 606,
-          "1172": "1,355",
+          "1172": "1355",
           "1174": 871,
           "1181": 254,
           "1184": 55,
           "1186": 901,
           "1191.01": 611,
-          "1191.02": "1,297",
+          "1191.02": "1297",
           "1192": 274,
           "1193": 749,
           "1202": 165,
@@ -973,20 +973,20 @@
           "1242": 554,
           "1243": 970,
           "1246": 341,
-          "1255": "1,482",
-          "1256": "1,922",
+          "1255": "1482",
+          "1256": "1922",
           "1257": 464,
           "1266": 463,
           "1267": 155,
-          "1268": "1,053",
+          "1268": "1053",
           "1269": 457,
           "1270": 385,
           "1271": 218,
-          "1272": "1,228",
+          "1272": "1228",
           "1273": 714,
-          "1274": "1,401",
+          "1274": "1401",
           "1275": 422,
-          "1276": "1,150",
+          "1276": "1150",
           "TOTAL (All Selected Census Tracts)": "61,349"
         },
         {
@@ -1064,7 +1064,7 @@
           "1164": 554,
           "1165": 534,
           "1171": 186,
-          "1172": "1,039",
+          "1172": "1039",
           "1174": 800,
           "1181": 188,
           "1184": 43,
@@ -1218,7 +1218,7 @@
           "1015": 431,
           "1018": 297,
           "1021": 375,
-          "1022": "1,067",
+          "1022": "1067",
           "1023": 357,
           "1024": 354,
           "1025": 222,
@@ -4829,27 +4829,22 @@
         var percentage = parseFloat(education_sum/population)
 
         console.log(percentage)
-
         var individualCensusTract = (stlCensusTracts.geometries[i])
         var individualCensusTractPolygon = {
           "type":"GeometryCollection", 
           "geometries": [individualCensusTract]
         }
-
         // var polyTracts = L.geoJson(individualCensusTractPolygon)
         geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
         function style(region) {
           return {
-            fillColor: "#800080",
+            fillColor: "#00FF00",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: percentage
           };
         }
-        
-
-
-
-
-
-
       }
     }
     });
@@ -4857,16 +4852,91 @@
     var checkboxAge = document.querySelector("input[name=age]");
     checkboxAge.addEventListener('change', function() {
     if (this.checked) {
-        //Load age data points here:
-        console.log("Age checkbox is checked..");
+      for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+        censusTract = censusTractArrayList[i]
+        censusPoly = stlCensusTracts.geometries[i]
+        console.log("Working on tract", censusTract)
+        var less_than_five = data[3][censusTractArrayList[i]] //0
+        var five_to_nine = data[4][censusTractArrayList[i]] //1
+        var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
+        var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
+        var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
+        var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
+        var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
+        var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
+        var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
+        var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
+        var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
+        var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
+        // ages = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+        ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
+        ages_exanded = []
+        index = 0; 
+        for(var j = 0; j < ages_parsed.length; j++){
+          for(var k = 0; k < ages_parsed[j]; k++){
+            ages_exanded.push(index)
+          }
+          index = index+1; 
+        }
+        function median(arr){
+          arr.sort(function(a, b){ return a - b; });
+          var i = arr.length / 2;
+          return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+        }
+        var median_value = median(ages_exanded)
+        var percentage = median_value/11
+       
+        var individualCensusTract = (stlCensusTracts.geometries[i])
+        var individualCensusTractPolygon = {
+          "type":"GeometryCollection", 
+          "geometries": [individualCensusTract]
+        }
+        // var polyTracts = L.geoJson(individualCensusTractPolygon)
+        geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+        function style(region) {
+          return {
+            fillColor: "#FF0000",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: percentage
+          };
+        }
+      }
     }
     });
 
     var checkboxIncome = document.querySelector("input[name=income]");
     checkboxIncome.addEventListener('change', function() {
     if (this.checked) {
-        //Load income data points here:
-        console.log("Income checkbox is checked..");
+      for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+        censusTract = censusTractArrayList[i]
+        censusPoly = stlCensusTracts.geometries[i]
+        console.log("Working on tract", censusTract)
+
+        var lowest_income; 
+        var highest_income; 
+
+        var median_income = data[37][censusTractArrayList[i]]
+        console.log(median_income)
+       
+        // var individualCensusTract = (stlCensusTracts.geometries[i])
+        // var individualCensusTractPolygon = {
+        //   "type":"GeometryCollection", 
+        //   "geometries": [individualCensusTract]
+        // }
+        // // var polyTracts = L.geoJson(individualCensusTractPolygon)
+        // geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+        // function style(region) {
+        //   return {
+        //     fillColor: "#800080",
+        //     color: "#000",
+        //     weight: 1,
+        //     opacity: 1,
+        //     fillOpacity: percentage
+        //   };
+        // }
+      }
     }
     });
 
