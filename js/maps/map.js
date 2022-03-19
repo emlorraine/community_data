@@ -2971,112 +2971,112 @@
         },
         {
           "Statistics": "Population 25 Years and Over:",
-          "1011": "2,059",
-          "1012": "2,656",
-          "1013": "3,057",
-          "1014": "1,892",
-          "1015": "2,285",
-          "1018": "2,155",
-          "1021": "2,137",
-          "1022": "4,849",
-          "1023": "1,682",
-          "1024": "1,864",
-          "1025": "1,536",
-          "1031": "2,517",
-          "1034": "1,490",
+          "1011": "2059",
+          "1012": "2656",
+          "1013": "3057",
+          "1014": "1892",
+          "1015": "2285",
+          "1018": "2155",
+          "1021": "2137",
+          "1022": "4849",
+          "1023": "1682",
+          "1024": "1864",
+          "1025": "1536",
+          "1031": "2517",
+          "1034": "1490",
           "1036": 967,
-          "1037": "2,087",
-          "1038": "3,020",
-          "1042": "2,729",
-          "1045": "1,932",
-          "1051.98": "2,211",
-          "1052": "2,045",
-          "1053": "1,592",
-          "1054": "1,312",
-          "1055": "1,931",
-          "1061": "1,200",
+          "1037": "2087",
+          "1038": "3020",
+          "1042": "2729",
+          "1045": "1932",
+          "1051.98": "2211",
+          "1052": "2045",
+          "1053": "1592",
+          "1054": "1312",
+          "1055": "1931",
+          "1061": "1200",
           "1062": 578,
           "1063": 898,
-          "1064": "1,527",
-          "1065": "2,079",
-          "1066": "1,162",
-          "1067": "2,044",
+          "1064": "1527",
+          "1065": "2079",
+          "1066": "1162",
+          "1067": "2044",
           "1072": 765,
-          "1073": "2,997",
-          "1074": "1,697",
-          "1075": "1,519",
-          "1076": "1,254",
-          "1081": "1,803",
-          "1082": "1,530",
-          "1083": "1,463",
-          "1096": "1,932",
-          "1097": "1,349",
-          "1101": "1,802",
-          "1102": "1,403",
-          "1103": "1,240",
-          "1104": "1,349",
+          "1073": "2997",
+          "1074": "1697",
+          "1075": "1519",
+          "1076": "1254",
+          "1081": "1803",
+          "1082": "1530",
+          "1083": "1463",
+          "1096": "1932",
+          "1097": "1349",
+          "1101": "1802",
+          "1102": "1403",
+          "1103": "1240",
+          "1104": "1349",
           "1105": 668,
-          "1111": "1,251",
+          "1111": "1251",
           "1112": 742,
-          "1113": "1,220",
+          "1113": "1220",
           "1114": 892,
           "1115": 325,
-          "1121": "3,636",
+          "1121": "3636",
           "1122": 808,
-          "1123": "1,047",
-          "1124": "3,185",
-          "1135": "1,974",
-          "1141.01": "3,214",
-          "1141.02": "3,278",
-          "1142": "3,698",
-          "1143": "4,010",
-          "1151": "3,156",
-          "1152": "2,127",
-          "1153": "3,229",
-          "1154": "2,110",
-          "1155": "3,744",
-          "1156": "3,413",
-          "1157": "2,257",
-          "1161": "2,423",
-          "1162": "3,278",
-          "1163.01": "2,416",
-          "1163.02": "2,120",
-          "1164": "2,992",
-          "1165": "3,031",
-          "1171": "1,254",
-          "1172": "3,881",
-          "1174": "3,043",
+          "1123": "1047",
+          "1124": "3185",
+          "1135": "1974",
+          "1141.01": "3214",
+          "1141.02": "3278",
+          "1142": "3698",
+          "1143": "4010",
+          "1151": "3156",
+          "1152": "2127",
+          "1153": "3229",
+          "1154": "2110",
+          "1155": "3744",
+          "1156": "3413",
+          "1157": "2257",
+          "1161": "2423",
+          "1162": "3278",
+          "1163.01": "2416",
+          "1163.02": "2120",
+          "1164": "2992",
+          "1165": "3031",
+          "1171": "1254",
+          "1172": "3881",
+          "1174": "3043",
           "1181": 829,
           "1184": 387,
-          "1186": "2,599",
-          "1191.01": "2,333",
-          "1191.02": "2,641",
-          "1192": "1,610",
-          "1193": "1,794",
+          "1186": "2599",
+          "1191.01": "2333",
+          "1191.02": "2641",
+          "1192": "1610",
+          "1193": "1794",
           "1202": 736,
-          "1211": "1,168",
-          "1212": "1,239",
-          "1231": "2,519",
-          "1232": "2,212",
-          "1233": "2,065",
-          "1241": "2,889",
-          "1242": "2,190",
-          "1243": "2,697",
-          "1246": "1,010",
-          "1255": "3,348",
-          "1256": "3,916",
-          "1257": "1,880",
-          "1266": "1,898",
+          "1211": "1168",
+          "1212": "1239",
+          "1231": "2519",
+          "1232": "2212",
+          "1233": "2065",
+          "1241": "2889",
+          "1242": "2190",
+          "1243": "2697",
+          "1246": "1010",
+          "1255": "3348",
+          "1256": "3916",
+          "1257": "1880",
+          "1266": "1898",
           "1267": 807,
-          "1268": "2,789",
-          "1269": "2,457",
-          "1270": "1,158",
-          "1271": "1,132",
-          "1272": "3,215",
-          "1273": "2,829",
-          "1274": "2,920",
-          "1275": "1,716",
-          "1276": "2,271",
+          "1268": "2789",
+          "1269": "2457",
+          "1270": "1158",
+          "1271": "1132",
+          "1272": "3215",
+          "1273": "2829",
+          "1274": "2920",
+          "1275": "1716",
+          "1276": "2271",
           "TOTAL (All Selected Census Tracts)": "219,272"
         },
         {
@@ -4635,21 +4635,10 @@
         ]}
 
     censusTractArrayList = [1011,1012,1013,1014,1015,1018,1021,1022,1023,1024,1025,1031,1034,1036,1037,1038,1042,1045,1051.98,1052,1053,1054,1055,1061,1062,1063,1064,1065,1066,1067,1072,1073,1074,1075,1076,1081,1082,1083,1096,1097,1101,1102,1103,1104,1105,1111,1112,1113,1121,1122,1123,1124,1135,1141.01,1141.02,1142,1143,1151,1152,1153,1154,1155,1156,1157,1161,1162,1163.01,1163.02,1164,1165,1171,1172,1174,1181,1186,1191.01,1191.02,1192,1193,1202,1212,1231,1232,1233,1241,1242,1243,1246,1255,1256,1257,1266,1267,1268,1269,1270,1271,1272,1273,1274,1275,1276,1277,1278]
-    
     var poly = L.geoJson(boundary);
     var polyTracts = L.geoJson(stlCensusTracts)
-
     map.addLayer(poly);
     map.addLayer(polyTracts);
-
-
-
-    // var coordinanteBounds = poly.getBounds();
-    // var x_max = coordinanteBounds.getEast();
-    // var x_min = coordinanteBounds.getWest();
-    // var y_max = coordinanteBounds.getSouth();
-    // var y_min = coordinanteBounds.getNorth();
-
     randomPointInPoly = function(polygon) {
       var bounds = censusTractGeoJsonConversion.getBounds(); 
       var x_min  = bounds.getEast();
@@ -4670,10 +4659,6 @@
           return randomPointInPoly(polygon)
       }
   } 
-
-       
-
-
     //Event listeners for checkboxes:
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
@@ -4824,12 +4809,48 @@
           L.geoJSON().clearLayers();
       }
     })
-
     var checkboxEducation = document.querySelector("input[name=education]");
     checkboxEducation.addEventListener('change', function() {
     if (this.checked) {
-        //Load education data points here:
-        console.log("education Checkbox is checked..");
+      for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+        censusTract = censusTractArrayList[i]
+        censusPoly = stlCensusTracts.geometries[i]
+        console.log("Working on tract", censusTract)
+        var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
+        var some_college = parseInt(data[30][censusTractArrayList[i]])
+        var college = parseInt(data[31][censusTractArrayList[i]])
+        var masters = parseInt(data[32][censusTractArrayList[i]])
+        var doctorates = parseInt(data[33][censusTractArrayList[i]])
+        var professional = parseInt(data[34][censusTractArrayList[i]])
+
+        var population = parseInt(data[27][censusTractArrayList[i]]);
+        var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
+        
+        var percentage = parseFloat(education_sum/population)
+
+        console.log(percentage)
+
+        var individualCensusTract = (stlCensusTracts.geometries[i])
+        var individualCensusTractPolygon = {
+          "type":"GeometryCollection", 
+          "geometries": [individualCensusTract]
+        }
+
+        // var polyTracts = L.geoJson(individualCensusTractPolygon)
+        geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+        function style(region) {
+          return {
+            fillColor: "#800080",
+          };
+        }
+        
+
+
+
+
+
+
+      }
     }
     });
 
@@ -4837,7 +4858,7 @@
     checkboxAge.addEventListener('change', function() {
     if (this.checked) {
         //Load age data points here:
-        console.log("age Checkbox is checked..");
+        console.log("Age checkbox is checked..");
     }
     });
 
@@ -4845,7 +4866,7 @@
     checkboxIncome.addEventListener('change', function() {
     if (this.checked) {
         //Load income data points here:
-        console.log("income Checkbox is checked..");
+        console.log("Income checkbox is checked..");
     }
     });
 
