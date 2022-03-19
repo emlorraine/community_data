@@ -4677,6 +4677,7 @@
     //Event listeners for checkboxes:
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
+    var raceMarkerIds = []
     if(this.checked) {
         for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -4718,12 +4719,8 @@
             'Other':(parseInt(other)/5),
             'Two_Or_More_Races':(parseInt(two_or_more_races)/5),
             }
-
             for (var key of Object.keys(race_round)) {
-                console.log(key + " -> " + race_round[key] + " for ", i)
                 for(var j = 0; j <race_round[key]; j++){
-                    console.log(race_round[key])
-
                     if(key=="White"){
                       var geojsonMarkerOptions = {
                         radius: 4,
@@ -4788,26 +4785,19 @@
                         fillOpacity: 0.8
                       };
                     }
-                  
                   L.geoJSON(randomPointInPoly(censusTractPolygon), {
                       pointToLayer: function (feature, latlng) {
-                          return L.circleMarker(latlng, geojsonMarkerOptions);
+                        console.log(feature)
+                        return L.circleMarker(latlng, geojsonMarkerOptions);
                       }
                   }).addTo(map);
-
-                    // var marker = L.circleMarker(L.geoJson(randomPointInPoly(censusTractPolygon)), { 
-                    //   color: 'green', 
-                    //   fillColor: 'green', 
-                    //   fillOpacity: 1.0, 
-                    //   radius: 2 
-                    // }) 
-                    // // var marker = L.geoJson(randomPointInPoly(censusTractPolygon))
-                    // marker.bindPopup(race_round[key] + "for census tract " + stlCensusTracts.geometries).openPopup();
-                    // marker.addTo(map)
                 }
             }
         }
         
+      } else {
+          //REMOVE MARKERS HERE 
+          L.geoJSON().clearLayers();
       }
     })
 
