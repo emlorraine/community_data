@@ -4679,7 +4679,6 @@
     checkboxRace.addEventListener('change', function() {
     if(this.checked) {
         for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-            console.log("STARTING NEW TRACT", i)
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
                 "type":"GeometryCollection", 
@@ -4725,16 +4724,70 @@
                 for(var j = 0; j <race_round[key]; j++){
                     console.log(race_round[key])
 
-
-
-                    var geojsonMarkerOptions = {
-                      radius: 4,
-                      fillColor: "#ff7800",
-                      color: "#000",
-                      weight: 1,
-                      opacity: 1,
-                      fillOpacity: 0.8
-                  };
+                    if(key=="White"){
+                      var geojsonMarkerOptions = {
+                        radius: 4,
+                        fillColor: "#FF0000",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                      };
+                    } else if(key=="Black_or_African_American"){
+                      var geojsonMarkerOptions = {
+                        radius: 4,
+                        fillColor: "#00FF00",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                      };
+                    } else if(key=="American_Indian_or_Alaskan_Native"){
+                      var geojsonMarkerOptions = {
+                        radius: 4,
+                        fillColor: "#0000FF",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                      };
+                    } else if(key=="Asian"){
+                      var geojsonMarkerOptions = {
+                        radius: 4,
+                        fillColor: "#800080",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                      };
+                    } else if(key=="Native_Hawaiian_and_Other_Pacific_Islander"){
+                      var geojsonMarkerOptions = {
+                        radius: 4,
+                        fillColor: "#FFA500",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                      };
+                    } else if(key=="Other"){
+                      var geojsonMarkerOptions = {
+                        radius: 4,
+                        fillColor: "#FFFF00",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                      };
+                    } else if(key=="Two_Or_More_Races"){
+                      var geojsonMarkerOptions = {
+                        radius: 4,
+                        fillColor: "#FFC0CB",
+                        color: "#000",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                      };
+                    }
                   
                   L.geoJSON(randomPointInPoly(censusTractPolygon), {
                       pointToLayer: function (feature, latlng) {
@@ -4752,15 +4805,10 @@
                     // marker.bindPopup(race_round[key] + "for census tract " + stlCensusTracts.geometries).openPopup();
                     // marker.addTo(map)
                 }
-            //     console.log("wait so do we get here?")
             }
-            //loop prematurely ends here
-            console.log("end of coordinate-placing for loop")
         }
         
-        console.log("out of if checked")
       }
-      console.log("out of event listener statement")
     })
 
     var checkboxEducation = document.querySelector("input[name=education]");
