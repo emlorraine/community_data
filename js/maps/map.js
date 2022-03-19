@@ -4677,7 +4677,6 @@
     //Event listeners for checkboxes:
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
-    var raceMarkerIds = []
     if(this.checked) {
         for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -4787,14 +4786,39 @@
                     }
                   L.geoJSON(randomPointInPoly(censusTractPolygon), {
                       pointToLayer: function (feature, latlng) {
-                        console.log(feature)
                         return L.circleMarker(latlng, geojsonMarkerOptions);
                       }
                   }).addTo(map);
                 }
             }
         }
-        
+        function getColor(d) {
+          if(d=="White"){
+            return "#FF0000"
+          } else if(d=="Black or African_American"){
+            return "#00FF00";
+          } else if(d=="American Indian or Alaskan Native"){
+            return "#0000FF";
+          } else if(d=="Asian"){
+            return "#800080";
+          } else if(d=="Native Hawaiian and Other Pacific Islander"){
+            return "#FFA500";
+          } else if(d=="Other"){
+            return "#FFFF00";
+          } else if(d=="Two or More Races"){
+            return "#FFC0CB"; 
+          }
+        }
+        var legend = L.control({position: 'bottomright'});
+        legend.onAdd = function (map) { 
+          var div = L.DomUtil.create('div', 'legend'),
+          categories = ['White','Black or African_American','American Indian or Alaskan Native','Asian','Native Hawaiian and Other Pacific Islander','Other','Two or More Races'];
+          for (var i = 0; i < categories.length; i++) {
+            div.innerHTML+='<i style="background:'+(getColor(categories[i]))+'>&nbsp;</i>&nbsp;&nbsp;'+categories[i]+'<br/>';
+          }
+          return div;
+        };
+        legend.addTo(map);
       } else {
           //REMOVE MARKERS HERE 
           L.geoJSON().clearLayers();
