@@ -4711,20 +4711,46 @@
             //Two_Or_More_Races 24
             var two_or_more_races = (data[24][censusTractArrayList[i]])
             var race_round = {
-            'White':(parseInt(white_alone)),
-            'Black_or_African_American':(parseInt(black_or_african_american)),
-            'American_Indian_or_Alaskan_Native':(parseInt(american_indian_or_alaskan_native)),
-            'Asian':(parseInt(asian)),
-            'Native_Hawaiian_and_Other_Pacific_Islander':(parseInt(native_hawaiian_and_other_pacific_islander)),
-            'Other':(parseInt(other)),
-            'Two_Or_More_Races':(parseInt(two_or_more_races)),
+            'White':(parseInt(white_alone)/5),
+            'Black_or_African_American':(parseInt(black_or_african_american)/5),
+            'American_Indian_or_Alaskan_Native':(parseInt(american_indian_or_alaskan_native)/5),
+            'Asian':(parseInt(asian)/5),
+            'Native_Hawaiian_and_Other_Pacific_Islander':(parseInt(native_hawaiian_and_other_pacific_islander)/5),
+            'Other':(parseInt(other)/5),
+            'Two_Or_More_Races':(parseInt(two_or_more_races)/5),
             }
 
             for (var key of Object.keys(race_round)) {
                 console.log(key + " -> " + race_round[key] + " for ", i)
                 for(var j = 0; j <race_round[key]; j++){
                     console.log(race_round[key])
-                    L.geoJson(randomPointInPoly(censusTractPolygon)).addTo(map)
+
+
+
+                    var geojsonMarkerOptions = {
+                      radius: 4,
+                      fillColor: "#ff7800",
+                      color: "#000",
+                      weight: 1,
+                      opacity: 1,
+                      fillOpacity: 0.8
+                  };
+                  
+                  L.geoJSON(randomPointInPoly(censusTractPolygon), {
+                      pointToLayer: function (feature, latlng) {
+                          return L.circleMarker(latlng, geojsonMarkerOptions);
+                      }
+                  }).addTo(map);
+
+                    // var marker = L.circleMarker(L.geoJson(randomPointInPoly(censusTractPolygon)), { 
+                    //   color: 'green', 
+                    //   fillColor: 'green', 
+                    //   fillOpacity: 1.0, 
+                    //   radius: 2 
+                    // }) 
+                    // // var marker = L.geoJson(randomPointInPoly(censusTractPolygon))
+                    // marker.bindPopup(race_round[key] + "for census tract " + stlCensusTracts.geometries).openPopup();
+                    // marker.addTo(map)
                 }
             //     console.log("wait so do we get here?")
             }
