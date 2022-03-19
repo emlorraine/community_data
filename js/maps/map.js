@@ -4650,25 +4650,42 @@
     // var y_max = coordinanteBounds.getSouth();
     // var y_min = coordinanteBounds.getNorth();
 
+    randomPointInPoly = function(polygon) {
+      var bounds = censusTractGeoJsonConversion.getBounds(); 
+      var x_min  = bounds.getEast();
+      var x_max  = bounds.getWest();
+      var y_min  = bounds.getSouth();
+      var y_max  = bounds.getNorth();
+
+      var lat = y_min + (Math.random() * (y_max - y_min));
+      var lng = x_min + (Math.random() * (x_max - x_min));
+
+      var point  = turf.point([lng, lat]);
+      var turfPolygon = turf.polygon(coordinates)
+      var inside = turf.booleanPointInPolygon(point, turfPolygon);
+
+      if (inside) {
+          return point
+      } else {
+          return randomPointInPoly(polygon)
+      }
+  } 
+
        
 
 
     //Event listeners for checkboxes:
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
-    if (this.checked) {
+    if(this.checked) {
         for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-
+            console.log("STARTING NEW TRACT", i)
             var individualCensusTract = (stlCensusTracts.geometries[i])
-            var poly = L.geoJson(boundary);
-            var polyGeoJson = poly.toGeoJSON();
-            
             var individualCensusTractPolygon = {
                 "type":"GeometryCollection", 
                 "geometries": [individualCensusTract]
             }
             coordinates = individualCensusTractPolygon.geometries[0].coordinates
-
             var censusTractGeoJson = [{
               "type": "Feature",
               "geometry": {
@@ -4679,7 +4696,6 @@
             censusTractPolygon = L.polygon(censusTractGeoJson[0].geometry)
             //Get bounds from here:
             censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
-
             //White alone = 18
             var white_alone = (data[18][censusTractArrayList[i]])
             //Black_or_African_American 19
@@ -4704,43 +4720,22 @@
             'Two_Or_More_Races':(parseInt(two_or_more_races)),
             }
 
-            randomPointInPoly = function(polygon) {
-                var bounds = censusTractGeoJsonConversion.getBounds(); 
-                var x_min  = bounds.getEast();
-                var x_max  = bounds.getWest();
-                var y_min  = bounds.getSouth();
-                var y_max  = bounds.getNorth();
-        
-                var lat = y_min + (Math.random() * (y_max - y_min));
-                var lng = x_min + (Math.random() * (x_max - x_min));
-        
-                var point  = turf.point([lng, lat]);
-                var turfPolygon = turf.polygon(coordinates)
-                var inside = turf.booleanPointInPolygon(point, turfPolygon);
-
-                if (inside) {
-                    return point
-                } else {
-                    return randomPointInPoly(polygon)
-                }
-            } 
-
-
             for (var key of Object.keys(race_round)) {
-                console.log(key + " -> " + race_round[key])
-                for(var i = 0; i <race_round[key]; i++){
-                    L.geoJson(randomPointInPoly(censusTractPolygon)).addTo(map);
+                console.log(key + " -> " + race_round[key] + " for ", i)
+                for(var j = 0; j <race_round[key]; j++){
+                    console.log(race_round[key])
+                    L.geoJson(randomPointInPoly(censusTractPolygon)).addTo(map)
                 }
+            //     console.log("wait so do we get here?")
             }
-            // console.log(race_round)
-            // for(var i = 0; i <race_round[key]; i++){
-            //     L.geoJson(randomPointInPoly(censusTractPolygon)).addTo(map);
-            // }
-          //}
+            //loop prematurely ends here
+            console.log("end of coordinate-placing for loop")
+        }
+        
+        console.log("out of if checked")
       }
-
-    }
-    });
+      console.log("out of event listener statement")
+    })
 
     var checkboxEducation = document.querySelector("input[name=education]");
     checkboxEducation.addEventListener('change', function() {
