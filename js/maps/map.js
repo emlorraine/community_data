@@ -4659,6 +4659,11 @@
           return randomPointInPoly(polygon)
       }
   } 
+
+    //Add legend: 
+    // var legend = L.control({position: 'bottomright'});
+    // legend.addTo(map)
+ 
     //Event listeners for checkboxes:
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
@@ -4797,16 +4802,20 @@
             return "#FFC0CB"; 
           }
         }
-        var legend = L.control({position: 'bottomright'});
-        legend.onAdd = function (map) { 
-          var div = L.DomUtil.create('div', 'legend'),
-          categories = ['White','Black or African_American','American Indian or Alaskan Native','Asian','Native Hawaiian and Other Pacific Islander','Other','Two or More Races'];
-          for (var i = 0; i < categories.length; i++) {
-            div.innerHTML+='<i style="background:'+(getColor(categories[i]))+'>&nbsp;</i>&nbsp;&nbsp;'+categories[i]+'<br/>';
-          }
-          return div;
-        };
-        legend.addTo(map);
+        //add legend here with pure js/html/css
+        var categories = ["White","Black or African_American","American Indian or Alaskan Native","Asian","Native Hawaiian and Other Pacific Islander","Other","Two or More Races"]
+        for(var j = 0; j < categories.length; j++){
+          var category = categories[j]
+          console.log(category)
+          $("#legend").append("<p>"+categories[j]+"</p>");
+          $("#legend").append("<span class='dot' id="+j+"></span>");
+          $(".dot").css("height", "25px")
+          $(".dot").css("width", "25px")
+          $(".dot").css("border-radius", "50%")
+          $(".dot").css("display", "inline-block")
+
+          $("#"+j).css("background-color", getColor(category))
+        }
       }
       if(!this.checked) {
           // map.removeLayer(geojson);
@@ -4815,11 +4824,11 @@
             if(layer._radius == 4){
               // console.log(layer)
               map.removeLayer(layer);
+
             }
             
         });
       }
-
     })
     var checkboxEducation = document.querySelector("input[name=education]");
     checkboxEducation.addEventListener('change', function() {
