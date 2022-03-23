@@ -4868,11 +4868,12 @@
           };
         }
       }
-      $("#legend").append("<h5>Educational Attainment Legend:</h5>");
+      $("#legend").append("<div id='educational-attainment-data-legend'></div")
+      $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
 
     }
     if(!this.checked) {
-      $("#legend").empty()
+      $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
       console.log("remove layers here") 
       map.eachLayer(function (layer) {
@@ -4937,10 +4938,11 @@
           };
         }
       }
-      $("#legend").append("<h5>Age Legend:</h5>");
+      $("#legend").append("<div id='median-age-data-legend'></div")
+      $("#median-age-data-legend").append("<h5>Age Legend:</h5>");
     }
     if(!this.checked) {
-      $("#legend").empty()
+      $("#median-age-data-legend").empty()
       // map.removeLayer(geojson);
       console.log("remove layers here") 
       map.eachLayer(function (layer) {
@@ -4999,10 +5001,11 @@
           };
         }
       }
-      $("#legend").append("<h5>Median Income Legend:</h5>");
+      $("#legend").append("<div id='median-income-data-legend'></div")
+      $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>");
     }
     if(!this.checked) {
-      $("#legend").empty()
+      $("#median-income-data-legend").empty()
       // map.removeLayer(geojson);
       console.log("remove layers here") 
       map.eachLayer(function (layer) {
