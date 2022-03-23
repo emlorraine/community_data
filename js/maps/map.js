@@ -4804,9 +4804,10 @@
           return div;
         };
         legend.addTo(map);
-      } else {
-          //REMOVE MARKERS HERE 
-          L.geoJSON().clearLayers();
+      } else if(!this.checked) {
+          //REMOVE MARKERS HERE
+          console.log("remove layers here") 
+          // L.geoJSON().clearLayers();
       }
     })
     var checkboxEducation = document.querySelector("input[name=education]");
@@ -4846,6 +4847,10 @@
           };
         }
       }
+    } else if(!this.checked) {
+      //REMOVE MARKERS HERE
+      console.log("remove layers here") 
+      // L.geoJSON().clearLayers();
     }
     });
 
@@ -4903,6 +4908,10 @@
           };
         }
       }
+    } else if(!this.checked) {
+      //REMOVE MARKERS HERE
+      console.log("remove layers here") 
+      // L.geoJSON().clearLayers();
     }
     });
 
@@ -4954,6 +4963,10 @@
           };
         }
       }
+    } else if(!this.checked) {
+      //REMOVE MARKERS HERE
+      console.log("remove layers here") 
+      // L.geoJSON().clearLayers();
     }
     });
 
