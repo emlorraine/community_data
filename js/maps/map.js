@@ -4870,6 +4870,11 @@
       }
       $("#legend").append("<div id='educational-attainment-data-legend'></div")
       $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
+      $("#educational-attainment-data-legend").append("<span class='rectangle' id='education-rectangle'></span>");
+      $(".rectangle").css("height", "30px")
+      $(".rectangle").css("width", "100px")
+      $(".rectangle").css("display", "inline-block")
+      $("#education-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #00FF00)")
 
     }
     if(!this.checked) {
@@ -4939,7 +4944,13 @@
         }
       }
       $("#legend").append("<div id='median-age-data-legend'></div")
-      $("#median-age-data-legend").append("<h5>Age Legend:</h5>");
+      $("#median-age-data-legend").append("<h5>Age Legend:</h5>")
+      $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
+      $(".rectangle").css("height", "30px")
+      $(".rectangle").css("width", "100px")
+      $(".rectangle").css("display", "inline-block")
+      $("#age-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #FF0000)")
+
     }
     if(!this.checked) {
       $("#median-age-data-legend").empty()
@@ -5002,7 +5013,12 @@
         }
       }
       $("#legend").append("<div id='median-income-data-legend'></div")
-      $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>");
+      $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>")
+      $("#median-income-data-legend").append("<span class='rectangle' id='income-rectangle'></span>");
+      $(".rectangle").css("height", "30px")
+      $(".rectangle").css("width", "100px")
+      $(".rectangle").css("display", "inline-block")
+      $("#income-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #FFA500)")
     }
     if(!this.checked) {
       $("#median-income-data-legend").empty()
