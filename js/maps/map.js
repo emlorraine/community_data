@@ -4804,6 +4804,7 @@
         }
         //add legend here with pure js/html/css
         var categories = ["White","Black or African_American","American Indian or Alaskan Native","Asian","Native Hawaiian and Other Pacific Islander","Other","Two or More Races"]
+        $("#legend").append("<h5>Racial Data Legend:</h5>");
         for(var j = 0; j < categories.length; j++){
           var category = categories[j]
           console.log(category)
@@ -4818,6 +4819,7 @@
         }
       }
       if(!this.checked) {
+        $("#legend").empty()
           // map.removeLayer(geojson);
           // console.log("remove layers here") 
           map.eachLayer(function (layer) {
@@ -4864,12 +4866,15 @@
           };
         }
       }
+      $("#legend").append("<h5>Educational Attainment Legend:</h5>");
+
     }
     if(!this.checked) {
+      $("#legend").empty()
       // map.removeLayer(geojson);
       console.log("remove layers here") 
       map.eachLayer(function (layer) {
-        if(layer.options.fillColor){
+        if(layer.options.fillColor == '#00FF00'){
           map.removeLayer(layer);
         }
       });
@@ -4930,12 +4935,14 @@
           };
         }
       }
+      $("#legend").append("<h5>Age Legend:</h5>");
     }
     if(!this.checked) {
+      $("#legend").empty()
       // map.removeLayer(geojson);
       console.log("remove layers here") 
       map.eachLayer(function (layer) {
-        if(layer.options.fillColor){
+        if(layer.options.fillColor == '#FF0000'){
           map.removeLayer(layer);
         }
       });
@@ -4990,12 +4997,14 @@
           };
         }
       }
+      $("#legend").append("<h5>Median Income Legend:</h5>");
     }
     if(!this.checked) {
+      $("#legend").empty()
       // map.removeLayer(geojson);
       console.log("remove layers here") 
       map.eachLayer(function (layer) {
-        if(layer.options.fillColor){
+        if(layer.options.fillColor == '#FFA500'){
           map.removeLayer(layer);
         }
       });
