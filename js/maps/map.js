@@ -4804,12 +4804,14 @@
         }
         //add legend here with pure js/html/css
         var categories = ["White","Black or African_American","American Indian or Alaskan Native","Asian","Native Hawaiian and Other Pacific Islander","Other","Two or More Races"]
-        $("#legend").append("<h5>Racial Data Legend:</h5>");
+        
+        $("#legend").append("<div id='racial-data-legend'></div")
+        $("#racial-data-legend").append("<h5>Racial Data Legend:</h5>");
         for(var j = 0; j < categories.length; j++){
           var category = categories[j]
           console.log(category)
-          $("#legend").append("<p>"+categories[j]+"</p>");
-          $("#legend").append("<span class='dot' id="+j+"></span>");
+          $("#racial-data-legend").append("<p>"+categories[j]+"</p>");
+          $("#racial-data-legend").append("<span class='dot' id="+j+"></span>");
           $(".dot").css("height", "25px")
           $(".dot").css("width", "25px")
           $(".dot").css("border-radius", "50%")
@@ -4819,7 +4821,7 @@
         }
       }
       if(!this.checked) {
-        $("#legend").empty()
+        $("#racial-data-legend").empty()
           // map.removeLayer(geojson);
           // console.log("remove layers here") 
           map.eachLayer(function (layer) {
