@@ -4771,6 +4771,7 @@
                     }
                   var geojson = L.geoJSON(randomPointInPoly(censusTractPolygon), {
                       pointToLayer: function (feature, latlng) {
+
                         return L.circleMarker(latlng, geojsonMarkerOptions);
                       }
                     })
@@ -4826,7 +4827,6 @@
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
         censusTract = censusTractArrayList[i]
         censusPoly = stlCensusTracts.geometries[i]
-        console.log("Working on tract", censusTract)
         var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
         var some_college = parseInt(data[30][censusTractArrayList[i]])
         var college = parseInt(data[31][censusTractArrayList[i]])
@@ -4838,8 +4838,6 @@
         var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
         
         var percentage = parseFloat(education_sum/population)
-
-        console.log(percentage)
         var individualCensusTract = (stlCensusTracts.geometries[i])
         var individualCensusTractPolygon = {
           "type":"GeometryCollection", 
@@ -4857,10 +4855,15 @@
           };
         }
       }
-    } else if(!this.checked) {
-      //REMOVE MARKERS HERE
+    }
+    if(!this.checked) {
+      // map.removeLayer(geojson);
       console.log("remove layers here") 
-      // L.geoJSON().clearLayers();
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor){
+          map.removeLayer(layer);
+        }
+      });
     }
     });
 
@@ -4918,10 +4921,15 @@
           };
         }
       }
-    } else if(!this.checked) {
-      //REMOVE MARKERS HERE
+    }
+    if(!this.checked) {
+      // map.removeLayer(geojson);
       console.log("remove layers here") 
-      // L.geoJSON().clearLayers();
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor){
+          map.removeLayer(layer);
+        }
+      });
     }
     });
 
@@ -4973,10 +4981,15 @@
           };
         }
       }
-    } else if(!this.checked) {
-      //REMOVE MARKERS HERE
+    }
+    if(!this.checked) {
+      // map.removeLayer(geojson);
       console.log("remove layers here") 
-      // L.geoJSON().clearLayers();
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor){
+          map.removeLayer(layer);
+        }
+      });
     }
     });
 
