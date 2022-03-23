@@ -4769,11 +4769,13 @@
                         fillOpacity: 0.8
                       };
                     }
-                  L.geoJSON(randomPointInPoly(censusTractPolygon), {
+                  var geojson = L.geoJSON(randomPointInPoly(censusTractPolygon), {
                       pointToLayer: function (feature, latlng) {
                         return L.circleMarker(latlng, geojsonMarkerOptions);
                       }
-                  }).addTo(map);
+                    })
+                  // }).addTo(map);
+                  map.addLayer(geojson)
                 }
             }
         }
@@ -4804,11 +4806,19 @@
           return div;
         };
         legend.addTo(map);
-      } else if(!this.checked) {
-          //REMOVE MARKERS HERE
-          console.log("remove layers here") 
-          // L.geoJSON().clearLayers();
       }
+      if(!this.checked) {
+          // map.removeLayer(geojson);
+          // console.log("remove layers here") 
+          map.eachLayer(function (layer) {
+            if(layer._radius == 4){
+              // console.log(layer)
+              map.removeLayer(layer);
+            }
+            
+        });
+      }
+
     })
     var checkboxEducation = document.querySelector("input[name=education]");
     checkboxEducation.addEventListener('change', function() {
