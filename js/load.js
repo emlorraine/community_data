@@ -26,8 +26,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
           d3.csv(data2020FileName),
           ]).then((values) => {
               var raceBarChart = new RaceBarChart(values);
-              var raceTreeMap = new RaceTreeChart(values);
-
+              // var raceTreeMap = new RaceTreeChart(values);
               var educationalAttainmentChart = new EducationalAttainmentChart(values);
               var ageChart = new AgeChart(values);
               var povertyChart = new PovertyChart(values);          

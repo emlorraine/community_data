@@ -1,3 +1,5 @@
+
+    
     data = [
         {
           "Statistics": "",
@@ -4186,6 +4188,11 @@
         zoom: 11.5
     });
 
+    window.addEventListener('load', (event) => {
+      console.log('page is fully loaded');
+      map.invalidateSize()
+    });
+
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -4809,15 +4816,15 @@
         $("#racial-data-legend").append("<h5>Racial Data Legend:</h5>");
         for(var j = 0; j < categories.length; j++){
           var category = categories[j]
-          console.log(category)
           $("#racial-data-legend").append("<p>"+categories[j]+"</p>");
           $("#racial-data-legend").append("<span class='dot' id="+j+"></span>");
           $(".dot").css("height", "25px")
           $(".dot").css("width", "25px")
           $(".dot").css("border-radius", "50%")
           $(".dot").css("display", "inline-block")
-
           $("#"+j).css("background-color", getColor(category))
+          $("#racial-data-legend").append("<p>One dot = 10 people </p>");
+
         }
       }
       if(!this.checked) {
@@ -4870,11 +4877,13 @@
       }
       $("#legend").append("<div id='educational-attainment-data-legend'></div")
       $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
+      $("#educational-attainment-data-legend").append("<h8>0</h8>");
       $("#educational-attainment-data-legend").append("<span class='rectangle' id='education-rectangle'></span>");
       $(".rectangle").css("height", "30px")
-      $(".rectangle").css("width", "100px")
+      $(".rectangle").css("width", "250px")
       $(".rectangle").css("display", "inline-block")
       $("#education-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #00FF00)")
+      $("#educational-attainment-data-legend").append("<h8>100%</h8>");
 
     }
     if(!this.checked) {
@@ -4945,11 +4954,13 @@
       }
       $("#legend").append("<div id='median-age-data-legend'></div")
       $("#median-age-data-legend").append("<h5>Age Legend:</h5>")
+      $("#median-age-data-legend").append("<h8>< 5 years</h8>");
       $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
       $(".rectangle").css("height", "30px")
-      $(".rectangle").css("width", "100px")
+      $(".rectangle").css("width", "250px")
       $(".rectangle").css("display", "inline-block")
       $("#age-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #FF0000)")
+      $("#median-age-data-legend").append("<h8>>85 years</h8>");
 
     }
     if(!this.checked) {
@@ -5014,11 +5025,14 @@
       }
       $("#legend").append("<div id='median-income-data-legend'></div")
       $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>")
+      $("#median-income-data-legend").append("<h8> < $40,000</h8>");
       $("#median-income-data-legend").append("<span class='rectangle' id='income-rectangle'></span>");
       $(".rectangle").css("height", "30px")
-      $(".rectangle").css("width", "100px")
+      $(".rectangle").css("width", "250px")
       $(".rectangle").css("display", "inline-block")
       $("#income-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #FFA500)")
+      $("#median-income-data-legend").append("<h8> > $75,000</h8>");
+
     }
     if(!this.checked) {
       $("#median-income-data-legend").empty()
