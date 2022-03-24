@@ -4189,7 +4189,6 @@
     });
 
     window.addEventListener('load', (event) => {
-      console.log('page is fully loaded');
       map.invalidateSize()
     });
 
@@ -4816,16 +4815,19 @@
         $("#racial-data-legend").append("<h5>Racial Data Legend:</h5>");
         for(var j = 0; j < categories.length; j++){
           var category = categories[j]
-          $("#racial-data-legend").append("<p>"+categories[j]+"</p>");
-          $("#racial-data-legend").append("<span class='dot' id="+j+"></span>");
+          $("#racial-data-legend").append("<div class='row' id="+j+"-row></div>");
+
+          $("#"+j+"-row").append("<span class='dot' id="+j+"></span>");
+          $("#"+j+"-row").append("<p id='text'>"+categories[j]+"</p>");
+          // $(".dot").css("float", "left")
           $(".dot").css("height", "25px")
           $(".dot").css("width", "25px")
           $(".dot").css("border-radius", "50%")
           $(".dot").css("display", "inline-block")
           $("#"+j).css("background-color", getColor(category))
-          $("#racial-data-legend").append("<p>One dot = 10 people </p>");
-
+          // $("#text").css("float", "right")
         }
+        $("#racial-data-legend").append("<h8>One dot = 10 people </h8>");
       }
       if(!this.checked) {
         $("#racial-data-legend").empty()
@@ -4889,7 +4891,6 @@
     if(!this.checked) {
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
-      console.log("remove layers here") 
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#00FF00'){
           map.removeLayer(layer);
@@ -4904,7 +4905,6 @@
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
         censusTract = censusTractArrayList[i]
         censusPoly = stlCensusTracts.geometries[i]
-        console.log("Working on tract", censusTract)
         var less_than_five = data[3][censusTractArrayList[i]] //0
         var five_to_nine = data[4][censusTractArrayList[i]] //1
         var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
@@ -4966,7 +4966,6 @@
     if(!this.checked) {
       $("#median-age-data-legend").empty()
       // map.removeLayer(geojson);
-      console.log("remove layers here") 
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#FF0000'){
           map.removeLayer(layer);
@@ -4981,8 +4980,6 @@
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
         censusTract = censusTractArrayList[i]
         censusPoly = stlCensusTracts.geometries[i]
-        console.log("Working on tract", censusTract)
-
         //$75,000 or more
         //$60,000-$74,999
         //$50,000-$59,999
@@ -5002,8 +4999,6 @@
         } else if (median_income < 40000){
           bracket = 1; 
         }
-
-        console.log(median_income, bracket)
         percentage = bracket/5; 
         
         var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -5037,7 +5032,6 @@
     if(!this.checked) {
       $("#median-income-data-legend").empty()
       // map.removeLayer(geojson);
-      console.log("remove layers here") 
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#FFA500'){
           map.removeLayer(layer);
