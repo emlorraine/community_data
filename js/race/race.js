@@ -97,15 +97,13 @@
         .append("svg")
         .attr("width", 1200 + margin.left + margin.right)
         .attr("height", 750 + margin.top + margin.bottom)
-        // .append("g")
-        // .attr("transform","translate(" + margin.left + "," + margin.top + ")");
-
         const colors = {
             2010: '#1F7A8C',
             2019: '#B9314F',
           }
           // 2. Append a g element into our SVG
-          const main = svg.append('g')
+      console.log(svg)
+      const main = svg.append('g')
             .attr('class', 'grouped-bars-main-group')
             .attr('transform', `translate(100,${margin.top})`);
 

@@ -9,10 +9,10 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       $('#viz-wrapper').appendTo(`#${target}`);
     }
 
-    if(target == "transportation"){
-      $("#viz-wrapper").remove();
-      var transportationChart = new TransportationChart();      
-    }
+    // if(target == "transportation"){
+    //   $("#viz-wrapper").remove();
+    //   var transportationChart = new TransportationChart();      
+    // }
 
     if(target !=="intro"){
       // $('#map').attr("id",mapTag)
