@@ -22,7 +22,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if(target !== "intro"){
       $("#age2010").empty()
       console.log("./data/age_svgs/" + target +".svg")
-      $("#age2010").prepend("<img src=./data/age_svgs/" + target +".svg width='500' height='600'>")
+      $("#age2010").prepend("<img id='age-svg' src=./data/age_svgs/" + target +".svg width='1000' height='1200'>")
     }
 
     if(target !== "intro"){
