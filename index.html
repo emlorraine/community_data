@@ -96,6 +96,20 @@
 
         <div class="tab-pane" id="intro" role="tabpanel">
 
+          <br><h1 id="intro-header">Introduction</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
+
+          <div id="map-container">
           <div id="race-map"></div>
           <div id="legend"></div>
 
@@ -110,21 +124,9 @@
             <input type="checkbox" id="income" name="income" value="Income">
             <label for="income">Income</label><br>
           </div>
+        </div>
 
           <div id="intro-text">
-          <br><h1>Introduction</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
-            <br>
           <h3>Section 1</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
             pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
@@ -233,13 +235,10 @@
 
               <div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
                 <h1>Data sources:</h1>
-                <button  id="download-2010-data">Download 2010 data</button>
+                <button class="btn btn-secondary" id="download-2010-data">Download 2010 data</button>
                 <br>
                 <br>
-
-                <button id="download-2019-data">Download 2019 data</button>
-
-
+                <button class="btn btn-secondary" id="download-2019-data">Download 2019 data</button>
               </div> 
 
               <div class="tab-pane fade show active" id="pills-race" role="tabpanel" aria-labelledby="pills-race-tab">
@@ -285,12 +284,12 @@
                     <div class="vstack gap-2" style="margin-right: 150px;">
                       <h3 class = "education-text" id = "collegeOrHigher2010Text">2010</h3><br>
                       <div id="education2010"></div>
-                      <button id='education2010' onclick="save(this.id)">Export this chart to PNG</button>
+                      <!-- <button id='education2010' onclick="save(this.id)">Export this chart to PNG</button> -->
                     </div>
                     <div class="vstack gap-2">
                       <h3 class = "education-text" id = "collegeOrHigher2010Text">2019</h3><br>
                       <div id="education2020"></div>
-                      <button id='education2020' onclick="save(this.id)">Export this chart to PNG</button>
+                      <!-- <button id='education2020' onclick="save(this.id)">Export this chart to PNG</button> -->
                     </div>
                   </div>
                 </div>
@@ -312,8 +311,8 @@
                 <div id="age-block">
                   <div id="age2010"></div>
                   <div id="age2020"></div>
-                  <button id='age2020' onclick="save(this.id)">Export this chart to PNG</button>
-                  <button id='age2010' onclick="save(this.id)">Export this chart to PNG</button>
+                  <!-- <button id='age2020' onclick="save(this.id)">Export this chart to PNG</button> -->
+                  <!-- <button id='age2010' onclick="save(this.id)">Export this chart to PNG</button> -->
 
                 </div>
               </div>
@@ -336,13 +335,13 @@
                   <div class="vstack gap-3" id="povertyBlock2010">
                     <h3>2010</h3>
                     <div id="poverty2010"></div>
-                    <button id='poverty2010' onclick="save(this.id)">Export this chart to PNG</button>
+                    <!-- <button id='poverty2010' onclick="save(this.id)">Export this chart to PNG</button> -->
                     <!-- <p>2010 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p> -->
                   </div>
                   <div class="vstack gap-3" id="povertyBlock2019">
                     <h3>2019</h3>
                     <div id="poverty2020"></div>
-                    <button id='poverty2020' onclick="save(this.id)">Export this chart to PNG</button>
+                    <!-- <button id='poverty2020' onclick="save(this.id)">Export this chart to PNG</button> -->
                     <!-- <p>2019 Poverty Line: $X,XXX; plus $X,XXX per additional person in household</p> -->
                   </div>
                 </div>
@@ -414,10 +413,10 @@
         <div class="tab-pane" id="transportation" role="tabpanel">
           <p>Transportation</p>
           <div id = "transportation-2010"></div>
-          <button id='transportation-2010' onclick="save(this.id)">Export this chart to PNG</button>
+          <!-- <button id='transportation-2010' onclick="save(this.id)">Export this chart to PNG</button> -->
 
           <div id = "transportation-2019"></div>
-          <button id='transportation-2019' onclick="save(this.id)">Export this chart to PNG</button>
+          <!-- <button id='transportation-2019' onclick="save(this.id)">Export this chart to PNG</button> -->
 
 
         </div>

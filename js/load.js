@@ -6,16 +6,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   document.getElementById("download-2010-data").addEventListener("click", function(e){
     if(target !=="intro"){
       var data10 = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
-      console.log(data10)
       window.open(data10)
     }
   })
   document.getElementById("download-2019-data").addEventListener("click", function(e){
     if(target !=="intro"){
       var data19 = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
-      console.log(data19)      
       window.open(data19)
-
     }
   })
 
@@ -45,7 +42,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
               var raceBarChart = new RaceBarChart(values);
               // var raceTreeMap = new RaceTreeChart(values);
               var educationalAttainmentChart = new EducationalAttainmentChart(values);
-              var ageChart = new AgeChart(values);
+              // var ageChart = new AgeChart(values);
               var povertyChart = new PovertyChart(values);          
         });
     } else{
