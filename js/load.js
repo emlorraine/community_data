@@ -57,7 +57,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     `<div class="vstack gap-2">
     <h2> Race in Missouri </h2>
     <div id="race-missouri"></div>
-    <button id='race-state' onclick="save(this.id)">Export this chart to PNG</button>
     </div>`
       //Add div to race-block
       $('#pills-race').append($("<div id='race-state'></div>"))
@@ -76,7 +75,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     `<div class="vstack gap-2">
     <h2> Race in St. Louis </h2>
     <div id="race-city"></div>
-    <button id='race-city' onclick="save(this.id)">Export this chart to PNG</button>
     </div>`
     //Add div to race-block
     $('#pills-race').append($("<div id='race-stl'></div>"))
@@ -138,7 +136,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         <div class="vstack gap-2" style="margin-right: 150px;">
           <h3 class = "education-text" id = "collegeOrHigher2010Text">2010</h3><br>
           <div id="educationCity2010"></div>
-          <button id='educationCity2010' onclick="save(this.id)">Export this 2010 CITY chart to PNG</button>
         </div>
         <div class="vstack gap-2">
           <h3 class = "education-text" id = "collegeOrHigher2010Text">2019</h3><br>
@@ -176,7 +173,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
               <div id="age-state-2010"></div>
               <div id="age-state-2020"></div>
             </div>
-            <button id='age-state-2020' onclick="save(this.id)">Export this chart to PNG</button>
       </div>
       `
       $('#pills-age').append($("<div id='age-state'></div>"))
@@ -195,7 +191,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       <h2> Age Distribution in St. Louis </h2>
           <div id="age-city-2010"></div>
           <div id="age-city-2020"></div>
-      <button id='age-city-2020' onclick="save(this.id)">Export this chart to PNG</button>
       </div>`
       $('#pills-age').append($("<div id='age-city'></div>"))
       $('#age-city').html(html)
