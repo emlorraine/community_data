@@ -2,7 +2,6 @@ $(document).ready(function(){
   $('.nav-tabs a[href="#intro"]').tab('show')});
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  
   document.getElementById("download-2010-data").addEventListener("click", function(e){
     if(target !=="intro"){
       var data10 = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
@@ -19,6 +18,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var target = $(e.target).attr("href").substring(1) // activated tab
     var mapTag = "map-"+target
 
+    //Add in age svgs:
+    if(target !== "intro"){
+      $("#age2010").empty()
+      console.log("./data/age_svgs/" + target +".svg")
+      $("#age2010").prepend("<img src=./data/age_svgs/" + target +".svg width='500' height='600'>")
+    }
+
     if(target !== "intro"){
       $('#viz-wrapper').appendTo(`#${target}`);
     }
@@ -28,9 +34,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     //   var transportationChart = new TransportationChart();      
     // }
 
-    if(target !=="intro"){
-      // $('#map').attr("id",mapTag)
-    }
      // Call datasets for branch:
     data2010FileName = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
     data2020FileName = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
