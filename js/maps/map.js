@@ -4879,6 +4879,8 @@
       }
       $("#legend").append("<div id='educational-attainment-data-legend'></div")
       $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
+      $("#educational-attainment-data-legend").append("<h7>Percentage of population with high school diploma (and equivalents) or higher:</h7>");
+      $("#educational-attainment-data-legend").append("<br>");
       $("#educational-attainment-data-legend").append("<h8>0</h8>");
       $("#educational-attainment-data-legend").append("<span class='rectangle' id='education-rectangle'></span>");
       $(".rectangle").css("height", "30px")
@@ -4953,7 +4955,7 @@
         }
       }
       $("#legend").append("<div id='median-age-data-legend'></div")
-      $("#median-age-data-legend").append("<h5>Age Legend:</h5>")
+      $("#median-age-data-legend").append("<h5>Median Age Legend:</h5>")
       $("#median-age-data-legend").append("<h8>< 5 years</h8>");
       $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
       $(".rectangle").css("height", "30px")
