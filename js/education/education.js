@@ -86,8 +86,6 @@
 
     sum2010 = fullGrid2010.reduce((a, b) => a + b, 0)
     sum2020 = fullGrid2020.reduce((a, b) => a + b, 0)
-    console.log("sums 2010", sum2010)
-    console.log("sums 2020", sum2020)
 
     if(sum2010 == 99){
         max =Math.max(...fullGrid2010)
@@ -102,9 +100,6 @@
 
     newSum2010 = fullGrid2010.reduce((a, b) => a + b, 0)
     newSum2020 = fullGrid2020.reduce((a, b) => a + b, 0)
-
-    console.log("new sums 2010", newSum2010, fullGrid2010)
-    console.log("new sums 2020", newSum2020, fullGrid2020)
 
 
     for(var i = 0; i < fullGrid2010[0]; i++){

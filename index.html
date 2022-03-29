@@ -440,7 +440,6 @@
 
   <script>
     function save(chartName){
-      console.log("Saving", chartName)
       var fileName = chartName + ".png"
       var element = chartName.charAt(0).toLowerCase() + chartName.slice(1);
       var chart = document.getElementById(element).getElementsByTagName('svg')[0];

@@ -82,9 +82,6 @@
           ]
         }
       ];
-
-      console.log(data)
-
     var self = this;
     $('#race-missouri').empty();
 

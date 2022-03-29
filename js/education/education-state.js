@@ -34,7 +34,6 @@
         socialExplorer2020Data[33]//Doctorate degree 
     ]
 
-    console.log("MO Masters", socialExplorer2020Data[31])
     var labels = [
         "\n Less than high school",
         "\n High school or equivalent",
@@ -77,10 +76,6 @@
 
     fullGrid2020 = [lessThanHS2020, hsOrEquiv2020, someCollege2020, bachelorOrHigher2020, mastersDegree2020, professionalDegree2020, doctorateDegree2020]
     gridData2020 = []
-
-    console.log(data2010, fullGrid2010)
-    console.log(data2020, fullGrid2020)
-
 
     for(var i = 0; i < fullGrid2010[0]; i++){
         gridData2010.push(0)

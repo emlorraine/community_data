@@ -25,8 +25,6 @@ function RaceTreeChart(data){
     var twoOrMoreRacesPercentage2010 = +(data2010[23].value.replace(",", "")) / totalPopulation2010
     var allOtherRacialGroupsPercentage2010 = allOtherRacialGroups2010 / totalPopulation2010
 
-    console.log(whitePercentage2010, blackOrAfricanAmericanPercentage2010, blackOrAfricanAmericanPercentage2010, asianPercentage2010, twoOrMoreRacesPercentage2010, allOtherRacialGroupsPercentage2010)
-
     let data2010Hierarchy = {
         "children": [
           {
@@ -189,7 +187,6 @@ d3.treemap()
       .attr('height', function (d) { return d.y1 - d.y0; })
       .style("stroke", "black")
       .style("fill", function(d, i){ 
-          console.log(d.parent.data.children[i].name, color(d.parent.data.children[i].name))
           return color(d.parent.data.children[i].name)
         } )
     //   .style("opacity", function(d){ return opacity(d.data.value)})

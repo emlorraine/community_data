@@ -21,7 +21,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     //Add in age svgs:
     if(target !== "intro"){
       $("#age2010").empty()
-      console.log("./data/age_svgs/" + target +".svg")
       $("#age2010").prepend("<img id='age-svg' src=./data/age_svgs/" + target +".svg width='1000' height='1200'>")
     }
 
@@ -126,7 +125,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         d3.csv("../data/missouri/2010/2010/Sheet1-Table 1.csv"),
         d3.csv("../data/missouri/2019/2019/Sheet1-Table 1.csv"),
       ]).then((values) => {
-        console.log(values)
         var educationalStateAttainmentChart = new EducationalStateAttainmentChart(values); 
       })
 
@@ -170,7 +168,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   //Import raw svgs here!
   $("#state-age").change(function(){
     $('#age-block').append($("<div id='age-state'></div>"))
-    console.log("./data/age_svgs/missouri.svg")
     $("#age-state").prepend("<img id='age-svg' src=./data/age_svgs/missouri.png>")
     //for d3:
     // if ($(this).is(':checked'))
@@ -196,7 +193,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
 
     $('#age-block').append($("<div id='age-city'></div>"))
-    console.log("./data/age_svgs/st-louis.svg")
     $("#age-city").prepend("<img id='age-svg' src=./data/age_svgs/st-louis.png>")
 
     // if ($(this).is(':checked'))

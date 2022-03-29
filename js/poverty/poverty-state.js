@@ -31,9 +31,6 @@ function PovertyStateChart(data){
 
     ]
 
-    console.log("Poverty state 2010", data2010)
-    console.log("Poverty state 2019", data2020)
-
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;
@@ -94,7 +91,6 @@ function PovertyStateChart(data){
         .attr('d', arc)
         .attr('fill', function(d, i) { 
             if(i==0){
-                console.log("2019 poverty is", d)
                 return "#B9314F"
             } else {
                 return "#D3D3D3"
