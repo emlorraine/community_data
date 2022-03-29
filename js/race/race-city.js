@@ -87,7 +87,7 @@
     var self = this;
     $('#race-city').empty();
 
-    var width = 1200;
+    var width = 1600;
     var height = 750;
 
     var maxValue = Math.max(...values)
@@ -96,7 +96,7 @@
 
     const svg = d3.select("#race-city")
         .append("svg")
-        .attr("width", 1200 + margin.left + margin.right)
+        .attr("width", 1600 + margin.left + margin.right)
         .attr("height", 750 + margin.top + margin.bottom)
         // .append("g")
         // .attr("transform","translate(" + margin.left + "," + margin.top + ")");
@@ -108,7 +108,7 @@
           // 2. Append a g element into our SVG
           const main = svg.append('g')
             .attr('class', 'grouped-bars-main-group')
-            .attr('transform', `translate(150,${margin.top})`);
+            .attr('transform', `translate(100,${margin.top})`);
 
             const xDomain = data.map(category => { return category.key });
             // xScale's domain will be our previously configured xDomain
