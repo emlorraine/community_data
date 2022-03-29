@@ -95,7 +95,7 @@
     const colors = {2010: '#1F7A8C',2019: '#B9314F'}
 
     const svg = d3.select("#race-viz").append("svg")
-        .attr("width", 1200 + margin.left + margin.right)
+        .attr("width", 1300 + margin.left + margin.right)
         .attr("height", 750 + margin.top + margin.bottom)
           // 2. Append a g element into our SVG
 
