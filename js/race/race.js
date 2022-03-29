@@ -10,7 +10,6 @@
  * Initializes the svg elements required to lay the bars
  */
  RaceBarChart.prototype.init = function(rawData){
-
     var data2010 = rawData[0]
     var data2020 = rawData[1]
 
@@ -84,7 +83,8 @@
       ];
 
     var self = this;
-    // $('#race').empty();
+    $('#race-viz').empty();
+
 
     var width = 1200;
     var height = 750;
@@ -92,16 +92,13 @@
     var maxValue = Math.max(...values)
 
     var margin = {top: 30, right: 20, bottom: 30, left: 50};
+    const colors = {2010: '#1F7A8C',2019: '#B9314F'}
 
-    const svg = d3.select("#race")
-        .append("svg")
+    const svg = d3.select("#race-viz").append("svg")
         .attr("width", 1200 + margin.left + margin.right)
         .attr("height", 750 + margin.top + margin.bottom)
-        const colors = {
-            2010: '#1F7A8C',
-            2019: '#B9314F',
-          }
           // 2. Append a g element into our SVG
+
       const main = svg.append('g')
             .attr('class', 'grouped-bars-main-group')
             .attr('transform', `translate(100,${margin.top})`);

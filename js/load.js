@@ -2,18 +2,7 @@ $(document).ready(function(){
   $('.nav-tabs a[href="#intro"]').tab('show')});
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  document.getElementById("download-2010-data").addEventListener("click", function(e){
-    if(target !=="intro"){
-      var data10 = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
-      window.open(data10)
-    }
-  })
-  document.getElementById("download-2019-data").addEventListener("click", function(e){
-    if(target !=="intro"){
-      var data19 = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
-      window.open(data19)
-    }
-  })
+  
 
     var target = $(e.target).attr("href").substring(1) // activated tab
     var mapTag = "map-"+target
@@ -25,13 +14,10 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     }
 
     if(target !== "intro"){
+      // console.log("appended")
       $('#viz-wrapper').appendTo(`#${target}`);
-    }
 
-    // if(target == "transportation"){
-    //   $("#viz-wrapper").remove();
-    //   var transportationChart = new TransportationChart();      
-    // }
+    }
 
      // Call datasets for branch:
     data2010FileName = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
@@ -50,6 +36,19 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     } else{
       console.log("Can't find files:", data2020FileName, data2010FileName)
     }
+
+    document.getElementById("download-2010-data").addEventListener("click", function(e){
+      if(target !=="intro"){
+        var data10 = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
+        window.open(data10)
+      }
+    })
+    document.getElementById("download-2019-data").addEventListener("click", function(e){
+      if(target !=="intro"){
+        var data19 = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
+        window.open(data19)
+      }
+    })
 
   });
 
@@ -283,3 +282,5 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     if (!$(this).is(':checked'))
       $("#poverty-city").remove();
   });
+
+  
