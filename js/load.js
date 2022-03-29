@@ -171,7 +171,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   $("#state-age").change(function(){
     $('#age-block').append($("<div id='age-state'></div>"))
     console.log("./data/age_svgs/missouri.svg")
-    $("#age-state").prepend("<img id='age-svg' src=./data/age_svgs/missouri.svg width='500' height='600'>")
+    $("#age-state").prepend("<img id='age-svg' src=./data/age_svgs/missouri.png>")
     //for d3:
     // if ($(this).is(':checked'))
     //   var html = 
@@ -197,7 +197,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
     $('#age-block').append($("<div id='age-city'></div>"))
     console.log("./data/age_svgs/st-louis.svg")
-    $("#age-city").prepend("<img id='age-svg' src=./data/age_svgs/st-louis.svg width='500' height='600'>")
+    $("#age-city").prepend("<img id='age-svg' src=./data/age_svgs/st-louis.png>")
 
     // if ($(this).is(':checked'))
     // var html = 
