@@ -167,42 +167,53 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       $("#education-state").remove();
   });
 
+  //Import raw svgs here!
   $("#state-age").change(function(){
-    if ($(this).is(':checked'))
-      var html = 
-      `<div id="age-state-block">
-        <h2> Age Distribution in the state of Missouri </h2>
-            <div id="age-state-container">
-              <div id="age-state-2010"></div>
-              <div id="age-state-2020"></div>
-            </div>
-      </div>
-      `
-      $('#pills-age').append($("<div id='age-state'></div>"))
-      $('#age-state').html(html)
-      Promise.all([
-        d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
-        d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
-      ]).then((values) => {
-        var ageStateChart = new AgeStateChart(values); 
-      })
+    $('#age-block').append($("<div id='age-state'></div>"))
+    console.log("./data/age_svgs/missouri.svg")
+    $("#age-state").prepend("<img id='age-svg' src=./data/age_svgs/missouri.svg width='500' height='600'>")
+    //for d3:
+    // if ($(this).is(':checked'))
+    //   var html = 
+    //   `<div id="age-state-block">
+    //     <h2> Age Distribution in the state of Missouri </h2>
+    //         <div id="age-state-container">
+    //           <div id="age-state-2010"></div>
+    //           <div id="age-state-2020"></div>
+    //         </div>
+    //   </div>
+    //   `
+    //   $('#pills-age').append($("<div id='age-state'></div>"))
+    //   $('#age-state').html(html)
+      // Promise.all([
+      //   d3.csv("../data/missouri/2010/R13001299/Sheet1-Table 1.csv"),
+      //   d3.csv("../data/missouri/2019/R13001295/Sheet1-Table 1.csv"),
+      // ]).then((values) => {
+      //   var ageStateChart = new AgeStateChart(values); 
+      // })
   });
   $("#city-age").change(function(){
-    if ($(this).is(':checked'))
-    var html = 
-      `<div id="age-city-block">
-      <h2> Age Distribution in St. Louis </h2>
-          <div id="age-city-2010"></div>
-          <div id="age-city-2020"></div>
-      </div>`
-      $('#pills-age').append($("<div id='age-city'></div>"))
-      $('#age-city').html(html)
-      Promise.all([
-        d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
-        d3.csv("../data/st-louis/2019/2019/Sheet1-Table 1.csv"),
-      ]).then((values) => {
-        var ageCityChart = new AgeCityChart(values); 
-      })
+
+
+    $('#age-block').append($("<div id='age-city'></div>"))
+    console.log("./data/age_svgs/st-louis.svg")
+    $("#age-city").prepend("<img id='age-svg' src=./data/age_svgs/st-louis.svg width='500' height='600'>")
+
+    // if ($(this).is(':checked'))
+    // var html = 
+    //   `<div id="age-city-block">
+    //   <h2> Age Distribution in St. Louis </h2>
+    //       <div id="age-city-2010"></div>
+    //       <div id="age-city-2020"></div>
+    //   </div>`
+    //   $('#pills-age').append($("<div id='age-city'></div>"))
+    //   $('#age-city').html(html)
+    //   Promise.all([
+    //     d3.csv("../data/st-louis/2010/R13001301/Sheet1-Table 1.csv"),
+    //     d3.csv("../data/st-louis/2019/2019/Sheet1-Table 1.csv"),
+    //   ]).then((values) => {
+    //     var ageCityChart = new AgeCityChart(values); 
+    //   })
   });
 
   $("#city-age").change(function(){
