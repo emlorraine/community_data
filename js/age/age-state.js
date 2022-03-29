@@ -60,9 +60,7 @@ function AgeStateChart(data){
      var max2010 = Math.max(...populationData2010)
      var max2020 = Math.max(...populationData2020)
      var maxValue = Math.max(max2010, max2020)
- 
-     console.log("Max value of age data:", maxValue)
- 
+  
      var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
      xScale.domain(labels)
      xScale.paddingInner(0.05)

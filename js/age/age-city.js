@@ -8,7 +8,6 @@ function AgeCityChart(data){
  */
  
   AgeCityChart.prototype.init = function(rawData){
-    console.log("Hmmmmmmm")
      var data2010 = rawData[0]
      var data2020 = rawData[1]
  
@@ -61,10 +60,7 @@ function AgeCityChart(data){
      var max2010 = Math.max(...populationData2010)
      var max2020 = Math.max(...populationData2020)
      var maxValue = Math.max(max2010, max2020)
- 
-     console.log("Max value of age data:", maxValue)
-     console.log(populationData2010, populationData2020)
- 
+  
      var xScale = d3.scaleBand().range ([0, 1000]).padding(0)
      xScale.domain(labels)
      xScale.paddingInner(0.05)
@@ -101,7 +97,6 @@ function AgeCityChart(data){
                  return (x(i))
              })
              .attr("y", function(d){
-                 console.log(d)
                  return y(d)
              })
              .style("fill", "#1F7A8C")

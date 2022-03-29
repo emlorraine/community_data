@@ -102,7 +102,6 @@
             2019: '#B9314F',
           }
           // 2. Append a g element into our SVG
-      console.log(svg)
       const main = svg.append('g')
             .attr('class', 'grouped-bars-main-group')
             .attr('transform', `translate(100,${margin.top})`);

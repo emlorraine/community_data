@@ -34,9 +34,6 @@ PovertyChart.prototype.init = function(rawData){
 
     ]
 
-    console.log("At or below poverty line, 2010", (totalUnderPovertyCount2010/(totalUnderPovertyCount2010+totalAtOrAbovePovertyCount2010)))
-    console.log("At or below poverty line, 2019", (totalUnderPovertyCount2020/(totalUnderPovertyCount2020+totalAtOrAbovePovertyCount2020)))
-
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;

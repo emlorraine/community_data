@@ -83,7 +83,6 @@
         }
       ];
 
-      console.log(data)
 
     var self = this;
     $('#race-city').empty();
