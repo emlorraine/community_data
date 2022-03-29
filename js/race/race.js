@@ -84,7 +84,7 @@
       ];
 
     var self = this;
-    $('#race').empty();
+    // $('#race').empty();
 
     var width = 1200;
     var height = 750;

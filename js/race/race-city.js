@@ -108,7 +108,7 @@
           // 2. Append a g element into our SVG
           const main = svg.append('g')
             .attr('class', 'grouped-bars-main-group')
-            .attr('transform', `translate(${margin.left},${margin.top})`);
+            .attr('transform', `translate(150,${margin.top})`);
 
             const xDomain = data.map(category => { return category.key });
             // xScale's domain will be our previously configured xDomain

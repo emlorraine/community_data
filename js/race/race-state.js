@@ -94,7 +94,7 @@
 
     const svg = d3.select("#race-missouri")
         .append("svg")
-        .attr("width", 1200 + margin.left + margin.right)
+        .attr("width", 1700 + margin.left + margin.right)
         .attr("height", 750 + margin.top + margin.bottom)
         // .append("g")
         // .attr("transform","translate(" + margin.left + "," + margin.top + ")");
@@ -136,7 +136,7 @@
     main.append('g')
     .attr('class', 'grouped-bar-chart axis x-axis')
     // Translate our x-axis to the bottom of our chart
-    .attr('transform', `translate(100, ${height - margin.top - margin.bottom})`)
+    .attr('transform', `translate(0, ${height - margin.top - margin.bottom})`)
     .call(xAxis);
     main.append('g')
     .attr('class', 'grouped-bar-chart axis y-axis')
