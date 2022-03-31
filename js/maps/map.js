@@ -4669,8 +4669,30 @@
     //Add legend: 
     // var legend = L.control({position: 'bottomright'});
     // legend.addTo(map)
- 
-    //Event listeners for checkboxes:
+
+    var GColor = function(r,g,b) {
+      r = (typeof r === 'undefined')?0:r;
+      g = (typeof g === 'undefined')?0:g;
+      b = (typeof b === 'undefined')?0:b;
+      return {r:r, g:g, b:b};
+  };
+  var createColorRange = function(c1, c2) {
+      var colorList = [], tmpColor;
+      for (var i=0; i<255; i++) {
+          tmpColor = new GColor();
+          tmpColor.r = c1.r + ((i*(c2.r-c1.r))/255);
+          tmpColor.g = c1.g + ((i*(c2.g-c1.g))/255);
+          tmpColor.b = c1.b + ((i*(c2.b-c1.b))/255);
+          colorList.push(tmpColor);
+      }
+      return colorList;
+  };
+
+  var red = new GColor(21, 41, 62);
+  var blue = new GColor(1, 37, 73);
+  var colorRange = createColorRange(red, blue)
+
+      //Event listeners for checkboxes:
     var checkboxRace = document.querySelector("input[name=race]");
     checkboxRace.addEventListener('change', function() {
     if(this.checked) {
@@ -4714,7 +4736,10 @@
             'Other':(parseInt(other)/5),
             'Two_Or_More_Races':(parseInt(two_or_more_races)/5),
             }
+
+            console.log(race_round)
             for (var key of Object.keys(race_round)) {
+                //check that the loop breaks here 
                 for(var j = 0; j <race_round[key]; j++){
                     if(key=="White"){
                       var geojsonMarkerOptions = {
@@ -4724,7 +4749,8 @@
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.8
-                      };
+                      }
+                      break;
                     } else if(key=="Black_or_African_American"){
                       var geojsonMarkerOptions = {
                         radius: 4,
@@ -4734,6 +4760,7 @@
                         opacity: 1,
                         fillOpacity: 0.8
                       };
+                      break;
                     } else if(key=="American_Indian_or_Alaskan_Native"){
                       var geojsonMarkerOptions = {
                         radius: 4,
@@ -4743,6 +4770,7 @@
                         opacity: 1,
                         fillOpacity: 0.8
                       };
+                      break;
                     } else if(key=="Asian"){
                       var geojsonMarkerOptions = {
                         radius: 4,
@@ -4752,6 +4780,7 @@
                         opacity: 1,
                         fillOpacity: 0.8
                       };
+                      break;
                     } else if(key=="Native_Hawaiian_and_Other_Pacific_Islander"){
                       var geojsonMarkerOptions = {
                         radius: 4,
@@ -4761,6 +4790,7 @@
                         opacity: 1,
                         fillOpacity: 0.8
                       };
+                      break;
                     } else if(key=="Other"){
                       var geojsonMarkerOptions = {
                         radius: 4,
@@ -4770,6 +4800,7 @@
                         opacity: 1,
                         fillOpacity: 0.8
                       };
+                      break;
                     } else if(key=="Two_Or_More_Races"){
                       var geojsonMarkerOptions = {
                         radius: 4,
@@ -4779,6 +4810,7 @@
                         opacity: 1,
                         fillOpacity: 0.8
                       };
+                      break;
                     }
                   var geojson = L.geoJSON(randomPointInPoly(censusTractPolygon), {
                       pointToLayer: function (feature, latlng) {
@@ -4869,7 +4901,7 @@
         geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
         function style(region) {
           return {
-            fillColor: "#00FF00",
+            fillColor: "#6E2594",
             color: "#000",
             weight: 1,
             opacity: 1,
@@ -4886,7 +4918,7 @@
       $(".rectangle").css("height", "30px")
       $(".rectangle").css("width", "250px")
       $(".rectangle").css("display", "inline-block")
-      $("#education-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #00FF00)")
+      $("#education-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
       $("#educational-attainment-data-legend").append("<h8>100%</h8>");
 
     }
@@ -4894,7 +4926,7 @@
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
-        if(layer.options.fillColor == '#00FF00'){
+        if(layer.options.fillColor == '#6E2594'){
           map.removeLayer(layer);
         }
       });
@@ -4919,7 +4951,8 @@
         var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
         var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
         var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
-        // ages = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+        age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+        age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
         ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
         ages_exanded = []
         index = 0; 
@@ -4935,7 +4968,37 @@
           return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
         }
         var median_value = median(ages_exanded)
-        var percentage = median_value/11
+        var percentage = median_value/12
+
+        console.log(age_range_str[median_value])
+        var age_bracket = age_range_str[median_value]
+        var bracket; 
+        if (age_bracket == 'eighty_five_and_older'){
+          bracket = 12; 
+        } else if (age_bracket == 'seventy_five_to_eighty_four'){
+          bracket = 11; 
+        } else if (age_bracket == 'sixty_five_to_seventy_four'){
+          bracket = 10; 
+        } else if (age_bracket == 'fifty_five_to_sixty_four'){
+          bracket = 9; 
+        } else if (age_bracket == 'fourty_five_to_fifty_four'){
+          bracket = 8; 
+        } else if (age_bracket == 'thirty_five_to_fourty_four'){
+          bracket = 7; 
+        } else if (age_bracket == 'twenty_five_to_thirty_four'){
+          bracket = 6; 
+        } else if (age_bracket == 'eighteen_to_twenty_four'){
+          bracket = 5; 
+        } else if (age_bracket == 'fifteen_to_seventeen'){
+          bracket = 4; 
+        } else if (age_bracket == 'ten_to_fourteen'){
+          bracket = 3; 
+        } else if (age_bracket == 'five_to_nine'){
+          bracket = 2; 
+        } else if (age_bracket == 'less_than_five'){
+          bracket = 1; 
+        }
+        // percentage = bracket/12; 
        
         var individualCensusTract = (stlCensusTracts.geometries[i])
         var individualCensusTractPolygon = {
@@ -4944,10 +5007,15 @@
         }
         // var polyTracts = L.geoJson(individualCensusTractPolygon)
         geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+  
+        if(censusTract==1278){
+          // middle = '5500ab'
+          percentage = 0.33
+        }
+        // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
         function style(region) {
           return {
-            fillColor: "#FF0000",
-            color: "#000",
+            fillColor: "#228B22",
             weight: 1,
             opacity: 1,
             fillOpacity: percentage
@@ -4961,7 +5029,7 @@
       $(".rectangle").css("height", "30px")
       $(".rectangle").css("width", "250px")
       $(".rectangle").css("display", "inline-block")
-      $("#age-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #FF0000)")
+      $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
       $("#median-age-data-legend").append("<h8>>85 years</h8>");
 
     }
@@ -4969,7 +5037,7 @@
       $("#median-age-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
-        if(layer.options.fillColor == '#FF0000'){
+        if(layer.options.fillColor == '#228B22'){
           map.removeLayer(layer);
         }
       });
@@ -5027,7 +5095,7 @@
       $(".rectangle").css("height", "30px")
       $(".rectangle").css("width", "250px")
       $(".rectangle").css("display", "inline-block")
-      $("#income-rectangle").css("background", "linear-gradient(to right, #FFFFFF, #FFA500)")
+      $("#income-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
       $("#median-income-data-legend").append("<h8> > $75,000</h8>");
 
     }
