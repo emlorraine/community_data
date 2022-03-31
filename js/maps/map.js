@@ -4693,7 +4693,7 @@
   var colorRange = createColorRange(red, blue)
 
       //Event listeners for checkboxes:
-    var checkboxRace = document.querySelector("input[name=race]");
+    var checkboxRace = document.querySelector("input[id=race]");
     checkboxRace.addEventListener('change', function() {
     if(this.checked) {
         for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
@@ -4736,8 +4736,6 @@
             'Other':(parseInt(other)/5),
             'Two_Or_More_Races':(parseInt(two_or_more_races)/5),
             }
-
-            console.log(race_round)
             for (var key of Object.keys(race_round)) {
                 //check that the loop breaks here 
                 for(var j = 0; j <race_round[key]; j++){
@@ -4875,9 +4873,27 @@
         });
       }
     })
-    var checkboxEducation = document.querySelector("input[name=education]");
+    var checkboxEducation = document.querySelector("input[id=education]");
     checkboxEducation.addEventListener('change', function() {
     if (this.checked) {
+
+      $("#median-age-data-legend").empty()
+      // map.removeLayer(geojson);
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#228B22'){
+          map.removeLayer(layer);
+        }
+      });
+
+      $("#median-income-data-legend").empty()
+      // map.removeLayer(geojson);
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#FFA500'){
+          map.removeLayer(layer);
+        }
+      });
+
+
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
         censusTract = censusTractArrayList[i]
         censusPoly = stlCensusTracts.geometries[i]
@@ -4922,7 +4938,23 @@
       $("#educational-attainment-data-legend").append("<h8>100%</h8>");
 
     }
-    if(!this.checked) {
+    // if(!this.checked) {
+    //   $("#educational-attainment-data-legend").empty()
+    //   // map.removeLayer(geojson);
+    //   map.eachLayer(function (layer) {
+    //     if(layer.options.fillColor == '#6E2594'){
+    //       map.removeLayer(layer);
+    //     }
+    //   });
+    // }
+    });
+ 
+    
+
+    var checkboxAge = document.querySelector("input[id=age]");
+    checkboxAge.addEventListener('change', function() {
+    if (this.checked) {
+
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -4930,12 +4962,16 @@
           map.removeLayer(layer);
         }
       });
-    }
-    });
 
-    var checkboxAge = document.querySelector("input[name=age]");
-    checkboxAge.addEventListener('change', function() {
-    if (this.checked) {
+      $("#median-income-data-legend").empty()
+      // map.removeLayer(geojson);
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#FFA500'){
+          map.removeLayer(layer);
+        }
+      });
+
+
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
         censusTract = censusTractArrayList[i]
         censusPoly = stlCensusTracts.geometries[i]
@@ -4970,7 +5006,7 @@
         var median_value = median(ages_exanded)
         var percentage = median_value/12
 
-        console.log(age_range_str[median_value])
+
         var age_bracket = age_range_str[median_value]
         var bracket; 
         if (age_bracket == 'eighty_five_and_older'){
@@ -5033,7 +5069,30 @@
       $("#median-age-data-legend").append("<h8>>85 years</h8>");
 
     }
-    if(!this.checked) {
+    // if(!this.checked) {
+    //   console.log(this.checked)
+    //   $("#median-age-data-legend").empty()
+    //   // map.removeLayer(geojson);
+    //   map.eachLayer(function (layer) {
+    //     if(layer.options.fillColor == '#228B22'){
+    //       map.removeLayer(layer);
+    //     }
+    //   });
+    // }
+    });
+
+    var checkboxIncome = document.querySelector("input[id=income]");
+    checkboxIncome.addEventListener('change', function() {
+    if (this.checked) {
+
+      $("#educational-attainment-data-legend").empty()
+      // map.removeLayer(geojson);
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#6E2594'){
+          map.removeLayer(layer);
+        }
+      });
+
       $("#median-age-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -5041,12 +5100,10 @@
           map.removeLayer(layer);
         }
       });
-    }
-    });
 
-    var checkboxIncome = document.querySelector("input[name=income]");
-    checkboxIncome.addEventListener('change', function() {
-    if (this.checked) {
+      
+
+
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
         censusTract = censusTractArrayList[i]
         censusPoly = stlCensusTracts.geometries[i]
@@ -5099,15 +5156,15 @@
       $("#median-income-data-legend").append("<h8> > $75,000</h8>");
 
     }
-    if(!this.checked) {
-      $("#median-income-data-legend").empty()
-      // map.removeLayer(geojson);
-      map.eachLayer(function (layer) {
-        if(layer.options.fillColor == '#FFA500'){
-          map.removeLayer(layer);
-        }
-      });
-    }
+    // if(!this.checked) {
+    //   $("#median-income-data-legend").empty()
+    //   // map.removeLayer(geojson);
+    //   map.eachLayer(function (layer) {
+    //     if(layer.options.fillColor == '#FFA500'){
+    //       map.removeLayer(layer);
+    //     }
+    //   });
+    // }
     });
 
 
