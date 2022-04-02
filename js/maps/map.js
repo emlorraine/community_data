@@ -2089,6 +2089,8 @@
           "1274": "1276",
           "1275": 611,
           "1276": "2087",
+          "1277": 34,
+          "1278": 991,
           "TOTAL (All Selected Census Tracts)": "143,401"
         },
         {
@@ -2199,6 +2201,9 @@
           "1274": "3493",
           "1275": "1488",
           "1276": 535,
+          "1277": 2237,
+          "1278": 2007,
+
           "TOTAL (All Selected Census Tracts)": "143,018"
         },
         {
@@ -2309,6 +2314,8 @@
           "1274": 0,
           "1275": 0,
           "1276": 0,
+          "1277": 0,
+          "1278": 10,
           "TOTAL (All Selected Census Tracts)": 787
         },
         {
@@ -2419,6 +2426,8 @@
           "1274": 45,
           "1275": 0,
           "1276": 43,
+          "1277": 0,
+          "1278": 260,
           "TOTAL (All Selected Census Tracts)": "10,365"
         },
         {
@@ -2529,6 +2538,8 @@
           "1274": 0,
           "1275": 0,
           "1276": 0,
+          "1277": 0,
+          "1278": 0,
           "TOTAL (All Selected Census Tracts)": 212
         },
         {
@@ -2639,6 +2650,8 @@
           "1274": 0,
           "1275": 39,
           "1276": 0,
+          "1277": 0,
+          "1278": 2,
           "TOTAL (All Selected Census Tracts)": "2,979"
         },
         {
@@ -2749,6 +2762,8 @@
           "1274": 0,
           "1275": 87,
           "1276": 23,
+          "1277": 0,
+          "1278": 32,
           "TOTAL (All Selected Census Tracts)": "7,412"
         },
         {
@@ -4774,7 +4789,7 @@
             'Two_Or_More_Races':(parseInt(two_or_more_races)/10),
             }
 
-            // console.log(race_round, censusTractArrayList[i])
+            console.log(race_round, censusTractArrayList[i])
             for (var key of Object.keys(race_round)) {
                 //check that the loop breaks here 
                 for(var j = 0; j <race_round[key]; j++){
