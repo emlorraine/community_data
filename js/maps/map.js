@@ -4696,6 +4696,32 @@
     var checkboxRace = document.querySelector("input[id=race]");
     checkboxRace.addEventListener('change', function() {
     if(this.checked) {
+
+      $("#educational-attainment-data-legend").empty()
+      // map.removeLayer(geojson);
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#6E2594'){
+          map.removeLayer(layer);
+        }
+      });
+
+      $("#median-age-data-legend").empty()
+      // map.removeLayer(geojson);
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#228B22'){
+          map.removeLayer(layer);
+        }
+      });
+
+      $("#median-income-data-legend").empty()
+      // map.removeLayer(geojson);
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#FFA500'){
+          map.removeLayer(layer);
+        }
+      });
+
+
         for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
