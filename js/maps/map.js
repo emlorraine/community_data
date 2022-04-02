@@ -4748,7 +4748,7 @@
             'Two_Or_More_Races':(parseInt(two_or_more_races)/10),
             }
 
-            console.log(race_round, censusTractArrayList[i])
+            // console.log(race_round, censusTractArrayList[i])
             for (var key of Object.keys(race_round)) {
                 //check that the loop breaks here 
                 for(var j = 0; j <race_round[key]; j++){
@@ -4870,7 +4870,7 @@
           // map.removeLayer(geojson);
           // console.log("remove layers here") 
           map.eachLayer(function (layer) {
-            if(layer._radius == 4){
+            if(layer._radius == 2){
               // console.log(layer)
               map.removeLayer(layer);
 
@@ -4898,6 +4898,17 @@
           map.removeLayer(layer);
         }
       });
+
+      $("#racial-data-legend").empty()
+          // map.removeLayer(geojson);
+          // console.log("remove layers here") 
+          map.eachLayer(function (layer) {
+            if(layer._radius == 2){
+              // console.log(layer)
+              map.removeLayer(layer);
+
+            }
+        });
 
 
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
@@ -4976,6 +4987,18 @@
           map.removeLayer(layer);
         }
       });
+
+      $("#racial-data-legend").empty()
+          // map.removeLayer(geojson);
+          // console.log("remove layers here") 
+          map.eachLayer(function (layer) {
+            if(layer._radius == 2){
+              // console.log(layer)
+              map.removeLayer(layer);
+
+            }
+            
+        });
 
 
       for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
@@ -5106,6 +5129,18 @@
           map.removeLayer(layer);
         }
       });
+
+      $("#racial-data-legend").empty()
+          // map.removeLayer(geojson);
+          // console.log("remove layers here") 
+          map.eachLayer(function (layer) {
+            if(layer._radius == 2){
+              // console.log(layer)
+              map.removeLayer(layer);
+
+            }
+            
+        });
 
       
 
