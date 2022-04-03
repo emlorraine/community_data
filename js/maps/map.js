@@ -4681,9 +4681,6 @@
       }
   } 
 
-    //Add legend: 
-    // var legend = L.control({position: 'bottomright'});
-    // legend.addTo(map)
 
     var GColor = function(r,g,b) {
       r = (typeof r === 'undefined')?0:r;
@@ -4738,6 +4735,7 @@
 
 
         for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
                 "type":"GeometryCollection", 
@@ -4754,6 +4752,8 @@
             censusTractPolygon = L.polygon(censusTractGeoJson[0].geometry)
             //Get bounds from here:
             censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
+
+
             //White alone = 18
             var white_alone = (data[18][censusTractArrayList[i]])
             //Black_or_African_American 19
@@ -5249,6 +5249,18 @@
     // }
     });
 
+
+    //Add library locations: 
+
+    //Bind popups: 
+    for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+      coordinates = stlCensusTracts.geometries[i].coordinates
+      console.log("popup for", censusTractArrayList[i], "at", coordinates)
+      // var polyline = L.polyline([[StartLat, StartLong],[EndLat,EndLong]]).addTo(this.map);
+      // polyline.bindTooltip("tool tip is bound");
+
+
+    }
 
 
 
