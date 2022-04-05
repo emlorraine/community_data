@@ -5254,6 +5254,7 @@
 
     //Bind popups: 
     for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+      var total_pop = data[2][censusTractArrayList[i]]
       var individualCensusTract = (stlCensusTracts.geometries[i])
 
       //Race data: 
@@ -5324,23 +5325,30 @@
         var edPRounded = (Math.round(edP * 100) / 100).toFixed(2);
 
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
+
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
       var layerGroup = L.geoJSON(individualCensusTract, {
         onEachFeature: function (feature, layer) {
           var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
+          + "<dt>Total Population</dt>"
+          + "<dd>" + total_pop + " people</dd>"
            + "<dt>Median Income</dt>"
-           + "<dd>$" + median_income + "</dd>"
+           + "<dd>$" + numberWithCommas(median_income) + "</dd>"
            + "<dt>Percentage of residents with high school diploma or higher</dt>"
-           + "<dd>" + edPRounded + "%</dd>"
+           + "<dd>" + numberWithCommas(edPRounded) + "%</dd>"
            + "<dt>Median Age Bracket</dt>"
            + "<dd>" + age_bracket + "</dd>"
            + "<dt>Racial Breakdown</dt>"
-           + "<dd> White: " + white_alone + "</dd>"
-           + "<dd> Black or African American: " + black_or_african_american + "</dd>"
-           + "<dd> American Indian and Alaska Native: " + american_indian_or_alaskan_native + "</dd>"
-           + "<dd> Asian: " + asian + "</dd>"
-           + "<dd> Native Hawaiian and Other Pacific Islander: " + native_hawaiian_and_other_pacific_islander + "</dd>"
-           + "<dd> Other: " + other + "</dd>"
-           + "<dd> Two or More Races: " + two_or_more_races + "</dd>"
+           + "<dd> White: " + numberWithCommas(white_alone) + "</dd>"
+           + "<dd> Black or African American: " + numberWithCommas(black_or_african_american) + "</dd>"
+           + "<dd> American Indian and Alaska Native: " + numberWithCommas(american_indian_or_alaskan_native) + "</dd>"
+           + "<dd> Asian: " + numberWithCommas(asian) + "</dd>"
+           + "<dd> Native Hawaiian and Other Pacific Islander: " + numberWithCommas(native_hawaiian_and_other_pacific_islander) + "</dd>"
+           + "<dd> Other: " + numberWithCommas(other) + "</dd>"
+           + "<dd> Two or More Races: " + numberWithCommas(two_or_more_races) + "</dd>"
 
           layer.bindPopup(list);
         }
