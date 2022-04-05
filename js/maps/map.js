@@ -5255,36 +5255,96 @@
     //Bind popups: 
     for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
       var individualCensusTract = (stlCensusTracts.geometries[i])
+
+      //Race data: 
+      //White alone = 18
+      var white_alone = (data[18][censusTractArrayList[i]])
+      //Black_or_African_American 19
+      var black_or_african_american = (data[19][censusTractArrayList[i]])
+      //American_Indian_or_Alaskan_Native 20
+      var american_indian_or_alaskan_native = (data[20][censusTractArrayList[i]])
+      //Asian 21
+      var asian = +(data[21][censusTractArrayList[i]])
+      //Native_Hawaiian_and_Other_Pacific_Islander 22
+      var native_hawaiian_and_other_pacific_islander = (data[22][censusTractArrayList[i]])
+      //Other 23
+      var other = (data[23][censusTractArrayList[i]])
+      //Two_Or_More_Races 24
+      var two_or_more_races = (data[24][censusTractArrayList[i]])
+
+
+      //Income data:
+      var median_income = parseFloat(data[37][censusTractArrayList[i]])
+
+      //Age data:
+      var less_than_five = data[3][censusTractArrayList[i]] //0
+        var five_to_nine = data[4][censusTractArrayList[i]] //1
+        var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
+        var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
+        var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
+        var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
+        var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
+        var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
+        var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
+        var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
+        var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
+        var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
+        age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+        age_range_str = ['< 5', '5-9', '10-14', '15-17', '18-24', '25-34', '35-44', '45-54', '55-64', '65-74', '75-84', '85+']
+        ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
+        ages_exanded = []
+        index = 0; 
+        for(var j = 0; j < ages_parsed.length; j++){
+          for(var k = 0; k < ages_parsed[j]; k++){
+            ages_exanded.push(index)
+          }
+          index = index+1; 
+        }
+        function median(arr){
+          arr.sort(function(a, b){ return a - b; });
+          var i = arr.length / 2;
+          return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+        }
+        var median_value = median(ages_exanded)
+        var age_bracket = age_range_str[median_value]
+
+        //Education data
+        var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
+        var some_college = parseInt(data[30][censusTractArrayList[i]])
+        var college = parseInt(data[31][censusTractArrayList[i]])
+        var masters = parseInt(data[32][censusTractArrayList[i]])
+        var doctorates = parseInt(data[33][censusTractArrayList[i]])
+        var professional = parseInt(data[34][censusTractArrayList[i]])
+
+        var population = parseInt(data[27][censusTractArrayList[i]]);
+        var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
+        
+        var percentage = parseFloat(education_sum/population)
+        var edP = percentage*100 
+        var edPRounded = (Math.round(edP * 100) / 100).toFixed(2);
+
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
       var layerGroup = L.geoJSON(individualCensusTract, {
         onEachFeature: function (feature, layer) {
           var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
            + "<dt>Median Income</dt>"
-           + "<dd>" + censusTractArrayList[i] + "</dd>"
-           + "<dt>Median Age</dt>"
-           + "<dd>" + censusTractArrayList[i] + "</dd>"
+           + "<dd>$" + median_income + "</dd>"
+           + "<dt>Percentage of residents with high school diploma or higher</dt>"
+           + "<dd>" + edPRounded + "%</dd>"
+           + "<dt>Median Age Bracket</dt>"
+           + "<dd>" + age_bracket + "</dd>"
            + "<dt>Racial Breakdown</dt>"
-           + "<dd> White: " + censusTractArrayList[i] + "</dd>"
-           + "<dd> Black or African American: " + censusTractArrayList[i] + "</dd>"
-           + "<dd> American Indian and Alaska Native: " + censusTractArrayList[i] + "</dd>"
-           + "<dd> Asian: " + censusTractArrayList[i] + "</dd>"
-           + "<dd> Native Hawaiian and Other Pacific Islander: " + censusTractArrayList[i] + "</dd>"
-           + "<dd> Other: " + censusTractArrayList[i] + "</dd>"
-           + "<dd> Two or More Races: " + censusTractArrayList[i] + "</dd>"
+           + "<dd> White: " + white_alone + "</dd>"
+           + "<dd> Black or African American: " + black_or_african_american + "</dd>"
+           + "<dd> American Indian and Alaska Native: " + american_indian_or_alaskan_native + "</dd>"
+           + "<dd> Asian: " + asian + "</dd>"
+           + "<dd> Native Hawaiian and Other Pacific Islander: " + native_hawaiian_and_other_pacific_islander + "</dd>"
+           + "<dd> Other: " + other + "</dd>"
+           + "<dd> Two or More Races: " + two_or_more_races + "</dd>"
 
           layer.bindPopup(list);
-          // layer.bindPopup('<br>');
-          // layer.bindPopup('<h4>Median Age:'+censusTractArrayList[i]+'</h3>');
-          // layer.bindPopup('<br>');
-          // layer.bindPopup('<h4>Median Income:'+censusTractArrayList[i]+'</h3>');
         }
       }).addTo(map);
-
-
-      // var polyline = L.polyline([[StartLat, StartLong],[EndLat,EndLong]]).addTo(this.map);
-      // polyline.bindTooltip("tool tip is bound");
-
-
     }
 
 
