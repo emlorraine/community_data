@@ -5258,7 +5258,25 @@
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
       var layerGroup = L.geoJSON(individualCensusTract, {
         onEachFeature: function (feature, layer) {
-          layer.bindPopup('<h1>Hello world</h1>');
+          var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
+           + "<dt>Median Income</dt>"
+           + "<dd>" + censusTractArrayList[i] + "</dd>"
+           + "<dt>Median Age</dt>"
+           + "<dd>" + censusTractArrayList[i] + "</dd>"
+           + "<dt>Racial Breakdown</dt>"
+           + "<dd> White: " + censusTractArrayList[i] + "</dd>"
+           + "<dd> Black or African American: " + censusTractArrayList[i] + "</dd>"
+           + "<dd> American Indian and Alaska Native: " + censusTractArrayList[i] + "</dd>"
+           + "<dd> Asian: " + censusTractArrayList[i] + "</dd>"
+           + "<dd> Native Hawaiian and Other Pacific Islander: " + censusTractArrayList[i] + "</dd>"
+           + "<dd> Other: " + censusTractArrayList[i] + "</dd>"
+           + "<dd> Two or More Races: " + censusTractArrayList[i] + "</dd>"
+
+          layer.bindPopup(list);
+          // layer.bindPopup('<br>');
+          // layer.bindPopup('<h4>Median Age:'+censusTractArrayList[i]+'</h3>');
+          // layer.bindPopup('<br>');
+          // layer.bindPopup('<h4>Median Income:'+censusTractArrayList[i]+'</h3>');
         }
       }).addTo(map);
 
