@@ -4789,7 +4789,7 @@
             'Two_Or_More_Races':(parseInt(two_or_more_races)/10),
             }
 
-            console.log(race_round, censusTractArrayList[i])
+            // console.log(race_round, censusTractArrayList[i])
             for (var key of Object.keys(race_round)) {
                 //check that the loop breaks here 
                 for(var j = 0; j <race_round[key]; j++){
@@ -5254,8 +5254,15 @@
 
     //Bind popups: 
     for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-      coordinates = stlCensusTracts.geometries[i].coordinates
-      console.log("popup for", censusTractArrayList[i], "at", coordinates)
+      var individualCensusTract = (stlCensusTracts.geometries[i])
+      // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
+      var layerGroup = L.geoJSON(individualCensusTract, {
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup('<h1>Hello world</h1>');
+        }
+      }).addTo(map);
+
+
       // var polyline = L.polyline([[StartLat, StartLong],[EndLat,EndLong]]).addTo(this.map);
       // polyline.bindTooltip("tool tip is bound");
 
