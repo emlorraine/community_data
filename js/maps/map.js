@@ -5355,6 +5355,114 @@
       }).addTo(map);
     }
 
+    //append library locations to map 
+    library_locations = [
+      {
+        "Branch Name": "Baden Library",
+        "Address": "8448 Church Road\nSt. Louis MO 63147",
+        "Lat": 38.7149707,
+        "Long": -90.2327487
+      },
+      {
+        "Branch Name": "Barr Library",
+        "Address": "1701 South Jefferson Ave\nSt. Louis MO 63104",
+        "Lat": 38.6145509,
+        "Long": -90.2213976
+      },
+      {
+        "Branch Name": "Buder Library",
+        "Address": "4401 Hampton Ave\nSt. Louis MO 63109",
+        "Lat": 38.5904057,
+        "Long": -90.2948063
+      },
+      {
+        "Branch Name": "Cabanne Library",
+        "Address": "1106 Union Boulevard\nSt. Louis MO 63113",
+        "Lat": 38.6573791,
+        "Long": -90.2721648
+      },
+      {
+        "Branch Name": "Carondelet Library",
+        "Address": "6800 Michigan Avenue\nSt. Louis MO 63111",
+        "Lat": 38.5546939,
+        "Long": -90.2542077
+      },
+      {
+        "Branch Name": "Carpenter Library",
+        "Address": "3309 South Grand Boulevard\nSt. Louis MO 63118",
+        "Lat": 38.5967553,
+        "Long": -90.2434506
+      },
+      {
+        "Branch Name": "Central Express Library",
+        "Address": "815 Olive Street, Suite 160\nSt. Louis MO 63101",
+        "Lat": 38.6290975,
+        "Long": -90.1927682
+      },
+      {
+        "Branch Name": "Central Library",
+        "Address": "1301 Olive Street\nSt. Louis MO 63103",
+        "Lat": 38.63061,
+        "Long": -90.1994854
+      },
+      {
+        "Branch Name": "Charing Cross Library\n",
+        "Address": "356 N. Skinker Blvd\nSt. Louis MO 63130",
+        "Lat": 38.6515428,
+        "Long": -90.3000167
+      },
+      {
+        "Branch Name": "Divoll Library",
+        "Address": "4234 North Grand Blvd.\nSt. Louis MO 63107",
+        "Lat": 38.6674556,
+        "Long": -90.2117906
+      },
+      {
+        "Branch Name": "Julia Davis Library\n",
+        "Address": "4415 Natural Bridge Avenue\nSt. Louis MO 63115",
+        "Lat": 38.6703954,
+        "Long": -90.2368834
+      },
+      {
+        "Branch Name": "Kingshighway Library\n",
+        "Address": "2260 South Vandeventer Avenue\nSt. Louis MO 63110",
+        "Lat": 38.6128136,
+        "Long": -90.2668824
+      },
+      {
+        "Branch Name": "Machacek Library\n",
+        "Address": "6424 Scanlan Avenue\nSt. Louis MO 63139",
+        "Lat": 38.6047874,
+        "Long": -90.2978531
+      },
+      {
+        "Branch Name": "Marketplace Library\n",
+        "Address": "6548 Manchester Avenue\nSt. Louis MO 63139",
+        "Lat": 38.6189758,
+        "Long": -90.2981101
+      },
+      {
+        "Branch Name": "Schlafly Library\n",
+        "Address": "225 North Euclid Avenue\nSt. Louis MO 63108",
+        "Lat": 38.6440072,
+        "Long": -90.2621509
+      },
+      {
+        "Branch Name": "Walnut Park Library\n",
+        "Address": "5760 West Florissant Avenue\nSt. Louis MO 63120",
+        "Lat": 38.7037006,
+        "Long": -90.2472266
+      },
+     ]
+
+     for(var i = 0; i < library_locations.length; i++){
+       console.log(library_locations[i]["Lat"])
+       var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]]).addTo(map);
+       var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
+
+
+     }
+
 
 
     
