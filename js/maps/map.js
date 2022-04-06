@@ -4905,6 +4905,7 @@
           // $("#text").css("float", "right")
         }
         $("#racial-data-legend").append("<h8>One dot = 10 people </h8>");
+        
       }
       if(!this.checked) {
         $("#racial-data-legend").empty()
@@ -4994,6 +4995,8 @@
       $(".rectangle").css("display", "inline-block")
       $("#education-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
       $("#educational-attainment-data-legend").append("<h8>100%</h8>");
+
+      generateLayerPopups()
 
     }
     // if(!this.checked) {
@@ -5138,6 +5141,8 @@
       $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
       $("#median-age-data-legend").append("<h8>>85 years</h8>");
 
+      generateLayerPopups()
+
     }
     // if(!this.checked) {
     //   console.log(this.checked)
@@ -5237,6 +5242,8 @@
       $("#income-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
       $("#median-income-data-legend").append("<h8> > $75,000</h8>");
 
+      generateLayerPopups()
+
     }
     // if(!this.checked) {
     //   $("#median-income-data-legend").empty()
@@ -5253,6 +5260,8 @@
     //Add library locations: 
 
     //Bind popups: 
+
+    function generateLayerPopups(){
     for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
       var total_pop = data[2][censusTractArrayList[i]]
       var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -5354,6 +5363,9 @@
         }
       }).addTo(map);
     }
+  }
+  generateLayerPopups()
+
 
     //append library locations to map 
     library_locations = [
