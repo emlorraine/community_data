@@ -2,20 +2,75 @@ $(document).ready(function(){
   $('.nav-tabs a[href="#intro"]').tab('show')});
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  
-
     var target = $(e.target).attr("href").substring(1) // activated tab
-    var mapTag = "map-"+target
 
     //Add in age svgs:
-    if(target !== "intro"){
+    if(target !== "intro" && target != "regional-data"){
       $("#age2010").empty()
       $("#age2010").prepend("<img id='age-svg' src=./data/age_svgs/" + target +".svg width='1000' height='1200'>")
     }
 
-    if(target !== "intro"){
+    if(target !== "intro" && target !=="regional-data"){
       // console.log("appended")
       $('#viz-wrapper').appendTo(`#${target}`);
+
+    }
+
+    if(target == "regional-data"){
+      console.log("found")
+      html_header = `<h1>Download regional data anaylsis:</h1>`
+      $("#regional-data-content").append(html_header)
+      html = `<button class="btn btn-secondary" id="download-Buder-data">Download Buder Region Handout</button>
+                <br>
+                <br>
+              <button class="btn btn-secondary" id="download-Carpenter-data">Download Carpenter Region Handout</button>
+              <br>
+              <br>
+            <button class="btn btn-secondary" id="download-Central-data">Download Central Region Handout</button>
+            <br>
+            <br>
+          <button class="btn btn-secondary" id="download-Julia-Davis-data">Download Julia Davis Region Handout</button>
+          <br>
+          <br>
+          <button class="btn btn-secondary" id="download-Schlafly-data">Download Schlafly Region Handout</button>
+              `
+      $("#regional-data-content").append(html)
+
+      document.getElementById("download-Buder-data").addEventListener("click", function(e){
+        if(target !=="intro"){
+          var data = "./handouts/regional/buder/buder.pdf"
+          window.open(data)
+        }
+      })
+
+      document.getElementById("download-Carpenter-data").addEventListener("click", function(e){
+        if(target !=="intro"){
+          var data = "./handouts/regional/Carpenter/Carpenter-region.pdf"
+          window.open(data)
+        }
+      })
+
+      document.getElementById("download-Central-data").addEventListener("click", function(e){
+        if(target !=="intro"){
+          var data = "./handouts/regional/Central/Central-region.pdf"
+          window.open(data)
+        }
+      })
+
+      document.getElementById("download-Julia-Davis-data").addEventListener("click", function(e){
+        if(target !=="intro"){
+          var data = "./handouts/regional/julia_davis/julia-davis-regional.pdf"
+          window.open(data)
+        }
+      })
+
+      document.getElementById("download-Schlafly-data").addEventListener("click", function(e){
+        if(target !=="intro"){
+          var data = "./handouts/regional/Schlafly/Schlafly.pdf"
+          window.open(data)
+        }
+      })
+
 
     }
 
@@ -38,13 +93,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     }
 
     document.getElementById("download-2010-data").addEventListener("click", function(e){
-      if(target !=="intro"){
+      if(target !=="intro" && target != "regional-data"){
         var data10 = "./data/" + target +"/2010/2010/Sheet1-Table 1.csv"
         window.open(data10)
       }
     })
     document.getElementById("download-2019-data").addEventListener("click", function(e){
-      if(target !=="intro"){
+      if(target !=="intro" && target != "regional-data"){
         var data19 = "./data/" + target +"/2019/2019/Sheet1-Table 1.csv"
         window.open(data19)
       }
