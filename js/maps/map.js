@@ -5456,7 +5456,6 @@
      ]
 
      for(var i = 0; i < library_locations.length; i++){
-       console.log(library_locations[i]["Lat"])
        var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]]).addTo(map);
        var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
 
