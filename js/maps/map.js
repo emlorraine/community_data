@@ -4924,6 +4924,8 @@
     })
     var checkboxEducation = document.querySelector("input[id=education]");
     checkboxEducation.addEventListener('change', function() {
+
+
     if (this.checked) {
 
       $("#median-age-data-legend").empty()
@@ -4953,38 +4955,138 @@
             }
         });
 
+        //Add in radio selectors: 
 
-      for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-        censusTract = censusTractArrayList[i]
-        censusPoly = stlCensusTracts.geometries[i]
-        var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
-        var some_college = parseInt(data[30][censusTractArrayList[i]])
-        var college = parseInt(data[31][censusTractArrayList[i]])
-        var masters = parseInt(data[32][censusTractArrayList[i]])
-        var doctorates = parseInt(data[33][censusTractArrayList[i]])
-        var professional = parseInt(data[34][censusTractArrayList[i]])
+        $("#legend").append("<div id='educational-attainment-data-selectors'></div")
+        $("#educational-attainment-data-selectors").append("<input type='radio' id='high-school-or-higher' name='edu-selector' value='high-school-or-higher'><label for='high-school-or-higher'>High school (and equivalents)or higher</label>")
+        $("#educational-attainment-data-selectors").append("<br>")
+        $("#educational-attainment-data-selectors").append("<input type='radio' id='college-or-higher' name='edu-selector' value='college-or-higher'><label for='college-or-higher'>College higher</label>")
 
-        var population = parseInt(data[27][censusTractArrayList[i]]);
-        var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
+        // $("#educational-attainment-data-selectors").append("<input type='radio' id='0-9' name='age-selector' value='0-9'checked><label for='0-9'>0-9</label>")
+        // $("#educational-attainment-data-selectors").append("<input type='radio' id='9-17' name='age-selector' value='9-17'checked><label for='9-17'>9-17</label>")
+        // $("#educational-attainment-data-selectors").append("<input type='radio' id='18-34' name='age-selector' value='18-34'checked><label for='18-34'>18-34</label>")
+        // $("#educational-attainment-data-selectors").append("<input type='radio' id='35-64' name='age-selector' value='35-64'checked><label for='35-64'>35-64</label>")
+        // $("#educational-attainment-data-selectors").append("<input type='radio' id='65+' name='age-selector' value='65+'checked><label for='65+'>65+</label>")
+
+      var checkboxHSOrHigher = document.querySelector("input[id=high-school-or-higher]");
+        checkboxHSOrHigher.addEventListener('change', function() {
+        if (this.checked) {
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
+            var some_college = parseInt(data[30][censusTractArrayList[i]])
+            var college = parseInt(data[31][censusTractArrayList[i]])
+            var masters = parseInt(data[32][censusTractArrayList[i]])
+            var doctorates = parseInt(data[33][censusTractArrayList[i]])
+            var professional = parseInt(data[34][censusTractArrayList[i]])
+    
+            var population = parseInt(data[27][censusTractArrayList[i]]);
+            var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
+            
+            var percentage = parseFloat(education_sum/population)
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#6E2594",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
+        }
+      })
+
+      var collegeOrHigher = document.querySelector("input[id=college-or-higher]");
+      collegeOrHigher.addEventListener('change', function() {
+        if (this.checked) {
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            // var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
+            // var some_college = parseInt(data[30][censusTractArrayList[i]])
+            var college = parseInt(data[31][censusTractArrayList[i]])
+            var masters = parseInt(data[32][censusTractArrayList[i]])
+            var doctorates = parseInt(data[33][censusTractArrayList[i]])
+            var professional = parseInt(data[34][censusTractArrayList[i]])
+    
+            var population = parseInt(data[27][censusTractArrayList[i]]);
+            var education_sum = college + masters + doctorates + professional
+            
+            var percentage = parseFloat(education_sum/population)
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#6E2594",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
+        }
+      })
+
+
+
+      // for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+      //   censusTract = censusTractArrayList[i]
+      //   censusPoly = stlCensusTracts.geometries[i]
+      //   var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
+      //   var some_college = parseInt(data[30][censusTractArrayList[i]])
+      //   var college = parseInt(data[31][censusTractArrayList[i]])
+      //   var masters = parseInt(data[32][censusTractArrayList[i]])
+      //   var doctorates = parseInt(data[33][censusTractArrayList[i]])
+      //   var professional = parseInt(data[34][censusTractArrayList[i]])
+
+      //   var population = parseInt(data[27][censusTractArrayList[i]]);
+      //   var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
         
-        var percentage = parseFloat(education_sum/population)
-        var individualCensusTract = (stlCensusTracts.geometries[i])
-        var individualCensusTractPolygon = {
-          "type":"GeometryCollection", 
-          "geometries": [individualCensusTract]
-        }
-        // var polyTracts = L.geoJson(individualCensusTractPolygon)
-        geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
-        function style(region) {
-          return {
-            fillColor: "#6E2594",
-            color: "#000",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: percentage
-          };
-        }
-      }
+      //   var percentage = parseFloat(education_sum/population)
+      //   var individualCensusTract = (stlCensusTracts.geometries[i])
+      //   var individualCensusTractPolygon = {
+      //     "type":"GeometryCollection", 
+      //     "geometries": [individualCensusTract]
+      //   }
+      //   // var polyTracts = L.geoJson(individualCensusTractPolygon)
+      //   geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+      //   function style(region) {
+      //     return {
+      //       fillColor: "#6E2594",
+      //       color: "#000",
+      //       weight: 1,
+      //       opacity: 1,
+      //       fillOpacity: percentage
+      //     };
+      //   }
+      // }
+
+
       $("#legend").append("<div id='educational-attainment-data-legend'></div")
       $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
       $("#educational-attainment-data-legend").append("<h7>Percentage of population with high school diploma (and equivalents) or higher:</h7>");
