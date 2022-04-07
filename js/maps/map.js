@@ -5210,8 +5210,8 @@
                 fillOpacity: (percentage * 100)
               };
             }
-            $("#legend").empty()
             $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").empty()
             $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 0-9:</h5>")
             $("#median-age-data-legend").append("<h8>0</h8>");
             $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
@@ -5272,8 +5272,8 @@
                 fillOpacity: (percentage * 100)
               };
             }
-            $("#legend").empty()
             $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").empty()
             $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 9-17:</h5>")
             $("#median-age-data-legend").append("<h8>0</h8>");
             $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
@@ -5336,8 +5336,8 @@
                 fillOpacity: (percentage * 100)
               };
             }
-            $("#legend").empty()
             $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").empty()
             $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 18-34:</h5>")
             $("#median-age-data-legend").append("<h8>0</h8>");
             $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
@@ -5402,8 +5402,8 @@
                 fillOpacity: (percentage * 100)
               };
             }
-            $("#legend").empty()
             $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").empty()
             $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 35-64:</h5>")
             $("#median-age-data-legend").append("<h8>0</h8>");
             $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
@@ -5468,8 +5468,8 @@
                 fillOpacity: (percentage * 100)
               };
             }
-            $("#legend").empty()
             $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").empty()
             $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 65+:</h5>")
             $("#median-age-data-legend").append("<h8>0</h8>");
             $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
