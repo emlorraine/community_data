@@ -17,7 +17,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     }
 
     if(target == "regional-data"){
-      console.log("found")
+      $("#regional-data-content").empty()
       html_header = `<h1>Download regional data anaylsis:</h1>`
       $("#regional-data-content").append(html_header)
       html = `<button class="btn btn-secondary" id="download-Buder-data">Download Buder Region Handout</button>

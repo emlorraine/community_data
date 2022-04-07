@@ -4194,6 +4194,7 @@
           "1274": "45264",
           "1275": "29978",
           "1276": "73021",
+          "1278": "73021",
           "TOTAL (All Selected Census Tracts)": "43,872"
         }
       ]
@@ -5473,6 +5474,11 @@
 
 
      }
+
+    //  var clearMap = document.selectb("clear");
+    //  clearMap.addEventListener('change', function() {
+    //    console.log("clear everything on map")
+    //  })
 
 
 
