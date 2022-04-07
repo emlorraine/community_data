@@ -4659,8 +4659,9 @@
     censusTractArrayList = [1011,1012,1013,1014,1015,1018,1021,1022,1023,1024,1025,1031,1034,1036,1037,1038,1042,1045,1051.98,1052,1053,1054,1055,1061,1062,1063,1064,1065,1066,1067,1072,1073,1074,1075,1076,1081,1082,1083,1096,1097,1101,1102,1103,1104,1105,1111,1112,1113,1121,1122,1123,1124,1135,1141.01,1141.02,1142,1143,1151,1152,1153,1154,1155,1156,1157,1161,1162,1163.01,1163.02,1164,1165,1171,1172,1174,1181,1186,1191.01,1191.02,1192,1193,1202,1212,1231,1232,1233,1241,1242,1243,1246,1255,1256,1257,1266,1267,1268,1269,1270,1271,1272,1273,1274,1275,1276,1277,1278]
     var poly = L.geoJson(boundary);
     var polyTracts = L.geoJson(stlCensusTracts)
-    map.addLayer(poly);
-    map.addLayer(polyTracts);
+    // map.addLayer(poly);
+    // map.addLayer(polyTracts);
+
     randomPointInPoly = function(polygon) {
       var bounds = censusTractGeoJsonConversion.getBounds(); 
       var x_min  = bounds.getEast();
@@ -4928,8 +4929,6 @@
     })
     var checkboxEducation = document.querySelector("input[id=education]");
     checkboxEducation.addEventListener('change', function() {
-
-
     if (this.checked) {
 
       $("#median-age-data-legend").empty()
@@ -5056,41 +5055,6 @@
         }
       })
 
-
-
-      // for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-      //   censusTract = censusTractArrayList[i]
-      //   censusPoly = stlCensusTracts.geometries[i]
-      //   var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
-      //   var some_college = parseInt(data[30][censusTractArrayList[i]])
-      //   var college = parseInt(data[31][censusTractArrayList[i]])
-      //   var masters = parseInt(data[32][censusTractArrayList[i]])
-      //   var doctorates = parseInt(data[33][censusTractArrayList[i]])
-      //   var professional = parseInt(data[34][censusTractArrayList[i]])
-
-      //   var population = parseInt(data[27][censusTractArrayList[i]]);
-      //   var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
-        
-      //   var percentage = parseFloat(education_sum/population)
-      //   var individualCensusTract = (stlCensusTracts.geometries[i])
-      //   var individualCensusTractPolygon = {
-      //     "type":"GeometryCollection", 
-      //     "geometries": [individualCensusTract]
-      //   }
-      //   // var polyTracts = L.geoJson(individualCensusTractPolygon)
-      //   geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
-      //   function style(region) {
-      //     return {
-      //       fillColor: "#6E2594",
-      //       color: "#000",
-      //       weight: 1,
-      //       opacity: 1,
-      //       fillOpacity: percentage
-      //     };
-      //   }
-      // }
-
-
       $("#legend").append("<div id='educational-attainment-data-legend'></div")
       $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
       $("#educational-attainment-data-legend").append("<h7>Percentage of population with high school diploma (and equivalents) or higher:</h7>");
@@ -5117,14 +5081,9 @@
     // }
     });
  
-    
-
     var checkboxAge = document.querySelector("input[id=age]");
     checkboxAge.addEventListener('change', function() {
     if (this.checked) {
-
-
-
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -5220,8 +5179,6 @@
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
             $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
-
-          
           }
         }
     
@@ -5282,9 +5239,6 @@
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
             $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
-
-          
-
           }
         }
     
@@ -5346,11 +5300,6 @@
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
             $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
-
-          
-
-          
-            
           }
         }
     
@@ -5412,11 +5361,6 @@
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
             $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
-
-          
-
-          
-
           }
         }
     
@@ -5478,9 +5422,6 @@
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
             $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
-
-          
-
           }
         }
     
@@ -5489,16 +5430,7 @@
       generateLayerPopups()
 
     }
-    // if(!this.checked) {
-    //   console.log(this.checked)
-    //   $("#median-age-data-legend").empty()
-    //   // map.removeLayer(geojson);
-    //   map.eachLayer(function (layer) {
-    //     if(layer.options.fillColor == '#228B22'){
-    //       map.removeLayer(layer);
-    //     }
-    //   });
-    // }
+
     });
 
     var checkboxIncome = document.querySelector("input[id=income]");
@@ -5680,9 +5612,15 @@
 
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
 
+        function style(region) {
+          return {
+            fillOpacity: 0
+          };
+        }
+
       
 
-      var layerGroup = L.geoJSON(individualCensusTract, {
+      var layerGroup = L.geoJSON(individualCensusTract, {style: style}, {
         onEachFeature: function (feature, layer) {
           var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
           + "<dt>Total Population</dt>"
