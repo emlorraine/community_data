@@ -329,7 +329,7 @@
           "1274": "4,814",
           "1275": "2,225",
           "1276": "2,688",
-          "TOTAL (All Selected Census Tracts)": "308,174"
+          "TOTAL (All Selected Census Tracts)": "308174"
         },
         {
           "Statistics": "Under 5 Years",
@@ -439,7 +439,7 @@
           "1274": 645,
           "1275": 142,
           "1276": 64,
-          "TOTAL (All Selected Census Tracts)": "19,673"
+          "TOTAL (All Selected Census Tracts)": "19673"
         },
         {
           "Statistics": "5 to 9 Years",
@@ -549,7 +549,7 @@
           "1274": 451,
           "1275": 30,
           "1276": 42,
-          "TOTAL (All Selected Census Tracts)": "15,286"
+          "TOTAL (All Selected Census Tracts)": "15286"
         },
         {
           "Statistics": "10 to 14 Years",
@@ -659,7 +659,7 @@
           "1274": 157,
           "1275": 52,
           "1276": 17,
-          "TOTAL (All Selected Census Tracts)": "16,211"
+          "TOTAL (All Selected Census Tracts)": "16211"
         },
         {
           "Statistics": "15 to 17 Years",
@@ -769,7 +769,7 @@
           "1274": 67,
           "1275": 36,
           "1276": 7,
-          "TOTAL (All Selected Census Tracts)": "8,649"
+          "TOTAL (All Selected Census Tracts)": "8649"
         },
         {
           "Statistics": "18 to 24 Years",
@@ -879,7 +879,7 @@
           "1274": 574,
           "1275": 249,
           "1276": 287,
-          "TOTAL (All Selected Census Tracts)": "29,083"
+          "TOTAL (All Selected Census Tracts)": "29083"
         },
         {
           "Statistics": "25 to 34 Years",
@@ -989,7 +989,7 @@
           "1274": "1401",
           "1275": 422,
           "1276": "1150",
-          "TOTAL (All Selected Census Tracts)": "61,349"
+          "TOTAL (All Selected Census Tracts)": "61349"
         },
         {
           "Statistics": "35 to 44 Years",
@@ -1099,7 +1099,7 @@
           "1274": 396,
           "1275": 308,
           "1276": 296,
-          "TOTAL (All Selected Census Tracts)": "40,386"
+          "TOTAL (All Selected Census Tracts)": "40386"
         },
         {
           "Statistics": "45 to 54 Years",
@@ -1209,7 +1209,7 @@
           "1274": 416,
           "1275": 373,
           "1276": 168,
-          "TOTAL (All Selected Census Tracts)": "36,559"
+          "TOTAL (All Selected Census Tracts)": "36559"
         },
         {
           "Statistics": "55 to 64 Years",
@@ -1319,7 +1319,7 @@
           "1274": 391,
           "1275": 294,
           "1276": 338,
-          "TOTAL (All Selected Census Tracts)": "40,502"
+          "TOTAL (All Selected Census Tracts)": "40502"
         },
         {
           "Statistics": "65 to 74 Years",
@@ -1429,7 +1429,7 @@
           "1274": 212,
           "1275": 165,
           "1276": 218,
-          "TOTAL (All Selected Census Tracts)": "24,252"
+          "TOTAL (All Selected Census Tracts)": "24252"
         },
         {
           "Statistics": "75 to 84 Years",
@@ -1539,7 +1539,7 @@
           "1274": 72,
           "1275": 119,
           "1276": 77,
-          "TOTAL (All Selected Census Tracts)": "11,276"
+          "TOTAL (All Selected Census Tracts)": "11276"
         },
         {
           "Statistics": "85 Years and Over",
@@ -1649,7 +1649,7 @@
           "1274": 32,
           "1275": 35,
           "1276": 24,
-          "TOTAL (All Selected Census Tracts)": "4,948"
+          "TOTAL (All Selected Census Tracts)": "4948"
         },
         {
           "Statistics": "",
@@ -1979,7 +1979,7 @@
           "1274": "4,814",
           "1275": "2,225",
           "1276": "2,688",
-          "TOTAL (All Selected Census Tracts)": "308,174"
+          "TOTAL (All Selected Census Tracts)": "308174"
         },
         {
           "Statistics": "White Alone",
@@ -2091,7 +2091,7 @@
           "1276": "2087",
           "1277": 34,
           "1278": 991,
-          "TOTAL (All Selected Census Tracts)": "143,401"
+          "TOTAL (All Selected Census Tracts)": "143401"
         },
         {
           "Statistics": "Black or African American Alone",
@@ -2204,7 +2204,7 @@
           "1277": 2237,
           "1278": 2007,
 
-          "TOTAL (All Selected Census Tracts)": "143,018"
+          "TOTAL (All Selected Census Tracts)": "143018"
         },
         {
           "Statistics": "American Indian and Alaska Native Alone",
@@ -2428,7 +2428,7 @@
           "1276": 43,
           "1277": 0,
           "1278": 260,
-          "TOTAL (All Selected Census Tracts)": "10,365"
+          "TOTAL (All Selected Census Tracts)": "10365"
         },
         {
           "Statistics": "Native Hawaiian and Other Pacific Islander Alone",
@@ -2652,7 +2652,7 @@
           "1276": 0,
           "1277": 0,
           "1278": 2,
-          "TOTAL (All Selected Census Tracts)": "2,979"
+          "TOTAL (All Selected Census Tracts)": "2979"
         },
         {
           "Statistics": "Two or More Races",
@@ -2764,7 +2764,7 @@
           "1276": 23,
           "1277": 0,
           "1278": 32,
-          "TOTAL (All Selected Census Tracts)": "7,412"
+          "TOTAL (All Selected Census Tracts)": "7412"
         },
         {
           "Statistics": "",
@@ -3094,7 +3094,7 @@
           "1274": "2920",
           "1275": "1716",
           "1276": "2271",
-          "TOTAL (All Selected Census Tracts)": "219,272"
+          "TOTAL (All Selected Census Tracts)": "219272"
         },
         {
           "Statistics": "Less than High School",
@@ -3204,7 +3204,7 @@
           "1274": 256,
           "1275": 227,
           "1276": 51,
-          "TOTAL (All Selected Census Tracts)": "26,828"
+          "TOTAL (All Selected Census Tracts)": "26828"
         },
         {
           "Statistics": "High School Graduate (Includes Equivalency)",
@@ -3314,7 +3314,7 @@
           "1274": 744,
           "1275": 338,
           "1276": 293,
-          "TOTAL (All Selected Census Tracts)": "52,444"
+          "TOTAL (All Selected Census Tracts)": "52444"
         },
         {
           "Statistics": "Some College",
@@ -3424,7 +3424,7 @@
           "1274": 941,
           "1275": 579,
           "1276": 563,
-          "TOTAL (All Selected Census Tracts)": "60,331"
+          "TOTAL (All Selected Census Tracts)": "60331"
         },
         {
           "Statistics": "Bachelor's Degree",
@@ -3534,7 +3534,7 @@
           "1274": 392,
           "1275": 418,
           "1276": 825,
-          "TOTAL (All Selected Census Tracts)": "43,290"
+          "TOTAL (All Selected Census Tracts)": "43290"
         },
         {
           "Statistics": "Master's Degree",
@@ -3644,7 +3644,7 @@
           "1274": 367,
           "1275": 123,
           "1276": 361,
-          "TOTAL (All Selected Census Tracts)": "23,772"
+          "TOTAL (All Selected Census Tracts)": "23772"
         },
         {
           "Statistics": "Professional School Degree",
@@ -3754,7 +3754,7 @@
           "1274": 129,
           "1275": 21,
           "1276": 91,
-          "TOTAL (All Selected Census Tracts)": "7,134"
+          "TOTAL (All Selected Census Tracts)": "7134"
         },
         {
           "Statistics": "Doctorate Degree",
@@ -3864,7 +3864,7 @@
           "1274": 91,
           "1275": 10,
           "1276": 87,
-          "TOTAL (All Selected Census Tracts)": "5,473"
+          "TOTAL (All Selected Census Tracts)": "5473"
         },
         {
           "Statistics": "",
@@ -4195,7 +4195,7 @@
           "1275": "29978",
           "1276": "73021",
           "1278": "73021",
-          "TOTAL (All Selected Census Tracts)": "43,872"
+          "TOTAL (All Selected Census Tracts)": "43872"
         }
       ]
     
@@ -5166,6 +5166,7 @@
         zeroToNine.addEventListener('change', function() {
         if (this.checked) {
           console.log("checked 0-9")
+          console.log(data)
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
               map.removeLayer(layer);
@@ -5174,67 +5175,16 @@
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
-            var less_than_five = data[3][censusTractArrayList[i]] //0
-            var five_to_nine = data[4][censusTractArrayList[i]] //1
-            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
-            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
-            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
-            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
-            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
-            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
-            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
-            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
-            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
-            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
-            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
-            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
-            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
-            ages_exanded = []
-            index = 0; 
-            for(var j = 0; j < ages_parsed.length; j++){
-              for(var k = 0; k < ages_parsed[j]; k++){
-                ages_exanded.push(index)
-              }
-              index = index+1; 
-            }
-            function median(arr){
-              arr.sort(function(a, b){ return a - b; });
-              var i = arr.length / 2;
-              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
-            }
-            var median_value = median(ages_exanded)
-            var percentage = median_value/12
-    
-    
-            var age_bracket = age_range_str[median_value]
-            var bracket; 
-            if (age_bracket == 'eighty_five_and_older'){
-              bracket = 12; 
-            } else if (age_bracket == 'seventy_five_to_eighty_four'){
-              bracket = 11; 
-            } else if (age_bracket == 'sixty_five_to_seventy_four'){
-              bracket = 10; 
-            } else if (age_bracket == 'fifty_five_to_sixty_four'){
-              bracket = 9; 
-            } else if (age_bracket == 'fourty_five_to_fifty_four'){
-              bracket = 8; 
-            } else if (age_bracket == 'thirty_five_to_fourty_four'){
-              bracket = 7; 
-            } else if (age_bracket == 'twenty_five_to_thirty_four'){
-              bracket = 6; 
-            } else if (age_bracket == 'eighteen_to_twenty_four'){
-              bracket = 5; 
-            } else if (age_bracket == 'fifteen_to_seventeen'){
-              bracket = 4; 
-            } else if (age_bracket == 'ten_to_fourteen'){
-              bracket = 3; 
-            } else if (age_bracket == 'five_to_nine'){
-              bracket = 2; 
-            } else if (age_bracket == 'less_than_five'){
-              bracket = 1; 
-            }
-            // percentage = bracket/12; 
-           
+            var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
+            var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
+
+            var less_than_five_total = parseInt(data[3]["TOTAL (All Selected Census Tracts)"])
+            var five_to_nine_total = parseInt(data[4]["TOTAL (All Selected Census Tracts)"])
+
+            var tract_age_sum = less_than_five + five_to_nine
+            var total_age_sum = less_than_five_total + five_to_nine_total 
+
+            var percentage = tract_age_sum / total_age_sum
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -5253,7 +5203,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: percentage
+                fillOpacity: (percentage * 100)
               };
             }
           }
@@ -5274,67 +5224,17 @@
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
-            var less_than_five = data[3][censusTractArrayList[i]] //0
-            var five_to_nine = data[4][censusTractArrayList[i]] //1
-            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
-            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
-            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
-            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
-            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
-            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
-            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
-            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
-            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
-            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
-            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
-            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
-            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
-            ages_exanded = []
-            index = 0; 
-            for(var j = 0; j < ages_parsed.length; j++){
-              for(var k = 0; k < ages_parsed[j]; k++){
-                ages_exanded.push(index)
-              }
-              index = index+1; 
-            }
-            function median(arr){
-              arr.sort(function(a, b){ return a - b; });
-              var i = arr.length / 2;
-              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
-            }
-            var median_value = median(ages_exanded)
-            var percentage = median_value/12
-    
-    
-            var age_bracket = age_range_str[median_value]
-            var bracket; 
-            if (age_bracket == 'eighty_five_and_older'){
-              bracket = 12; 
-            } else if (age_bracket == 'seventy_five_to_eighty_four'){
-              bracket = 11; 
-            } else if (age_bracket == 'sixty_five_to_seventy_four'){
-              bracket = 10; 
-            } else if (age_bracket == 'fifty_five_to_sixty_four'){
-              bracket = 9; 
-            } else if (age_bracket == 'fourty_five_to_fifty_four'){
-              bracket = 8; 
-            } else if (age_bracket == 'thirty_five_to_fourty_four'){
-              bracket = 7; 
-            } else if (age_bracket == 'twenty_five_to_thirty_four'){
-              bracket = 6; 
-            } else if (age_bracket == 'eighteen_to_twenty_four'){
-              bracket = 5; 
-            } else if (age_bracket == 'fifteen_to_seventeen'){
-              bracket = 4; 
-            } else if (age_bracket == 'ten_to_fourteen'){
-              bracket = 3; 
-            } else if (age_bracket == 'five_to_nine'){
-              bracket = 2; 
-            } else if (age_bracket == 'less_than_five'){
-              bracket = 1; 
-            }
-            // percentage = bracket/12; 
-           
+            var ten_to_fourteen = parseInt(data[5][censusTractArrayList[i]]) //0
+            var fifteen_to_seventeen = parseInt(data[6][censusTractArrayList[i]]) //1
+
+            var ten_to_fourteen_total = parseInt(data[5]["TOTAL (All Selected Census Tracts)"])
+            var fifteen_to_seventeen_total = parseInt(data[6]["TOTAL (All Selected Census Tracts)"])
+
+            var tract_age_sum = ten_to_fourteen + fifteen_to_seventeen
+            var total_age_sum = ten_to_fourteen_total + fifteen_to_seventeen_total 
+
+            var percentage = tract_age_sum / total_age_sum
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -5353,9 +5253,10 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: percentage
+                fillOpacity: (percentage * 100)
               };
             }
+
           }
         }
     
@@ -5371,70 +5272,21 @@
               map.removeLayer(layer);
             }
           });
+          
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
-            var less_than_five = data[3][censusTractArrayList[i]] //0
-            var five_to_nine = data[4][censusTractArrayList[i]] //1
-            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
-            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
-            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
-            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
-            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
-            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
-            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
-            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
-            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
-            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
-            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
-            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
-            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
-            ages_exanded = []
-            index = 0; 
-            for(var j = 0; j < ages_parsed.length; j++){
-              for(var k = 0; k < ages_parsed[j]; k++){
-                ages_exanded.push(index)
-              }
-              index = index+1; 
-            }
-            function median(arr){
-              arr.sort(function(a, b){ return a - b; });
-              var i = arr.length / 2;
-              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
-            }
-            var median_value = median(ages_exanded)
-            var percentage = median_value/12
-    
-    
-            var age_bracket = age_range_str[median_value]
-            var bracket; 
-            if (age_bracket == 'eighty_five_and_older'){
-              bracket = 12; 
-            } else if (age_bracket == 'seventy_five_to_eighty_four'){
-              bracket = 11; 
-            } else if (age_bracket == 'sixty_five_to_seventy_four'){
-              bracket = 10; 
-            } else if (age_bracket == 'fifty_five_to_sixty_four'){
-              bracket = 9; 
-            } else if (age_bracket == 'fourty_five_to_fifty_four'){
-              bracket = 8; 
-            } else if (age_bracket == 'thirty_five_to_fourty_four'){
-              bracket = 7; 
-            } else if (age_bracket == 'twenty_five_to_thirty_four'){
-              bracket = 6; 
-            } else if (age_bracket == 'eighteen_to_twenty_four'){
-              bracket = 5; 
-            } else if (age_bracket == 'fifteen_to_seventeen'){
-              bracket = 4; 
-            } else if (age_bracket == 'ten_to_fourteen'){
-              bracket = 3; 
-            } else if (age_bracket == 'five_to_nine'){
-              bracket = 2; 
-            } else if (age_bracket == 'less_than_five'){
-              bracket = 1; 
-            }
-            // percentage = bracket/12; 
-           
+            var eighteen_to_twenty_four = parseInt(data[7][censusTractArrayList[i]]) //0
+            var twenty_five_to_thirty_four = parseInt(data[8][censusTractArrayList[i]]) //1
+
+            var eighteen_to_twenty_four_total = parseInt(data[7]["TOTAL (All Selected Census Tracts)"])
+            var twenty_five_to_thirty_four_total = parseInt(data[8]["TOTAL (All Selected Census Tracts)"])
+
+            var tract_age_sum = eighteen_to_twenty_four + twenty_five_to_thirty_four
+            var total_age_sum = eighteen_to_twenty_four_total + twenty_five_to_thirty_four_total
+
+            var percentage = tract_age_sum / total_age_sum
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -5453,9 +5305,12 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: percentage
+                fillOpacity: (percentage * 100)
               };
             }
+
+          
+            
           }
         }
     
@@ -5474,67 +5329,19 @@
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
-            var less_than_five = data[3][censusTractArrayList[i]] //0
-            var five_to_nine = data[4][censusTractArrayList[i]] //1
-            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
-            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
-            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
-            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
-            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
-            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
-            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
-            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
-            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
-            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
-            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
-            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
-            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
-            ages_exanded = []
-            index = 0; 
-            for(var j = 0; j < ages_parsed.length; j++){
-              for(var k = 0; k < ages_parsed[j]; k++){
-                ages_exanded.push(index)
-              }
-              index = index+1; 
-            }
-            function median(arr){
-              arr.sort(function(a, b){ return a - b; });
-              var i = arr.length / 2;
-              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
-            }
-            var median_value = median(ages_exanded)
-            var percentage = median_value/12
-    
-    
-            var age_bracket = age_range_str[median_value]
-            var bracket; 
-            if (age_bracket == 'eighty_five_and_older'){
-              bracket = 12; 
-            } else if (age_bracket == 'seventy_five_to_eighty_four'){
-              bracket = 11; 
-            } else if (age_bracket == 'sixty_five_to_seventy_four'){
-              bracket = 10; 
-            } else if (age_bracket == 'fifty_five_to_sixty_four'){
-              bracket = 9; 
-            } else if (age_bracket == 'fourty_five_to_fifty_four'){
-              bracket = 8; 
-            } else if (age_bracket == 'thirty_five_to_fourty_four'){
-              bracket = 7; 
-            } else if (age_bracket == 'twenty_five_to_thirty_four'){
-              bracket = 6; 
-            } else if (age_bracket == 'eighteen_to_twenty_four'){
-              bracket = 5; 
-            } else if (age_bracket == 'fifteen_to_seventeen'){
-              bracket = 4; 
-            } else if (age_bracket == 'ten_to_fourteen'){
-              bracket = 3; 
-            } else if (age_bracket == 'five_to_nine'){
-              bracket = 2; 
-            } else if (age_bracket == 'less_than_five'){
-              bracket = 1; 
-            }
-            // percentage = bracket/12; 
-           
+            var thirty_five_to_fourty_four = parseInt(data[9][censusTractArrayList[i]]) //1
+            var fourty_five_to_fifty_four = parseInt(data[10][censusTractArrayList[i]]) //1
+            var fifty_five_to_sixty_four = parseInt(data[11][censusTractArrayList[i]]) //1
+
+            var thirty_five_to_fourty_four_total = parseInt(data[9]["TOTAL (All Selected Census Tracts)"])
+            var fourty_five_to_fifty_four_total = parseInt(data[10]["TOTAL (All Selected Census Tracts)"])
+            var fifty_five_to_sixty_four_total = parseInt(data[11]["TOTAL (All Selected Census Tracts)"])
+
+            var tract_age_sum = thirty_five_to_fourty_four + fourty_five_to_fifty_four + fifty_five_to_sixty_four
+            var total_age_sum = thirty_five_to_fourty_four_total + fourty_five_to_fifty_four_total + fifty_five_to_sixty_four_total
+
+            var percentage = tract_age_sum / total_age_sum
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -5553,9 +5360,12 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: percentage
+                fillOpacity: (percentage * 100)
               };
             }
+
+          
+
           }
         }
     
@@ -5574,66 +5384,18 @@
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
-            var less_than_five = data[3][censusTractArrayList[i]] //0
-            var five_to_nine = data[4][censusTractArrayList[i]] //1
-            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
-            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
-            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
-            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
-            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
-            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
-            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
-            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
-            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
-            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
-            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
-            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
-            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
-            ages_exanded = []
-            index = 0; 
-            for(var j = 0; j < ages_parsed.length; j++){
-              for(var k = 0; k < ages_parsed[j]; k++){
-                ages_exanded.push(index)
-              }
-              index = index+1; 
-            }
-            function median(arr){
-              arr.sort(function(a, b){ return a - b; });
-              var i = arr.length / 2;
-              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
-            }
-            var median_value = median(ages_exanded)
-            var percentage = median_value/12
-    
-    
-            var age_bracket = age_range_str[median_value]
-            var bracket; 
-            if (age_bracket == 'eighty_five_and_older'){
-              bracket = 12; 
-            } else if (age_bracket == 'seventy_five_to_eighty_four'){
-              bracket = 11; 
-            } else if (age_bracket == 'sixty_five_to_seventy_four'){
-              bracket = 10; 
-            } else if (age_bracket == 'fifty_five_to_sixty_four'){
-              bracket = 9; 
-            } else if (age_bracket == 'fourty_five_to_fifty_four'){
-              bracket = 8; 
-            } else if (age_bracket == 'thirty_five_to_fourty_four'){
-              bracket = 7; 
-            } else if (age_bracket == 'twenty_five_to_thirty_four'){
-              bracket = 6; 
-            } else if (age_bracket == 'eighteen_to_twenty_four'){
-              bracket = 5; 
-            } else if (age_bracket == 'fifteen_to_seventeen'){
-              bracket = 4; 
-            } else if (age_bracket == 'ten_to_fourteen'){
-              bracket = 3; 
-            } else if (age_bracket == 'five_to_nine'){
-              bracket = 2; 
-            } else if (age_bracket == 'less_than_five'){
-              bracket = 1; 
-            }
-            // percentage = bracket/12; 
+            var sixty_five_to_seventy_four = parseInt(data[12][censusTractArrayList[i]]) //0
+            var seventy_five_to_eighty_four = parseInt(data[13][censusTractArrayList[i]]) //1
+            var eighty_five_and_older = parseInt(data[14][censusTractArrayList[i]]) //1
+            
+            var sixty_five_to_seventy_four_total = parseInt(data[12]["TOTAL (All Selected Census Tracts)"])
+            var seventy_five_to_eighty_four_total = parseInt(data[13]["TOTAL (All Selected Census Tracts)"])
+            var eighty_five_and_older_total = parseInt(data[14][censusTractArrayList[i]]) //1
+
+            var tract_age_sum = sixty_five_to_seventy_four + seventy_five_to_eighty_four + eighty_five_and_older
+            var total_age_sum = sixty_five_to_seventy_four_total + seventy_five_to_eighty_four_total 
+
+            var percentage = tract_age_sum / total_age_sum
            
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
@@ -5653,9 +5415,12 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: percentage
+                fillOpacity: (percentage * 100)
               };
             }
+
+          
+
           }
         }
     
