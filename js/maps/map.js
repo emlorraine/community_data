@@ -4705,6 +4705,10 @@
   var blue = new GColor(1, 37, 73);
   var colorRange = createColorRange(red, blue)
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
       //Event listeners for checkboxes:
     var checkboxRace = document.querySelector("input[id=race]");
     checkboxRace.addEventListener('change', function() {
@@ -5206,6 +5210,18 @@
                 fillOpacity: (percentage * 100)
               };
             }
+            $("#legend").empty()
+            $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 0-9:</h5>")
+            $("#median-age-data-legend").append("<h8>0</h8>");
+            $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
+            $(".rectangle").css("height", "30px")
+            $(".rectangle").css("width", "250px")
+            $(".rectangle").css("display", "inline-block")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+
+          
           }
         }
     
@@ -5256,6 +5272,18 @@
                 fillOpacity: (percentage * 100)
               };
             }
+            $("#legend").empty()
+            $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 9-17:</h5>")
+            $("#median-age-data-legend").append("<h8>0</h8>");
+            $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
+            $(".rectangle").css("height", "30px")
+            $(".rectangle").css("width", "250px")
+            $(".rectangle").css("display", "inline-block")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+
+          
 
           }
         }
@@ -5308,6 +5336,18 @@
                 fillOpacity: (percentage * 100)
               };
             }
+            $("#legend").empty()
+            $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 18-34:</h5>")
+            $("#median-age-data-legend").append("<h8>0</h8>");
+            $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
+            $(".rectangle").css("height", "30px")
+            $(".rectangle").css("width", "250px")
+            $(".rectangle").css("display", "inline-block")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+
+          
 
           
             
@@ -5320,7 +5360,6 @@
         var thirtyFiveToSixtyFour = document.querySelector("input[id=thirtyFiveToSixtyFour]");
         thirtyFiveToSixtyFour.addEventListener('change', function() {
         if (this.checked) {
-          console.log("checked thirtyFiveToSixtyFour")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
               map.removeLayer(layer);
@@ -5363,6 +5402,18 @@
                 fillOpacity: (percentage * 100)
               };
             }
+            $("#legend").empty()
+            $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 35-64:</h5>")
+            $("#median-age-data-legend").append("<h8>0</h8>");
+            $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
+            $(".rectangle").css("height", "30px")
+            $(".rectangle").css("width", "250px")
+            $(".rectangle").css("display", "inline-block")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+
+          
 
           
 
@@ -5375,7 +5426,6 @@
         var sixtyFivePlus = document.querySelector("input[id=sixtyFivePlus]");
         sixtyFivePlus.addEventListener('change', function() {
         if (this.checked) {
-          console.log("checked sixtyFivePlus")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
               map.removeLayer(layer);
@@ -5418,6 +5468,16 @@
                 fillOpacity: (percentage * 100)
               };
             }
+            $("#legend").empty()
+            $("#legend").append("<div id='median-age-data-legend'></div")
+            $("#median-age-data-legend").append("<h5>Population Density of Persons Aged 65+:</h5>")
+            $("#median-age-data-legend").append("<h8>0</h8>");
+            $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
+            $(".rectangle").css("height", "30px")
+            $(".rectangle").css("width", "250px")
+            $(".rectangle").css("display", "inline-block")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
 
           
 
@@ -5425,21 +5485,6 @@
         }
     
         })
-
-
-
-
-
-      
-      $("#legend").append("<div id='median-age-data-legend'></div")
-      $("#median-age-data-legend").append("<h5>Median Age Legend:</h5>")
-      $("#median-age-data-legend").append("<h8>< 5 years</h8>");
-      $("#median-age-data-legend").append("<span class='rectangle' id='age-rectangle'></span>");
-      $(".rectangle").css("height", "30px")
-      $(".rectangle").css("width", "250px")
-      $(".rectangle").css("display", "inline-block")
-      $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
-      $("#median-age-data-legend").append("<h8>>85 years</h8>");
 
       generateLayerPopups()
 
@@ -5635,9 +5680,7 @@
 
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
 
-      function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
+      
 
       var layerGroup = L.geoJSON(individualCensusTract, {
         onEachFeature: function (feature, layer) {
