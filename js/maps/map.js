@@ -5119,6 +5119,8 @@
     checkboxAge.addEventListener('change', function() {
     if (this.checked) {
 
+
+
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -5147,93 +5149,523 @@
             
         });
 
+        $("#legend").append("<div id='age-data-selectors'></div")
+        $("#age-data-selectors").append("<input type='radio' id='zeroToNine' name='age-selector' value='zeroToNine'><label for='zeroToNine'>0-9</label>")
+        $("#age-data-selectors").append("<br>")
+        $("#age-data-selectors").append("<input type='radio' id='nineToSeventeen' name='age-selector' value='nineToSeventeen'><label for='nineToSeventeen'>9-17</label>")
+        $("#age-data-selectors").append("<br>")
+        $("#age-data-selectors").append("<input type='radio' id='eighteenToThirtyFour' name='age-selector' value='eighteenToThirtyFour'><label for='eighteenToThirtyFour'>18-34</label>")
+        $("#age-data-selectors").append("<br>")
+        $("#age-data-selectors").append("<input type='radio' id='thirtyFiveToSixtyFour' name='age-selector' value='thirtyFiveToSixtyFour'><label for='thirtyFiveToSixtyFour'>35-64</label>")
+        $("#age-data-selectors").append("<br>")
+        $("#age-data-selectors").append("<input type='radio' id='sixtyFivePlus' name='age-selector' value='sixtyFivePlus'><label for='sixtyFivePlus'>65+</label>")
+        $("#age-data-selectors").append("<br>")
 
-      for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-        censusTract = censusTractArrayList[i]
-        censusPoly = stlCensusTracts.geometries[i]
-        var less_than_five = data[3][censusTractArrayList[i]] //0
-        var five_to_nine = data[4][censusTractArrayList[i]] //1
-        var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
-        var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
-        var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
-        var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
-        var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
-        var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
-        var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
-        var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
-        var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
-        var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
-        age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
-        age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
-        ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
-        ages_exanded = []
-        index = 0; 
-        for(var j = 0; j < ages_parsed.length; j++){
-          for(var k = 0; k < ages_parsed[j]; k++){
-            ages_exanded.push(index)
+        
+        var zeroToNine = document.querySelector("input[id=zeroToNine]");
+        zeroToNine.addEventListener('change', function() {
+        if (this.checked) {
+          console.log("checked 0-9")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var less_than_five = data[3][censusTractArrayList[i]] //0
+            var five_to_nine = data[4][censusTractArrayList[i]] //1
+            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
+            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
+            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
+            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
+            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
+            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
+            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
+            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
+            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
+            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
+            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
+            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
+            ages_exanded = []
+            index = 0; 
+            for(var j = 0; j < ages_parsed.length; j++){
+              for(var k = 0; k < ages_parsed[j]; k++){
+                ages_exanded.push(index)
+              }
+              index = index+1; 
+            }
+            function median(arr){
+              arr.sort(function(a, b){ return a - b; });
+              var i = arr.length / 2;
+              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+            }
+            var median_value = median(ages_exanded)
+            var percentage = median_value/12
+    
+    
+            var age_bracket = age_range_str[median_value]
+            var bracket; 
+            if (age_bracket == 'eighty_five_and_older'){
+              bracket = 12; 
+            } else if (age_bracket == 'seventy_five_to_eighty_four'){
+              bracket = 11; 
+            } else if (age_bracket == 'sixty_five_to_seventy_four'){
+              bracket = 10; 
+            } else if (age_bracket == 'fifty_five_to_sixty_four'){
+              bracket = 9; 
+            } else if (age_bracket == 'fourty_five_to_fifty_four'){
+              bracket = 8; 
+            } else if (age_bracket == 'thirty_five_to_fourty_four'){
+              bracket = 7; 
+            } else if (age_bracket == 'twenty_five_to_thirty_four'){
+              bracket = 6; 
+            } else if (age_bracket == 'eighteen_to_twenty_four'){
+              bracket = 5; 
+            } else if (age_bracket == 'fifteen_to_seventeen'){
+              bracket = 4; 
+            } else if (age_bracket == 'ten_to_fourteen'){
+              bracket = 3; 
+            } else if (age_bracket == 'five_to_nine'){
+              bracket = 2; 
+            } else if (age_bracket == 'less_than_five'){
+              bracket = 1; 
+            }
+            // percentage = bracket/12; 
+           
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+      
+            if(censusTract==1278){
+              // middle = '5500ab'
+              percentage = 0.33
+            }
+            // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            function style(region) {
+              return {
+                fillColor: "#228B22",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
           }
-          index = index+1; 
         }
-        function median(arr){
-          arr.sort(function(a, b){ return a - b; });
-          var i = arr.length / 2;
-          return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+    
+        })
+
+        
+        var nineToSeventeen = document.querySelector("input[id=nineToSeventeen]");
+        nineToSeventeen.addEventListener('change', function() {
+        if (this.checked) {
+          console.log("checked nineToSeventeen")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var less_than_five = data[3][censusTractArrayList[i]] //0
+            var five_to_nine = data[4][censusTractArrayList[i]] //1
+            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
+            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
+            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
+            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
+            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
+            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
+            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
+            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
+            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
+            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
+            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
+            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
+            ages_exanded = []
+            index = 0; 
+            for(var j = 0; j < ages_parsed.length; j++){
+              for(var k = 0; k < ages_parsed[j]; k++){
+                ages_exanded.push(index)
+              }
+              index = index+1; 
+            }
+            function median(arr){
+              arr.sort(function(a, b){ return a - b; });
+              var i = arr.length / 2;
+              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+            }
+            var median_value = median(ages_exanded)
+            var percentage = median_value/12
+    
+    
+            var age_bracket = age_range_str[median_value]
+            var bracket; 
+            if (age_bracket == 'eighty_five_and_older'){
+              bracket = 12; 
+            } else if (age_bracket == 'seventy_five_to_eighty_four'){
+              bracket = 11; 
+            } else if (age_bracket == 'sixty_five_to_seventy_four'){
+              bracket = 10; 
+            } else if (age_bracket == 'fifty_five_to_sixty_four'){
+              bracket = 9; 
+            } else if (age_bracket == 'fourty_five_to_fifty_four'){
+              bracket = 8; 
+            } else if (age_bracket == 'thirty_five_to_fourty_four'){
+              bracket = 7; 
+            } else if (age_bracket == 'twenty_five_to_thirty_four'){
+              bracket = 6; 
+            } else if (age_bracket == 'eighteen_to_twenty_four'){
+              bracket = 5; 
+            } else if (age_bracket == 'fifteen_to_seventeen'){
+              bracket = 4; 
+            } else if (age_bracket == 'ten_to_fourteen'){
+              bracket = 3; 
+            } else if (age_bracket == 'five_to_nine'){
+              bracket = 2; 
+            } else if (age_bracket == 'less_than_five'){
+              bracket = 1; 
+            }
+            // percentage = bracket/12; 
+           
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+      
+            if(censusTract==1278){
+              // middle = '5500ab'
+              percentage = 0.33
+            }
+            // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            function style(region) {
+              return {
+                fillColor: "#228B22",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
         }
-        var median_value = median(ages_exanded)
-        var percentage = median_value/12
+    
+        })
+
+        
+        var eighteenToThirtyFour = document.querySelector("input[id=eighteenToThirtyFour]");
+        eighteenToThirtyFour.addEventListener('change', function() {
+        if (this.checked) {
+          console.log("checked eighteenToThirtyFour")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var less_than_five = data[3][censusTractArrayList[i]] //0
+            var five_to_nine = data[4][censusTractArrayList[i]] //1
+            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
+            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
+            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
+            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
+            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
+            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
+            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
+            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
+            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
+            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
+            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
+            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
+            ages_exanded = []
+            index = 0; 
+            for(var j = 0; j < ages_parsed.length; j++){
+              for(var k = 0; k < ages_parsed[j]; k++){
+                ages_exanded.push(index)
+              }
+              index = index+1; 
+            }
+            function median(arr){
+              arr.sort(function(a, b){ return a - b; });
+              var i = arr.length / 2;
+              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+            }
+            var median_value = median(ages_exanded)
+            var percentage = median_value/12
+    
+    
+            var age_bracket = age_range_str[median_value]
+            var bracket; 
+            if (age_bracket == 'eighty_five_and_older'){
+              bracket = 12; 
+            } else if (age_bracket == 'seventy_five_to_eighty_four'){
+              bracket = 11; 
+            } else if (age_bracket == 'sixty_five_to_seventy_four'){
+              bracket = 10; 
+            } else if (age_bracket == 'fifty_five_to_sixty_four'){
+              bracket = 9; 
+            } else if (age_bracket == 'fourty_five_to_fifty_four'){
+              bracket = 8; 
+            } else if (age_bracket == 'thirty_five_to_fourty_four'){
+              bracket = 7; 
+            } else if (age_bracket == 'twenty_five_to_thirty_four'){
+              bracket = 6; 
+            } else if (age_bracket == 'eighteen_to_twenty_four'){
+              bracket = 5; 
+            } else if (age_bracket == 'fifteen_to_seventeen'){
+              bracket = 4; 
+            } else if (age_bracket == 'ten_to_fourteen'){
+              bracket = 3; 
+            } else if (age_bracket == 'five_to_nine'){
+              bracket = 2; 
+            } else if (age_bracket == 'less_than_five'){
+              bracket = 1; 
+            }
+            // percentage = bracket/12; 
+           
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+      
+            if(censusTract==1278){
+              // middle = '5500ab'
+              percentage = 0.33
+            }
+            // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            function style(region) {
+              return {
+                fillColor: "#228B22",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
+        }
+    
+        })
+
+        
+        var thirtyFiveToSixtyFour = document.querySelector("input[id=thirtyFiveToSixtyFour]");
+        thirtyFiveToSixtyFour.addEventListener('change', function() {
+        if (this.checked) {
+          console.log("checked thirtyFiveToSixtyFour")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var less_than_five = data[3][censusTractArrayList[i]] //0
+            var five_to_nine = data[4][censusTractArrayList[i]] //1
+            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
+            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
+            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
+            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
+            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
+            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
+            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
+            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
+            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
+            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
+            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
+            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
+            ages_exanded = []
+            index = 0; 
+            for(var j = 0; j < ages_parsed.length; j++){
+              for(var k = 0; k < ages_parsed[j]; k++){
+                ages_exanded.push(index)
+              }
+              index = index+1; 
+            }
+            function median(arr){
+              arr.sort(function(a, b){ return a - b; });
+              var i = arr.length / 2;
+              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+            }
+            var median_value = median(ages_exanded)
+            var percentage = median_value/12
+    
+    
+            var age_bracket = age_range_str[median_value]
+            var bracket; 
+            if (age_bracket == 'eighty_five_and_older'){
+              bracket = 12; 
+            } else if (age_bracket == 'seventy_five_to_eighty_four'){
+              bracket = 11; 
+            } else if (age_bracket == 'sixty_five_to_seventy_four'){
+              bracket = 10; 
+            } else if (age_bracket == 'fifty_five_to_sixty_four'){
+              bracket = 9; 
+            } else if (age_bracket == 'fourty_five_to_fifty_four'){
+              bracket = 8; 
+            } else if (age_bracket == 'thirty_five_to_fourty_four'){
+              bracket = 7; 
+            } else if (age_bracket == 'twenty_five_to_thirty_four'){
+              bracket = 6; 
+            } else if (age_bracket == 'eighteen_to_twenty_four'){
+              bracket = 5; 
+            } else if (age_bracket == 'fifteen_to_seventeen'){
+              bracket = 4; 
+            } else if (age_bracket == 'ten_to_fourteen'){
+              bracket = 3; 
+            } else if (age_bracket == 'five_to_nine'){
+              bracket = 2; 
+            } else if (age_bracket == 'less_than_five'){
+              bracket = 1; 
+            }
+            // percentage = bracket/12; 
+           
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+      
+            if(censusTract==1278){
+              // middle = '5500ab'
+              percentage = 0.33
+            }
+            // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            function style(region) {
+              return {
+                fillColor: "#228B22",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
+        }
+    
+        })
+
+        
+        var sixtyFivePlus = document.querySelector("input[id=sixtyFivePlus]");
+        sixtyFivePlus.addEventListener('change', function() {
+        if (this.checked) {
+          console.log("checked sixtyFivePlus")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var less_than_five = data[3][censusTractArrayList[i]] //0
+            var five_to_nine = data[4][censusTractArrayList[i]] //1
+            var ten_to_fourteen= data[5][censusTractArrayList[i]] //2
+            var fifteen_to_seventeen = data[6][censusTractArrayList[i]] //3
+            var eighteen_to_twenty_four = data[7][censusTractArrayList[i]] //4
+            var twenty_five_to_thirty_four = data[8][censusTractArrayList[i]] //5
+            var thirty_five_to_fourty_four = data[9][censusTractArrayList[i]] //6
+            var fourty_five_to_fifty_four = data[10][censusTractArrayList[i]] //7
+            var fifty_five_to_sixty_four = data[11][censusTractArrayList[i]] //8
+            var sixty_five_to_seventy_four = data[12][censusTractArrayList[i]] //9
+            var seventy_five_to_eighty_four = data[13][censusTractArrayList[i]] //10
+            var eighty_five_and_older = data[14][censusTractArrayList[i]]//11
+            age_range = [less_than_five, five_to_nine, ten_to_fourteen, fifteen_to_seventeen, eighteen_to_twenty_four, twenty_five_to_thirty_four, thirty_five_to_fourty_four, fourty_five_to_fifty_four, fifty_five_to_sixty_four, sixty_five_to_seventy_four, seventy_five_to_eighty_four, eighty_five_and_older]
+            age_range_str = ['less_than_five', 'five_to_nine', 'ten_to_fourteen', 'fifteen_to_seventeen', 'eighteen_to_twenty_four', 'twenty_five_to_thirty_four', 'thirty_five_to_fourty_four', 'fourty_five_to_fifty_four', 'fifty_five_to_sixty_four', 'sixty_five_to_seventy_four', 'seventy_five_to_eighty_four', 'eighty_five_and_older']
+            ages_parsed = [parseInt(less_than_five), parseInt(five_to_nine), parseInt(ten_to_fourteen), parseInt(fifteen_to_seventeen), parseInt(eighteen_to_twenty_four), parseInt(twenty_five_to_thirty_four), parseInt(thirty_five_to_fourty_four), parseInt(fourty_five_to_fifty_four), parseInt(fifty_five_to_sixty_four), parseInt(sixty_five_to_seventy_four), parseInt(seventy_five_to_eighty_four), parseInt(eighty_five_and_older)]
+            ages_exanded = []
+            index = 0; 
+            for(var j = 0; j < ages_parsed.length; j++){
+              for(var k = 0; k < ages_parsed[j]; k++){
+                ages_exanded.push(index)
+              }
+              index = index+1; 
+            }
+            function median(arr){
+              arr.sort(function(a, b){ return a - b; });
+              var i = arr.length / 2;
+              return i % 1 == 0 ? (arr[i - 1] + arr[i]) / 2 : arr[Math.floor(i)];
+            }
+            var median_value = median(ages_exanded)
+            var percentage = median_value/12
+    
+    
+            var age_bracket = age_range_str[median_value]
+            var bracket; 
+            if (age_bracket == 'eighty_five_and_older'){
+              bracket = 12; 
+            } else if (age_bracket == 'seventy_five_to_eighty_four'){
+              bracket = 11; 
+            } else if (age_bracket == 'sixty_five_to_seventy_four'){
+              bracket = 10; 
+            } else if (age_bracket == 'fifty_five_to_sixty_four'){
+              bracket = 9; 
+            } else if (age_bracket == 'fourty_five_to_fifty_four'){
+              bracket = 8; 
+            } else if (age_bracket == 'thirty_five_to_fourty_four'){
+              bracket = 7; 
+            } else if (age_bracket == 'twenty_five_to_thirty_four'){
+              bracket = 6; 
+            } else if (age_bracket == 'eighteen_to_twenty_four'){
+              bracket = 5; 
+            } else if (age_bracket == 'fifteen_to_seventeen'){
+              bracket = 4; 
+            } else if (age_bracket == 'ten_to_fourteen'){
+              bracket = 3; 
+            } else if (age_bracket == 'five_to_nine'){
+              bracket = 2; 
+            } else if (age_bracket == 'less_than_five'){
+              bracket = 1; 
+            }
+            // percentage = bracket/12; 
+           
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+      
+            if(censusTract==1278){
+              // middle = '5500ab'
+              percentage = 0.33
+            }
+            // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            function style(region) {
+              return {
+                fillColor: "#228B22",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
+        }
+    
+        })
 
 
-        var age_bracket = age_range_str[median_value]
-        var bracket; 
-        if (age_bracket == 'eighty_five_and_older'){
-          bracket = 12; 
-        } else if (age_bracket == 'seventy_five_to_eighty_four'){
-          bracket = 11; 
-        } else if (age_bracket == 'sixty_five_to_seventy_four'){
-          bracket = 10; 
-        } else if (age_bracket == 'fifty_five_to_sixty_four'){
-          bracket = 9; 
-        } else if (age_bracket == 'fourty_five_to_fifty_four'){
-          bracket = 8; 
-        } else if (age_bracket == 'thirty_five_to_fourty_four'){
-          bracket = 7; 
-        } else if (age_bracket == 'twenty_five_to_thirty_four'){
-          bracket = 6; 
-        } else if (age_bracket == 'eighteen_to_twenty_four'){
-          bracket = 5; 
-        } else if (age_bracket == 'fifteen_to_seventeen'){
-          bracket = 4; 
-        } else if (age_bracket == 'ten_to_fourteen'){
-          bracket = 3; 
-        } else if (age_bracket == 'five_to_nine'){
-          bracket = 2; 
-        } else if (age_bracket == 'less_than_five'){
-          bracket = 1; 
-        }
-        // percentage = bracket/12; 
-       
-        var individualCensusTract = (stlCensusTracts.geometries[i])
-        var individualCensusTractPolygon = {
-          "type":"GeometryCollection", 
-          "geometries": [individualCensusTract]
-        }
-        // var polyTracts = L.geoJson(individualCensusTractPolygon)
-        geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
-  
-        if(censusTract==1278){
-          // middle = '5500ab'
-          percentage = 0.33
-        }
-        // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
-        function style(region) {
-          return {
-            fillColor: "#228B22",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: percentage
-          };
-        }
-      }
+
+
+
+      
       $("#legend").append("<div id='median-age-data-legend'></div")
       $("#median-age-data-legend").append("<h5>Median Age Legend:</h5>")
       $("#median-age-data-legend").append("<h8>< 5 years</h8>");
