@@ -4715,6 +4715,8 @@
     checkboxRace.addEventListener('change', function() {
     if(this.checked) {
 
+
+
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
 
@@ -4743,8 +4745,30 @@
         }
       });
 
+      //Display selectors here: 
 
-        for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+      $("#legend").append("<div id='race-ethnicity-data-selectors'></div")
+      $("#race-ethnicity-data-selectors").append("<input type='radio' id='race-data' name='race-or-ethnicity-data-selector' value='race-data'><label for='race-data'>Racial Data</label>")
+      $("#race-ethnicity-data-selectors").append("<br>")
+      $("#race-ethnicity-data-selectors").append("<input type='radio' id='ethnicity-data' name='race-or-ethnicity-data-selector' value='ethnicity-data'><label for='ethnicity-data'>Ethnicity Data</label>")
+
+      var racialData = document.querySelector("input[id=race-data]");
+      racialData.addEventListener('change', function() {
+        if (this.checked) {
+
+          $("#racial-data-legend").empty()
+          // map.removeLayer(geojson);
+          // console.log("remove layers here") 
+          map.eachLayer(function (layer) {
+            if(layer._radius == 2){
+              // console.log(layer)
+              map.removeLayer(layer);
+
+            }
+            
+        });
+        
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
@@ -4915,21 +4939,27 @@
           // $("#text").css("float", "right")
         }
         $("#racial-data-legend").append("<h8>One dot = 10 people </h8>");
+        }
+      })
+
+
+
+        
         
       }
-      if(!this.checked) {
-        $("#racial-data-legend").empty()
-          // map.removeLayer(geojson);
-          // console.log("remove layers here") 
-          map.eachLayer(function (layer) {
-            if(layer._radius == 2){
-              // console.log(layer)
-              map.removeLayer(layer);
+      // if(!this.checked) {
+      //   $("#racial-data-legend").empty()
+      //     // map.removeLayer(geojson);
+      //     // console.log("remove layers here") 
+      //     map.eachLayer(function (layer) {
+      //       if(layer._radius == 2){
+      //         // console.log(layer)
+      //         map.removeLayer(layer);
 
-            }
+      //       }
             
-        });
-      }
+      //   });
+      // }
     })
     var checkboxEducation = document.querySelector("input[id=education]");
     checkboxEducation.addEventListener('change', function() {
