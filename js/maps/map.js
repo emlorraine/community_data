@@ -4656,6 +4656,433 @@
         {"type":"Polygon","coordinates":[[[-90.23378799999999,38.634422],[-90.23385499999999,38.63422],[-90.23405799999999,38.633617],[-90.23412599999999,38.633416],[-90.23414199999999,38.633367],[-90.23419,38.633223],[-90.234207,38.633175],[-90.234225,38.633117999999996],[-90.234234,38.633089999999996],[-90.234246,38.633055999999996],[-90.23425499999999,38.633029],[-90.234265,38.633],[-90.23432799999999,38.632818],[-90.234432,38.63252],[-90.234465,38.632425999999995],[-90.234523,38.632258],[-90.234588,38.632070999999996],[-90.234623,38.631971],[-90.234668,38.631816],[-90.234775,38.631524999999996],[-90.23494,38.631074999999996],[-90.234956,38.631031],[-90.235086,38.630679],[-90.23542499999999,38.629764],[-90.235445,38.629708],[-90.235474,38.62963],[-90.235507,38.62954],[-90.235528,38.629484999999995],[-90.235557,38.629408],[-90.23589,38.628508],[-90.236097,38.627877],[-90.23615699999999,38.627691999999996],[-90.23633799999999,38.62714],[-90.23639899999999,38.626956],[-90.23646199999999,38.626762],[-90.23655099999999,38.626492999999996],[-90.23665299999999,38.626183],[-90.236718,38.625991],[-90.23526199999999,38.625686],[-90.234054,38.625434],[-90.233989,38.62542],[-90.233921,38.625405],[-90.23302,38.625211],[-90.232551,38.62511],[-90.232046,38.625001],[-90.231341,38.624857999999996],[-90.231234,38.624835999999995],[-90.230319,38.624649],[-90.229878,38.624559],[-90.229483,38.624479],[-90.22822,38.624219],[-90.227858,38.624144],[-90.22636399999999,38.623835],[-90.226063,38.623771999999995],[-90.225162,38.623584],[-90.224862,38.623522],[-90.224786,38.623644999999996],[-90.224729,38.623739],[-90.224565,38.62402],[-90.224493,38.624145999999996],[-90.22442199999999,38.624311999999996],[-90.224209,38.624812999999996],[-90.224139,38.62498],[-90.22375699999999,38.624876],[-90.223249,38.624758],[-90.22314,38.624733],[-90.222645,38.624638],[-90.222173,38.624562],[-90.221583,38.624458],[-90.220834,38.624344],[-90.220539,38.624300999999996],[-90.220028,38.624229],[-90.21963099999999,38.624179],[-90.218953,38.624094],[-90.21843899999999,38.62404],[-90.218136,38.624018],[-90.218128,38.624275],[-90.218121,38.624582],[-90.218119,38.624727],[-90.218115,38.624997],[-90.218133,38.625505],[-90.218144,38.625813],[-90.218147,38.625917],[-90.21815099999999,38.626034],[-90.218137,38.626453999999995],[-90.21811799999999,38.626618],[-90.218102,38.626702],[-90.218083,38.626795],[-90.218009,38.626984],[-90.21794899999999,38.627092999999995],[-90.21789799999999,38.627184],[-90.217823,38.62732],[-90.21777999999999,38.62739],[-90.217738,38.627455999999995],[-90.217683,38.627545],[-90.217649,38.627598],[-90.21755,38.627758],[-90.217517,38.627812],[-90.217405,38.627991],[-90.217263,38.62822],[-90.217069,38.628529],[-90.21695799999999,38.628709],[-90.216813,38.628941],[-90.21656,38.629349999999995],[-90.21638,38.629636999999995],[-90.216236,38.62987],[-90.21608599999999,38.630109999999995],[-90.21597799999999,38.630285],[-90.215639,38.630831],[-90.215491,38.631071999999996],[-90.215851,38.631122999999995],[-90.215946,38.631136999999995],[-90.216589,38.631186],[-90.216939,38.631195],[-90.217233,38.631204],[-90.217303,38.631201999999995],[-90.217286,38.631249],[-90.217188,38.631524],[-90.217094,38.631789],[-90.216961,38.632191],[-90.216861,38.632497],[-90.21675499999999,38.632822999999995],[-90.217197,38.632901],[-90.21744199999999,38.632943999999995],[-90.21836499999999,38.633125],[-90.21846099999999,38.633168999999995],[-90.218509,38.633185999999995],[-90.218535,38.633247],[-90.21853399999999,38.633285],[-90.21843799999999,38.633621],[-90.21841099999999,38.633699],[-90.21833099999999,38.633936],[-90.218305,38.634015],[-90.218237,38.634211],[-90.218128,38.634533],[-90.218036,38.634799],[-90.217969,38.634996],[-90.217906,38.635177999999996],[-90.217812,38.635453],[-90.217719,38.635723999999996],[-90.217658,38.635906999999996],[-90.217596,38.636089],[-90.217503,38.636368999999995],[-90.217413,38.636635999999996],[-90.21735199999999,38.636818999999996],[-90.21728999999999,38.637001],[-90.217237,38.637161],[-90.217103,38.637547],[-90.217041,38.63773],[-90.216976,38.637916],[-90.21690799999999,38.638112],[-90.216781,38.638473999999995],[-90.216717,38.63866],[-90.217495,38.638808999999995],[-90.21766,38.638844],[-90.21857299999999,38.639033999999995],[-90.218948,38.639111],[-90.220075,38.639345],[-90.220451,38.639423],[-90.220798,38.639493],[-90.22093,38.63952],[-90.221128,38.639559999999996],[-90.221701,38.639676],[-90.22184,38.639703999999995],[-90.222188,38.639775],[-90.22254699999999,38.639852999999995],[-90.223624,38.640087],[-90.223905,38.640147999999996],[-90.223985,38.640153],[-90.22416,38.640173],[-90.224862,38.640329],[-90.225276,38.640422],[-90.22572199999999,38.640518],[-90.22585199999999,38.640546],[-90.226382,38.64066],[-90.226839,38.640758999999996],[-90.227271,38.640853],[-90.227395,38.640879],[-90.22748899999999,38.640899],[-90.227814,38.640971],[-90.22801799999999,38.641014999999996],[-90.22836699999999,38.641082999999995],[-90.22838899999999,38.641087],[-90.229102,38.641217],[-90.22995499999999,38.641238],[-90.23001699999999,38.641138999999995],[-90.23008899999999,38.641025],[-90.230215,38.64085],[-90.230284,38.640755999999996],[-90.23036499999999,38.640642],[-90.230611,38.6403],[-90.230655,38.640240999999996],[-90.230694,38.640187],[-90.230735,38.640129],[-90.23085999999999,38.639956],[-90.230902,38.639899],[-90.230992,38.639772],[-90.231235,38.639437],[-90.23126599999999,38.639393999999996],[-90.23136,38.639269999999996],[-90.231428,38.639178],[-90.23163199999999,38.638905],[-90.231701,38.638813999999996],[-90.2318,38.638681],[-90.231865,38.638594999999995],[-90.232098,38.638282],[-90.23214,38.638227],[-90.23219499999999,38.638148],[-90.232317,38.637971],[-90.2324,38.637851999999995],[-90.232536,38.637636],[-90.23265699999999,38.63742],[-90.232743,38.637225],[-90.232857,38.636964],[-90.233181,38.636115],[-90.233318,38.635732999999995],[-90.23378799999999,38.634422]]]}
         ]}
 
+      const ethnicity_data = [
+        {
+          "Area Name": 1011,
+          "% Total Population: Hispanic or Latino": 10.77
+        },
+        {
+          "Area Name": 1012,
+          "% Total Population: Hispanic or Latino": 1.97
+        },
+        {
+          "Area Name": 1013,
+          "% Total Population: Hispanic or Latino": 0.56
+        },
+        {
+          "Area Name": 1014,
+          "% Total Population: Hispanic or Latino": 1.3
+        },
+        {
+          "Area Name": 1015,
+          "% Total Population: Hispanic or Latino": 3.67
+        },
+        {
+          "Area Name": 1018,
+          "% Total Population: Hispanic or Latino": 10.11
+        },
+        {
+          "Area Name": 1021,
+          "% Total Population: Hispanic or Latino": 1.63
+        },
+        {
+          "Area Name": 1022,
+          "% Total Population: Hispanic or Latino": 2.07
+        },
+        {
+          "Area Name": 1023,
+          "% Total Population: Hispanic or Latino": 5.52
+        },
+        {
+          "Area Name": 1024,
+          "% Total Population: Hispanic or Latino": 2.05
+        },
+        {
+          "Area Name": 1025,
+          "% Total Population: Hispanic or Latino": 6.31
+        },
+        {
+          "Area Name": 1031,
+          "% Total Population: Hispanic or Latino": 7.6
+        },
+        {
+          "Area Name": 1034,
+          "% Total Population: Hispanic or Latino": 2.61
+        },
+        {
+          "Area Name": 1036,
+          "% Total Population: Hispanic or Latino": 2.91
+        },
+        {
+          "Area Name": 1037,
+          "% Total Population: Hispanic or Latino": 2.4
+        },
+        {
+          "Area Name": 1038,
+          "% Total Population: Hispanic or Latino": 5.92
+        },
+        {
+          "Area Name": 1042,
+          "% Total Population: Hispanic or Latino": 2.3
+        },
+        {
+          "Area Name": 1045,
+          "% Total Population: Hispanic or Latino": 2.89
+        },
+        {
+          "Area Name": 1051.98,
+          "% Total Population: Hispanic or Latino": 2.19
+        },
+        {
+          "Area Name": 1052,
+          "% Total Population: Hispanic or Latino": 4.39
+        },
+        {
+          "Area Name": 1053,
+          "% Total Population: Hispanic or Latino": 0.72
+        },
+        {
+          "Area Name": 1054,
+          "% Total Population: Hispanic or Latino": 8.88
+        },
+        {
+          "Area Name": 1055,
+          "% Total Population: Hispanic or Latino": 1.77
+        },
+        {
+          "Area Name": 1061,
+          "% Total Population: Hispanic or Latino": 0.68
+        },
+        {
+          "Area Name": 1062,
+          "% Total Population: Hispanic or Latino": 1.4
+        },
+        {
+          "Area Name": 1063,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1064,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1065,
+          "% Total Population: Hispanic or Latino": 0.98
+        },
+        {
+          "Area Name": 1066,
+          "% Total Population: Hispanic or Latino": 1.22
+        },
+        {
+          "Area Name": 1067,
+          "% Total Population: Hispanic or Latino": 0.39
+        },
+        {
+          "Area Name": 1072,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1073,
+          "% Total Population: Hispanic or Latino": 1.25
+        },
+        {
+          "Area Name": 1074,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1075,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1076,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1081,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1082,
+          "% Total Population: Hispanic or Latino": 0.29
+        },
+        {
+          "Area Name": 1083,
+          "% Total Population: Hispanic or Latino": 0.76
+        },
+        {
+          "Area Name": 1096,
+          "% Total Population: Hispanic or Latino": 2.56
+        },
+        {
+          "Area Name": 1097,
+          "% Total Population: Hispanic or Latino": 0.55
+        },
+        {
+          "Area Name": 1101,
+          "% Total Population: Hispanic or Latino": 0.87
+        },
+        {
+          "Area Name": 1102,
+          "% Total Population: Hispanic or Latino": 1.57
+        },
+        {
+          "Area Name": 1103,
+          "% Total Population: Hispanic or Latino": 0.49
+        },
+        {
+          "Area Name": 1104,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1105,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1111,
+          "% Total Population: Hispanic or Latino": 0.37
+        },
+        {
+          "Area Name": 1112,
+          "% Total Population: Hispanic or Latino": 2.16
+        },
+        {
+          "Area Name": 1113,
+          "% Total Population: Hispanic or Latino": 0.07
+        },
+        {
+          "Area Name": 1114,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1115,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1121,
+          "% Total Population: Hispanic or Latino": 5.8
+        },
+        {
+          "Area Name": 1122,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1123,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1124,
+          "% Total Population: Hispanic or Latino": 5.06
+        },
+        {
+          "Area Name": 1135,
+          "% Total Population: Hispanic or Latino": 4.39
+        },
+        {
+          "Area Name": 1141.01,
+          "% Total Population: Hispanic or Latino": 2.45
+        },
+        {
+          "Area Name": 1141.02,
+          "% Total Population: Hispanic or Latino": 0.68
+        },
+        {
+          "Area Name": 1142,
+          "% Total Population: Hispanic or Latino": 4.02
+        },
+        {
+          "Area Name": 1143,
+          "% Total Population: Hispanic or Latino": 3.22
+        },
+        {
+          "Area Name": 1151,
+          "% Total Population: Hispanic or Latino": 9.27
+        },
+        {
+          "Area Name": 1152,
+          "% Total Population: Hispanic or Latino": 10.25
+        },
+        {
+          "Area Name": 1153,
+          "% Total Population: Hispanic or Latino": 13.04
+        },
+        {
+          "Area Name": 1154,
+          "% Total Population: Hispanic or Latino": 17.56
+        },
+        {
+          "Area Name": 1155,
+          "% Total Population: Hispanic or Latino": 9.67
+        },
+        {
+          "Area Name": 1156,
+          "% Total Population: Hispanic or Latino": 8.65
+        },
+        {
+          "Area Name": 1157,
+          "% Total Population: Hispanic or Latino": 12.12
+        },
+        {
+          "Area Name": 1161,
+          "% Total Population: Hispanic or Latino": 6.11
+        },
+        {
+          "Area Name": 1162,
+          "% Total Population: Hispanic or Latino": 2.49
+        },
+        {
+          "Area Name": 1163.01,
+          "% Total Population: Hispanic or Latino": 5.35
+        },
+        {
+          "Area Name": 1163.02,
+          "% Total Population: Hispanic or Latino": 7.17
+        },
+        {
+          "Area Name": 1164,
+          "% Total Population: Hispanic or Latino": 6.52
+        },
+        {
+          "Area Name": 1165,
+          "% Total Population: Hispanic or Latino": 2.66
+        },
+        {
+          "Area Name": 1171,
+          "% Total Population: Hispanic or Latino": 5.95
+        },
+        {
+          "Area Name": 1172,
+          "% Total Population: Hispanic or Latino": 3.59
+        },
+        {
+          "Area Name": 1174,
+          "% Total Population: Hispanic or Latino": 5.37
+        },
+        {
+          "Area Name": 1181,
+          "% Total Population: Hispanic or Latino": 9.33
+        },
+        {
+          "Area Name": 1184,
+          "% Total Population: Hispanic or Latino": 6.42
+        },
+        {
+          "Area Name": 1186,
+          "% Total Population: Hispanic or Latino": 3.55
+        },
+        {
+          "Area Name": 1191.01,
+          "% Total Population: Hispanic or Latino": 5.5
+        },
+        {
+          "Area Name": 1191.02,
+          "% Total Population: Hispanic or Latino": 3.36
+        },
+        {
+          "Area Name": 1192,
+          "% Total Population: Hispanic or Latino": 1.44
+        },
+        {
+          "Area Name": 1193,
+          "% Total Population: Hispanic or Latino": 6.58
+        },
+        {
+          "Area Name": 1202,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1211,
+          "% Total Population: Hispanic or Latino": 1.61
+        },
+        {
+          "Area Name": 1212,
+          "% Total Population: Hispanic or Latino": 0.81
+        },
+        {
+          "Area Name": 1231,
+          "% Total Population: Hispanic or Latino": 3.69
+        },
+        {
+          "Area Name": 1232,
+          "% Total Population: Hispanic or Latino": 1.75
+        },
+        {
+          "Area Name": 1233,
+          "% Total Population: Hispanic or Latino": 1.5
+        },
+        {
+          "Area Name": 1241,
+          "% Total Population: Hispanic or Latino": 13.27
+        },
+        {
+          "Area Name": 1242,
+          "% Total Population: Hispanic or Latino": 8.85
+        },
+        {
+          "Area Name": 1243,
+          "% Total Population: Hispanic or Latino": 2.4
+        },
+        {
+          "Area Name": 1246,
+          "% Total Population: Hispanic or Latino": 5.89
+        },
+        {
+          "Area Name": 1255,
+          "% Total Population: Hispanic or Latino": 6.3
+        },
+        {
+          "Area Name": 1256,
+          "% Total Population: Hispanic or Latino": 3.41
+        },
+        {
+          "Area Name": 1257,
+          "% Total Population: Hispanic or Latino": 0
+        },
+        {
+          "Area Name": 1266,
+          "% Total Population: Hispanic or Latino": 1.61
+        },
+        {
+          "Area Name": 1267,
+          "% Total Population: Hispanic or Latino": 0.49
+        },
+        {
+          "Area Name": 1268,
+          "% Total Population: Hispanic or Latino": 4.24
+        },
+        {
+          "Area Name": 1269,
+          "% Total Population: Hispanic or Latino": 0.91
+        },
+        {
+          "Area Name": 1270,
+          "% Total Population: Hispanic or Latino": 0.45
+        },
+        {
+          "Area Name": 1271,
+          "% Total Population: Hispanic or Latino": 0.82
+        },
+        {
+          "Area Name": 1272,
+          "% Total Population: Hispanic or Latino": 1.34
+        },
+        {
+          "Area Name": 1273,
+          "% Total Population: Hispanic or Latino": 5.22
+        },
+        {
+          "Area Name": 1274,
+          "% Total Population: Hispanic or Latino": 0.39
+        },
+        {
+          "Area Name": 1275,
+          "% Total Population: Hispanic or Latino": 6.16
+        },
+        {
+          "Area Name": 1276,
+          "% Total Population: Hispanic or Latino": 1.6
+        }
+       ]
+
     censusTractArrayList = [1011,1012,1013,1014,1015,1018,1021,1022,1023,1024,1025,1031,1034,1036,1037,1038,1042,1045,1051.98,1052,1053,1054,1055,1061,1062,1063,1064,1065,1066,1067,1072,1073,1074,1075,1076,1081,1082,1083,1096,1097,1101,1102,1103,1104,1105,1111,1112,1113,1121,1122,1123,1124,1135,1141.01,1141.02,1142,1143,1151,1152,1153,1154,1155,1156,1157,1161,1162,1163.01,1163.02,1164,1165,1171,1172,1174,1181,1186,1191.01,1191.02,1192,1193,1202,1212,1231,1232,1233,1241,1242,1243,1246,1255,1256,1257,1266,1267,1268,1269,1270,1271,1272,1273,1274,1275,1276,1277,1278]
     var poly = L.geoJson(boundary);
     var polyTracts = L.geoJson(stlCensusTracts)
@@ -4714,9 +5141,6 @@
     var checkboxRace = document.querySelector("input[id=race]");
     checkboxRace.addEventListener('change', function() {
     if(this.checked) {
-
-
-
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
 
@@ -4765,9 +5189,8 @@
               map.removeLayer(layer);
 
             }
-            
         });
-        
+
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -4902,6 +5325,7 @@
                 }
             }
         }
+
         function getColor(d) {
           if(d=="White"){
             return "#FF0000"
@@ -4940,13 +5364,42 @@
         }
         $("#racial-data-legend").append("<h8>One dot = 10 people </h8>");
         }
+      })}
+
+      var ethnicityData = document.querySelector("input[id=ethnicity-data]");
+      ethnicityData.addEventListener('change', function() {
+        if (this.checked) {
+          $("#racial-data-legend").empty()
+          map.eachLayer(function (layer) {
+            if(layer._radius == 2){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            console.log(ethnicity_data[i])
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+           
+           
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            // geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            // function style(region) {
+            //   return {
+            //     fillColor: "#6E2594",
+            //     color: "#000",
+            //     weight: 1,
+            //     opacity: 1,
+            //     fillOpacity: percentage
+            //   };
+            // }
+          }
+        }
       })
-
-
-
-        
-        
-      }
       // if(!this.checked) {
       //   $("#racial-data-legend").empty()
       //     // map.removeLayer(geojson);
