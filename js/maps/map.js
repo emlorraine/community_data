@@ -4715,6 +4715,10 @@
     checkboxRace.addEventListener('change', function() {
     if(this.checked) {
 
+      $("#age-data-selectors").empty(); 
+      $("#educational-attainment-data-selectors").empty();
+
+
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -4960,6 +4964,10 @@
 
         //Add in radio selectors: 
 
+        $("#age-data-selectors").empty(); 
+
+
+
         $("#legend").append("<div id='educational-attainment-data-selectors'></div")
         $("#educational-attainment-data-selectors").append("<input type='radio' id='high-school-or-higher' name='edu-selector' value='high-school-or-higher'><label for='high-school-or-higher'>High school (and equivalents)or higher</label>")
         $("#educational-attainment-data-selectors").append("<br>")
@@ -5010,6 +5018,7 @@
               };
             }
           }
+          // generateLayerPopups()
         }
       })
 
@@ -5051,6 +5060,8 @@
                 fillOpacity: percentage
               };
             }
+            // generateLayerPopups()
+
           }
         }
       })
@@ -5067,7 +5078,7 @@
       $("#education-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
       $("#educational-attainment-data-legend").append("<h8>100%</h8>");
 
-      generateLayerPopups()
+      // generateLayerPopups()
 
     }
     // if(!this.checked) {
@@ -5085,6 +5096,8 @@
     checkboxAge.addEventListener('change', function() {
     if (this.checked) {
       $("#educational-attainment-data-legend").empty()
+      $("#educational-attainment-data-selectors").empty();
+
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#6E2594'){
@@ -5427,7 +5440,7 @@
     
         })
 
-      generateLayerPopups()
+      // generateLayerPopups()
 
     }
 
@@ -5436,6 +5449,10 @@
     var checkboxIncome = document.querySelector("input[id=income]");
     checkboxIncome.addEventListener('change', function() {
     if (this.checked) {
+
+      $("#age-data-selectors").empty(); 
+      $("#educational-attainment-data-selectors").empty();
+
 
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
@@ -5519,7 +5536,7 @@
       $("#income-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
       $("#median-income-data-legend").append("<h8> > $75,000</h8>");
 
-      generateLayerPopups()
+      // generateLayerPopups()
 
     }
     // if(!this.checked) {
@@ -5558,8 +5575,6 @@
       var other = (data[23][censusTractArrayList[i]])
       //Two_Or_More_Races 24
       var two_or_more_races = (data[24][censusTractArrayList[i]])
-
-
       //Income data:
       var median_income = parseFloat(data[37][censusTractArrayList[i]])
 
@@ -5602,24 +5617,18 @@
         var masters = parseInt(data[32][censusTractArrayList[i]])
         var doctorates = parseInt(data[33][censusTractArrayList[i]])
         var professional = parseInt(data[34][censusTractArrayList[i]])
-
         var population = parseInt(data[27][censusTractArrayList[i]]);
         var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
-        
         var percentage = parseFloat(education_sum/population)
         var edP = percentage*100 
         var edPRounded = (Math.round(edP * 100) / 100).toFixed(2);
 
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
-
         function style(region) {
           return {
             fillOpacity: 0
           };
         }
-
-      
-
       var layerGroup = L.geoJSON(individualCensusTract, {style: style}, {
         onEachFeature: function (feature, layer) {
           var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
