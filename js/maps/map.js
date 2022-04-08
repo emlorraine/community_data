@@ -5180,6 +5180,9 @@
       racialData.addEventListener('change', function() {
         if (this.checked) {
 
+          $("#ethnicity-data-legend").empty(); 
+
+
           // $("#racial-data-legend").empty()
           // $("#race-ethnicity-data-selectors").empty()
           // map.removeLayer(geojson);
@@ -5397,6 +5400,7 @@
               };
             }
           }
+          $("#ethnicity-data-legend").empty(); 
           $("#legend").append("<div id='ethnicity-data-legend'></div")
           $("#ethnicity-data-legend").append("<h5>Ethnicity Legend:</h5>");
           $("#ethnicity-data-legend").append("<h7>Density of hispanic population in St. Louis:</h7>");
