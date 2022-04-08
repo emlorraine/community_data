@@ -5180,7 +5180,8 @@
       racialData.addEventListener('change', function() {
         if (this.checked) {
 
-          $("#racial-data-legend").empty()
+          // $("#racial-data-legend").empty()
+          // $("#race-ethnicity-data-selectors").empty()
           // map.removeLayer(geojson);
           // console.log("remove layers here") 
           map.eachLayer(function (layer) {
@@ -5345,7 +5346,6 @@
         }
         //add legend here with pure js/html/css
         var categories = ["White","Black or African_American","American Indian or Alaskan Native","Asian","Native Hawaiian and Other Pacific Islander","Other","Two or More Races"]
-        
         $("#legend").append("<div id='racial-data-legend'></div")
         $("#racial-data-legend").append("<h5>Racial Data Legend:</h5>");
         for(var j = 0; j < categories.length; j++){
@@ -5398,7 +5398,7 @@
             }
           }
           $("#legend").append("<div id='ethnicity-data-legend'></div")
-          $("#ethnicity-data-legend").append("<h5>Educational Attainment Legend:</h5>");
+          $("#ethnicity-data-legend").append("<h5>Ethnicity Legend:</h5>");
           $("#ethnicity-data-legend").append("<h7>Density of hispanic population in St. Louis:</h7>");
           $("#ethnicity-data-legend").append("<br>");
           $("#ethnicity-data-legend").append("<h8>0</h8>");
@@ -5429,6 +5429,7 @@
     checkboxEducation.addEventListener('change', function() {
     if (this.checked) {
 
+      $("#legend").empty()
       $("#median-age-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -5459,6 +5460,8 @@
         //Add in radio selectors: 
 
         $("#age-data-selectors").empty(); 
+        $("#race-ethnicity-data-selectors").empty()
+
 
 
 
@@ -5585,6 +5588,8 @@
     if (this.checked) {
       $("#educational-attainment-data-legend").empty()
       $("#educational-attainment-data-selectors").empty();
+      $("#race-ethnicity-data-selectors").empty()
+
 
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -5940,6 +5945,9 @@
 
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
+      $("#race-ethnicity-data-selectors").empty()
+
+
 
 
       $("#educational-attainment-data-legend").empty()
