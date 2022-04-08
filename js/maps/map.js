@@ -5376,28 +5376,39 @@
             }
           });
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-            console.log(ethnicity_data[i])
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
-           
-           
+
+            var percentage = parseFloat(ethnicity_data[i]["% Total Population: Hispanic or Latino"])/100
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
             }
-            // var polyTracts = L.geoJson(individualCensusTractPolygon)
-            // geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
-            // function style(region) {
-            //   return {
-            //     fillColor: "#6E2594",
-            //     color: "#000",
-            //     weight: 1,
-            //     opacity: 1,
-            //     fillOpacity: percentage
-            //   };
-            // }
+            var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#0000FF",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
           }
+          $("#legend").append("<div id='ethnicity-data-legend'></div")
+          $("#ethnicity-data-legend").append("<h5>Educational Attainment Legend:</h5>");
+          $("#ethnicity-data-legend").append("<h7>Density of hispanic population in St. Louis:</h7>");
+          $("#ethnicity-data-legend").append("<br>");
+          $("#ethnicity-data-legend").append("<h8>0</h8>");
+          $("#ethnicity-data-legend").append("<span class='rectangle' id='ethnicity-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#ethnicity-rectangle").css("background", "linear-gradient(to right, white, #0000FF)")
+          $("#ethnicity-data-legend").append("<h8>100%</h8>");
+
         }
       })
       // if(!this.checked) {
@@ -5455,12 +5466,6 @@
         $("#educational-attainment-data-selectors").append("<input type='radio' id='high-school-or-higher' name='edu-selector' value='high-school-or-higher'><label for='high-school-or-higher'>High school (and equivalents)or higher</label>")
         $("#educational-attainment-data-selectors").append("<br>")
         $("#educational-attainment-data-selectors").append("<input type='radio' id='college-or-higher' name='edu-selector' value='college-or-higher'><label for='college-or-higher'>College higher</label>")
-
-        // $("#educational-attainment-data-selectors").append("<input type='radio' id='0-9' name='age-selector' value='0-9'checked><label for='0-9'>0-9</label>")
-        // $("#educational-attainment-data-selectors").append("<input type='radio' id='9-17' name='age-selector' value='9-17'checked><label for='9-17'>9-17</label>")
-        // $("#educational-attainment-data-selectors").append("<input type='radio' id='18-34' name='age-selector' value='18-34'checked><label for='18-34'>18-34</label>")
-        // $("#educational-attainment-data-selectors").append("<input type='radio' id='35-64' name='age-selector' value='35-64'checked><label for='35-64'>35-64</label>")
-        // $("#educational-attainment-data-selectors").append("<input type='radio' id='65+' name='age-selector' value='65+'checked><label for='65+'>65+</label>")
 
       var checkboxHSOrHigher = document.querySelector("input[id=high-school-or-higher]");
         checkboxHSOrHigher.addEventListener('change', function() {
