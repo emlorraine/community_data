@@ -6906,6 +6906,8 @@
     if(this.checked) {
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
+      $("#econ-data-selectors").empty()
+
 
 
       $("#educational-attainment-data-legend").empty()
@@ -7228,6 +7230,8 @@
 
         $("#age-data-selectors").empty(); 
         $("#race-ethnicity-data-selectors").empty()
+        $("#econ-data-selectors").empty()
+
 
 
 
@@ -7354,8 +7358,9 @@
     checkboxAge.addEventListener('change', function() {
     if (this.checked) {
       $("#educational-attainment-data-legend").empty()
-      $("#educational-attainment-data-selectors").empty();
+      $("#educational-attainment-data-selectors").empty()
       $("#race-ethnicity-data-selectors").empty()
+      $("#econ-data-selectors").empty()
 
 
       // map.removeLayer(geojson);
@@ -7401,7 +7406,6 @@
         var zeroToNine = document.querySelector("input[id=zeroToNine]");
         zeroToNine.addEventListener('change', function() {
         if (this.checked) {
-          console.log("checked 0-9")
           console.log(data)
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
@@ -7461,7 +7465,6 @@
         var nineToSeventeen = document.querySelector("input[id=nineToSeventeen]");
         nineToSeventeen.addEventListener('change', function() {
         if (this.checked) {
-          console.log("checked nineToSeventeen")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
               map.removeLayer(layer);
@@ -7707,13 +7710,7 @@
     });
 
     var checkboxIncome = document.querySelector("input[id=income]");
-
-
     checkboxIncome.addEventListener('change', function() {
-
-      //
-
-
     if (this.checked) {
 
       $("#age-data-selectors").empty(); 
@@ -7748,18 +7745,24 @@
             
         });
 
-        //soutline selectors: 
+        $("#poverty-data-legend").empty()
 
         $("#legend").append("<div id='econ-data-selectors'></div")
         $("#econ-data-selectors").append("<input type='radio' id='median-income' name='econ-selector' value='median-income'><label for='median-income'>Median income</label>")
         $("#econ-data-selectors").append("<br>")
-        $("#econ-data-selectors").append("<input type='radio' id='poverty' name='age-selector' value='poverty'><label for='poverty'>Percent below poverty line</label>")
+        $("#econ-data-selectors").append("<input type='radio' id='poverty' name='econ-selector' value='poverty'><label for='poverty'>Percent below poverty line</label>")
         $("#econ-data-selectors").append("<br>")
-        $("#econ-data-selectors").append("<input type='radio' id='unemployment' name='age-selector' value='unemployment'><label for='unemployment'>Population in labor force 16 years and over:</label>")
+        $("#econ-data-selectors").append("<input type='radio' id='unemployment' name='econ-selector' value='unemployment'><label for='unemployment'>Population in labor force 16 years and over:</label>")
 
         var checkboxMedianIncome = document.querySelector("input[id=median-income]");
         checkboxMedianIncome.addEventListener('change', function() {
-          console.log("display stuff here")
+
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#FFA500'){
+              map.removeLayer(layer);
+            }
+          });
+
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
@@ -7768,7 +7771,6 @@
             //$50,000-$59,999
             //$40,000-$49,999
             //Less than $40,000
-    
             var median_income = parseFloat(data[37][censusTractArrayList[i]])
             var bracket; 
             if(median_income > 75000){
@@ -7801,6 +7803,10 @@
               };
             }
           }
+
+          $("#poverty-data-legend").empty()
+          $("#unemployment-data-legend").empty()
+
           $("#legend").append("<div id='median-income-data-legend'></div")
           $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>")
           $("#median-income-data-legend").append("<h8> < $40,000</h8>");
@@ -7810,7 +7816,88 @@
           $(".rectangle").css("display", "inline-block")
           $("#income-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
           $("#median-income-data-legend").append("<h8> > $75,000</h8>");
-    
+        })
+
+        var checkboxPoverty = document.querySelector("input[id=poverty]");
+        checkboxPoverty.addEventListener('change', function() {
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#FFA500'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            // var individualCensusTract = (stlCensusTracts.geometries[i])
+            // var individualCensusTractPolygon = {
+            //   "type":"GeometryCollection", 
+            //   "geometries": [individualCensusTract]
+            // }
+            // // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            // geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            // function style(region) {
+            //   return {
+            //     fillColor: "#FFA500",
+            //     color: "#000",
+            //     weight: 1,
+            //     opacity: 1,
+            //     fillOpacity: percentage
+            //   };
+            // }
+          }
+          $("#median-income-data-legend").empty()
+          $("#unemployment-data-legend").empty()
+
+          $("#legend").append("<div id='poverty-data-legend'></div")
+          $("#poverty-data-legend").append("<h5>Poverty Rate Legend:</h5>")
+          $("#poverty-data-legend").append("<h8> < $40,000</h8>");
+          $("#poverty-data-legend").append("<span class='rectangle' id='poverty-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#poverty-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
+          $("#poverty-data-legend").append("<h8> > $75,000</h8>");
+        })
+
+        var checkboxUnemployment = document.querySelector("input[id=unemployment]");
+        checkboxUnemployment.addEventListener('change', function() {
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#FFA500'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            // var individualCensusTract = (stlCensusTracts.geometries[i])
+            // var individualCensusTractPolygon = {
+            //   "type":"GeometryCollection", 
+            //   "geometries": [individualCensusTract]
+            // }
+            // // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            // geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            // function style(region) {
+            //   return {
+            //     fillColor: "#FFA500",
+            //     color: "#000",
+            //     weight: 1,
+            //     opacity: 1,
+            //     fillOpacity: percentage
+            //   };
+            // }
+          }
+          $("#median-income-data-legend").empty()
+          $("#poverty-data-legend").empty()
+
+          $("#legend").append("<div id='unemployment-data-legend'></div")
+          $("#unemployment-data-legend").append("<h5>Unemployment Legend:</h5>")
+          $("#unemployment-data-legend").append("<h8> < $40,000</h8>");
+          $("#unemployment-data-legend").append("<span class='rectangle' id='unemployment-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#unemployment-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
+          $("#unemployment-data-legend").append("<h8> > $75,000</h8>");
         })
       
 
