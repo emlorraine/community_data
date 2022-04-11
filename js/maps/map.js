@@ -7897,9 +7897,8 @@
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
 
-            var employed = parseInt(economic_data[6][censusTractArrayList[i]])
-            var unemployed = parseInt(economic_data[10][censusTractArrayList[i]])
-          
+            var employed = parseInt(economic_data[2][censusTractArrayList[i]])
+            var unemployed = parseInt(economic_data[3][censusTractArrayList[i]])          
             var percentage = (unemployed/(unemployed+employed))
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -7923,13 +7922,13 @@
 
           $("#legend").append("<div id='unemployment-data-legend'></div")
           $("#unemployment-data-legend").append("<h5>Unemployment Legend:</h5>")
-          $("#unemployment-data-legend").append("<h8> < $40,000</h8>");
+          $("#unemployment-data-legend").append("<h8> < 0</h8>");
           $("#unemployment-data-legend").append("<span class='rectangle' id='unemployment-rectangle'></span>");
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
           $("#unemployment-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
-          $("#unemployment-data-legend").append("<h8> > $75,000</h8>");
+          $("#unemployment-data-legend").append("<h8> > 100%</h8>");
         })
       
 
