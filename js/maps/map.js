@@ -7707,15 +7707,18 @@
     });
 
     var checkboxIncome = document.querySelector("input[id=income]");
+
+
     checkboxIncome.addEventListener('change', function() {
+
+      //
+
+
     if (this.checked) {
 
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
       $("#race-ethnicity-data-selectors").empty()
-
-
-
 
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
@@ -7745,60 +7748,75 @@
             
         });
 
+        //soutline selectors: 
+
+        $("#legend").append("<div id='econ-data-selectors'></div")
+        $("#econ-data-selectors").append("<input type='radio' id='median-income' name='econ-selector' value='median-income'><label for='median-income'>Median income</label>")
+        $("#econ-data-selectors").append("<br>")
+        $("#econ-data-selectors").append("<input type='radio' id='poverty' name='age-selector' value='poverty'><label for='poverty'>Percent below poverty line</label>")
+        $("#econ-data-selectors").append("<br>")
+        $("#econ-data-selectors").append("<input type='radio' id='unemployment' name='age-selector' value='unemployment'><label for='unemployment'>Population in labor force 16 years and over:</label>")
+
+        var checkboxMedianIncome = document.querySelector("input[id=median-income]");
+        checkboxMedianIncome.addEventListener('change', function() {
+          console.log("display stuff here")
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            //$75,000 or more
+            //$60,000-$74,999
+            //$50,000-$59,999
+            //$40,000-$49,999
+            //Less than $40,000
+    
+            var median_income = parseFloat(data[37][censusTractArrayList[i]])
+            var bracket; 
+            if(median_income > 75000){
+              bracket = 5; 
+            } else if (median_income >= 60000 && (median_income <=74999)){
+              bracket = 4; 
+            } else if (median_income >= 50000 && (median_income <=59999)){
+              bracket = 3; 
+            } else if (median_income >= 40000 && (median_income <=49999)){
+              bracket = 2; 
+            } else if (median_income < 40000){
+              bracket = 1; 
+            }
+            percentage = bracket/5; 
+            
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // var polyTracts = L.geoJson(individualCensusTractPolygon)
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#FFA500",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
+          $("#legend").append("<div id='median-income-data-legend'></div")
+          $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>")
+          $("#median-income-data-legend").append("<h8> < $40,000</h8>");
+          $("#median-income-data-legend").append("<span class='rectangle' id='income-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#income-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
+          $("#median-income-data-legend").append("<h8> > $75,000</h8>");
+    
+        })
       
 
 
-      for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-        censusTract = censusTractArrayList[i]
-        censusPoly = stlCensusTracts.geometries[i]
-        //$75,000 or more
-        //$60,000-$74,999
-        //$50,000-$59,999
-        //$40,000-$49,999
-        //Less than $40,000
 
-        var median_income = parseFloat(data[37][censusTractArrayList[i]])
-        var bracket; 
-        if(median_income > 75000){
-          bracket = 5; 
-        } else if (median_income >= 60000 && (median_income <=74999)){
-          bracket = 4; 
-        } else if (median_income >= 50000 && (median_income <=59999)){
-          bracket = 3; 
-        } else if (median_income >= 40000 && (median_income <=49999)){
-          bracket = 2; 
-        } else if (median_income < 40000){
-          bracket = 1; 
-        }
-        percentage = bracket/5; 
-        
-        var individualCensusTract = (stlCensusTracts.geometries[i])
-        var individualCensusTractPolygon = {
-          "type":"GeometryCollection", 
-          "geometries": [individualCensusTract]
-        }
-        // var polyTracts = L.geoJson(individualCensusTractPolygon)
-        geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
-        function style(region) {
-          return {
-            fillColor: "#FFA500",
-            color: "#000",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: percentage
-          };
-        }
-      }
-      $("#legend").append("<div id='median-income-data-legend'></div")
-      $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>")
-      $("#median-income-data-legend").append("<h8> < $40,000</h8>");
-      $("#median-income-data-legend").append("<span class='rectangle' id='income-rectangle'></span>");
-      $(".rectangle").css("height", "30px")
-      $(".rectangle").css("width", "250px")
-      $(".rectangle").css("display", "inline-block")
-      $("#income-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
-      $("#median-income-data-legend").append("<h8> > $75,000</h8>");
-
+      
       // generateLayerPopups()
 
     }
