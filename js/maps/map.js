@@ -8107,7 +8107,7 @@
         "Long": -90.1994854
       },
       {
-        "Branch Name": "Charing Cross Library\n",
+        "Branch Name": "Charing Cross Library",
         "Address": "356 N. Skinker Blvd\nSt. Louis MO 63130",
         "Lat": 38.6515428,
         "Long": -90.3000167
@@ -8119,48 +8119,113 @@
         "Long": -90.2117906
       },
       {
-        "Branch Name": "Julia Davis Library\n",
+        "Branch Name": "Julia Davis Library",
         "Address": "4415 Natural Bridge Avenue\nSt. Louis MO 63115",
         "Lat": 38.6703954,
         "Long": -90.2368834
       },
       {
-        "Branch Name": "Kingshighway Library\n",
+        "Branch Name": "Kingshighway Library",
         "Address": "2260 South Vandeventer Avenue\nSt. Louis MO 63110",
         "Lat": 38.6128136,
         "Long": -90.2668824
       },
       {
-        "Branch Name": "Machacek Library\n",
+        "Branch Name": "Machacek Library",
         "Address": "6424 Scanlan Avenue\nSt. Louis MO 63139",
         "Lat": 38.6047874,
         "Long": -90.2978531
       },
       {
-        "Branch Name": "Marketplace Library\n",
+        "Branch Name": "Marketplace Library",
         "Address": "6548 Manchester Avenue\nSt. Louis MO 63139",
         "Lat": 38.6189758,
         "Long": -90.2981101
       },
       {
-        "Branch Name": "Schlafly Library\n",
+        "Branch Name": "Schlafly Library",
         "Address": "225 North Euclid Avenue\nSt. Louis MO 63108",
         "Lat": 38.6440072,
         "Long": -90.2621509
       },
       {
-        "Branch Name": "Walnut Park Library\n",
+        "Branch Name": "Walnut Park Library",
         "Address": "5760 West Florissant Avenue\nSt. Louis MO 63120",
         "Lat": 38.7037006,
         "Long": -90.2472266
       },
      ]
 
+     var greenIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    var redIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    var purpleIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    var orangeIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    var yellowIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+
+
+
+
      for(var i = 0; i < library_locations.length; i++){
-       var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]]).addTo(map);
-       var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
-
-
+       if(library_locations[i]["Branch Name"] == "Cabanne Library" || library_locations[i]["Branch Name"] == "Divoll Library" || library_locations[i]["Branch Name"] == "Schlafly Library"){
+        var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: greenIcon}).addTo(map);
+        var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
+      } else if(library_locations[i]["Branch Name"] == "Julia Davis Library" || library_locations[i]["Branch Name"] == "Walnut Park Library" || library_locations[i]["Branch Name"] == "Baden Library"){
+        var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: redIcon}).addTo(map);
+        var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
+      } else if(library_locations[i]["Branch Name"] == "Carpenter Library" || library_locations[i]["Branch Name"] == "Kingshighway Library" || library_locations[i]["Branch Name"] == "Barr Library"){
+        var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: orangeIcon}).addTo(map);
+        var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
+      } else if(library_locations[i]["Branch Name"] == "Carondelet Library" || library_locations[i]["Branch Name"] == "Buder Library" || library_locations[i]["Branch Name"] == "Machacek Library"){
+        var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: yellowIcon}).addTo(map);
+        var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
+      } else if(library_locations[i]["Branch Name"] == "Central Library"){
+        var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: purpleIcon}).addTo(map);
+        var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
+      } else {
+        console.log(library_locations[i]["Branch Name"])
+        var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]]).addTo(map);
+        var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
+      }
      }
 
 
