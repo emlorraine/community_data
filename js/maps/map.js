@@ -8163,10 +8163,16 @@
 
      }
 
-    //  var clearMap = document.selectb("clear");
-    //  clearMap.addEventListener('change', function() {
-    //    console.log("clear everything on map")
-    //  })
+
+    var clearMap = document.getElementById("clear");
+    clearMap.addEventListener('click', function() {
+      // window.location = window.location
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor || layer._radius == 2){
+          map.removeLayer(layer);
+        }
+      });
+    })
 
 
 
