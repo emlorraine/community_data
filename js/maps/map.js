@@ -8231,12 +8231,12 @@
 
     var clearMap = document.getElementById("clear");
     clearMap.addEventListener('click', function() {
-      // window.location = window.location
-      map.eachLayer(function (layer) {
-        if(layer.options.fillColor || layer._radius == 2){
-          map.removeLayer(layer);
-        }
-      });
+      window.location = window.location
+      // map.eachLayer(function (layer) {
+      //   if(layer.options.fillColor || layer._radius == 2){
+      //     map.removeLayer(layer);
+      //   }
+      // });
     })
 
 
