@@ -7387,15 +7387,13 @@
             if(layer._radius == 2){
               // console.log(layer)
               map.removeLayer(layer);
-
             }
-            
         });
 
         $("#age-subselectors").append("<div id='age-data-selectors'></div")
         $("#age-data-selectors").append("<input type='radio' id='zeroToNine' class='subselector' name='age-selector' value='zeroToNine'><label for='zeroToNine'>0-9</label>")
         $("#age-data-selectors").append("<br>")
-        $("#age-data-selectors").append("<input type='radio' id='nineToSeventeen' class='subselector' name='age-selector' value='nineToSeventeen'><label for='nineToSeventeen'>9-17</label>")
+        $("#age-data-selectors").append("<input type='radio' id='nineToSeventeen' class='subselector' name='age-selector' value='nineToSeventeen'><label for='nineToSeventeen'>10-17</label>")
         $("#age-data-selectors").append("<br>")
         $("#age-data-selectors").append("<input type='radio' id='eighteenToThirtyFour' class='subselector' name='age-selector' value='eighteenToThirtyFour'><label for='eighteenToThirtyFour'>18-34</label>")
         $("#age-data-selectors").append("<br>")
@@ -8208,16 +8206,16 @@
 
 
      for(var i = 0; i < library_locations.length; i++){
-       if(library_locations[i]["Branch Name"] == "Cabanne Library" || library_locations[i]["Branch Name"] == "Divoll Library" || library_locations[i]["Branch Name"] == "Schlafly Library"){
+       if(library_locations[i]["Branch Name"] == "Cabanne Library" || library_locations[i]["Branch Name"] == "Divoll Library" || library_locations[i]["Branch Name"] == "Schlafly Library" || library_locations[i]["Branch Name"] == "Charing Cross Library"){
         var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: greenIcon}).addTo(map);
         var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
       } else if(library_locations[i]["Branch Name"] == "Julia Davis Library" || library_locations[i]["Branch Name"] == "Walnut Park Library" || library_locations[i]["Branch Name"] == "Baden Library"){
         var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: redIcon}).addTo(map);
         var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
-      } else if(library_locations[i]["Branch Name"] == "Carpenter Library" || library_locations[i]["Branch Name"] == "Kingshighway Library" || library_locations[i]["Branch Name"] == "Barr Library"){
+      } else if(library_locations[i]["Branch Name"] == "Carpenter Library" || library_locations[i]["Branch Name"] == "Kingshighway Library" || library_locations[i]["Branch Name"] == "Barr Library" || library_locations[i]["Branch Name"]=="Central Express Library"){
         var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: orangeIcon}).addTo(map);
         var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
-      } else if(library_locations[i]["Branch Name"] == "Carondelet Library" || library_locations[i]["Branch Name"] == "Buder Library" || library_locations[i]["Branch Name"] == "Machacek Library"){
+      } else if(library_locations[i]["Branch Name"] == "Carondelet Library" || library_locations[i]["Branch Name"] == "Buder Library" || library_locations[i]["Branch Name"] == "Machacek Library" || library_locations[i]["Branch Name"] == "Marketplace Library"){
         var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: yellowIcon}).addTo(map);
         var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
       } else if(library_locations[i]["Branch Name"] == "Central Library"){
