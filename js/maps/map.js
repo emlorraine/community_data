@@ -6936,8 +6936,8 @@
 
       //Display selectors here: 
 
-      $("#legend").append("<div id='race-ethnicity-data-selectors'></div")
-      $("#race-ethnicity-data-selectors").append("<input type='radio' id='race-data' name='race-or-ethnicity-data-selector' value='race-data'><label for='race-data'>Racial Data</label>")
+      $("#race-subselectors").append("<div id='race-ethnicity-data-selectors'></div")
+      $("#race-ethnicity-data-selectors").append("<input type='radio' id='race-data' name='race-or-ethnicity-data-selector' value='race-data'><label for='race-data'>Racial Dot Map</label>")
       $("#race-ethnicity-data-selectors").append("<br>")
       $("#race-ethnicity-data-selectors").append("<input type='radio' id='ethnicity-data' name='race-or-ethnicity-data-selector' value='ethnicity-data'><label for='ethnicity-data'>Ethnicity Data</label>")
 
@@ -7236,10 +7236,10 @@
 
 
 
-        $("#legend").append("<div id='educational-attainment-data-selectors'></div")
-        $("#educational-attainment-data-selectors").append("<input type='radio' id='high-school-or-higher' name='edu-selector' value='high-school-or-higher'><label for='high-school-or-higher'>High school (and equivalents)or higher</label>")
+        $("#education-subselectors").append("<div id='educational-attainment-data-selectors'></div")
+        $("#educational-attainment-data-selectors").append("<input type='radio' id='high-school-or-higher' name='edu-selector' value='high-school-or-higher'><label for='high-school-or-higher'> High school (and equivalents) or higher</label>")
         $("#educational-attainment-data-selectors").append("<br>")
-        $("#educational-attainment-data-selectors").append("<input type='radio' id='college-or-higher' name='edu-selector' value='college-or-higher'><label for='college-or-higher'>College higher</label>")
+        $("#educational-attainment-data-selectors").append("<input type='radio' id='college-or-higher' name='edu-selector' value='college-or-higher'><label for='college-or-higher'>Four-year college or higher</label>")
 
       var checkboxHSOrHigher = document.querySelector("input[id=high-school-or-higher]");
         checkboxHSOrHigher.addEventListener('change', function() {
@@ -7249,6 +7249,8 @@
               map.removeLayer(layer);
             }
           });
+
+
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
@@ -7330,7 +7332,7 @@
 
       $("#legend").append("<div id='educational-attainment-data-legend'></div")
       $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
-      $("#educational-attainment-data-legend").append("<h7>Percentage of population with high school diploma (and equivalents) or higher:</h7>");
+      $("#educational-attainment-data-legend").append("<h7>Percentage of population higher:</h7>");
       $("#educational-attainment-data-legend").append("<br>");
       $("#educational-attainment-data-legend").append("<h8>0</h8>");
       $("#educational-attainment-data-legend").append("<span class='rectangle' id='education-rectangle'></span>");
@@ -7390,7 +7392,7 @@
             
         });
 
-        $("#legend").append("<div id='age-data-selectors'></div")
+        $("#age-subselectors").append("<div id='age-data-selectors'></div")
         $("#age-data-selectors").append("<input type='radio' id='zeroToNine' name='age-selector' value='zeroToNine'><label for='zeroToNine'>0-9</label>")
         $("#age-data-selectors").append("<br>")
         $("#age-data-selectors").append("<input type='radio' id='nineToSeventeen' name='age-selector' value='nineToSeventeen'><label for='nineToSeventeen'>9-17</label>")
@@ -7747,7 +7749,7 @@
 
         $("#poverty-data-legend").empty()
 
-        $("#legend").append("<div id='econ-data-selectors'></div")
+        $("#income-subselectors").append("<div id='econ-data-selectors'></div")
         $("#econ-data-selectors").append("<input type='radio' id='median-income' name='econ-selector' value='median-income'><label for='median-income'>Median income</label>")
         $("#econ-data-selectors").append("<br>")
         $("#econ-data-selectors").append("<input type='radio' id='poverty' name='econ-selector' value='poverty'><label for='poverty'>Percent below poverty line</label>")
