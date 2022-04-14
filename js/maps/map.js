@@ -6849,8 +6849,8 @@
     censusTractArrayList = [1011,1012,1013,1014,1015,1018,1021,1022,1023,1024,1025,1031,1034,1036,1037,1038,1042,1045,1051.98,1052,1053,1054,1055,1061,1062,1063,1064,1065,1066,1067,1072,1073,1074,1075,1076,1081,1082,1083,1096,1097,1101,1102,1103,1104,1105,1111,1112,1113,1121,1122,1123,1124,1135,1141.01,1141.02,1142,1143,1151,1152,1153,1154,1155,1156,1157,1161,1162,1163.01,1163.02,1164,1165,1171,1172,1174,1181,1186,1191.01,1191.02,1192,1193,1202,1212,1231,1232,1233,1241,1242,1243,1246,1255,1256,1257,1266,1267,1268,1269,1270,1271,1272,1273,1274,1275,1276,1277,1278]
     var poly = L.geoJson(boundary);
     var polyTracts = L.geoJson(stlCensusTracts)
-    // map.addLayer(poly);
-    // map.addLayer(polyTracts);
+    map.addLayer(poly);
+    map.addLayer(polyTracts);
 
     randomPointInPoly = function(polygon) {
       var bounds = censusTractGeoJsonConversion.getBounds(); 
@@ -7406,7 +7406,6 @@
         var zeroToNine = document.querySelector("input[id=zeroToNine]");
         zeroToNine.addEventListener('change', function() {
         if (this.checked) {
-          console.log(data)
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
               map.removeLayer(layer);
@@ -7423,6 +7422,8 @@
 
             var tract_age_sum = less_than_five + five_to_nine
             var total_age_sum = less_than_five_total + five_to_nine_total 
+
+            console.log("0-9", tract_age_sum, total_age_sum)
 
             var percentage = tract_age_sum / total_age_sum
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -7443,7 +7444,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: (percentage * 100)
+                fillOpacity: (percentage*10)
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -7482,6 +7483,9 @@
             var tract_age_sum = ten_to_fourteen + fifteen_to_seventeen
             var total_age_sum = ten_to_fourteen_total + fifteen_to_seventeen_total 
 
+            console.log("10-17", tract_age_sum, total_age_sum)
+
+
             var percentage = tract_age_sum / total_age_sum
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -7502,7 +7506,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: (percentage * 100)
+                fillOpacity: (percentage)
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -7543,6 +7547,9 @@
             var tract_age_sum = eighteen_to_twenty_four + twenty_five_to_thirty_four
             var total_age_sum = eighteen_to_twenty_four_total + twenty_five_to_thirty_four_total
 
+            console.log("18-34", tract_age_sum, total_age_sum)
+
+
             var percentage = tract_age_sum / total_age_sum
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -7563,7 +7570,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: (percentage * 100)
+                fillOpacity: (percentage)
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -7604,6 +7611,9 @@
             var tract_age_sum = thirty_five_to_fourty_four + fourty_five_to_fifty_four + fifty_five_to_sixty_four
             var total_age_sum = thirty_five_to_fourty_four_total + fourty_five_to_fifty_four_total + fifty_five_to_sixty_four_total
 
+            console.log("35-64", tract_age_sum, total_age_sum)
+
+
             var percentage = tract_age_sum / total_age_sum
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -7624,7 +7634,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: (percentage * 100)
+                fillOpacity: (percentage)
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -7663,7 +7673,10 @@
             var eighty_five_and_older_total = parseInt(data[14][censusTractArrayList[i]]) //1
 
             var tract_age_sum = sixty_five_to_seventy_four + seventy_five_to_eighty_four + eighty_five_and_older
-            var total_age_sum = sixty_five_to_seventy_four_total + seventy_five_to_eighty_four_total 
+            var total_age_sum = sixty_five_to_seventy_four_total + seventy_five_to_eighty_four_total
+            
+            console.log("65+", tract_age_sum, total_age_sum)
+
 
             var percentage = tract_age_sum / total_age_sum
            
@@ -7685,7 +7698,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: (percentage * 100)
+                fillOpacity: (percentage)
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -7929,37 +7942,15 @@
           $(".rectangle").css("display", "inline-block")
           $("#unemployment-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
           $("#unemployment-data-legend").append("<h8> > 100%</h8>");
-        })
-      
-
-
-
-      
-      // generateLayerPopups()
+        })   
 
     }
-    // if(!this.checked) {
-    //   $("#median-income-data-legend").empty()
-    //   // map.removeLayer(geojson);
-    //   map.eachLayer(function (layer) {
-    //     if(layer.options.fillColor == '#FFA500'){
-    //       map.removeLayer(layer);
-    //     }
-    //   });
-    // }
-    });
 
 
-    //Add library locations: 
-
-    //Bind popups: 
-
-    function generateLayerPopups(){
     for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
-      var total_pop = data[2][censusTractArrayList[i]]
       var individualCensusTract = (stlCensusTracts.geometries[i])
-
-      //Race data: 
+      var total_pop = data[2][censusTractArrayList[i]]
+        //Race data: 
       //White alone = 18
       var white_alone = (data[18][censusTractArrayList[i]])
       //Black_or_African_American 19
@@ -8023,38 +8014,31 @@
         var edPRounded = (Math.round(edP * 100) / 100).toFixed(2);
 
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
-        function style(region) {
-          return {
-            fillOpacity: 0
-          };
-        }
-      var layerGroup = L.geoJSON(individualCensusTract, {style: style}, {
+      var layerGroup = L.geoJSON(individualCensusTract, {
         onEachFeature: function (feature, layer) {
-          var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
-          + "<dt>Total Population</dt>"
-          + "<dd>" + total_pop + " people</dd>"
-           + "<dt>Median Income</dt>"
-           + "<dd>$" + numberWithCommas(median_income) + "</dd>"
-           + "<dt>Percentage of residents with high school diploma or higher</dt>"
-           + "<dd>" + numberWithCommas(edPRounded) + "%</dd>"
-           + "<dt>Median Age Bracket</dt>"
-           + "<dd>" + age_bracket + "</dd>"
-           + "<dt>Racial Breakdown</dt>"
-           + "<dd> White: " + numberWithCommas(white_alone) + "</dd>"
-           + "<dd> Black or African American: " + numberWithCommas(black_or_african_american) + "</dd>"
-           + "<dd> American Indian and Alaska Native: " + numberWithCommas(american_indian_or_alaskan_native) + "</dd>"
-           + "<dd> Asian: " + numberWithCommas(asian) + "</dd>"
-           + "<dd> Native Hawaiian and Other Pacific Islander: " + numberWithCommas(native_hawaiian_and_other_pacific_islander) + "</dd>"
-           + "<dd> Other: " + numberWithCommas(other) + "</dd>"
-           + "<dd> Two or More Races: " + numberWithCommas(two_or_more_races) + "</dd>"
-
-          layer.bindPopup(list);
+                var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
+                + "<dt>Total Population</dt>"
+                + "<dd>" + total_pop + " people</dd>"
+                 + "<dt>Median Income</dt>"
+                 + "<dd>$" + numberWithCommas(median_income) + "</dd>"
+                 + "<dt>Percentage of residents with high school diploma or higher</dt>"
+                 + "<dd>" + numberWithCommas(edPRounded) + "%</dd>"
+                 + "<dt>Median Age Bracket</dt>"
+                 + "<dd>" + age_bracket + "</dd>"
+                 + "<dt>Racial Breakdown</dt>"
+                 + "<dd> White: " + numberWithCommas(white_alone) + "</dd>"
+                 + "<dd> Black or African American: " + numberWithCommas(black_or_african_american) + "</dd>"
+                 + "<dd> American Indian and Alaska Native: " + numberWithCommas(american_indian_or_alaskan_native) + "</dd>"
+                 + "<dd> Asian: " + numberWithCommas(asian) + "</dd>"
+                 + "<dd> Native Hawaiian and Other Pacific Islander: " + numberWithCommas(native_hawaiian_and_other_pacific_islander) + "</dd>"
+                 + "<dd> Other: " + numberWithCommas(other) + "</dd>"
+                 + "<dd> Two or More Races: " + numberWithCommas(two_or_more_races) + "</dd>"
+      
+                layer.bindPopup(list);
+          // layer.bindPopup('<h1>Hello world</h1>');
         }
       }).addTo(map);
     }
-  }
-  generateLayerPopups()
-
 
     //append library locations to map 
     library_locations = [
