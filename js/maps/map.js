@@ -6937,9 +6937,9 @@
       //Display selectors here: 
 
       $("#race-subselectors").append("<div id='race-ethnicity-data-selectors'></div")
-      $("#race-ethnicity-data-selectors").append("<input type='radio' id='race-data' name='race-or-ethnicity-data-selector' value='race-data'><label for='race-data'>Racial Dot Map</label>")
+      $("#race-ethnicity-data-selectors").append("<input type='radio' id='race-data' class='subselector' name='race-or-ethnicity-data-selector' value='race-data'><label for='race-data'>Racial Dot Map</label>")
       $("#race-ethnicity-data-selectors").append("<br>")
-      $("#race-ethnicity-data-selectors").append("<input type='radio' id='ethnicity-data' name='race-or-ethnicity-data-selector' value='ethnicity-data'><label for='ethnicity-data'>Ethnicity Data</label>")
+      $("#race-ethnicity-data-selectors").append("<input type='radio' id='ethnicity-data' class='subselector' name='race-or-ethnicity-data-selector' value='ethnicity-data'><label for='ethnicity-data'>Ethnicity Data</label>")
 
       var racialData = document.querySelector("input[id=race-data]");
       racialData.addEventListener('change', function() {
@@ -7237,9 +7237,9 @@
 
 
         $("#education-subselectors").append("<div id='educational-attainment-data-selectors'></div")
-        $("#educational-attainment-data-selectors").append("<input type='radio' id='high-school-or-higher' name='edu-selector' value='high-school-or-higher'><label for='high-school-or-higher'> High school (and equivalents) or higher</label>")
+        $("#educational-attainment-data-selectors").append("<input type='radio' id='high-school-or-higher' class='subselector' name='edu-selector' value='high-school-or-higher'><label for='high-school-or-higher'> High school (and equivalents) or higher</label>")
         $("#educational-attainment-data-selectors").append("<br>")
-        $("#educational-attainment-data-selectors").append("<input type='radio' id='college-or-higher' name='edu-selector' value='college-or-higher'><label for='college-or-higher'>Four-year college or higher</label>")
+        $("#educational-attainment-data-selectors").append("<input type='radio' id='college-or-higher' class='subselector' name='edu-selector' value='college-or-higher'><label for='college-or-higher'>Four-year college or higher</label>")
 
       var checkboxHSOrHigher = document.querySelector("input[id=high-school-or-higher]");
         checkboxHSOrHigher.addEventListener('change', function() {
@@ -7393,15 +7393,15 @@
         });
 
         $("#age-subselectors").append("<div id='age-data-selectors'></div")
-        $("#age-data-selectors").append("<input type='radio' id='zeroToNine' name='age-selector' value='zeroToNine'><label for='zeroToNine'>0-9</label>")
+        $("#age-data-selectors").append("<input type='radio' id='zeroToNine' class='subselector' name='age-selector' value='zeroToNine'><label for='zeroToNine'>0-9</label>")
         $("#age-data-selectors").append("<br>")
-        $("#age-data-selectors").append("<input type='radio' id='nineToSeventeen' name='age-selector' value='nineToSeventeen'><label for='nineToSeventeen'>9-17</label>")
+        $("#age-data-selectors").append("<input type='radio' id='nineToSeventeen' class='subselector' name='age-selector' value='nineToSeventeen'><label for='nineToSeventeen'>9-17</label>")
         $("#age-data-selectors").append("<br>")
-        $("#age-data-selectors").append("<input type='radio' id='eighteenToThirtyFour' name='age-selector' value='eighteenToThirtyFour'><label for='eighteenToThirtyFour'>18-34</label>")
+        $("#age-data-selectors").append("<input type='radio' id='eighteenToThirtyFour' class='subselector' name='age-selector' value='eighteenToThirtyFour'><label for='eighteenToThirtyFour'>18-34</label>")
         $("#age-data-selectors").append("<br>")
-        $("#age-data-selectors").append("<input type='radio' id='thirtyFiveToSixtyFour' name='age-selector' value='thirtyFiveToSixtyFour'><label for='thirtyFiveToSixtyFour'>35-64</label>")
+        $("#age-data-selectors").append("<input type='radio' id='thirtyFiveToSixtyFour' class='subselector' name='age-selector' value='thirtyFiveToSixtyFour'><label for='thirtyFiveToSixtyFour'>35-64</label>")
         $("#age-data-selectors").append("<br>")
-        $("#age-data-selectors").append("<input type='radio' id='sixtyFivePlus' name='age-selector' value='sixtyFivePlus'><label for='sixtyFivePlus'>65+</label>")
+        $("#age-data-selectors").append("<input type='radio' id='sixtyFivePlus' class='subselector' name='age-selector' value='sixtyFivePlus'><label for='sixtyFivePlus'>65+</label>")
         $("#age-data-selectors").append("<br>")
 
         
@@ -7750,11 +7750,11 @@
         $("#poverty-data-legend").empty()
 
         $("#income-subselectors").append("<div id='econ-data-selectors'></div")
-        $("#econ-data-selectors").append("<input type='radio' id='median-income' name='econ-selector' value='median-income'><label for='median-income'>Median income</label>")
+        $("#econ-data-selectors").append("<input type='radio' id='median-income' class='subselector' name='econ-selector' value='median-income'><label for='median-income'>Median income</label>")
         $("#econ-data-selectors").append("<br>")
-        $("#econ-data-selectors").append("<input type='radio' id='poverty' name='econ-selector' value='poverty'><label for='poverty'>Percent below poverty line</label>")
+        $("#econ-data-selectors").append("<input type='radio' id='poverty' class='subselector' name='econ-selector' value='poverty'><label for='poverty'>Percent below poverty line</label>")
         $("#econ-data-selectors").append("<br>")
-        $("#econ-data-selectors").append("<input type='radio' id='unemployment' name='econ-selector' value='unemployment'><label for='unemployment'>Population in labor force 16 years and over:</label>")
+        $("#econ-data-selectors").append("<input type='radio' id='unemployment' class='subselector' name='econ-selector' value='unemployment'><label for='unemployment'>Population in labor force 16 years and over:</label>")
 
         var checkboxMedianIncome = document.querySelector("input[id=median-income]");
         checkboxMedianIncome.addEventListener('change', function() {
