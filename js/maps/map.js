@@ -7327,26 +7327,26 @@
         "Asian and Pacific Island languages": 0,
         "Other languages": 0
       },
-      {
-        "Geographic Area Name": 1114,
-        "Total Population": 1241,
-        "Speak only English": 1232,
-        "Speak a language other than English": 9,
-        "Spanish": 0,
-        "Other Indo-European languages": 0,
-        "Asian and Pacific Island languages": 9,
-        "Other languages": 0
-      },
-      {
-        "Geographic Area Name": 1115,
-        "Total Population": 579,
-        "Speak only English": 579,
-        "Speak a language other than English": 0,
-        "Spanish": 0,
-        "Other Indo-European languages": 0,
-        "Asian and Pacific Island languages": 0,
-        "Other languages": 0
-      },
+      // {
+      //   "Geographic Area Name": 1114,
+      //   "Total Population": 1241,
+      //   "Speak only English": 1232,
+      //   "Speak a language other than English": 9,
+      //   "Spanish": 0,
+      //   "Other Indo-European languages": 0,
+      //   "Asian and Pacific Island languages": 9,
+      //   "Other languages": 0
+      // },
+      // {
+      //   "Geographic Area Name": 1115,
+      //   "Total Population": 579,
+      //   "Speak only English": 579,
+      //   "Speak a language other than English": 0,
+      //   "Spanish": 0,
+      //   "Other Indo-European languages": 0,
+      //   "Asian and Pacific Island languages": 0,
+      //   "Other languages": 0
+      // },
       {
         "Geographic Area Name": 1121,
         "Total Population": 4164,
@@ -7607,16 +7607,16 @@
         "Asian and Pacific Island languages": 6,
         "Other languages": 22
       },
-      {
-        "Geographic Area Name": 1184,
-        "Total Population": 1572,
-        "Speak only English": 1340,
-        "Speak a language other than English": 232,
-        "Spanish": 97,
-        "Other Indo-European languages": 66,
-        "Asian and Pacific Island languages": 65,
-        "Other languages": 4
-      },
+      // {
+      //   "Geographic Area Name": 1184,
+      //   "Total Population": 1572,
+      //   "Speak only English": 1340,
+      //   "Speak a language other than English": 232,
+      //   "Spanish": 97,
+      //   "Other Indo-European languages": 66,
+      //   "Asian and Pacific Island languages": 65,
+      //   "Other languages": 4
+      // },
       {
         "Geographic Area Name": 1186,
         "Total Population": 4204,
@@ -7677,16 +7677,16 @@
         "Asian and Pacific Island languages": 0,
         "Other languages": 0
       },
-      {
-        "Geographic Area Name": 1211,
-        "Total Population": 1808,
-        "Speak only English": 1699,
-        "Speak a language other than English": 109,
-        "Spanish": 17,
-        "Other Indo-European languages": 41,
-        "Asian and Pacific Island languages": 51,
-        "Other languages": 0
-      },
+      // {
+      //   "Geographic Area Name": 1211,
+      //   "Total Population": 1808,
+      //   "Speak only English": 1699,
+      //   "Speak a language other than English": 109,
+      //   "Spanish": 17,
+      //   "Other Indo-European languages": 41,
+      //   "Asian and Pacific Island languages": 51,
+      //   "Other languages": 0
+      // },
       {
         "Geographic Area Name": 1212,
         "Total Population": 1942,
@@ -9034,7 +9034,6 @@
 
         var checkboxUnemployment = document.querySelector("input[id=unemployment]");
         checkboxUnemployment.addEventListener('change', function() {
-          console.log(economic_data)
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#FFA500'){
               map.removeLayer(layer);
@@ -9077,23 +9076,7 @@
           $("#unemployment-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
           $("#unemployment-data-legend").append("<h8> > 100%</h8>");
         })
-      
-
-
-
-      
-      // generateLayerPopups()
-
     }
-    // if(!this.checked) {
-    //   $("#median-income-data-legend").empty()
-    //   // map.removeLayer(geojson);
-    //   map.eachLayer(function (layer) {
-    //     if(layer.options.fillColor == '#FFA500'){
-    //       map.removeLayer(layer);
-    //     }
-    //   });
-    // }
     });
 
 
@@ -9242,6 +9225,33 @@
         var checkboxEnglish = document.querySelector("input[id=english-data]");
         checkboxEnglish.addEventListener('change', function() {
           console.log("english")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#DC143C'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+
+            console.log(censusTract, langauges[i])
+
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            // geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            // function style(region) {
+            //   return {
+            //     fillColor: "#FFA500",
+            //     color: "#000",
+            //     weight: 1,
+            //     opacity: 1,
+            //     fillOpacity: 1
+            //   };
+            // }
+          }
         })
         var checkboxSpanish = document.querySelector("input[id=spanish-data]");
         checkboxSpanish.addEventListener('change', function() {
