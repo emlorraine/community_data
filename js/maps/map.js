@@ -8259,6 +8259,8 @@
     var checkboxEducation = document.querySelector("input[id=education]");
     checkboxEducation.addEventListener('change', function() {
     if (this.checked) {
+      
+      $("#educational-attainment-data-legend").empty()
 
       $("#legend").empty()
       $("#median-age-data-legend").empty()
@@ -8313,6 +8315,7 @@
       var checkboxHSOrHigher = document.querySelector("input[id=high-school-or-higher]");
         checkboxHSOrHigher.addEventListener('change', function() {
         if (this.checked) {
+          $("#educational-attainment-data-legend").empty()
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
@@ -8350,14 +8353,24 @@
                 fillOpacity: percentage
               };
             }
-          }
-          // generateLayerPopups()
+          }$("#legend").append("<div id='educational-attainment-data-legend'></div")
+          $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
+          $("#educational-attainment-data-legend").append("<h7>Percentage of population high school (and equivalents) or higher:</h7>");
+          $("#educational-attainment-data-legend").append("<br>");
+          $("#educational-attainment-data-legend").append("<h8>0</h8>");
+          $("#educational-attainment-data-legend").append("<span class='rectangle' id='education-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#education-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
+          $("#educational-attainment-data-legend").append("<h8>100%</h8>");
         }
       })
 
       var collegeOrHigher = document.querySelector("input[id=college-or-higher]");
       collegeOrHigher.addEventListener('change', function() {
         if (this.checked) {
+          $("#educational-attainment-data-legend").empty()
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
@@ -8396,12 +8409,9 @@
             // generateLayerPopups()
 
           }
-        }
-      })
-
-      $("#legend").append("<div id='educational-attainment-data-legend'></div")
+          $("#legend").append("<div id='educational-attainment-data-legend'></div")
       $("#educational-attainment-data-legend").append("<h5>Educational Attainment Legend:</h5>");
-      $("#educational-attainment-data-legend").append("<h7>Percentage of population higher:</h7>");
+      $("#educational-attainment-data-legend").append("<h7>Percentage of population college or higher:</h7>");
       $("#educational-attainment-data-legend").append("<br>");
       $("#educational-attainment-data-legend").append("<h8>0</h8>");
       $("#educational-attainment-data-legend").append("<span class='rectangle' id='education-rectangle'></span>");
@@ -8410,6 +8420,10 @@
       $(".rectangle").css("display", "inline-block")
       $("#education-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
       $("#educational-attainment-data-legend").append("<h8>100%</h8>");
+        }
+      })
+
+      
 
       // generateLayerPopups()
 
