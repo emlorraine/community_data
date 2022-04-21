@@ -9076,7 +9076,7 @@
         $("#econ-data-selectors").append("<br>")
         $("#econ-data-selectors").append("<input type='radio' id='poverty' class='subselector' name='econ-selector' value='poverty'><label for='poverty'>Percent below poverty line</label>")
         $("#econ-data-selectors").append("<br>")
-        $("#econ-data-selectors").append("<input type='radio' id='unemployment' class='subselector' name='econ-selector' value='unemployment'><label for='unemployment'>Population in labor force 16 years and over:</label>")
+        $("#econ-data-selectors").append("<input type='radio' id='unemployment' class='subselector' name='econ-selector' value='unemployment'><label for='unemployment'>Population of labor force (ages 16 years+) unemployed</label>")
 
         var checkboxMedianIncome = document.querySelector("input[id=median-income]");
         checkboxMedianIncome.addEventListener('change', function() {
