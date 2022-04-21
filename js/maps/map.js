@@ -329,6 +329,8 @@
           "1274": "4,814",
           "1275": "2,225",
           "1276": "2,688",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "308174"
         },
         {
@@ -439,6 +441,8 @@
           "1274": 645,
           "1275": 142,
           "1276": 64,
+          "1277":43,
+          "1278":43,
           "TOTAL (All Selected Census Tracts)": "19673"
         },
         {
@@ -549,6 +553,8 @@
           "1274": 451,
           "1275": 30,
           "1276": 42,
+          "1277":90,
+          "1278":155,
           "TOTAL (All Selected Census Tracts)": "15286"
         },
         {
@@ -659,6 +665,8 @@
           "1274": 157,
           "1275": 52,
           "1276": 17,
+          "1277":114,
+          "1278":94,
           "TOTAL (All Selected Census Tracts)": "16211"
         },
         {
@@ -769,6 +777,8 @@
           "1274": 67,
           "1275": 36,
           "1276": 7,
+          "1277":148,
+          "1278":41,
           "TOTAL (All Selected Census Tracts)": "8649"
         },
         {
@@ -879,6 +889,8 @@
           "1274": 574,
           "1275": 249,
           "1276": 287,
+          "1277":355,
+          "1278":1526,
           "TOTAL (All Selected Census Tracts)": "29083"
         },
         {
@@ -989,6 +1001,8 @@
           "1274": "1401",
           "1275": 422,
           "1276": "1150",
+          "1277":153,
+          "1278":433,
           "TOTAL (All Selected Census Tracts)": "61349"
         },
         {
@@ -1099,6 +1113,8 @@
           "1274": 396,
           "1275": 308,
           "1276": 296,
+          "1277":225,
+          "1278":150,
           "TOTAL (All Selected Census Tracts)": "40386"
         },
         {
@@ -1209,6 +1225,8 @@
           "1274": 416,
           "1275": 373,
           "1276": 168,
+          "1277":279,
+          "1278":178,
           "TOTAL (All Selected Census Tracts)": "36559"
         },
         {
@@ -1319,6 +1337,8 @@
           "1274": 391,
           "1275": 294,
           "1276": 338,
+          "1277":261,
+          "1278":373,
           "TOTAL (All Selected Census Tracts)": "40502"
         },
         {
@@ -1429,6 +1449,8 @@
           "1274": 212,
           "1275": 165,
           "1276": 218,
+          "1277":166,
+          "1278":241,
           "TOTAL (All Selected Census Tracts)": "24252"
         },
         {
@@ -1539,6 +1561,8 @@
           "1274": 72,
           "1275": 119,
           "1276": 77,
+          "1277":20,
+          "1278":102,
           "TOTAL (All Selected Census Tracts)": "11276"
         },
         {
@@ -1649,6 +1673,8 @@
           "1274": 32,
           "1275": 35,
           "1276": 24,
+          "1277":417,
+          "1278":97,
           "TOTAL (All Selected Census Tracts)": "4948"
         },
         {
@@ -8419,7 +8445,6 @@
             //   console.log("censusTract==1277", percentage)
             // }
 
-
             var percentage; 
             if(censusTract==1278){
               percentage = 0.865
@@ -8429,13 +8454,16 @@
               percentage = parseFloat(education_sum/population)
             }
 
+            // if(censusTract == 1101){
+            //   console.log(censusTract, percentage)
+            // }
             function style(region) {
               return {
                 fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: percentage
+                fillOpacity: percentage 
               };
             }
           }$("#legend").append("<div id='educational-attainment-data-legend'></div")
@@ -8463,7 +8491,6 @@
           });
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
-            console.log(censusTract)
             censusPoly = stlCensusTracts.geometries[i]
             // var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
             // var some_college = parseInt(data[30][censusTractArrayList[i]])
@@ -8490,9 +8517,9 @@
               percentage = 0.05
             } else {
               percentage = parseFloat(education_sum/population)
-            }
+            }  
+         
             function style(region) {
-              console.log("assigned value for census tract", censusTract)
               return {
                 fillColor: "#6E2594",
                 color: "#000",
@@ -8599,9 +8626,9 @@
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
-            var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
-            var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
-
+            // var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
+            // var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
+            
             var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
             var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
             var ten_to_fourteen= parseInt(data[5][censusTractArrayList[i]]) //2
@@ -8615,25 +8642,25 @@
             var seventy_five_to_eighty_four = parseInt(data[13][censusTractArrayList[i]]) //10
             var eighty_five_and_older = parseInt(data[14][censusTractArrayList[i]])//11
             var tract_total_population = less_than_five +five_to_nine+ten_to_fourteen+ fifteen_to_seventeen+eighteen_to_twenty_four+twenty_five_to_thirty_four+thirty_five_to_fourty_four+fourty_five_to_fifty_four+fifty_five_to_sixty_four+sixty_five_to_seventy_four+seventy_five_to_eighty_four+eighty_five_and_older; 
-
+            
             // var less_than_five_total = parseInt(data[3]["TOTAL (All Selected Census Tracts)"])
             // var five_to_nine_total = parseInt(data[4]["TOTAL (All Selected Census Tracts)"])
 
             var tract_age_sum = less_than_five + five_to_nine
             // var total_age_sum = less_than_five_total + five_to_nine_total 
-            // console.log("For census tract", censusTractArrayList[i]," ages 0-9 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
-            var percentage = tract_age_sum / tract_total_population
+            var percentage;// = tract_age_sum / tract_total_population
             if(censusTract==1278){
-              percentage = 198 / parseInt(tract_total_population)
+              console.log(tract_total_population)
+              percentage = 198/parseInt(tract_total_population)
               console.log("1278 census tract is", percentage, tract_total_population)
+            } else if(censusTract==1277){
+              console.log(tract_total_population)
+              percentage = 133/parseInt(tract_total_population)
+              console.log("1277 census tract is", percentage,(tract_total_population))
+            } else {
+              percentage = tract_age_sum / tract_total_population
             }
-            if(censusTract==1277){
-              percentage = 133 / parseInt(tract_total_population)
-              console.log("1277 census tract is", percentage, typeof(tract_total_population))
-            } 
             var individualCensusTract = (stlCensusTracts.geometries[i])
-            console.log(tract_age_sum, tract_total_population, percentage)
-
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
