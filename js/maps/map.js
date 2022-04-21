@@ -7990,6 +7990,7 @@
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
       $("#econ-data-selectors").empty()
+      $("#language-data-selectors").empty()
 
 
 
@@ -8013,6 +8014,12 @@
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#FFA500'){
+          map.removeLayer(layer);
+        }
+      });
+
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#DC143C'){
           map.removeLayer(layer);
         }
       });
@@ -8270,6 +8277,12 @@
         }
       });
 
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#DC143C'){
+          map.removeLayer(layer);
+        }
+      });
+
       $("#racial-data-legend").empty()
           // map.removeLayer(geojson);
           // console.log("remove layers here") 
@@ -8286,6 +8299,7 @@
         $("#age-data-selectors").empty(); 
         $("#race-ethnicity-data-selectors").empty()
         $("#econ-data-selectors").empty()
+        $("#language-data-selectors").empty()
 
 
 
@@ -8418,6 +8432,7 @@
       $("#educational-attainment-data-selectors").empty()
       $("#race-ethnicity-data-selectors").empty()
       $("#econ-data-selectors").empty()
+      $("#language-data-selectors").empty()
 
 
       // map.removeLayer(geojson);
@@ -8431,6 +8446,12 @@
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#FFA500'){
+          map.removeLayer(layer);
+        }
+      });
+
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#DC143C'){
           map.removeLayer(layer);
         }
       });
@@ -8863,6 +8884,7 @@
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
       $("#race-ethnicity-data-selectors").empty()
+      $("#language-data-selectors").empty()
 
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
@@ -8876,6 +8898,12 @@
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#228B22'){
+          map.removeLayer(layer);
+        }
+      });
+
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#DC143C'){
           map.removeLayer(layer);
         }
       });
