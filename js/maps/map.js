@@ -7991,7 +7991,7 @@
       $("#educational-attainment-data-selectors").empty();
       $("#econ-data-selectors").empty()
       $("#language-data-selectors").empty()
-
+      $("#language-data-legend").empty()
 
 
       $("#educational-attainment-data-legend").empty()
@@ -8276,7 +8276,7 @@
           map.removeLayer(layer);
         }
       });
-
+      $("#language-data-legend").empty()
       map.eachLayer(function (layer) {
         if(layer.options.fillColor == '#DC143C'){
           map.removeLayer(layer);
@@ -8441,7 +8441,7 @@
           map.removeLayer(layer);
         }
       });
-
+      $("#language-data-legend").empty()
       $("#median-income-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -8885,7 +8885,7 @@
       $("#educational-attainment-data-selectors").empty();
       $("#race-ethnicity-data-selectors").empty()
       $("#language-data-selectors").empty()
-
+      $("#language-data-legend").empty()
       $("#educational-attainment-data-legend").empty()
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -8981,6 +8981,7 @@
 
           $("#poverty-data-legend").empty()
           $("#unemployment-data-legend").empty()
+
 
           $("#legend").append("<div id='median-income-data-legend'></div")
           $("#median-income-data-legend").append("<h5>Median Income Legend:</h5>")
@@ -9212,8 +9213,11 @@
         $("#age-data-selectors").empty(); 
         $("#educational-attainment-data-selectors").empty();
         $("#econ-data-selectors").empty()
-  
         $("#educational-attainment-data-legend").empty()
+        $("#language-data-legend").empty()
+
+
+        $("#language-data-legend").empty()
         // map.removeLayer(geojson);
         map.eachLayer(function (layer) {
           if(layer.options.fillColor == '#6E2594'){
@@ -9251,7 +9255,10 @@
         $("#language-data-selectors").append("<input type='radio' id='other-data' class='subselector' name='language-selector' value='other-lang-data'><label for='other-lang-data'> Other Languages</label>")
       
         var checkboxEnglish = document.querySelector("input[id=english-data]");
+
         checkboxEnglish.addEventListener('change', function() {
+          $("#language-data-legend").empty()
+
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#DC143C'){
               map.removeLayer(layer);
@@ -9281,9 +9288,19 @@
               };
             }
           }
+          $("#legend").append("<div id='language-data-legend'></div")
+          $("#language-data-legend").append("<h5>Language Distribution Legend:</h5>")
+          $("#language-data-legend").append("<h8>0</h8>");
+          $("#language-data-legend").append("<span class='rectangle' id='lang-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxSpanish = document.querySelector("input[id=spanish-data]");
         checkboxSpanish.addEventListener('change', function() {
+          $("#language-data-legend").empty()
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#DC143C'){
               map.removeLayer(layer);
@@ -9313,9 +9330,20 @@
               };
             }
           }
+          $("#legend").append("<div id='language-data-legend'></div")
+          $("#language-data-legend").append("<h5>Language Distribution Legend:</h5>")
+          $("#language-data-legend").append("<h8>0</h8>");
+          $("#language-data-legend").append("<span class='rectangle' id='lang-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxIndoEuropean = document.querySelector("input[id=indo-european-data]");
         checkboxIndoEuropean.addEventListener('change', function() {
+          $("#language-data-legend").empty()
+
           console.log("checkboxIndoEuropean")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#DC143C'){
@@ -9346,9 +9374,20 @@
               };
             }
           }
+          $("#legend").append("<div id='language-data-legend'></div")
+          $("#language-data-legend").append("<h5>Language Distribution Legend:</h5>")
+          $("#language-data-legend").append("<h8>0</h8>");
+          $("#language-data-legend").append("<span class='rectangle' id='lang-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxAsianAndPacificIslander = document.querySelector("input[id=asian-and-pacific-islander-data]");
         checkboxAsianAndPacificIslander.addEventListener('change', function() {
+          $("#language-data-legend").empty()
+
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#DC143C'){
               map.removeLayer(layer);
@@ -9378,9 +9417,19 @@
               };
             }
           }
+          $("#legend").append("<div id='language-data-legend'></div")
+          $("#language-data-legend").append("<h5>Language Distribution Legend:</h5>")
+          $("#language-data-legend").append("<h8>0</h8>");
+          $("#language-data-legend").append("<span class='rectangle' id='lang-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxOther = document.querySelector("input[id=other-data]");
         checkboxOther.addEventListener('change', function() {
+          $("#language-data-legend").empty()
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#DC143C'){
               map.removeLayer(layer);
@@ -9410,13 +9459,16 @@
               };
             }
           }
-        })
-      
-      
-      
-      
-      
-      
+          $("#legend").append("<div id='language-data-legend'></div")
+          $("#language-data-legend").append("<h5>Language Distribution Legend:</h5>")
+          $("#language-data-legend").append("<h8>0</h8>");
+          $("#language-data-legend").append("<span class='rectangle' id='lang-rectangle'></span>");
+          $(".rectangle").css("height", "30px")
+          $(".rectangle").css("width", "250px")
+          $(".rectangle").css("display", "inline-block")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#language-data-legend").append("<h8>100%</h8>");
+        }) 
       }
     })
 
