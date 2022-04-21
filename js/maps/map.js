@@ -2874,6 +2874,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -2984,6 +2986,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -3094,6 +3098,8 @@
           "1274": "2920",
           "1275": "1716",
           "1276": "2271",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "219272"
         },
         {
@@ -3204,6 +3210,8 @@
           "1274": 256,
           "1275": 227,
           "1276": 51,
+          "1277":0,
+          "1278":0,
           "TOTAL (All Selected Census Tracts)": "26828"
         },
         {
@@ -3314,6 +3322,8 @@
           "1274": 744,
           "1275": 338,
           "1276": 293,
+          "1277":0,
+          "1278":0,
           "TOTAL (All Selected Census Tracts)": "52444"
         },
         {
@@ -3424,6 +3434,8 @@
           "1274": 941,
           "1275": 579,
           "1276": 563,
+          "1277":0,
+          "1278":0,
           "TOTAL (All Selected Census Tracts)": "60331"
         },
         {
@@ -3534,6 +3546,8 @@
           "1274": 392,
           "1275": 418,
           "1276": 825,
+          "1277":0,
+          "1278":0,
           "TOTAL (All Selected Census Tracts)": "43290"
         },
         {
@@ -3644,6 +3658,8 @@
           "1274": 367,
           "1275": 123,
           "1276": 361,
+          "1277":0,
+          "1278":0,
           "TOTAL (All Selected Census Tracts)": "23772"
         },
         {
@@ -3754,6 +3770,8 @@
           "1274": 129,
           "1275": 21,
           "1276": 91,
+          "1277":0,
+          "1278":0,
           "TOTAL (All Selected Census Tracts)": "7134"
         },
         {
@@ -3864,6 +3882,8 @@
           "1274": 91,
           "1275": 10,
           "1276": 87,
+          "1277":0,
+          "1278":0,
           "TOTAL (All Selected Census Tracts)": "5473"
         },
         {
@@ -3974,6 +3994,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -4084,6 +4106,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -5080,6 +5104,14 @@
         {
           "Area Name": 1276,
           "% Total Population: Hispanic or Latino": 1.6
+        },
+        {
+          "Area Name": 1277,
+          "% Total Population: Hispanic or Latino":""
+        },
+        {
+          "Area Name": 1278,
+          "% Total Population: Hispanic or Latino": ""
         }
        ]
 
@@ -5192,6 +5224,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -5302,6 +5336,8 @@
           "1274": "2804",
           "1275": "1377",
           "1276": "1918",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "167,492"
         },
         {
@@ -5412,6 +5448,8 @@
           "1274": "2440",
           "1275": "1220",
           "1276": "1886",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "155835"
         },
         {
@@ -5522,6 +5560,8 @@
           "1274": "364",
           "1275": "157",
           "1276": "32",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "11,657"
         },
         {
@@ -5632,6 +5672,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -5742,6 +5784,8 @@
           "1274": "1304",
           "1275": "258",
           "1276": "130",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "58,940"
         },
         {
@@ -5852,6 +5896,8 @@
           "1274": "357",
           "1275": "184",
           "1276": "0",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "19,951"
         },
         {
@@ -5962,6 +6008,8 @@
           "1274": "947",
           "1275": "74",
           "1276": "130",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "38,989"
         },
         {
@@ -6072,6 +6120,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -6182,6 +6232,8 @@
           "1274": "3178",
           "1275": "1646",
           "1276": "2239",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "201610"
         },
         {
@@ -6292,6 +6344,8 @@
           "1274": "535",
           "1275": "410",
           "1276": "362",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "39,397"
         },
         {
@@ -6402,6 +6456,8 @@
           "1274": "2643",
           "1275": "1236",
           "1276": "1877",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "162213"
         },
         {
@@ -6512,6 +6568,8 @@
           "1274": "",
           "1275": "",
           "1276": "",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": ""
         },
         {
@@ -6622,6 +6680,8 @@
           "1274": "316",
           "1275": "319",
           "1276": "319",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "39,139"
         },
         {
@@ -6732,6 +6792,8 @@
           "1274": "47",
           "1275": "130",
           "1276": "57",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "6,064"
         },
         {
@@ -6842,6 +6904,8 @@
           "1274": "269",
           "1275": "189",
           "1276": "262",
+          "1277":"",
+          "1278":"",
           "TOTAL (All Selected Census Tracts)": "33,075"
         }
        ]
@@ -8326,6 +8390,7 @@
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
+
             var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
             var some_college = parseInt(data[30][censusTractArrayList[i]])
             var college = parseInt(data[31][censusTractArrayList[i]])
@@ -8336,7 +8401,7 @@
             var population = parseInt(data[27][censusTractArrayList[i]]);
             var education_sum = high_school_completed + some_college + college + masters + doctorates + professional
             
-            var percentage = parseFloat(education_sum/population)
+            // var percentage = parseFloat(education_sum/population)
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -8344,6 +8409,26 @@
             }
             // var polyTracts = L.geoJson(individualCensusTractPolygon)
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+
+            // if(censusTract==1278){
+            //   percentage = .865
+            //   console.log("censusTract==1278", percentage)
+            // }
+            // if(censusTract==1277){
+            //   percentage = 0.573
+            //   console.log("censusTract==1277", percentage)
+            // }
+
+
+            var percentage; 
+            if(censusTract==1278){
+              percentage = 0.865
+            } else if(censusTract==1277){
+              percentage = 0.573
+            } else {
+              percentage = parseFloat(education_sum/population)
+            }
+
             function style(region) {
               return {
                 fillColor: "#6E2594",
@@ -8378,6 +8463,7 @@
           });
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
+            console.log(censusTract)
             censusPoly = stlCensusTracts.geometries[i]
             // var high_school_completed = parseInt(data[29][censusTractArrayList[i]])
             // var some_college = parseInt(data[30][censusTractArrayList[i]])
@@ -8389,7 +8475,7 @@
             var population = parseInt(data[27][censusTractArrayList[i]]);
             var education_sum = college + masters + doctorates + professional
             
-            var percentage = parseFloat(education_sum/population)
+            // var percentage = parseFloat(education_sum/population)
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -8397,7 +8483,16 @@
             }
             // var polyTracts = L.geoJson(individualCensusTractPolygon)
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var percentage; 
+            if(censusTract==1278){
+              percentage = 0.25
+            } else if(censusTract==1277){
+              percentage = 0.05
+            } else {
+              percentage = parseFloat(education_sum/population)
+            }
             function style(region) {
+              console.log("assigned value for census tract", censusTract)
               return {
                 fillColor: "#6E2594",
                 color: "#000",
@@ -8406,7 +8501,7 @@
                 fillOpacity: percentage
               };
             }
-            // generateLayerPopups()
+
 
           }
           $("#legend").append("<div id='educational-attainment-data-legend'></div")
@@ -8527,8 +8622,15 @@
             var tract_age_sum = less_than_five + five_to_nine
             // var total_age_sum = less_than_five_total + five_to_nine_total 
             // console.log("For census tract", censusTractArrayList[i]," ages 0-9 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
-
             var percentage = tract_age_sum / tract_total_population
+            if(censusTract==1278){
+              percentage = 198 / parseInt(tract_total_population)
+              console.log("1278 census tract is", percentage, tract_total_population)
+            }
+            if(censusTract==1277){
+              percentage = 133 / parseInt(tract_total_population)
+              console.log("1277 census tract is", percentage, typeof(tract_total_population))
+            } 
             var individualCensusTract = (stlCensusTracts.geometries[i])
             console.log(tract_age_sum, tract_total_population, percentage)
 
@@ -8538,11 +8640,10 @@
             }
             // var polyTracts = L.geoJson(individualCensusTractPolygon)
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
-      
-            if(censusTract==1278){
-              // middle = '5500ab'
-              percentage = 0.33
-            }
+
+
+            //TO DO: DATA HERE 
+            
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
             function style(region) {
               return {
@@ -8608,6 +8709,14 @@
 
             var percentage = tract_age_sum / tract_total_population
 
+            //TO DO: DATA HERE 
+            if(censusTract==1278){
+              percentage = 0.33
+            }
+            if(censusTract==1277){
+              percentage = 0.33
+            }
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
@@ -8617,8 +8726,11 @@
             // var polyTracts = L.geoJson(individualCensusTractPolygon)
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
       
+            //TO DO: DATA HERE 
             if(censusTract==1278){
-              // middle = '5500ab'
+              percentage = 0.33
+            }
+            if(censusTract==1277){
               percentage = 0.33
             }
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
@@ -8684,6 +8796,13 @@
             var total_age_sum = eighteen_to_twenty_four_total + twenty_five_to_thirty_four_total
 
             console.log("For census tract", censusTractArrayList[i]," ages 18-34 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
+            //TO DO: DATA HERE 
+            if(censusTract==1278){
+              percentage = 0.33
+            }
+            if(censusTract==1277){
+              percentage = 0.33
+            }
 
 
             var percentage = tract_age_sum / tract_total_population
@@ -8768,6 +8887,14 @@
 
             var percentage = tract_age_sum / tract_total_population
 
+            //TO DO: DATA HERE 
+            if(censusTract==1278){
+              percentage = 0.33
+            }
+            if(censusTract==1277){
+              percentage = 0.33
+            }
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
@@ -8847,6 +8974,14 @@
 
 
             var percentage = tract_age_sum / tract_total_population
+
+            //TO DO: DATA HERE 
+            if(censusTract==1278){
+              percentage = 0.33
+            }
+            if(censusTract==1277){
+              percentage = 0.33
+            }
            
             var individualCensusTract = (stlCensusTracts.geometries[i])
             console.log(tract_age_sum, tract_total_population, percentage)
@@ -8961,6 +9096,12 @@
             //$40,000-$49,999
             //Less than $40,000
             var median_income = parseFloat(data[37][censusTractArrayList[i]])
+            if(censusTract==1278){
+              median_income = 21825
+            }
+            if(censusTract==1277){
+              median_income = 23960
+            }
             var bracket; 
             if(median_income > 75000){
               bracket = 5; 
@@ -8974,7 +9115,8 @@
               bracket = 1; 
             }
             percentage = bracket/5; 
-            
+                      
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -9044,6 +9186,14 @@
             var above_poverty_line = children_above_poverty + adult_above_poverty + elder_above_poverty
 
             var percentage = (below_poverty_line/(below_poverty_line+above_poverty_line))
+
+            if(censusTract==1278){
+              percentage = 0.276
+            }
+            if(censusTract==1277){
+              percentage = 0.294
+            }
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -9089,6 +9239,13 @@
             var employed = parseInt(economic_data[2][censusTractArrayList[i]])
             var unemployed = parseInt(economic_data[3][censusTractArrayList[i]])          
             var percentage = (unemployed/(unemployed+employed))
+
+            if(censusTract==1278){
+              percentage = 58 / 1426
+            }
+            if(censusTract==1277){
+              percentage = 99 / 862
+            }
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
@@ -9286,6 +9443,13 @@
 
             var percentage = lang/population
 
+            if(censusTract==1278){
+              percentage = (281 + 2256 + 505)/(290+2670+510)
+            }
+            if(censusTract==1277){
+              percentage = (352+1273+603)/(352+1273+603)
+            }
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -9327,6 +9491,14 @@
             var lang = languages[i]["Spanish"]
 
             var percentage = lang/population
+
+            //TO DO: DATA HERE 
+            if(censusTract==1278){
+              percentage = (136+0+5)/(290+2670+510)
+            }
+            if(censusTract==1277){
+              percentage = 0
+            }
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
@@ -9372,6 +9544,14 @@
 
             var percentage = lang/population
 
+            //TO DO: DATA HERE 
+            if(censusTract==1278){
+              percentage = (9+95+0)/(290+2670+510)
+            }
+            if(censusTract==1277){
+              percentage = 0
+            }
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -9415,6 +9595,13 @@
 
             var percentage = lang/population
 
+            if(censusTract==1278){
+              percentage = (0+128+0)/(290+2670+510)
+            }
+            if(censusTract==1277){
+              percentage = 0
+            }
+
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
@@ -9456,6 +9643,13 @@
             var lang = languages[i]["Other languages"]
 
             var percentage = lang/population
+
+            if(censusTract==1278){
+              percentage = (55)/(290+2670+510)
+            }
+            if(censusTract==1277){
+              percentage = 0
+            }
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
