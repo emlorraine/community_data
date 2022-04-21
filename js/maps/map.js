@@ -8734,14 +8734,20 @@
             console.log("For census tract", censusTractArrayList[i]," ages 10-17 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
 
-            var percentage = tract_age_sum / tract_total_population
+            // var percentage = tract_age_sum / tract_total_population
 
             //TO DO: DATA HERE 
+            var percentage;// = tract_age_sum / tract_total_population
             if(censusTract==1278){
-              percentage = 0.33
-            }
-            if(censusTract==1277){
-              percentage = 0.33
+              console.log(tract_total_population)
+              percentage = 198/parseInt(tract_total_population)
+              console.log("1278 census tract is", percentage, tract_total_population)
+            } else if(censusTract==1277){
+              console.log(tract_total_population)
+              percentage = 133/parseInt(tract_total_population)
+              console.log("1277 census tract is", percentage,(tract_total_population))
+            } else {
+              percentage = tract_age_sum / tract_total_population
             }
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
@@ -8824,15 +8830,21 @@
 
             console.log("For census tract", censusTractArrayList[i]," ages 18-34 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
             //TO DO: DATA HERE 
+            var percentage;// = tract_age_sum / tract_total_population
             if(censusTract==1278){
-              percentage = 0.33
-            }
-            if(censusTract==1277){
-              percentage = 0.33
+              console.log(tract_total_population)
+              percentage = 198/parseInt(tract_total_population)
+              console.log("1278 census tract is", percentage, tract_total_population)
+            } else if(censusTract==1277){
+              console.log(tract_total_population)
+              percentage = 133/parseInt(tract_total_population)
+              console.log("1277 census tract is", percentage,(tract_total_population))
+            } else {
+              percentage = tract_age_sum / tract_total_population
             }
 
 
-            var percentage = tract_age_sum / tract_total_population
+            // var percentage = tract_age_sum / tract_total_population
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
             console.log(tract_age_sum, tract_total_population, percentage)
@@ -8912,18 +8924,29 @@
             console.log("For census tract", censusTractArrayList[i]," ages 35-64 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
 
-            var percentage = tract_age_sum / tract_total_population
+            // var percentage = tract_age_sum / tract_total_population
+            var percentage;// = tract_age_sum / tract_total_population
+            if(censusTract==1278){
+              console.log(tract_total_population)
+              percentage = 198/parseInt(tract_total_population)
+              console.log("1278 census tract is", percentage, tract_total_population)
+            } else if(censusTract==1277){
+              console.log(tract_total_population)
+              percentage = 133/parseInt(tract_total_population)
+              console.log("1277 census tract is", percentage,(tract_total_population))
+            } else {
+              percentage = tract_age_sum / tract_total_population
+            }
 
             //TO DO: DATA HERE 
-            if(censusTract==1278){
-              percentage = 0.33
-            }
-            if(censusTract==1277){
-              percentage = 0.33
-            }
+            // if(censusTract==1278){
+            //   percentage = 0.33
+            // }
+            // if(censusTract==1277){
+            //   percentage = 0.33
+            // }
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
-            console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -8931,10 +8954,10 @@
             // var polyTracts = L.geoJson(individualCensusTractPolygon)
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
       
-            if(censusTract==1278){
-              // middle = '5500ab'
-              percentage = 0.33
-            }
+            // if(censusTract==1278){
+            //   // middle = '5500ab'
+            //   percentage = 0.33
+            // }
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
             function style(region) {
               return {
@@ -9000,14 +9023,20 @@
             console.log("For census tract", censusTractArrayList[i]," ages 65+ the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
 
-            var percentage = tract_age_sum / tract_total_population
+            // var percentage = tract_age_sum / tract_total_population
 
             //TO DO: DATA HERE 
+            var percentage;// = tract_age_sum / tract_total_population
             if(censusTract==1278){
-              percentage = 0.33
-            }
-            if(censusTract==1277){
-              percentage = 0.33
+              console.log(tract_total_population)
+              percentage = 198/parseInt(tract_total_population)
+              console.log("1278 census tract is", percentage, tract_total_population)
+            } else if(censusTract==1277){
+              console.log(tract_total_population)
+              percentage = 133/parseInt(tract_total_population)
+              console.log("1277 census tract is", percentage,(tract_total_population))
+            } else {
+              percentage = tract_age_sum / tract_total_population
             }
            
             var individualCensusTract = (stlCensusTracts.geometries[i])
