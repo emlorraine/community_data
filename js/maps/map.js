@@ -256,7 +256,7 @@
           "1072": "1,188",
           "1073": "4,232",
           "1074": "2,282",
-          "1075": "2,050",
+          "1075": "2050",
           "1076": "1,799",
           "1081": "3,024",
           "1082": "2,084",
@@ -5410,7 +5410,7 @@
           "1157": "1564",
           "1161": "1744",
           "1162": "2656",
-          "1163.01": "2,050",
+          "1163.01": "2050",
           "1163.02": "1452",
           "1164": "2079",
           "1165": "2598",
@@ -9245,6 +9245,10 @@
             }
             if(censusTract==1277){
               percentage = 99 / 862
+            }
+
+            if(percentage == 0.9622641509433962){
+              console.log(censusTract, economic_data[2][censusTractArrayList[i]], economic_data[3][censusTractArrayList[i]] )
             }
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
