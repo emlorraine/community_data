@@ -6846,9 +6846,1092 @@
         }
        ]
 
+    var langauges = [
+      {
+        "Geographic Area Name": 1011,
+        "Total Population": 2315,
+        "Speak only English": 1813,
+        "Speak a language other than English": 502,
+        "Spanish": 174,
+        "Other Indo-European languages": 155,
+        "Asian and Pacific Island languages": 164,
+        "Other languages": 9
+      },
+      {
+        "Geographic Area Name": 1012,
+        "Total Population": 3157,
+        "Speak only English": 2877,
+        "Speak a language other than English": 280,
+        "Spanish": 30,
+        "Other Indo-European languages": 249,
+        "Asian and Pacific Island languages": 1,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1013,
+        "Total Population": 3863,
+        "Speak only English": 3697,
+        "Speak a language other than English": 166,
+        "Spanish": 15,
+        "Other Indo-European languages": 73,
+        "Asian and Pacific Island languages": 78,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1014,
+        "Total Population": 2662,
+        "Speak only English": 2307,
+        "Speak a language other than English": 355,
+        "Spanish": 17,
+        "Other Indo-European languages": 65,
+        "Asian and Pacific Island languages": 145,
+        "Other languages": 128
+      },
+      {
+        "Geographic Area Name": 1015,
+        "Total Population": 3023,
+        "Speak only English": 2837,
+        "Speak a language other than English": 186,
+        "Spanish": 72,
+        "Other Indo-European languages": 105,
+        "Asian and Pacific Island languages": 9,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1018,
+        "Total Population": 2807,
+        "Speak only English": 2379,
+        "Speak a language other than English": 428,
+        "Spanish": 221,
+        "Other Indo-European languages": 16,
+        "Asian and Pacific Island languages": 7,
+        "Other languages": 184
+      },
+      {
+        "Geographic Area Name": 1021,
+        "Total Population": 2412,
+        "Speak only English": 2355,
+        "Speak a language other than English": 57,
+        "Spanish": 39,
+        "Other Indo-European languages": 18,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1022,
+        "Total Population": 5571,
+        "Speak only English": 5346,
+        "Speak a language other than English": 225,
+        "Spanish": 89,
+        "Other Indo-European languages": 136,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1023,
+        "Total Population": 1971,
+        "Speak only English": 1635,
+        "Speak a language other than English": 336,
+        "Spanish": 68,
+        "Other Indo-European languages": 88,
+        "Asian and Pacific Island languages": 172,
+        "Other languages": 8
+      },
+      {
+        "Geographic Area Name": 1024,
+        "Total Population": 2339,
+        "Speak only English": 1870,
+        "Speak a language other than English": 469,
+        "Spanish": 27,
+        "Other Indo-European languages": 188,
+        "Asian and Pacific Island languages": 22,
+        "Other languages": 232
+      },
+      {
+        "Geographic Area Name": 1025,
+        "Total Population": 1801,
+        "Speak only English": 1550,
+        "Speak a language other than English": 251,
+        "Spanish": 68,
+        "Other Indo-European languages": 176,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 7
+      },
+      {
+        "Geographic Area Name": 1031,
+        "Total Population": 2905,
+        "Speak only English": 2651,
+        "Speak a language other than English": 254,
+        "Spanish": 171,
+        "Other Indo-European languages": 40,
+        "Asian and Pacific Island languages": 8,
+        "Other languages": 35
+      },
+      {
+        "Geographic Area Name": 1034,
+        "Total Population": 1771,
+        "Speak only English": 1670,
+        "Speak a language other than English": 101,
+        "Spanish": 10,
+        "Other Indo-European languages": 66,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 25
+      },
+      {
+        "Geographic Area Name": 1036,
+        "Total Population": 1240,
+        "Speak only English": 1136,
+        "Speak a language other than English": 104,
+        "Spanish": 63,
+        "Other Indo-European languages": 7,
+        "Asian and Pacific Island languages": 34,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1037,
+        "Total Population": 2496,
+        "Speak only English": 2309,
+        "Speak a language other than English": 187,
+        "Spanish": 58,
+        "Other Indo-European languages": 26,
+        "Asian and Pacific Island languages": 62,
+        "Other languages": 41
+      },
+      {
+        "Geographic Area Name": 1038,
+        "Total Population": 3573,
+        "Speak only English": 3251,
+        "Speak a language other than English": 322,
+        "Spanish": 209,
+        "Other Indo-European languages": 21,
+        "Asian and Pacific Island languages": 92,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1042,
+        "Total Population": 3087,
+        "Speak only English": 2757,
+        "Speak a language other than English": 330,
+        "Spanish": 27,
+        "Other Indo-European languages": 30,
+        "Asian and Pacific Island languages": 255,
+        "Other languages": 18
+      },
+      {
+        "Geographic Area Name": 1045,
+        "Total Population": 2257,
+        "Speak only English": 1858,
+        "Speak a language other than English": 399,
+        "Spanish": 32,
+        "Other Indo-European languages": 207,
+        "Asian and Pacific Island languages": 138,
+        "Other languages": 22
+      },
+      {
+        "Geographic Area Name": 1051.98,
+        "Total Population": 3045,
+        "Speak only English": 2504,
+        "Speak a language other than English": 541,
+        "Spanish": 40,
+        "Other Indo-European languages": 162,
+        "Asian and Pacific Island languages": 319,
+        "Other languages": 20
+      },
+      {
+        "Geographic Area Name": 1052,
+        "Total Population": 2606,
+        "Speak only English": 2217,
+        "Speak a language other than English": 389,
+        "Spanish": 146,
+        "Other Indo-European languages": 104,
+        "Asian and Pacific Island languages": 126,
+        "Other languages": 13
+      },
+      {
+        "Geographic Area Name": 1053,
+        "Total Population": 2328,
+        "Speak only English": 2122,
+        "Speak a language other than English": 206,
+        "Spanish": 117,
+        "Other Indo-European languages": 21,
+        "Asian and Pacific Island languages": 41,
+        "Other languages": 27
+      },
+      {
+        "Geographic Area Name": 1054,
+        "Total Population": 2168,
+        "Speak only English": 1940,
+        "Speak a language other than English": 228,
+        "Spanish": 228,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1055,
+        "Total Population": 2518,
+        "Speak only English": 2449,
+        "Speak a language other than English": 69,
+        "Spanish": 57,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 12
+      },
+      {
+        "Geographic Area Name": 1061,
+        "Total Population": 1539,
+        "Speak only English": 1528,
+        "Speak a language other than English": 11,
+        "Spanish": 11,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1062,
+        "Total Population": 912,
+        "Speak only English": 912,
+        "Speak a language other than English": 0,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1063,
+        "Total Population": 1256,
+        "Speak only English": 1227,
+        "Speak a language other than English": 29,
+        "Spanish": 7,
+        "Other Indo-European languages": 5,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 17
+      },
+      {
+        "Geographic Area Name": 1064,
+        "Total Population": 2124,
+        "Speak only English": 2124,
+        "Speak a language other than English": 0,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1065,
+        "Total Population": 2604,
+        "Speak only English": 2555,
+        "Speak a language other than English": 49,
+        "Spanish": 7,
+        "Other Indo-European languages": 31,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 11
+      },
+      {
+        "Geographic Area Name": 1066,
+        "Total Population": 1483,
+        "Speak only English": 1469,
+        "Speak a language other than English": 14,
+        "Spanish": 14,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1067,
+        "Total Population": 2862,
+        "Speak only English": 2861,
+        "Speak a language other than English": 1,
+        "Spanish": 1,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1072,
+        "Total Population": 1059,
+        "Speak only English": 1036,
+        "Speak a language other than English": 23,
+        "Spanish": 16,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 7
+      },
+      {
+        "Geographic Area Name": 1073,
+        "Total Population": 3913,
+        "Speak only English": 3871,
+        "Speak a language other than English": 42,
+        "Spanish": 33,
+        "Other Indo-European languages": 9,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1074,
+        "Total Population": 2234,
+        "Speak only English": 2195,
+        "Speak a language other than English": 39,
+        "Spanish": 0,
+        "Other Indo-European languages": 17,
+        "Asian and Pacific Island languages": 14,
+        "Other languages": 8
+      },
+      {
+        "Geographic Area Name": 1075,
+        "Total Population": 1928,
+        "Speak only English": 1911,
+        "Speak a language other than English": 17,
+        "Spanish": 17,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1076,
+        "Total Population": 1727,
+        "Speak only English": 1727,
+        "Speak a language other than English": 0,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1081,
+        "Total Population": 2814,
+        "Speak only English": 2771,
+        "Speak a language other than English": 43,
+        "Spanish": 43,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1082,
+        "Total Population": 2004,
+        "Speak only English": 1990,
+        "Speak a language other than English": 14,
+        "Spanish": 0,
+        "Other Indo-European languages": 14,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1083,
+        "Total Population": 2168,
+        "Speak only English": 2110,
+        "Speak a language other than English": 58,
+        "Spanish": 25,
+        "Other Indo-European languages": 12,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 21
+      },
+      {
+        "Geographic Area Name": 1096,
+        "Total Population": 2723,
+        "Speak only English": 2640,
+        "Speak a language other than English": 83,
+        "Spanish": 83,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1097,
+        "Total Population": 1888,
+        "Speak only English": 1838,
+        "Speak a language other than English": 50,
+        "Spanish": 5,
+        "Other Indo-European languages": 2,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 43
+      },
+      {
+        "Geographic Area Name": 1101,
+        "Total Population": 2359,
+        "Speak only English": 2317,
+        "Speak a language other than English": 42,
+        "Spanish": 34,
+        "Other Indo-European languages": 8,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1102,
+        "Total Population": 2076,
+        "Speak only English": 2041,
+        "Speak a language other than English": 35,
+        "Spanish": 13,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 22
+      },
+      {
+        "Geographic Area Name": 1103,
+        "Total Population": 1704,
+        "Speak only English": 1689,
+        "Speak a language other than English": 15,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 15,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1104,
+        "Total Population": 1874,
+        "Speak only English": 1841,
+        "Speak a language other than English": 33,
+        "Spanish": 25,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 8,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1105,
+        "Total Population": 864,
+        "Speak only English": 839,
+        "Speak a language other than English": 25,
+        "Spanish": 25,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1111,
+        "Total Population": 1761,
+        "Speak only English": 1680,
+        "Speak a language other than English": 81,
+        "Spanish": 6,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 75
+      },
+      {
+        "Geographic Area Name": 1112,
+        "Total Population": 1065,
+        "Speak only English": 1051,
+        "Speak a language other than English": 14,
+        "Spanish": 9,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 5
+      },
+      {
+        "Geographic Area Name": 1113,
+        "Total Population": 1474,
+        "Speak only English": 1474,
+        "Speak a language other than English": 0,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1114,
+        "Total Population": 1241,
+        "Speak only English": 1232,
+        "Speak a language other than English": 9,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 9,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1115,
+        "Total Population": 579,
+        "Speak only English": 579,
+        "Speak a language other than English": 0,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1121,
+        "Total Population": 4164,
+        "Speak only English": 3559,
+        "Speak a language other than English": 605,
+        "Spanish": 160,
+        "Other Indo-European languages": 193,
+        "Asian and Pacific Island languages": 161,
+        "Other languages": 91
+      },
+      {
+        "Geographic Area Name": 1122,
+        "Total Population": 1174,
+        "Speak only English": 1151,
+        "Speak a language other than English": 23,
+        "Spanish": 8,
+        "Other Indo-European languages": 7,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 8
+      },
+      {
+        "Geographic Area Name": 1123,
+        "Total Population": 1484,
+        "Speak only English": 1403,
+        "Speak a language other than English": 81,
+        "Spanish": 41,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 21,
+        "Other languages": 19
+      },
+      {
+        "Geographic Area Name": 1124,
+        "Total Population": 3863,
+        "Speak only English": 3296,
+        "Speak a language other than English": 567,
+        "Spanish": 115,
+        "Other Indo-European languages": 129,
+        "Asian and Pacific Island languages": 229,
+        "Other languages": 94
+      },
+      {
+        "Geographic Area Name": 1135,
+        "Total Population": 2282,
+        "Speak only English": 2202,
+        "Speak a language other than English": 80,
+        "Spanish": 19,
+        "Other Indo-European languages": 52,
+        "Asian and Pacific Island languages": 9,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1141.01,
+        "Total Population": 3952,
+        "Speak only English": 3422,
+        "Speak a language other than English": 530,
+        "Spanish": 121,
+        "Other Indo-European languages": 363,
+        "Asian and Pacific Island languages": 14,
+        "Other languages": 32
+      },
+      {
+        "Geographic Area Name": 1141.02,
+        "Total Population": 4155,
+        "Speak only English": 3963,
+        "Speak a language other than English": 192,
+        "Spanish": 37,
+        "Other Indo-European languages": 155,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1142,
+        "Total Population": 4116,
+        "Speak only English": 3777,
+        "Speak a language other than English": 339,
+        "Spanish": 99,
+        "Other Indo-European languages": 157,
+        "Asian and Pacific Island languages": 83,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1143,
+        "Total Population": 5025,
+        "Speak only English": 4783,
+        "Speak a language other than English": 242,
+        "Spanish": 87,
+        "Other Indo-European languages": 139,
+        "Asian and Pacific Island languages": 16,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1151,
+        "Total Population": 4333,
+        "Speak only English": 3248,
+        "Speak a language other than English": 1085,
+        "Spanish": 353,
+        "Other Indo-European languages": 433,
+        "Asian and Pacific Island languages": 55,
+        "Other languages": 244
+      },
+      {
+        "Geographic Area Name": 1152,
+        "Total Population": 2980,
+        "Speak only English": 2219,
+        "Speak a language other than English": 761,
+        "Spanish": 156,
+        "Other Indo-European languages": 202,
+        "Asian and Pacific Island languages": 134,
+        "Other languages": 269
+      },
+      {
+        "Geographic Area Name": 1153,
+        "Total Population": 4654,
+        "Speak only English": 3398,
+        "Speak a language other than English": 1256,
+        "Spanish": 481,
+        "Other Indo-European languages": 353,
+        "Asian and Pacific Island languages": 389,
+        "Other languages": 33
+      },
+      {
+        "Geographic Area Name": 1154,
+        "Total Population": 2854,
+        "Speak only English": 2230,
+        "Speak a language other than English": 624,
+        "Spanish": 410,
+        "Other Indo-European languages": 132,
+        "Asian and Pacific Island languages": 73,
+        "Other languages": 9
+      },
+      {
+        "Geographic Area Name": 1155,
+        "Total Population": 6379,
+        "Speak only English": 5364,
+        "Speak a language other than English": 1015,
+        "Spanish": 434,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 581
+      },
+      {
+        "Geographic Area Name": 1156,
+        "Total Population": 4624,
+        "Speak only English": 4139,
+        "Speak a language other than English": 485,
+        "Spanish": 321,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 62,
+        "Other languages": 102
+      },
+      {
+        "Geographic Area Name": 1157,
+        "Total Population": 3273,
+        "Speak only English": 2517,
+        "Speak a language other than English": 756,
+        "Spanish": 288,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 222,
+        "Other languages": 246
+      },
+      {
+        "Geographic Area Name": 1161,
+        "Total Population": 2819,
+        "Speak only English": 2085,
+        "Speak a language other than English": 734,
+        "Spanish": 104,
+        "Other Indo-European languages": 84,
+        "Asian and Pacific Island languages": 426,
+        "Other languages": 120
+      },
+      {
+        "Geographic Area Name": 1162,
+        "Total Population": 3711,
+        "Speak only English": 3624,
+        "Speak a language other than English": 87,
+        "Spanish": 42,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 45,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1163.01,
+        "Total Population": 3093,
+        "Speak only English": 2743,
+        "Speak a language other than English": 350,
+        "Spanish": 108,
+        "Other Indo-European languages": 58,
+        "Asian and Pacific Island languages": 150,
+        "Other languages": 34
+      },
+      {
+        "Geographic Area Name": 1163.02,
+        "Total Population": 2872,
+        "Speak only English": 1685,
+        "Speak a language other than English": 1187,
+        "Spanish": 169,
+        "Other Indo-European languages": 303,
+        "Asian and Pacific Island languages": 400,
+        "Other languages": 315
+      },
+      {
+        "Geographic Area Name": 1164,
+        "Total Population": 4222,
+        "Speak only English": 3409,
+        "Speak a language other than English": 813,
+        "Spanish": 257,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 195,
+        "Other languages": 361
+      },
+      {
+        "Geographic Area Name": 1165,
+        "Total Population": 3773,
+        "Speak only English": 3315,
+        "Speak a language other than English": 458,
+        "Spanish": 77,
+        "Other Indo-European languages": 52,
+        "Asian and Pacific Island languages": 62,
+        "Other languages": 267
+      },
+      {
+        "Geographic Area Name": 1171,
+        "Total Population": 1469,
+        "Speak only English": 1338,
+        "Speak a language other than English": 131,
+        "Spanish": 51,
+        "Other Indo-European languages": 54,
+        "Asian and Pacific Island languages": 18,
+        "Other languages": 8
+      },
+      {
+        "Geographic Area Name": 1172,
+        "Total Population": 4535,
+        "Speak only English": 4353,
+        "Speak a language other than English": 182,
+        "Spanish": 72,
+        "Other Indo-European languages": 41,
+        "Asian and Pacific Island languages": 41,
+        "Other languages": 28
+      },
+      {
+        "Geographic Area Name": 1174,
+        "Total Population": 3931,
+        "Speak only English": 3517,
+        "Speak a language other than English": 414,
+        "Spanish": 156,
+        "Other Indo-European languages": 152,
+        "Asian and Pacific Island languages": 33,
+        "Other languages": 73
+      },
+      {
+        "Geographic Area Name": 1181,
+        "Total Population": 1016,
+        "Speak only English": 921,
+        "Speak a language other than English": 95,
+        "Spanish": 62,
+        "Other Indo-European languages": 5,
+        "Asian and Pacific Island languages": 6,
+        "Other languages": 22
+      },
+      {
+        "Geographic Area Name": 1184,
+        "Total Population": 1572,
+        "Speak only English": 1340,
+        "Speak a language other than English": 232,
+        "Spanish": 97,
+        "Other Indo-European languages": 66,
+        "Asian and Pacific Island languages": 65,
+        "Other languages": 4
+      },
+      {
+        "Geographic Area Name": 1186,
+        "Total Population": 4204,
+        "Speak only English": 3590,
+        "Speak a language other than English": 614,
+        "Spanish": 127,
+        "Other Indo-European languages": 160,
+        "Asian and Pacific Island languages": 283,
+        "Other languages": 44
+      },
+      {
+        "Geographic Area Name": 1191.01,
+        "Total Population": 2530,
+        "Speak only English": 2176,
+        "Speak a language other than English": 354,
+        "Spanish": 117,
+        "Other Indo-European languages": 145,
+        "Asian and Pacific Island languages": 92,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1191.02,
+        "Total Population": 3238,
+        "Speak only English": 2712,
+        "Speak a language other than English": 526,
+        "Spanish": 98,
+        "Other Indo-European languages": 157,
+        "Asian and Pacific Island languages": 170,
+        "Other languages": 101
+      },
+      {
+        "Geographic Area Name": 1192,
+        "Total Population": 1880,
+        "Speak only English": 1757,
+        "Speak a language other than English": 123,
+        "Spanish": 18,
+        "Other Indo-European languages": 37,
+        "Asian and Pacific Island languages": 62,
+        "Other languages": 6
+      },
+      {
+        "Geographic Area Name": 1193,
+        "Total Population": 3824,
+        "Speak only English": 3079,
+        "Speak a language other than English": 745,
+        "Spanish": 143,
+        "Other Indo-European languages": 266,
+        "Asian and Pacific Island languages": 316,
+        "Other languages": 20
+      },
+      {
+        "Geographic Area Name": 1202,
+        "Total Population": 1229,
+        "Speak only English": 1210,
+        "Speak a language other than English": 19,
+        "Spanish": 0,
+        "Other Indo-European languages": 19,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1211,
+        "Total Population": 1808,
+        "Speak only English": 1699,
+        "Speak a language other than English": 109,
+        "Spanish": 17,
+        "Other Indo-European languages": 41,
+        "Asian and Pacific Island languages": 51,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1212,
+        "Total Population": 1942,
+        "Speak only English": 1634,
+        "Speak a language other than English": 308,
+        "Spanish": 0,
+        "Other Indo-European languages": 12,
+        "Asian and Pacific Island languages": 15,
+        "Other languages": 281
+      },
+      {
+        "Geographic Area Name": 1231,
+        "Total Population": 3252,
+        "Speak only English": 3015,
+        "Speak a language other than English": 237,
+        "Spanish": 79,
+        "Other Indo-European languages": 49,
+        "Asian and Pacific Island languages": 92,
+        "Other languages": 17
+      },
+      {
+        "Geographic Area Name": 1232,
+        "Total Population": 2515,
+        "Speak only English": 2433,
+        "Speak a language other than English": 82,
+        "Spanish": 55,
+        "Other Indo-European languages": 12,
+        "Asian and Pacific Island languages": 15,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1233,
+        "Total Population": 2746,
+        "Speak only English": 2650,
+        "Speak a language other than English": 96,
+        "Spanish": 46,
+        "Other Indo-European languages": 50,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1241,
+        "Total Population": 4243,
+        "Speak only English": 3738,
+        "Speak a language other than English": 505,
+        "Spanish": 468,
+        "Other Indo-European languages": 17,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 20
+      },
+      {
+        "Geographic Area Name": 1242,
+        "Total Population": 3280,
+        "Speak only English": 2996,
+        "Speak a language other than English": 284,
+        "Spanish": 250,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 27,
+        "Other languages": 7
+      },
+      {
+        "Geographic Area Name": 1243,
+        "Total Population": 3228,
+        "Speak only English": 3045,
+        "Speak a language other than English": 183,
+        "Spanish": 86,
+        "Other Indo-European languages": 97,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1246,
+        "Total Population": 1603,
+        "Speak only English": 1365,
+        "Speak a language other than English": 238,
+        "Spanish": 124,
+        "Other Indo-European languages": 17,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 97
+      },
+      {
+        "Geographic Area Name": 1255,
+        "Total Population": 4047,
+        "Speak only English": 3492,
+        "Speak a language other than English": 555,
+        "Spanish": 201,
+        "Other Indo-European languages": 200,
+        "Asian and Pacific Island languages": 105,
+        "Other languages": 49
+      },
+      {
+        "Geographic Area Name": 1256,
+        "Total Population": 5065,
+        "Speak only English": 4593,
+        "Speak a language other than English": 472,
+        "Spanish": 171,
+        "Other Indo-European languages": 57,
+        "Asian and Pacific Island languages": 244,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1257,
+        "Total Population": 3079,
+        "Speak only English": 3023,
+        "Speak a language other than English": 56,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 56
+      },
+      {
+        "Geographic Area Name": 1266,
+        "Total Population": 2747,
+        "Speak only English": 2705,
+        "Speak a language other than English": 42,
+        "Spanish": 35,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 7
+      },
+      {
+        "Geographic Area Name": 1267,
+        "Total Population": 1013,
+        "Speak only English": 996,
+        "Speak a language other than English": 17,
+        "Spanish": 5,
+        "Other Indo-European languages": 12,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1268,
+        "Total Population": 3280,
+        "Speak only English": 3182,
+        "Speak a language other than English": 98,
+        "Spanish": 61,
+        "Other Indo-European languages": 37,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1269,
+        "Total Population": 3655,
+        "Speak only English": 3615,
+        "Speak a language other than English": 40,
+        "Spanish": 40,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1270,
+        "Total Population": 1646,
+        "Speak only English": 1595,
+        "Speak a language other than English": 51,
+        "Spanish": 14,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 37
+      },
+      {
+        "Geographic Area Name": 1271,
+        "Total Population": 1527,
+        "Speak only English": 1527,
+        "Speak a language other than English": 0,
+        "Spanish": 0,
+        "Other Indo-European languages": 0,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1272,
+        "Total Population": 3845,
+        "Speak only English": 3212,
+        "Speak a language other than English": 633,
+        "Spanish": 30,
+        "Other Indo-European languages": 220,
+        "Asian and Pacific Island languages": 157,
+        "Other languages": 226
+      },
+      {
+        "Geographic Area Name": 1273,
+        "Total Population": 3724,
+        "Speak only English": 3521,
+        "Speak a language other than English": 203,
+        "Spanish": 99,
+        "Other Indo-European languages": 40,
+        "Asian and Pacific Island languages": 20,
+        "Other languages": 44
+      },
+      {
+        "Geographic Area Name": 1274,
+        "Total Population": 4169,
+        "Speak only English": 3518,
+        "Speak a language other than English": 651,
+        "Spanish": 22,
+        "Other Indo-European languages": 34,
+        "Asian and Pacific Island languages": 25,
+        "Other languages": 570
+      },
+      {
+        "Geographic Area Name": 1275,
+        "Total Population": 2083,
+        "Speak only English": 1936,
+        "Speak a language other than English": 147,
+        "Spanish": 135,
+        "Other Indo-European languages": 12,
+        "Asian and Pacific Island languages": 0,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": 1276,
+        "Total Population": 2624,
+        "Speak only English": 2578,
+        "Speak a language other than English": 46,
+        "Spanish": 18,
+        "Other Indo-European languages": 8,
+        "Asian and Pacific Island languages": 20,
+        "Other languages": 0
+      },
+      {
+        "Geographic Area Name": null,
+        "Total Population": null,
+        "Speak only English": null,
+        "Speak a language other than English": null,
+        "Spanish": null,
+        "Other Indo-European languages": null,
+        "Asian and Pacific Island languages": null,
+        "Other languages": null
+      },
+      {
+        "Geographic Area Name": null,
+        "Total Population": null,
+        "Speak only English": null,
+        "Speak a language other than English": null,
+        "Spanish": null,
+        "Other Indo-European languages": null,
+        "Asian and Pacific Island languages": null,
+        "Other languages": null
+      }
+     ]
+
     censusTractArrayList = [1011,1012,1013,1014,1015,1018,1021,1022,1023,1024,1025,1031,1034,1036,1037,1038,1042,1045,1051.98,1052,1053,1054,1055,1061,1062,1063,1064,1065,1066,1067,1072,1073,1074,1075,1076,1081,1082,1083,1096,1097,1101,1102,1103,1104,1105,1111,1112,1113,1121,1122,1123,1124,1135,1141.01,1141.02,1142,1143,1151,1152,1153,1154,1155,1156,1157,1161,1162,1163.01,1163.02,1164,1165,1171,1172,1174,1181,1186,1191.01,1191.02,1192,1193,1202,1212,1231,1232,1233,1241,1242,1243,1246,1255,1256,1257,1266,1267,1268,1269,1270,1271,1272,1273,1274,1275,1276,1277,1278]
-    var poly = L.geoJson(boundary);
-    var polyTracts = L.geoJson(stlCensusTracts)
+    // var poly = L.geoJson(boundary);
+    // var polyTracts = L.geoJson(stlCensusTracts)
     // map.addLayer(poly);
     // map.addLayer(polyTracts);
 
@@ -6946,8 +8029,6 @@
         if (this.checked) {
 
           $("#ethnicity-data-legend").empty(); 
-
-
           // $("#racial-data-legend").empty()
           // $("#race-ethnicity-data-selectors").empty()
           // map.removeLayer(geojson);
@@ -6994,17 +8075,6 @@
             var other = (data[23][censusTractArrayList[i]])
             //Two_Or_More_Races 24
             var two_or_more_races = (data[24][censusTractArrayList[i]])
-
-            //replace commas
-            // white_alone.replaceAll(",","")
-            // black_or_african_american.replaceAll(",","")
-            // american_indian_or_alaskan_native.replaceAll(",","")
-            // asian.replaceAll(",","")
-            // native_hawaiian_and_other_pacific_islander.replaceAll(",","")
-            // other.replaceAll(",","")
-            // two_or_more_races.replaceAll(",","")
-
-
             var race_round = {
             'White':(parseInt(white_alone)/10),
             'Black_or_African_American':(parseInt(black_or_african_american)/10),
@@ -7014,8 +8084,6 @@
             'Other':(parseInt(other)/5),
             'Two_Or_More_Races':(parseInt(two_or_more_races)/10),
             }
-
-            // console.log(race_round, censusTractArrayList[i])
             for (var key of Object.keys(race_round)) {
                 //check that the loop breaks here 
                 for(var j = 0; j <race_round[key]; j++){
@@ -7180,19 +8248,6 @@
 
         }
       })
-      // if(!this.checked) {
-      //   $("#racial-data-legend").empty()
-      //     // map.removeLayer(geojson);
-      //     // console.log("remove layers here") 
-      //     map.eachLayer(function (layer) {
-      //       if(layer._radius == 2){
-      //         // console.log(layer)
-      //         map.removeLayer(layer);
-
-      //       }
-            
-      //   });
-      // }
     })
     var checkboxEducation = document.querySelector("input[id=education]");
     checkboxEducation.addEventListener('change', function() {
@@ -7417,16 +8472,31 @@
             var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
             var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
 
-            var less_than_five_total = parseInt(data[3]["TOTAL (All Selected Census Tracts)"])
-            var five_to_nine_total = parseInt(data[4]["TOTAL (All Selected Census Tracts)"])
+            var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
+            var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
+            var ten_to_fourteen= parseInt(data[5][censusTractArrayList[i]]) //2
+            var fifteen_to_seventeen = parseInt(data[6][censusTractArrayList[i]]) //3
+            var eighteen_to_twenty_four = parseInt(data[7][censusTractArrayList[i]]) //4
+            var twenty_five_to_thirty_four = parseInt(data[8][censusTractArrayList[i]]) //5
+            var thirty_five_to_fourty_four = parseInt(data[9][censusTractArrayList[i]]) //6
+            var fourty_five_to_fifty_four = parseInt(data[10][censusTractArrayList[i]]) //7
+            var fifty_five_to_sixty_four = parseInt(data[11][censusTractArrayList[i]]) //8
+            var sixty_five_to_seventy_four = parseInt(data[12][censusTractArrayList[i]]) //9
+            var seventy_five_to_eighty_four = parseInt(data[13][censusTractArrayList[i]]) //10
+            var eighty_five_and_older = parseInt(data[14][censusTractArrayList[i]])//11
+            var tract_total_population = less_than_five +five_to_nine+ten_to_fourteen+ fifteen_to_seventeen+eighteen_to_twenty_four+twenty_five_to_thirty_four+thirty_five_to_fourty_four+fourty_five_to_fifty_four+fifty_five_to_sixty_four+sixty_five_to_seventy_four+seventy_five_to_eighty_four+eighty_five_and_older; 
+
+            // var less_than_five_total = parseInt(data[3]["TOTAL (All Selected Census Tracts)"])
+            // var five_to_nine_total = parseInt(data[4]["TOTAL (All Selected Census Tracts)"])
 
             var tract_age_sum = less_than_five + five_to_nine
-            var total_age_sum = less_than_five_total + five_to_nine_total 
+            // var total_age_sum = less_than_five_total + five_to_nine_total 
+            // console.log("For census tract", censusTractArrayList[i]," ages 0-9 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
-            console.log("0-9", tract_age_sum, total_age_sum)
-
-            var percentage = tract_age_sum / total_age_sum
+            var percentage = tract_age_sum / tract_total_population
             var individualCensusTract = (stlCensusTracts.geometries[i])
+            console.log(tract_age_sum, tract_total_population, percentage)
+
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -7444,7 +8514,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: (percentage*10)
+                fillOpacity: (percentage)
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -7456,7 +8526,7 @@
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
-            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+            $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
     
@@ -7477,18 +8547,34 @@
             var ten_to_fourteen = parseInt(data[5][censusTractArrayList[i]]) //0
             var fifteen_to_seventeen = parseInt(data[6][censusTractArrayList[i]]) //1
 
+            var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
+            var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
+            var ten_to_fourteen= parseInt(data[5][censusTractArrayList[i]]) //2
+            var fifteen_to_seventeen = parseInt(data[6][censusTractArrayList[i]]) //3
+            var eighteen_to_twenty_four = parseInt(data[7][censusTractArrayList[i]]) //4
+            var twenty_five_to_thirty_four = parseInt(data[8][censusTractArrayList[i]]) //5
+            var thirty_five_to_fourty_four = parseInt(data[9][censusTractArrayList[i]]) //6
+            var fourty_five_to_fifty_four = parseInt(data[10][censusTractArrayList[i]]) //7
+            var fifty_five_to_sixty_four = parseInt(data[11][censusTractArrayList[i]]) //8
+            var sixty_five_to_seventy_four = parseInt(data[12][censusTractArrayList[i]]) //9
+            var seventy_five_to_eighty_four = parseInt(data[13][censusTractArrayList[i]]) //10
+            var eighty_five_and_older = parseInt(data[14][censusTractArrayList[i]])//11
+            var tract_total_population = less_than_five +five_to_nine+ten_to_fourteen+ fifteen_to_seventeen+eighteen_to_twenty_four+twenty_five_to_thirty_four+thirty_five_to_fourty_four+fourty_five_to_fifty_four+fifty_five_to_sixty_four+sixty_five_to_seventy_four+seventy_five_to_eighty_four+eighty_five_and_older; 
+
+
             var ten_to_fourteen_total = parseInt(data[5]["TOTAL (All Selected Census Tracts)"])
             var fifteen_to_seventeen_total = parseInt(data[6]["TOTAL (All Selected Census Tracts)"])
 
             var tract_age_sum = ten_to_fourteen + fifteen_to_seventeen
             var total_age_sum = ten_to_fourteen_total + fifteen_to_seventeen_total 
 
-            console.log("10-17", tract_age_sum, total_age_sum)
+            console.log("For census tract", censusTractArrayList[i]," ages 10-17 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
 
-            var percentage = tract_age_sum / total_age_sum
+            var percentage = tract_age_sum / tract_total_population
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
+            console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -7518,7 +8604,7 @@
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
-            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+            $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
     
@@ -7541,18 +8627,34 @@
             var eighteen_to_twenty_four = parseInt(data[7][censusTractArrayList[i]]) //0
             var twenty_five_to_thirty_four = parseInt(data[8][censusTractArrayList[i]]) //1
 
+            var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
+            var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
+            var ten_to_fourteen= parseInt(data[5][censusTractArrayList[i]]) //2
+            var fifteen_to_seventeen = parseInt(data[6][censusTractArrayList[i]]) //3
+            var eighteen_to_twenty_four = parseInt(data[7][censusTractArrayList[i]]) //4
+            var twenty_five_to_thirty_four = parseInt(data[8][censusTractArrayList[i]]) //5
+            var thirty_five_to_fourty_four = parseInt(data[9][censusTractArrayList[i]]) //6
+            var fourty_five_to_fifty_four = parseInt(data[10][censusTractArrayList[i]]) //7
+            var fifty_five_to_sixty_four = parseInt(data[11][censusTractArrayList[i]]) //8
+            var sixty_five_to_seventy_four = parseInt(data[12][censusTractArrayList[i]]) //9
+            var seventy_five_to_eighty_four = parseInt(data[13][censusTractArrayList[i]]) //10
+            var eighty_five_and_older = parseInt(data[14][censusTractArrayList[i]])//11
+            var tract_total_population = less_than_five +five_to_nine+ten_to_fourteen+ fifteen_to_seventeen+eighteen_to_twenty_four+twenty_five_to_thirty_four+thirty_five_to_fourty_four+fourty_five_to_fifty_four+fifty_five_to_sixty_four+sixty_five_to_seventy_four+seventy_five_to_eighty_four+eighty_five_and_older; 
+
+
             var eighteen_to_twenty_four_total = parseInt(data[7]["TOTAL (All Selected Census Tracts)"])
             var twenty_five_to_thirty_four_total = parseInt(data[8]["TOTAL (All Selected Census Tracts)"])
 
             var tract_age_sum = eighteen_to_twenty_four + twenty_five_to_thirty_four
             var total_age_sum = eighteen_to_twenty_four_total + twenty_five_to_thirty_four_total
 
-            console.log("18-34", tract_age_sum, total_age_sum)
+            console.log("For census tract", censusTractArrayList[i]," ages 18-34 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
 
-            var percentage = tract_age_sum / total_age_sum
+            var percentage = tract_age_sum / tract_total_population
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
+            console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -7570,7 +8672,7 @@
                 fillColor: "#228B22",
                 weight: 1,
                 opacity: 1,
-                fillOpacity: (percentage)
+                fillOpacity: percentage
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -7582,7 +8684,7 @@
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
-            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+            $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
     
@@ -7608,15 +8710,31 @@
             var fourty_five_to_fifty_four_total = parseInt(data[10]["TOTAL (All Selected Census Tracts)"])
             var fifty_five_to_sixty_four_total = parseInt(data[11]["TOTAL (All Selected Census Tracts)"])
 
+            var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
+            var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
+            var ten_to_fourteen= parseInt(data[5][censusTractArrayList[i]]) //2
+            var fifteen_to_seventeen = parseInt(data[6][censusTractArrayList[i]]) //3
+            var eighteen_to_twenty_four = parseInt(data[7][censusTractArrayList[i]]) //4
+            var twenty_five_to_thirty_four = parseInt(data[8][censusTractArrayList[i]]) //5
+            var thirty_five_to_fourty_four = parseInt(data[9][censusTractArrayList[i]]) //6
+            var fourty_five_to_fifty_four = parseInt(data[10][censusTractArrayList[i]]) //7
+            var fifty_five_to_sixty_four = parseInt(data[11][censusTractArrayList[i]]) //8
+            var sixty_five_to_seventy_four = parseInt(data[12][censusTractArrayList[i]]) //9
+            var seventy_five_to_eighty_four = parseInt(data[13][censusTractArrayList[i]]) //10
+            var eighty_five_and_older = parseInt(data[14][censusTractArrayList[i]])//11
+            var tract_total_population = less_than_five +five_to_nine+ten_to_fourteen+ fifteen_to_seventeen+eighteen_to_twenty_four+twenty_five_to_thirty_four+thirty_five_to_fourty_four+fourty_five_to_fifty_four+fifty_five_to_sixty_four+sixty_five_to_seventy_four+seventy_five_to_eighty_four+eighty_five_and_older; 
+
+
             var tract_age_sum = thirty_five_to_fourty_four + fourty_five_to_fifty_four + fifty_five_to_sixty_four
             var total_age_sum = thirty_five_to_fourty_four_total + fourty_five_to_fifty_four_total + fifty_five_to_sixty_four_total
 
-            console.log("35-64", tract_age_sum, total_age_sum)
+            console.log("For census tract", censusTractArrayList[i]," ages 35-64 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
 
-            var percentage = tract_age_sum / total_age_sum
+            var percentage = tract_age_sum / tract_total_population
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
+            console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -7646,7 +8764,7 @@
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
-            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+            $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
     
@@ -7672,15 +8790,31 @@
             var seventy_five_to_eighty_four_total = parseInt(data[13]["TOTAL (All Selected Census Tracts)"])
             var eighty_five_and_older_total = parseInt(data[14][censusTractArrayList[i]]) //1
 
+            var less_than_five = parseInt(data[3][censusTractArrayList[i]]) //0
+            var five_to_nine = parseInt(data[4][censusTractArrayList[i]]) //1
+            var ten_to_fourteen= parseInt(data[5][censusTractArrayList[i]]) //2
+            var fifteen_to_seventeen = parseInt(data[6][censusTractArrayList[i]]) //3
+            var eighteen_to_twenty_four = parseInt(data[7][censusTractArrayList[i]]) //4
+            var twenty_five_to_thirty_four = parseInt(data[8][censusTractArrayList[i]]) //5
+            var thirty_five_to_fourty_four = parseInt(data[9][censusTractArrayList[i]]) //6
+            var fourty_five_to_fifty_four = parseInt(data[10][censusTractArrayList[i]]) //7
+            var fifty_five_to_sixty_four = parseInt(data[11][censusTractArrayList[i]]) //8
+            var sixty_five_to_seventy_four = parseInt(data[12][censusTractArrayList[i]]) //9
+            var seventy_five_to_eighty_four = parseInt(data[13][censusTractArrayList[i]]) //10
+            var eighty_five_and_older = parseInt(data[14][censusTractArrayList[i]])//11
+            var tract_total_population = less_than_five +five_to_nine+ten_to_fourteen+ fifteen_to_seventeen+eighteen_to_twenty_four+twenty_five_to_thirty_four+thirty_five_to_fourty_four+fourty_five_to_fifty_four+fifty_five_to_sixty_four+sixty_five_to_seventy_four+seventy_five_to_eighty_four+eighty_five_and_older; 
+
+
             var tract_age_sum = sixty_five_to_seventy_four + seventy_five_to_eighty_four + eighty_five_and_older
             var total_age_sum = sixty_five_to_seventy_four_total + seventy_five_to_eighty_four_total
             
-            console.log("65+", tract_age_sum, total_age_sum)
+            console.log("For census tract", censusTractArrayList[i]," ages 65+ the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
 
 
-            var percentage = tract_age_sum / total_age_sum
+            var percentage = tract_age_sum / tract_total_population
            
             var individualCensusTract = (stlCensusTracts.geometries[i])
+            console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -7710,7 +8844,7 @@
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
             $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
-            $("#median-age-data-legend").append("<h8>"+numberWithCommas(total_age_sum)+"</h8>");
+            $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
     
@@ -8059,6 +9193,53 @@
         }
       }).addTo(map);
     }
+
+      //Event listeners for checkboxes:
+      var checkboxLanguages = document.querySelector("input[id=language]");
+      checkboxLanguages.addEventListener('change', function() {
+      if(this.checked) {
+        $("#age-data-selectors").empty(); 
+        $("#educational-attainment-data-selectors").empty();
+        $("#econ-data-selectors").empty()
+  
+        $("#educational-attainment-data-legend").empty()
+        // map.removeLayer(geojson);
+        map.eachLayer(function (layer) {
+          if(layer.options.fillColor == '#6E2594'){
+            map.removeLayer(layer);
+          }
+        });
+  
+        $("#median-age-data-legend").empty()
+        // map.removeLayer(geojson);
+        map.eachLayer(function (layer) {
+          if(layer.options.fillColor == '#228B22'){
+            map.removeLayer(layer);
+          }
+        });
+  
+        $("#median-income-data-legend").empty()
+        // map.removeLayer(geojson);
+        map.eachLayer(function (layer) {
+          if(layer.options.fillColor == '#FFA500'){
+            map.removeLayer(layer);
+          }
+        });
+  
+        //Display selectors here: 
+  
+        $("#language-subselectors").append("<div id='language-data-selectors'></div")
+        $("#language-data-selectors").append("<input type='radio' id='language-data' class='subselector' name='language-selector' value='english-data'><label for='english-data'>English Only</label>")
+        $("#language-data-selectors").append("<br>")
+        $("#language-data-selectors").append("<input type='radio' id='language-data' class='subselector' name='language-selector' value='spanish-data'><label for='spanish-data'>Spanish</label>")
+        $("#language-data-selectors").append("<br>")
+        $("#language-data-selectors").append("<input type='radio' id='language-data' class='subselector' name='language-selector' value='indo-european-data'><label for='indo-european-data'> Indo-European Languages</label>")
+        $("#language-data-selectors").append("<br>")
+        $("#language-data-selectors").append("<input type='radio' id='language-data' class='subselector' name='language-selector' value='asian-and-pacific-island-languages-data'><label for='asian-and-pacific-island-languages-data'>Asian and Pacific Island Languages</label>")
+        $("#language-data-selectors").append("<br>")
+        $("#language-data-selectors").append("<input type='radio' id='language-data' class='subselector' name='language-selector' value='other-lang-data'><label for='other-lang-data'> Other Languages</label>")
+      }
+    })
 
     // function generateLayerPopups(){
     // for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
