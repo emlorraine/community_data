@@ -6846,7 +6846,7 @@
         }
        ]
 
-    var langauges = [
+    var languages = [
       {
         "Geographic Area Name": 1011,
         "Total Population": 2315,
@@ -9224,7 +9224,6 @@
       
         var checkboxEnglish = document.querySelector("input[id=english-data]");
         checkboxEnglish.addEventListener('change', function() {
-          console.log("english")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#DC143C'){
               map.removeLayer(layer);
@@ -9233,41 +9232,156 @@
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
+            var population = languages[i]["Total Population"]
+            var lang = languages[i]["Speak only English"]
 
-            console.log(censusTract, langauges[i])
+            var percentage = lang/population
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
             }
-            // geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
-            // function style(region) {
-            //   return {
-            //     fillColor: "#FFA500",
-            //     color: "#000",
-            //     weight: 1,
-            //     opacity: 1,
-            //     fillOpacity: 1
-            //   };
-            // }
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#DC143C",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
           }
         })
         var checkboxSpanish = document.querySelector("input[id=spanish-data]");
         checkboxSpanish.addEventListener('change', function() {
-          console.log("spanish")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#DC143C'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var population = languages[i]["Total Population"]
+            var lang = languages[i]["Spanish"]
+
+            var percentage = lang/population
+
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#DC143C",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
         })
         var checkboxIndoEuropean = document.querySelector("input[id=indo-european-data]");
         checkboxIndoEuropean.addEventListener('change', function() {
           console.log("checkboxIndoEuropean")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#DC143C'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var population = languages[i]["Total Population"]
+            var lang = languages[i]["Other Indo-European languages"]
+
+            var percentage = lang/population
+
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#DC143C",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
         })
         var checkboxAsianAndPacificIslander = document.querySelector("input[id=asian-and-pacific-islander-data]");
         checkboxAsianAndPacificIslander.addEventListener('change', function() {
-          console.log("asian and pacific islander")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#DC143C'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var population = languages[i]["Total Population"]
+            var lang = languages[i]["Asian and Pacific Island languages"]
+
+            var percentage = lang/population
+
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#DC143C",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
         })
         var checkboxOther = document.querySelector("input[id=other-data]");
         checkboxOther.addEventListener('change', function() {
-          console.log("other")
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#DC143C'){
+              map.removeLayer(layer);
+            }
+          });
+          for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
+            censusTract = censusTractArrayList[i]
+            censusPoly = stlCensusTracts.geometries[i]
+            var population = languages[i]["Total Population"]
+            var lang = languages[i]["Other languages"]
+
+            var percentage = lang/population
+
+            var individualCensusTract = (stlCensusTracts.geometries[i])
+            var individualCensusTractPolygon = {
+              "type":"GeometryCollection", 
+              "geometries": [individualCensusTract]
+            }
+            geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            function style(region) {
+              return {
+                fillColor: "#DC143C",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: percentage
+              };
+            }
+          }
         })
       
       
