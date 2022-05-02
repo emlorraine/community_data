@@ -8,11 +8,17 @@
 }
 
 
+
+
 /* Tabs */
 #intro-header{
     text-align: center;
 }
 
+#intro-text{
+    display: inline-block;
+
+}
 
 #header{
     padding: 25px 25px 25px 25px;

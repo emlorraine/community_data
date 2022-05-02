@@ -91,8 +91,16 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#regional-data" role="tab">Regional Data</a>
+        <a class="nav-link" data-toggle="tab" href="#regional-data" role="tab">Download Regional Data</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#data-sources" role="tab">Project Documentation</a>
+      </li>
+
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#st-louis" role="tab">St. Louis</a>
+      </li> -->
 
 
     </ul><!-- Tab panes -->
@@ -101,18 +109,8 @@
         <div class="tab-pane" id="intro" role="tabpanel">
 
           <br><h1 id="intro-header">Introduction</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
-
+          <p>This tool is intended for use to St. Louis Public Library employees to better understand the communities they serve. Development of this project took place from September 2021 through May 2022. Data analysis and development was led by Emma Baker (emma.baker@wustl.edu) and work was overseen by Joe Monahan. Any questions about the scope of this project or bugs can be directed to jmonahan@slpl.org.           </p>
+          
           <div id="map-container">
           <div id="race-map"></div>
           <div id="legend"></div>
@@ -142,82 +140,75 @@
 
           </div>
         </div>
+        <div id="intro-text">
+          <!-- <h3>Data Sources</h3> -->
+          <!-- <ul>
+            <li>Population and Age Data:
+              <ul>
+                <li><u>Table name:</u> S0101: Age and Sex</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Racial Composition Data:
+              <ul>
+                <li><u>Table name:</u> P1: Race</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
 
-          <div id="intro-text">
-          <h3>Section 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
+            </li>
+            <li>Ethnicity Data:
+              <ul>
+                <li><u>Table name:</u> P2: Hispanic or Latino, and Not Hispanic or Latino by Race </li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-              pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-              Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-              in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-              per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-              vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-              Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-              faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-              Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-              Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-              non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
+            </li>
 
-          <h3>Section 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
+            <li>Educational Attainment Data:
+              <ul>
+                <li><u>Table name:</u>S1501: Educational Attainment </li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Median Income Data:
+              <ul>
+                <li><u>Table name:</u> S1903: Median Income in the Past 12 Months (inflation-adjusted dollars)</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Poverty Status Data:
+              <ul>
+                <li><u>Table name:</u>Poverty Status in the Past 12 Months</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Labor Force Data:
+              <ul>
+                <li><u>Table name:</u>S2301: Employment Status</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Language Data:
+              <ul>
+                <li><u>Table name:</u>S1601: Language Spoken at Home </li>
+                <li><u>Data Level:</u>  St. Louis City, Missouri </li>
+              </ul>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
+            </li>
+            <li>Transportation and Commute Data:
+              <ul>
+                <li><u>Table name:</u>C08301: Means of Transportation to Work </li>
+                <li><u>Data Level:</u>  St. Louis City, Missouri </li>
+              </ul>
 
-          <h3>Section 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
+            </li>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-            pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-            Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-            in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-            vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-            faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-            Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-            non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</p>
+          </ul> -->
+
+
+          
+
+          
           </div>
 
           
@@ -430,6 +421,83 @@
 
         <div class="tab-pane" id="regional-data" role="tabpanel">
           <div id = "regional-data-content"></div>
+        </div>
+
+        <div class="tab-pane" id="st-louis" role="tabpanel">
+        </div>
+        <div class="tab-pane" id="data-sources" role="tabpanel">
+
+          <br><h1>Project Documentation</h1>
+
+          <p>This is a Node.js project. Layout was templatized with Bootstrap and all visualizations were made with d3.js. Additionally, the interactive map was made using Leaflet.</p>
+
+          <p>Data for this project is from the Census Bureau's 5-year estimates from the American Community Survey for 2010 and 2019. Information on the American Community Survey and data collection methods are found <a href="https://www.census.gov/programs-surveys/acs">here</a>.</p>
+          <i>Note: 5-year census estimates for 2020 were unavailable until April 2022 due to data collection delays related to the COVID-19 pandemic.</i>
+          <p>All data for the map and visualizations are derived from these tables:</p>
+
+
+          <ul>
+            <li>Population and Age Data:
+              <ul>
+                <li><u>Table name:</u> S0101: Age and Sex</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Racial Composition Data:
+              <ul>
+                <li><u>Table name:</u> P1: Race</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+
+            </li>
+            <li>Ethnicity Data:
+              <ul>
+                <li><u>Table name:</u> P2: Hispanic or Latino, and Not Hispanic or Latino by Race </li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+
+            </li>
+
+            <li>Educational Attainment Data:
+              <ul>
+                <li><u>Table name:</u> S1501: Educational Attainment </li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Median Income Data:
+              <ul>
+                <li><u>Table name:</u> S1903: Median Income in the Past 12 Months (inflation-adjusted dollars)</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Poverty Status Data:
+              <ul>
+                <li><u>Table name:</u>Poverty Status in the Past 12 Months</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Labor Force Data:
+              <ul>
+                <li><u>Table name:</u> S2301: Employment Status</li>
+                <li><u>Data Level:</u> Census tracts </li>
+              </ul>
+            </li>
+            <li>Language Data:
+              <ul>
+                <li><u>Table name:</u> S1601: Language Spoken at Home </li>
+                <li><u>Data Level:</u>  St. Louis City, Missouri </li>
+              </ul>
+
+            </li>
+            <li>Transportation and Commute Data:
+              <ul>
+                <li><u>Table name:</u> C08301: Means of Transportation to Work </li>
+                <li><u>Data Level:</u>  St. Louis City, Missouri </li>
+              </ul>
+
+            </li>
+
+          </ul>
         </div>
 
         <div class="tab-pane" id="transportation" role="tabpanel">

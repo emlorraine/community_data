@@ -10,7 +10,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       $("#age2010").prepend("<img id='age-svg' src=./data/age_svgs/" + target +".svg width='1000' height='1200'>")
     }
 
-    if(target !== "intro" && target !=="regional-data"){
+    if(target !== "intro" && target !=="regional-data" && target !== "data-sources"){
       // console.log("appended")
       $('#viz-wrapper').appendTo(`#${target}`);
 
