@@ -2,7 +2,7 @@
 
 ## Introduction: 
 
-This tool is intended for use to St. Louis Public Library employees to better understand the communities they serve. Development of this project took place from September 2021 through May 2022. Data analysis and development was led by Emma Baker (emma.baker@wuslt.edu) and work was overseen by Joe Monahan. Any questions about the scope of this project or bugs can be directed to jmonahan@slpl.org.  
+This tool is intended for use to St. Louis Public Library employees to better understand the communities they serve. Development of this project took place from September 2021 through May 2022. Data analysis and development was led by Emma Baker (emma.baker@wustl.edu) and work was overseen by Joe Monahan. Any questions about the scope of this project or bugs can be directed to jmonahan@slpl.org.  
 
 ## Data Sources: 
 Data for this project is from the Census Bureau’s 5-year estimates from the American Community Survey for 2010 and 2019. Information on the American Community Survey and data collection methods are found here.  
