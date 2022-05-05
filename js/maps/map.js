@@ -9497,6 +9497,7 @@
         $("#econ-data-selectors").empty()
         $("#educational-attainment-data-legend").empty()
         $("#language-data-legend").empty()
+        $("#unemployment-data-legend").empty()
 
 
         $("#language-data-legend").empty()
@@ -9540,6 +9541,7 @@
 
         checkboxEnglish.addEventListener('change', function() {
           $("#language-data-legend").empty()
+          $("#unemployment-data-legend").empty()
 
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#6E2594'){
@@ -9591,6 +9593,7 @@
         var checkboxSpanish = document.querySelector("input[id=spanish-data]");
         checkboxSpanish.addEventListener('change', function() {
           $("#language-data-legend").empty()
+          $("#unemployment-data-legend").empty()
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
@@ -9641,6 +9644,7 @@
         var checkboxIndoEuropean = document.querySelector("input[id=indo-european-data]");
         checkboxIndoEuropean.addEventListener('change', function() {
           $("#language-data-legend").empty()
+          $("#unemployment-data-legend").empty()
 
           console.log("checkboxIndoEuropean")
           map.eachLayer(function (layer) {
