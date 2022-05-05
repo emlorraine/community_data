@@ -8322,7 +8322,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#0000FF",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -8340,7 +8340,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#ethnicity-rectangle").css("background", "linear-gradient(to right, white, #0000FF)")
+          $("#ethnicity-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#ethnicity-data-legend").append("<h8>100%</h8>");
 
         }
@@ -8360,6 +8360,14 @@
           map.removeLayer(layer);
         }
       });
+
+      map.eachLayer(function (layer) {
+        if(layer.options.fillColor == '#6E2594'){
+          map.removeLayer(layer);
+        }
+      });
+
+      
 
       $("#median-income-data-legend").empty()
       // map.removeLayer(geojson);
@@ -8623,6 +8631,13 @@
               map.removeLayer(layer);
             }
           });
+
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
+              map.removeLayer(layer);
+            }
+          });
+
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
@@ -8674,7 +8689,7 @@
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
             function style(region) {
               return {
-                fillColor: "#228B22",
+                fillColor: "#6E2594",
                 weight: 1,
                 opacity: 1,
                 fillOpacity: (percentage)
@@ -8688,7 +8703,7 @@
             $(".rectangle").css("height", "30px")
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
-            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
             $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
@@ -8701,6 +8716,11 @@
         if (this.checked) {
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -8769,7 +8789,7 @@
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
             function style(region) {
               return {
-                fillColor: "#228B22",
+                fillColor: "#6E2594",
                 weight: 1,
                 opacity: 1,
                 fillOpacity: (percentage)
@@ -8783,7 +8803,7 @@
             $(".rectangle").css("height", "30px")
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
-            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
             $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
@@ -8797,6 +8817,11 @@
           console.log("checked eighteenToThirtyFour")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -8862,7 +8887,7 @@
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
             function style(region) {
               return {
-                fillColor: "#228B22",
+                fillColor: "#6E2594",
                 weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
@@ -8876,7 +8901,7 @@
             $(".rectangle").css("height", "30px")
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
-            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
             $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
@@ -8889,6 +8914,11 @@
         if (this.checked) {
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -8961,7 +8991,7 @@
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
             function style(region) {
               return {
-                fillColor: "#228B22",
+                fillColor: "#6E2594",
                 weight: 1,
                 opacity: 1,
                 fillOpacity: (percentage)
@@ -8975,7 +9005,7 @@
             $(".rectangle").css("height", "30px")
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
-            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
             $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
@@ -8988,6 +9018,11 @@
         if (this.checked) {
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
+              map.removeLayer(layer);
+            }
+          });
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -9055,7 +9090,7 @@
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
             function style(region) {
               return {
-                fillColor: "#228B22",
+                fillColor: "#6E2594",
                 weight: 1,
                 opacity: 1,
                 fillOpacity: (percentage)
@@ -9069,7 +9104,7 @@
             $(".rectangle").css("height", "30px")
             $(".rectangle").css("width", "250px")
             $(".rectangle").css("display", "inline-block")
-            $("#age-rectangle").css("background", "linear-gradient(to right, white, #228B22)")
+            $("#age-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
             $("#median-age-data-legend").append("<h8>100%</h8>");
           }
         }
@@ -9098,6 +9133,7 @@
           map.removeLayer(layer);
         }
       });
+      
 
       $("#median-age-data-legend").empty()
       // map.removeLayer(geojson);
@@ -9142,6 +9178,11 @@
               map.removeLayer(layer);
             }
           });
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
+              map.removeLayer(layer);
+            }
+          });
 
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
@@ -9182,7 +9223,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#FFA500",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9202,7 +9243,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#income-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
+          $("#income-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#median-income-data-legend").append("<h8> > $75,000</h8>");
         })
 
@@ -9223,6 +9264,11 @@
        
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#FFA500'){
+              map.removeLayer(layer);
+            }
+          });
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -9259,7 +9305,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#FFA500",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9277,7 +9323,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#poverty-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
+          $("#poverty-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#poverty-data-legend").append("<h8> > 100%</h8>");
         })
 
@@ -9285,6 +9331,11 @@
         checkboxUnemployment.addEventListener('change', function() {
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#FFA500'){
+              map.removeLayer(layer);
+            }
+          });
+          map.eachLayer(function (layer) {
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -9315,7 +9366,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#FFA500",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9333,7 +9384,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#unemployment-rectangle").css("background", "linear-gradient(to right, white, #FFA500)")
+          $("#unemployment-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#unemployment-data-legend").append("<h8> > 100%</h8>");
         })
     }
@@ -9491,10 +9542,11 @@
           $("#language-data-legend").empty()
 
           map.eachLayer(function (layer) {
-            if(layer.options.fillColor == '#DC143C'){
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
+          
           for(var i = 0; i < (stlCensusTracts.geometries).length; i++){
             censusTract = censusTractArrayList[i]
             censusPoly = stlCensusTracts.geometries[i]
@@ -9518,7 +9570,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#DC143C",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9533,14 +9585,14 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxSpanish = document.querySelector("input[id=spanish-data]");
         checkboxSpanish.addEventListener('change', function() {
           $("#language-data-legend").empty()
           map.eachLayer(function (layer) {
-            if(layer.options.fillColor == '#DC143C'){
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -9568,7 +9620,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#DC143C",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9583,7 +9635,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxIndoEuropean = document.querySelector("input[id=indo-european-data]");
@@ -9592,7 +9644,7 @@
 
           console.log("checkboxIndoEuropean")
           map.eachLayer(function (layer) {
-            if(layer.options.fillColor == '#DC143C'){
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -9620,7 +9672,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#DC143C",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9635,7 +9687,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxAsianAndPacificIslander = document.querySelector("input[id=asian-and-pacific-islander-data]");
@@ -9643,7 +9695,7 @@
           $("#language-data-legend").empty()
 
           map.eachLayer(function (layer) {
-            if(layer.options.fillColor == '#DC143C'){
+            if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
             }
           });
@@ -9670,7 +9722,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#DC143C",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9685,7 +9737,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#language-data-legend").append("<h8>100%</h8>");
         })
         var checkboxOther = document.querySelector("input[id=other-data]");
@@ -9719,7 +9771,7 @@
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
-                fillColor: "#DC143C",
+                fillColor: "#6E2594",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
@@ -9734,7 +9786,7 @@
           $(".rectangle").css("height", "30px")
           $(".rectangle").css("width", "250px")
           $(".rectangle").css("display", "inline-block")
-          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #DC143C)")
+          $("#lang-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#language-data-legend").append("<h8>100%</h8>");
         }) 
       }
