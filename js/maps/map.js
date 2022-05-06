@@ -8394,6 +8394,8 @@
             }
         });
 
+        $("#ethnicity-data-legend").empty();
+
         //Add in radio selectors: 
 
         $("#age-data-selectors").empty(); 
@@ -8577,7 +8579,7 @@
       $("#race-ethnicity-data-selectors").empty()
       $("#econ-data-selectors").empty()
       $("#language-data-selectors").empty()
-
+      $("#ethnicity-data-legend").empty();
 
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -8665,13 +8667,9 @@
             // var total_age_sum = less_than_five_total + five_to_nine_total 
             var percentage;// = tract_age_sum / tract_total_population
             if(censusTract==1278){
-              console.log(tract_total_population)
               percentage = 198/parseInt(tract_total_population)
-              console.log("1278 census tract is", percentage, tract_total_population)
             } else if(censusTract==1277){
-              console.log(tract_total_population)
               percentage = 133/parseInt(tract_total_population)
-              console.log("1277 census tract is", percentage,(tract_total_population))
             } else {
               percentage = tract_age_sum / tract_total_population
             }
@@ -8751,27 +8749,20 @@
             var tract_age_sum = ten_to_fourteen + fifteen_to_seventeen
             var total_age_sum = ten_to_fourteen_total + fifteen_to_seventeen_total 
 
-            console.log("For census tract", censusTractArrayList[i]," ages 10-17 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
-
 
             // var percentage = tract_age_sum / tract_total_population
 
             //TO DO: DATA HERE 
             var percentage;// = tract_age_sum / tract_total_population
             if(censusTract==1278){
-              console.log(tract_total_population)
               percentage = 198/parseInt(tract_total_population)
-              console.log("1278 census tract is", percentage, tract_total_population)
             } else if(censusTract==1277){
-              console.log(tract_total_population)
               percentage = 133/parseInt(tract_total_population)
-              console.log("1277 census tract is", percentage,(tract_total_population))
             } else {
               percentage = tract_age_sum / tract_total_population
             }
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
-            console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -8814,7 +8805,6 @@
         var eighteenToThirtyFour = document.querySelector("input[id=eighteenToThirtyFour]");
         eighteenToThirtyFour.addEventListener('change', function() {
         if (this.checked) {
-          console.log("checked eighteenToThirtyFour")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#228B22'){
               map.removeLayer(layer);
@@ -8853,17 +8843,12 @@
             var tract_age_sum = eighteen_to_twenty_four + twenty_five_to_thirty_four
             var total_age_sum = eighteen_to_twenty_four_total + twenty_five_to_thirty_four_total
 
-            console.log("For census tract", censusTractArrayList[i]," ages 18-34 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
             //TO DO: DATA HERE 
             var percentage;// = tract_age_sum / tract_total_population
             if(censusTract==1278){
-              console.log(tract_total_population)
               percentage = 198/parseInt(tract_total_population)
-              console.log("1278 census tract is", percentage, tract_total_population)
             } else if(censusTract==1277){
-              console.log(tract_total_population)
               percentage = 133/parseInt(tract_total_population)
-              console.log("1277 census tract is", percentage,(tract_total_population))
             } else {
               percentage = tract_age_sum / tract_total_population
             }
@@ -8872,7 +8857,6 @@
             // var percentage = tract_age_sum / tract_total_population
 
             var individualCensusTract = (stlCensusTracts.geometries[i])
-            console.log(tract_age_sum, tract_total_population, percentage)
             var individualCensusTractPolygon = {
               "type":"GeometryCollection", 
               "geometries": [individualCensusTract]
@@ -9055,8 +9039,6 @@
             var tract_age_sum = sixty_five_to_seventy_four + seventy_five_to_eighty_four + eighty_five_and_older
             var total_age_sum = sixty_five_to_seventy_four_total + seventy_five_to_eighty_four_total
             
-            console.log("For census tract", censusTractArrayList[i]," ages 65+ the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
-
 
             // var percentage = tract_age_sum / tract_total_population
 
@@ -9120,7 +9102,7 @@
     var checkboxIncome = document.querySelector("input[id=income]");
     checkboxIncome.addEventListener('change', function() {
     if (this.checked) {
-
+      $("#ethnicity-data-legend").empty();
       $("#age-data-selectors").empty(); 
       $("#educational-attainment-data-selectors").empty();
       $("#race-ethnicity-data-selectors").empty()
@@ -9645,8 +9627,6 @@
         checkboxIndoEuropean.addEventListener('change', function() {
           $("#language-data-legend").empty()
           $("#unemployment-data-legend").empty()
-
-          console.log("checkboxIndoEuropean")
           map.eachLayer(function (layer) {
             if(layer.options.fillColor == '#6E2594'){
               map.removeLayer(layer);
@@ -9964,7 +9944,6 @@
         var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]],{icon: purpleIcon}).addTo(map);
         var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
       } else {
-        console.log(library_locations[i]["Branch Name"])
         var marker = L.marker([library_locations[i]["Lat"], library_locations[i]["Long"]]).addTo(map);
         var popup = marker.bindPopup('<b>'+library_locations[i]["Branch Name"]+'</b><br />'+library_locations[i]["Address"]);
       }
