@@ -8525,11 +8525,16 @@
               percentage = 0.25
             } else if(censusTract==1277){
               percentage = 0.05
+            } else if(censusTract==1011){
+              percentage = .173
             } else {
               percentage = parseFloat(education_sum/population)
             }  
          
             function style(region) {
+              if(censusTract==1011){
+                percentage = .173
+              }
               return {
                 fillColor: "#6E2594",
                 color: "#000",
