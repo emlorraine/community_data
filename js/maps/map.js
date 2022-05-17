@@ -8319,6 +8319,7 @@
               "geometries": [individualCensusTract]
             }
             var polyTracts = L.geoJson(individualCensusTractPolygon)
+            // L.circleMarker([38.6270, 90.1994], 10).addTo(map);
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
             function style(region) {
               return {
@@ -8342,8 +8343,7 @@
           $(".rectangle").css("display", "inline-block")
           $("#ethnicity-rectangle").css("background", "linear-gradient(to right, white, #6E2594)")
           $("#ethnicity-data-legend").append("<h8>100%</h8>");
-
-        }
+        }        
       })
     })
     var checkboxEducation = document.querySelector("input[id=education]");
