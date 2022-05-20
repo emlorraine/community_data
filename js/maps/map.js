@@ -8025,6 +8025,64 @@
     // map.addLayer(poly);
     // map.addLayer(polyTracts);
 
+    function returnServiceArea(censusTractParam){
+      //Baden 
+      if(censusTractParam == 1081 || censusTractParam == 1082 || censusTractParam == 1083 || censusTractParam == 1270){
+        return ["Baden","#800000"]
+      }
+      //Barr
+      else if(censusTractParam == 1231 || censusTractParam == 1232 || censusTractParam == 1233 || censusTractParam == 1242 || censusTractParam == 1243 || censusTractParam == 1273 || censusTractParam == 1274 || censusTractParam == 1276){
+        return ["Barr","#800080"]
+      }
+      //Buder 
+      else if(censusTractParam == 1021 || censusTractParam == 1022 || censusTractParam == 1023 || censusTractParam == 1024 || censusTractParam == 1025 || censusTractParam == 1031 || censusTractParam == 1141.01 || censusTractParam == 1141.02 || censusTractParam == 1142 || censusTractParam == 1143 || censusTractParam == 1154){
+        return ["Buder","#FF00FF"]
+      }
+      //Carondelet
+      else if(censusTractParam==1011 || censusTractParam==1012 || censusTractParam==1013 || censusTractParam==1014 || censusTractParam==1015 || censusTractParam==1018 || censusTractParam==1155 || censusTractParam==1156 || censusTractParam==1157){
+        return ["Carondelet","#008000"]
+      }
+      //Carpenter
+      else if(censusTractParam == 1151 || censusTractParam == 1152 || censusTractParam == 1153 || censusTractParam == 1161 || censusTractParam == 1162 || censusTractParam == 1163.01 || censusTractParam == 1163.02 || censusTractParam == 1164 || censusTractParam == 1165 || censusTractParam == 1174 || censusTractParam == 1241 || censusTractParam == 1246){
+        return ["Carpenter","#00FF00"]
+      }
+      //Central
+      else if(censusTractParam==1255 || censusTractParam==1256 || censusTractParam==1257 || censusTractParam==1275){
+        return ["Central","#0000FF"]
+      }
+      //Julia Davis 
+      else if(censusTractParam== 1062 || censusTractParam== 1063 || censusTractParam== 1064 || censusTractParam== 1065 || censusTractParam== 1067 || censusTractParam== 1096 || censusTractParam== 1101 || censusTractParam== 1102 || censusTractParam== 1103 || censusTractParam== 1112 || censusTractParam== 1113 || censusTractParam== 1114 || censusTractParam == 1269){
+        return ["Julia Davis","#008080"]
+      }
+      //Kingshighway
+      else if(censusTractParam== 1171 || censusTractParam== 1172 || censusTractParam== 1181 || censusTractParam== 1272 || censusTractParam== 1135){
+        return ["Kingshighway","#00FFFF"]
+      }
+      //Machacek
+      else if(censusTractParam== 1034 || censusTractParam== 1036 || censusTractParam== 1037 || censusTractParam== 1038 || censusTractParam== 1268){
+        return ["Machacek","#FF0000"]
+      }
+      //Walnut Park
+      else if(censusTractParam== 1072 || censusTractParam== 1073 || censusTractParam== 1074 || censusTractParam== 1075 || censusTractParam== 1076){
+        return ["Walnut Park","#87ceeb"]
+      }
+      //Cabanne	
+      else if(censusTractParam== 1052 || censusTractParam== 1053 || censusTractParam== 1054 || censusTractParam== 1055 || censusTractParam== 1061 || censusTractParam== 1066 || censusTractParam== 1122 || censusTractParam== 1123 || censusTractParam== 1266){
+        return ["Cabanne","#ffa500"]
+      }
+      //Schlafly	
+      else if(censusTractParam== 1042 || censusTractParam== 1045 || censusTractParam== 1051.98 || censusTractParam== 1111 || censusTractParam== 1121 || censusTractParam== 1124 || censusTractParam== 1184 || censusTractParam== 1186 || censusTractParam== 119101 || censusTractParam== 119102 || censusTractParam== 1192 || censusTractParam== 1193 || censusTractParam== 1211 || censusTractParam== 1212){
+        return ["Schlafly","#9370db"]
+      }
+      //Divoll
+      else if(censusTractParam== 1104 || censusTractParam== 1105 || censusTractParam== 1115 || censusTractParam== 1202 || censusTractParam== 1267 || censusTractParam== 1271 || censusTractParam== 1097 ){
+        return ["Divoll","#20b2aa"]
+      } 
+      else {
+        return ["Other","#black"]
+      }
+    }
+
     randomPointInPoly = function(polygon) {
       var bounds = censusTractGeoJsonConversion.getBounds(); 
       var x_min  = bounds.getEast();
@@ -8321,11 +8379,13 @@
             var polyTracts = L.geoJson(individualCensusTractPolygon)
             // L.circleMarker([38.6270, 90.1994], 10).addTo(map);
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8467,13 +8527,14 @@
             // if(censusTract == 1101){
             //   console.log(censusTract, percentage)
             // }
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
-                fillOpacity: percentage 
+                fillOpacity: percentage
               };
             }
           }$("#legend").append("<div id='educational-attainment-data-legend'></div")
@@ -8530,15 +8591,15 @@
             } else {
               percentage = parseFloat(education_sum/population)
             }  
+
+
          
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
-              if(censusTract==1011){
-                percentage = .173
-              }
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8585,6 +8646,7 @@
       $("#econ-data-selectors").empty()
       $("#language-data-selectors").empty()
       $("#ethnicity-data-legend").empty();
+      $("#unemployment-data-legend").empty()
 
       // map.removeLayer(geojson);
       map.eachLayer(function (layer) {
@@ -8690,12 +8752,14 @@
             //TO DO: DATA HERE 
             
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
-                fillOpacity: (percentage)
+                fillOpacity: percentage
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -8783,12 +8847,14 @@
               percentage = 0.33
             }
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
-                fillOpacity: (percentage)
+                fillOpacity: percentage
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -8874,10 +8940,12 @@
               percentage = 0.33
             }
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8940,8 +9008,6 @@
             var tract_age_sum = thirty_five_to_fourty_four + fourty_five_to_fifty_four + fifty_five_to_sixty_four
             var total_age_sum = thirty_five_to_fourty_four_total + fourty_five_to_fifty_four_total + fifty_five_to_sixty_four_total
 
-            console.log("For census tract", censusTractArrayList[i]," ages 35-64 the sum within tract is", tract_age_sum, ". We'll divide this by", total_age_sum, "to calculate the percentage within this tract.")
-
 
             // var percentage = tract_age_sum / tract_total_population
             var percentage;// = tract_age_sum / tract_total_population
@@ -8978,12 +9044,14 @@
             //   percentage = 0.33
             // }
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
-                fillOpacity: (percentage)
+                fillOpacity: percentage
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -9075,12 +9143,14 @@
               percentage = 0.33
             }
             // console.log(i, censusTract, percentage, "#"+middle)//, median_value, age_range_str[median_value])
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
-                fillOpacity: (percentage)
+                fillOpacity: percentage
               };
             }
             $("#legend").append("<div id='median-age-data-legend'></div")
@@ -9208,11 +9278,12 @@
             }
             // var polyTracts = L.geoJson(individualCensusTractPolygon)
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9290,11 +9361,12 @@
             }
             // var polyTracts = L.geoJson(individualCensusTractPolygon)
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9351,11 +9423,12 @@
               "geometries": [individualCensusTract]
             }
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9450,11 +9523,15 @@
 
         var ethnicity = parseFloat(ethnicity_data[i]["% Total Population: Hispanic or Latino"])
 
-
+        censusTractParam = censusTractArrayList[i]
+        var serviceAreaAssignment = returnServiceArea(censusTractParam)[0]
+        // console.log(censusTractParam, returnServiceArea(censusTractParam))
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
       var layerGroup = L.geoJSON(individualCensusTract, {
         onEachFeature: function (feature, layer) {
                 var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
+                + "<dt>Service Region</dt>"
+                + "<dd>" + serviceAreaAssignment + " service area</dd>"
                 + "<dt>Total Population</dt>"
                 + "<dd>" + total_pop + " people</dd>"
                  + "<dt>Median Income</dt>"
@@ -9476,7 +9553,6 @@
 
       
                 layer.bindPopup(list);
-          // layer.bindPopup('<h1>Hello world</h1>');
         }
       }).addTo(map);
     }
@@ -9563,11 +9639,12 @@
               "geometries": [individualCensusTract]
             }
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9614,11 +9691,12 @@
               "geometries": [individualCensusTract]
             }
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9665,11 +9743,12 @@
               "geometries": [individualCensusTract]
             }
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9715,11 +9794,12 @@
               "geometries": [individualCensusTract]
             }
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9764,11 +9844,12 @@
               "geometries": [individualCensusTract]
             }
             geoJsonLayer = L.geoJson(individualCensusTractPolygon, {style: style}).addTo(map);
+            var borderColor = returnServiceArea(censusTract)[1]
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: "#000",
-                weight: 1,
+                color: borderColor,
+                weight: 3,
                 opacity: 1,
                 fillOpacity: percentage
               };
