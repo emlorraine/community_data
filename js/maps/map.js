@@ -9448,6 +9448,9 @@
         var edP = percentage*100 
         var edPRounded = (Math.round(edP * 100) / 100).toFixed(2);
 
+        var ethnicity = parseFloat(ethnicity_data[i]["% Total Population: Hispanic or Latino"])
+
+
       // censusTractGeoJsonConversion = L.geoJson(individualCensusTract)
       var layerGroup = L.geoJSON(individualCensusTract, {
         onEachFeature: function (feature, layer) {
@@ -9468,6 +9471,9 @@
                  + "<dd> Native Hawaiian and Other Pacific Islander: " + numberWithCommas(native_hawaiian_and_other_pacific_islander) + "</dd>"
                  + "<dd> Other: " + numberWithCommas(other) + "</dd>"
                  + "<dd> Two or More Races: " + numberWithCommas(two_or_more_races) + "</dd>"
+                 + "<dt>Ethnicity</dt>"
+                 + "<dd> Hispanic Population: " + ethnicity + "%</dd>"
+
       
                 layer.bindPopup(list);
           // layer.bindPopup('<h1>Hello world</h1>');
