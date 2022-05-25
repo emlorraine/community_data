@@ -9523,6 +9523,32 @@
 
         var ethnicity = parseFloat(ethnicity_data[i]["% Total Population: Hispanic or Latino"])
 
+        //English 
+        var populationEng = languages[i]["Total Population"]
+        var langEng = languages[i]["Speak only English"]
+        var percentageEng = langEng/populationEng
+
+        //Spanish 
+        var populationSpanish = languages[i]["Total Population"]
+        var langSpanish = languages[i]["Spanish"]
+        var percentageSpanish = langSpanish/populationSpanish
+
+        //Indo European 
+        var populationIndoEuro = languages[i]["Total Population"]
+        var langIndoEuro = languages[i]["Other Indo-European languages"]
+        var percentageIndoEuro = langIndoEuro/populationIndoEuro
+
+        //Asian Pacific Islander
+        var populationAsianPacificIslander = languages[i]["Total Population"]
+        var langAsianPacificIslander = languages[i]["Asian and Pacific Island languages"]
+        var percentageAsianPacificIslander = langAsianPacificIslander/populationAsianPacificIslander
+
+        //Other
+        var populationOther = languages[i]["Total Population"]
+        var langOther = languages[i]["Other languages"]
+        var percentageOther = langOther/populationOther
+
+
         censusTractParam = censusTractArrayList[i]
         var serviceAreaAssignment = returnServiceArea(censusTractParam)[0]
         // console.log(censusTractParam, returnServiceArea(censusTractParam))
@@ -9550,8 +9576,12 @@
                  + "<dd> Two or More Races: " + numberWithCommas(two_or_more_races) + "</dd>"
                  + "<dt>Ethnicity</dt>"
                  + "<dd> Hispanic Population: " + ethnicity + "%</dd>"
-
-      
+                 + "<dt>Languages Spoken at Home</dt>"
+                 + "<dd> English Only: " + ((Math.round(percentageEng * 100) / 100).toFixed(2))*100 + "% </dd>"
+                 + "<dd> Spanish: " + ((Math.round(percentageSpanish * 100) / 100).toFixed(2))*100 + "% </dd>"
+                 + "<dd> Indo-European Languages: " + ((Math.round(percentageIndoEuro * 100) / 100).toFixed(2))*100 + "% </dd>"
+                 + "<dd> Asian and Pacific Island Languages: " + ((Math.round(percentageAsianPacificIslander * 100) / 100).toFixed(2))*100 + "% </dd>"
+                 + "<dd> Other Languages: " + ((Math.round(percentageOther * 100) / 100).toFixed(2))*100 + "% </dd>"
                 layer.bindPopup(list);
         }
       }).addTo(map);
@@ -9778,7 +9808,6 @@
             censusPoly = stlCensusTracts.geometries[i]
             var population = languages[i]["Total Population"]
             var lang = languages[i]["Asian and Pacific Island languages"]
-
             var percentage = lang/population
 
             if(censusTract==1278){
