@@ -8384,8 +8384,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8531,8 +8531,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8598,8 +8598,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8756,8 +8756,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8851,8 +8851,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -8944,8 +8944,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9048,8 +9048,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9147,8 +9147,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9282,8 +9282,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9365,8 +9365,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9427,8 +9427,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9531,7 +9531,7 @@
         onEachFeature: function (feature, layer) {
                 var list = "<dl><dt>Census Tract " +censusTractArrayList[i]+"</dt>"
                 + "<dt>Service Region</dt>"
-                + "<dd>" + serviceAreaAssignment + " service area</dd>"
+                + "<dd>" + serviceAreaAssignment + "</dd>"
                 + "<dt>Total Population</dt>"
                 + "<dd>" + total_pop + " people</dd>"
                  + "<dt>Median Income</dt>"
@@ -9643,8 +9643,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9695,8 +9695,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9747,8 +9747,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9798,8 +9798,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
@@ -9848,8 +9848,8 @@
             function style(region) {
               return {
                 fillColor: "#6E2594",
-                color: borderColor,
-                weight: 3,
+                color: "#000",
+                weight: 1,
                 opacity: 1,
                 fillOpacity: percentage
               };
